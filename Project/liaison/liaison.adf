@@ -58,7 +58,15 @@ UCF=
 
 [Files]
 /liaison.vhd=-1
+/onebitvoter.vhd=-1
+/controller.vhd=-1
+/ECC.vhd=-1
+/registers.vhd=-1
 
 [Files.Data]
 .\src\liaison.vhd=VHDL Source Code
+.\src\onebitvoter.vhd=VHDL Source Code
+.\src\controller.vhd=VHDL Source Code
+.\src\ECC.vhd=VHDL Source Code
+.\src\registers.vhd=VHDL Source Code
 

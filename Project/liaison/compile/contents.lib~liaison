@@ -1,1 +1,11 @@
-0
+13
+~E 1 "./src/ecc.vhd" 28 ecc
+~A 1 "./src/ecc.vhd" 38 ecc
+~E 1 "./src/controller.vhd" 28 controller
+~A 1 "./src/controller.vhd" 39 controller
+~E 1 "./src/onebitvoter.vhd" 28 onebitvoter
+~A 1 "./src/onebitvoter.vhd" 40 onebitvoter
+~E 1 "./src/liaison.vhd" 28 liaison
+~A 1 "./src/liaison.vhd" 41 liaison
+~E 1 "./src/registers.vhd" 28 registers
+~A 1 "./src/registers.vhd" 43 registers
