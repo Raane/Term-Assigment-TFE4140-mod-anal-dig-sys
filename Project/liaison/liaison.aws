@@ -1,0 +1,14 @@
+[Version]
+Version=8.2
+[Designs]
+liaison=.\liaison.adf
+[Settings]
+Active=liaison
+[Browser]
+sort=type
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+liaison=1
