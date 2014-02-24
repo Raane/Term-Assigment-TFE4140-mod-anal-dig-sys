@@ -16,10 +16,11 @@ architecture liaison of liaison is
 
 signal voted_data_bit: STD_LOGIC;
 signal status: STD_LOGIC_VECTOR (2 downto 0);
-signal control_signals: STD_LOGIC_VECTOR (8 downto 0);
+signal control_signals: STD_LOGIC_VECTOR (9 downto 0);
 signal ECC_signal: STD_LOGIC_VECTOR(7 downto 0);
 signal voted_data_out: STD_LOGIC_VECTOR (7 downto 0);
 signal status_out: STD_LOGIC_VECTOR (2 downto 0);
+signal voted_data_selector: STD_LOGIC_VECTOR (2 downto 0);
 
 alias a is mp_data(0);
 alias b is mp_data(1);
@@ -66,5 +67,28 @@ begin
 		status_out => status_out,
 		ECC_signal => ECC_signal
 		);
+		
+	process(voted_data_selector)
+	begin
+		case voted_data_selector is
+			when "000" =>
+			voted_data <= voted_data_out(0);
+			when "001" =>
+			voted_data <= voted_data_out(1);
+			when "010" =>
+			voted_data <= voted_data_out(2);
+			when "011" =>
+			voted_data <= voted_data_out(3);
+			when "100" =>
+			voted_data <= voted_data_out(4);
+			when "101" =>
+			voted_data <= voted_data_out(5);
+			when "110" =>
+			voted_data <= voted_data_out(6);
+			when "111" =>
+			voted_data <= voted_data_out(7);
+			when others =>
+		end case;
+	end process;
 
 end liaison;
