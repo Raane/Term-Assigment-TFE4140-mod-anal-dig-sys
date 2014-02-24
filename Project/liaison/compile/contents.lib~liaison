@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 219
+=======
+<<<<<<< HEAD
+153
+=======
+188
+>>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
+>>>>>>> 62c306b85a65e3243c97805d7110d8095d13a51b
 ~E 1 "./src/ECC.vhd" 4 ecc
 ~A 1 "./src/ECC.vhd" 12 ecc
 ~E 1 "./src/controller.vhd" 4 controller

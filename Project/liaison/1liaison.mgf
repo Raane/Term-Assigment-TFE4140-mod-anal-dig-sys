@@ -1103,6 +1103,17 @@ I 000050 55 2903          1393254662393 registers
 	(_model . registers 1 -1
 	)
 )
+<<<<<<< HEAD
+I 000051 55 1939          1393256236885 controller
+(_unit VHDL (controller 0 4 (controller 0 15 ))
+	(_version v63)
+	(_time 1393256236886 2014.02.24 16:37:16)
+	(_source (\./src/controller.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 444b1246161345534244561e43)
+	(_entity
+		(_time 1393256133595)
+=======
 I 000050 55 2906          1393254829363 registers
 (_unit VHDL (registers 0 4 (registers 0 17 ))
 	(_version v63)
@@ -1159,6 +1170,7 @@ I 000051 55 1390          1393255441913 controller
 	(_code e0b2b1b3b6b7e1f7e5e7f2bae7)
 	(_entity
 		(_time 1393255441911)
+>>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
 		(_use (std(standard))(ieee(std_logic_1164)))
 	)
 	(_object
@@ -1169,6 +1181,13 @@ I 000051 55 1390          1393255441913 controller
 		(_port (_internal control_signals ~STD_LOGIC_VECTOR{9~downto~0}~12 0 9 (_entity (_out ))))
 		(_type (_internal ~STD_LOGIC_VECTOR{2~downto~0}~12 0 10 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 2)(i 0))))))
 		(_port (_internal voted_data_selector ~STD_LOGIC_VECTOR{2~downto~0}~12 0 10 (_entity (_out ))))
+<<<<<<< HEAD
+		(_port (_internal do_ready ~extieee.std_logic_1164.STD_LOGIC 0 11 (_entity (_out ))))
+		(_type (_internal ~INTEGER~range~0~to~50~13 0 23 (_scalar (_to (i 0)(i 50)))))
+		(_signal (_internal counter ~INTEGER~range~0~to~50~13 0 23 (_architecture (_uni ))))
+		(_process
+			(clock_tick(_architecture 0 0 27 (_process (_target(6)(3)(4)(5))(_sensitivity(1)(2))(_dssslsensitivity 1))))
+=======
 		(_subprogram
 			(_external resolved (ieee std_logic_1164 15))
 		)
@@ -1251,6 +1270,7 @@ I 000048 55 3838          1393255447533 liaison
 		(_signal (_alias d ~extieee.std_logic_1164.STD_LOGIC 0 28 (_architecture (3(3)))))
 		(_process
 			(line__71(_architecture 0 0 71 (_process (_simple)(_target(5))(_sensitivity(12))(_read(10(7))(10(6))(10(5))(10(4))(10(3))(10(2))(10(1))(10(0))))))
+>>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
 		)
 		(_subprogram
 			(_external resolved (ieee std_logic_1164 15))
@@ -1258,6 +1278,26 @@ I 000048 55 3838          1393255447533 liaison
 		(_type (_external ~extieee.std_logic_1164.STD_ULOGIC (ieee std_logic_1164 STD_ULOGIC)))
 		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
 		(_type (_external ~extieee.std_logic_1164.STD_LOGIC_VECTOR (ieee std_logic_1164 STD_LOGIC_VECTOR)))
+<<<<<<< HEAD
+		(_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+	)
+	(_static
+		(33686018 33686018 514 )
+		(131586 )
+	)
+	(_model . controller 1 -1
+	)
+)
+V 000051 55 2130          1393256430948 controller
+(_unit VHDL (controller 0 4 (controller 0 15 ))
+	(_version v63)
+	(_time 1393256430949 2014.02.24 16:40:30)
+	(_source (\./src/controller.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code 555a5256060254425251470f52)
+	(_entity
+		(_time 1393256133595)
+=======
 	)
 	(_model . liaison 1 -1
 	)
@@ -1413,6 +1453,7 @@ I 000051 55 1720          1393255792541 controller
 	(_code a3a6a5f4f6f4a2b4a6a1b1f9a4)
 	(_entity
 		(_time 1393255792539)
+>>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
 		(_use (std(standard))(ieee(std_logic_1164)))
 	)
 	(_object
@@ -1424,6 +1465,14 @@ I 000051 55 1720          1393255792541 controller
 		(_type (_internal ~STD_LOGIC_VECTOR{2~downto~0}~12 0 10 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 2)(i 0))))))
 		(_port (_internal voted_data_selector ~STD_LOGIC_VECTOR{2~downto~0}~12 0 10 (_entity (_out ))))
 		(_port (_internal do_ready ~extieee.std_logic_1164.STD_LOGIC 0 11 (_entity (_out ))))
+<<<<<<< HEAD
+		(_constant (_internal counter_end ~extSTD.STANDARD.INTEGER 0 23 (_architecture ((i 50)))))
+		(_type (_internal ~INTEGER~range~0~to~counter_end~13 0 24 (_scalar (_to (i 0)(i 50)))))
+		(_signal (_internal counter ~INTEGER~range~0~to~counter_end~13 0 24 (_architecture (_uni ))))
+		(_process
+			(clock_tick(_architecture 0 0 28 (_process (_simple)(_target(6)(3)(4)(5))(_sensitivity(1))(_read(6)(2)))))
+			(set_input_read(_architecture 1 0 43 (_process (_simple)(_sensitivity(6)))))
+=======
 		(_type (_internal ~INTEGER~range~0~to~50~13 0 17 (_scalar (_to (i 0)(i 50)))))
 		(_signal (_internal counter ~INTEGER~range~0~to~50~13 0 17 (_architecture (_uni ))))
 		(_subprogram
@@ -1493,6 +1542,7 @@ I 000050 55 2906          1393255792553 registers
 		(_signal (_internal ECC_reg ~STD_LOGIC_VECTOR{7~downto~0}~13 0 21 (_architecture (_uni ))))
 		(_process
 			(line__25(_architecture 0 0 25 (_process (_target(8(7))(8(6))(8(5))(8(4))(8(3))(8(2))(8(1))(8(0))(8)(9)(10))(_sensitivity(1)(0)(2)(3)(4(8))(4(7))(4(6))(4(5))(4(4))(4(3))(4(2))(4(1))(4(0))(5))(_dssslsensitivity 1))))
+>>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
 		)
 		(_subprogram
 			(_external resolved (ieee std_logic_1164 15))
@@ -1500,12 +1550,22 @@ I 000050 55 2906          1393255792553 registers
 		(_type (_external ~extieee.std_logic_1164.STD_ULOGIC (ieee std_logic_1164 STD_ULOGIC)))
 		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
 		(_type (_external ~extieee.std_logic_1164.STD_LOGIC_VECTOR (ieee std_logic_1164 STD_LOGIC_VECTOR)))
+<<<<<<< HEAD
+		(_type (_external ~extSTD.STANDARD.INTEGER (std STANDARD INTEGER)))
+	)
+	(_static
+		(33686018 33686018 514 )
+		(131586 )
+	)
+	(_model . controller 2 -1
+=======
 	)
 	(_static
 		(33686018 33686018 )
 		(131586 )
 	)
 	(_model . registers 1 -1
+>>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
 	)
 )
 V 000048 55 3838          1393256561888 liaison
