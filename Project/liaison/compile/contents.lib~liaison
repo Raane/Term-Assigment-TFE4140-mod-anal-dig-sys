@@ -1,8 +1,8 @@
-138
+158
 ~E 1 "./src/ECC.vhd" 4 ecc
 ~A 1 "./src/ECC.vhd" 12 ecc
 ~E 1 "./src/controller.vhd" 4 controller
-~A 1 "./src/controller.vhd" 13 controller
+~A 1 "./src/controller.vhd" 14 controller
 ~E 1 "./src/onebitvoter.vhd" 14 onebitvoter
 ~A 1 "./src/onebitvoter.vhd" 14 onebitvoter
 ~A 1 "./src/onebitvoter.vhd" 28 behavioral

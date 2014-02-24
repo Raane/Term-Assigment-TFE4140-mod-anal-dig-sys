@@ -653,4 +653,60 @@ acom -work liaison -2002  $dsn/src/registers.vhd
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
 # File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd
 # Compile Entity "registers"
-# Compile Architecture "reg
+# Compile Architecture "registers" of Entity "registers"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+acom -work liaison -2002  $dsn/src/registers.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd
+# Compile Entity "registers"
+# Compile Architecture "registers" of Entity "registers"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -work liaison -2002  $dsn/src/liaison.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# Error: COMP96_0019: liaison.vhd : (89, 6): Keyword 'case' expected.
+# Error: COMP96_0019: liaison.vhd : (91, 5): Keyword 'process' expected.
+# Error: COMP96_0019: liaison.vhd : (92, 0): Keyword 'end' expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -work liaison -2002  $dsn/src/liaison.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# Error: COMP96_0367: liaison.vhd : (57, 22): Improper array length. Actual length is 9. Expected length is 10.
+# Error: COMP96_0078: liaison.vhd : (70, 10): Unknown identifier "voted_data_selector".
+# Error: COMP96_0348: liaison.vhd : (70, 10): Name on sensitivity list must denote a signal.
+# Error: COMP96_0078: liaison.vhd : (72, 8): Unknown identifier "voted_data_selector".
+# Error: COMP96_0133: liaison.vhd : (72, 8): Cannot find object declaration.
+# Error: COMP96_0584: liaison.vhd : (72, 8): Cannot determine the type of the case expression. Enumeration type, integer type, or one-dimensional array of characters expected.
+# Compile failure 6 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work liaison -2002  $dsn/src/liaison.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# Error: COMP96_0367: liaison.vhd : (58, 22): Improper array length. Actual length is 9. Expected length is 10.
+# Error: COMP96_0301: liaison.vhd : (73, 3): The choice 'others' must be present when all alternatives are not covered.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -work liaison -2002  $dsn/src/liaison.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# Error: COMP96_0367: liaison.vhd : (58, 22): Improper array length. Actual length is 9. Expected length is 10.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work liaison -2002  $dsn/src/liaison.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# Error: COMP96_0367: liaison.vhd : (49, 23): Improper array length. Actual length is 10. Expected length is 9.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0
