@@ -20,7 +20,7 @@ signal control_signals: STD_LOGIC_VECTOR (9 downto 0);
 signal ECC_signal: STD_LOGIC_VECTOR(7 downto 0);
 signal voted_data_out: STD_LOGIC_VECTOR (7 downto 0);
 signal status_out: STD_LOGIC_VECTOR (2 downto 0);
-signal voted_data_selector: STD_LOGIC_VECTOR (2 downto 0);
+signal voted_data_selector: STD_LOGIC_VECTOR (4 downto 0);
 
 alias a is mp_data(0);
 alias b is mp_data(1);
@@ -71,24 +71,47 @@ begin
 	process(voted_data_selector)
 	begin
 		case voted_data_selector is
-			when "000" =>
-			voted_data <= voted_data_out(0);
-			when "001" =>
-			voted_data <= voted_data_out(1);
-			when "010" =>
-			voted_data <= voted_data_out(2);
-			when "011" =>
-			voted_data <= voted_data_out(3);
-			when "100" =>
-			voted_data <= voted_data_out(4);
-			when "101" =>
-			voted_data <= voted_data_out(5);
-			when "110" =>
-			voted_data <= voted_data_out(6);
-			when "111" =>
-			voted_data <= voted_data_out(7);
+			when "00000" =>	-- 00
+				voted_data <= voted_data_out(0);
+			when "00001" =>	-- 01
+				voted_data <= voted_data_out(1);
+			when "00010" => -- 02
+				voted_data <= voted_data_out(2);
+			when "00011" =>	-- 03
+				voted_data <= voted_data_out(3);
+			when "00100" =>	-- 04
+				voted_data <= voted_data_out(4);
+			when "00101" =>	-- 05
+				voted_data <= voted_data_out(5);
+			when "00110" =>	-- 06
+				voted_data <= voted_data_out(6);
+			when "00111" =>	-- 07
+				voted_data <= voted_data_out(7);
+			when "01000" =>	-- 08
+				voted_data <= status_out(0);								  
+			when "01001" =>	-- 09
+				voted_data <= status_out(1);
+			when "01010" =>	-- 10
+				voted_data <= status_out(2);
+			when "01011" =>	-- 11
+				voted_data <= ECC_signal(0);
+			when "01100" =>	-- 12
+				voted_data <= ECC_signal(1);
+			when "01101" =>	-- 13
+				voted_data <= ECC_signal(2);
+			when "01110" =>	-- 14
+				voted_data <= ECC_signal(3);
+			when "01111" =>	-- 15
+				voted_data <= ECC_signal(4);
+			when "10000" =>	-- 16
+				voted_data <= ECC_signal(5);
+			when "10001" =>	-- 17
+				voted_data <= ECC_signal(6);
+			when "10010" =>	-- 18
+				voted_data <= ECC_signal(7);
 			when others =>
-		end case;
+				voted_data <= '-'; -- should not be reached, but useful to detect glitches
+		end case;				   -- when implementing and perfecting output throughput
 	end process;
 
 end liaison;

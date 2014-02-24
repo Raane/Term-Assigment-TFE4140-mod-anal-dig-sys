@@ -1,136 +1,96 @@
-<<<<<<< HEAD
-timestamp=1393256586575
+timestamp=1393270356583
 
 [controller]
-A/controller=21|./src/controller.vhd|15|1*88216
+A/controller=21|./src/controller.vhd|41|1*210010
+B/controller=3*127245
 C=8.2.1986.3485  (Windows)
 C/controller=8.2.1986.3485  (Windows)
-I=0*34733
-I/controller=0*35103
-M=11|0|v63|1393255792538|./src/controller.vhd|0*34299*0x379c57f8d977cf4e3682f70631d38048025a9447|0*34655*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/controller=21|0|v63|1393256562073|./src/controller.vhd|0*34837*0xa2c3e843a618c82187c4a41e20bb88de925f1808|0*35011*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-R=./src/controller.vhd|4
+I=0*44205
+I/controller=0*88563
+M=11|0|v63|1393260183214|./src/controller.vhd|0*43771*0xff69337707bbe2d74e35bf97c1e367fe1282f929|0*44127*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/controller=21|0|v63|1393270356242|./src/controller.vhd|0*85621*0xd81645df47220ba630a03ef318300a60adf83dab|0*88471*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+R=./src/controller.vhd|28
 
-[ecc]
-A/ecc=A/ECC 21|./src/ECC.vhd|12|1*92943
-B/ecc=3*40152
-=======
-timestamp=1393256431038
-
-[controller]
-A/controller=21|./src/controller.vhd|15|1*61162
-B/controller=3*12504
+[controller_tb]
+A/tb_architecture=A/TB_ARCHITECTURE 21|./src/TestBench/controller_TB.vhd|9|1*214461
+B/tb_architecture=3*132987
 C=8.2.1986.3485  (Windows)
-C/controller=8.2.1986.3485  (Windows)
-I=0*30233
-I/controller=0*31456
-M=11|0|v63|1393256133595|./src/controller.vhd|0*29799*0x379c57f8d977cf4e3682f70631d38048025a9447|0*30155*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/controller=21|0|v63|1393256430947|./src/controller.vhd|0*30900*0xceb4b8a36ee09afe1243360dcf924220e764360c|0*31364*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-R=./src/controller.vhd|4
+C/tb_architecture=8.2.1986.3485  (Windows)
+I=0*63550
+I/tb_architecture=I/TB_ARCHITECTURE 0*65782
+M=11|0|v63|1393267661856|./src/TestBench/controller_TB.vhd|0*63280*0xcc80590b649c0b25171edfc49199066921fdd8ec|0*63456*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|v63|1393270356479|./src/TestBench/controller_TB.vhd|0*63657*0xdab25c7038ae5ef02f28ed06e96431b6c668825f|0*65669*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+R=./src/TestBench/controller_TB.vhd|6
 
 [ecc]
-A/ecc=A/ECC 21|./src/ECC.vhd|12|1*37270
->>>>>>> 62c306b85a65e3243c97805d7110d8095d13a51b
+A/ecc=A/ECC 21|./src/ecc.vhd|12|1*108464
+B/ecc=3*61622
 C=8.2.1986.3485  (Windows)
 C/ecc=8.2.1986.3485  (Windows)
 I=0*17495
-I/ecc=I/ECC 0*37792
+I/ecc=I/ECC 0*42055
 M=11|0|v63|1393253172215|./src/ECC.vhd|0*17154*0xc37c5802a1e27303d23698139a03026736feba3a|0*17431*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-<<<<<<< HEAD
-M/ecc=M/ECC 21|0|v63|1393256586476|./src/ECC.vhd|0*37265*0xe477bc5dcbd1d87e25ebd81462c2e0e1f9efe6c3|0*37721*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/ecc=M/ECC 21|0|v63|1393259887397|./src/ecc.vhd|0*41528*0xe477bc5dcbd1d87e25ebd81462c2e0e1f9efe6c3|0*41984*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/ECC.vhd|4
 
 [liaison]
-A/liaison=21|./src/liaison.vhd|15|1*80876
-B/liaison=3*26466
+A/liaison=21|./src/liaison.vhd|15|1*113903
+B/liaison=3*64465
 C=8.2.1986.3485  (Windows)
 C/liaison=8.2.1986.3485  (Windows)
 I=0*641
-I/liaison=0*36934
+I/liaison=0*46536
 M=11|0|v63|1393249956224|./src/liaison.vhd|0*256*0xf1671279b549d36c45799157efe652427fa41039|0*569*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/liaison=21|0|v63|1393256561887|./src/liaison.vhd|0*35218*0xb3bec7127b4ee403b035d91a2a9db5f071df47ad|0*36851*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/liaison=21|0|v63|1393260537495|./src/liaison.vhd|0*44309*0x10551ca6d9f58181441e97728822726092f46059|0*46453*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/liaison.vhd|28
 
 [onebitvoter]
-A/behavioral=A/Behavioral 21|./src/onebitvoter.vhd|28|1*84762
+A/behavioral=A/Behavioral 21|./src/onebitvoter.vhd|28|1*105010
 A/onebitvoter=+21|./src/onebitvoter.vhd|14|1*27089
-B/behavioral=3*27372
-=======
-M/ecc=M/ECC 21|0|v63|1393253172220|./src/ecc.vhd|0*6500*0x7ede17fc026b267a4d3fdfc845ed737239f01f4c|0*6603*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-R=./src/ECC.vhd|4
-
-[liaison]
-A/liaison=21|./src/liaison.vhd|15|1*45699
-C=8.2.1986.3485  (Windows)
-C/liaison=8.2.1986.3485  (Windows)
-I=0*641
-I/liaison=0*24136
-M=11|0|v63|1393249956224|./src/liaison.vhd|0*256*0xf1671279b549d36c45799157efe652427fa41039|0*569*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/liaison=21|0|v63|1393253604280|./src/liaison.vhd|0*22916*0x1e449751f5b41a843a8070ed508aab69da61ee6f|0*24053*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-R=./src/liaison.vhd|28
-
-[onebitvoter]
-A/behavioral=A/Behavioral 21|./src/onebitvoter.vhd|28|1*52734
-A/onebitvoter=+21|./src/onebitvoter.vhd|14|1*27089
-B/behavioral=3*0
->>>>>>> 62c306b85a65e3243c97805d7110d8095d13a51b
+B/behavioral=3*51455
 C=8.2.1986.3485  (Windows)
 C/behavioral=8.2.1986.3485  (Windows)
 C/onebitvoter=8.2.1986.3485  (Windows)
 I=0*18420
 I/behavioral=I/Behavioral 0*27057
 M=11|0|v63|1393253592710|./src/onebitvoter.vhd|0*17973*0xe617bcd5ffe78c5b1ddfbc7c2e3c2e6045c3cc07|0*18340*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-<<<<<<< HEAD
-M/behavioral=M/Behavioral 21|0|v63|1393256561989|./src/onebitvoter.vhd|0*24467*0xd1f08e9a696c48eda11d72d8317f34ca90af8c93|0*26963*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-=======
-M/behavioral=M/Behavioral 21|0|v63|1393253723738|./src/onebitvoter.vhd|0*24467*0xd1f08e9a696c48eda11d72d8317f34ca90af8c93|0*26963*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
->>>>>>> 62c306b85a65e3243c97805d7110d8095d13a51b
+M/behavioral=M/Behavioral 21|0|v63|1393259887306|./src/onebitvoter.vhd|0*24467*0xd1f08e9a696c48eda11d72d8317f34ca90af8c93|0*26963*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 M/onebitvoter=21|0|v63|1393252946104|./src/onebitvoter.vhd|0*5785*0x0381e8771be2e1527408330539f432d9e60c95d4|0*5936*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/onebitvoter.vhd|14
 
 [registers]
-<<<<<<< HEAD
-A/registers=21|./src/registers.vhd|17|1*89987
-B/registers=3*37539
-=======
-A/registers=21|./src/registers.vhd|17|1*56188
-B/registers=3*10167
->>>>>>> 62c306b85a65e3243c97805d7110d8095d13a51b
+A/registers=21|./src/registers.vhd|17|1*110947
+B/registers=3*61852
 C=8.2.1986.3485  (Windows)
 C/registers=8.2.1986.3485  (Windows)
 I=0*28140
-I/registers=0*29391
+I/registers=0*43363
 M=11|0|v63|1393254662390|./src/registers.vhd|0*27615*0xf69f65c4a2223291772cf01d23fa48eb5ff9cc71|0*28064*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-<<<<<<< HEAD
-M/registers=21|0|v63|1393256562081|./src/registers.vhd|0*29504*0x2c78c7914286a53ca45da5e33fc69a215ae19022|0*30622*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/registers=21|0|v63|1393259887475|./src/registers.vhd|0*42156*0x2c78c7914286a53ca45da5e33fc69a215ae19022|0*43274*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/registers.vhd|4
 
+[testbench_for_controller]
+C=8.2.1986.3485  (Windows)
+E=1*217713
+I=0*66376
+M=2|0|v63|1393270356482|./src/TestBench/controller_TB.vhd|0*65963*0x191331da3b52ae44ec2e020c3a048bfda1354cf0|0*66255*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+R=./src/TestBench/controller_TB.vhd|175
+
 [~A]
-ModifyID=219
+ModifyID=369
 Version=73
 
 [~MFT]
-0=266|0liaison.mgf|37792|26366
-1=81|1liaison.mgf|92943|79446
-3=17|3liaison.mgf|40152|26466
-=======
-M/registers=21|0|v63|1393254662392|./src/registers.vhd|0*28243*0x27218be2697bd38b56f47b569f14fb76bf534383|0*29302*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-R=./src/registers.vhd|4
-
-[~A]
-ModifyID=153
-Version=73
-
-[~MFT]
-0=234|0liaison.mgf|31456|20662
-1=58|1liaison.mgf|61162|47113
-3=4|3liaison.mgf|12504|0
->>>>>>> 62c306b85a65e3243c97805d7110d8095d13a51b
+0=355|0liaison.mgf|88563|60812
+1=125|1liaison.mgf|217713|146478
+3=58|3liaison.mgf|132987|72058
 
 [~U]
-controller=11|0*29504|
+controller=11|0*43476|
+controller_tb=11|0*63195|
 ecc=ECC 11|0*16932|
 liaison=11|0*0|
 onebitvoter=11|0*17693|
 registers=11|0*27235|
+testbench_for_controller=TESTBENCH_FOR_controller 2||
 

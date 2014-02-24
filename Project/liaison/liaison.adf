@@ -56,21 +56,34 @@ DESIGNS=VIRTEX4
 [IMPLEMENTATION]
 UCF=
 
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=controller_tb|testbench_for_controller|1 
+ShowHide=ShowTopLevel
+Selected=
+
+[Groups]
+TestBench=1
+
 [Files]
 /liaison.vhd=-1
 /onebitvoter.vhd=-1
-/controller.vhd=-1
 /ECC.vhd=-1
 /registers.vhd=-1
+/controller.vhd=-1
+/8BitControllerTest.asdb=-1
+/8BitControllerTest.awc=-1
+TestBench/controller_TB.vhd=-1
+TestBench/controller_TB_runtest.do=-1
 
 [Files.Data]
 .\src\liaison.vhd=VHDL Source Code
 .\src\onebitvoter.vhd=VHDL Source Code
-.\src\controller.vhd=VHDL Source Code
 .\src\ECC.vhd=VHDL Source Code
 .\src\registers.vhd=VHDL Source Code
-[HierarchyViewer]
-SortInfo=u
-HierarchyInformation=liaison|liaison|0 
-ShowHide=ShowTopLevel
-Selected=
+.\src\controller.vhd=VHDL Source Code
+.\src\8BitControllerTest.asdb=Accelerated Waveform File
+.\src\8BitControllerTest.awc=Accelerated Waveform Configuration
+.\src\TestBench\controller_TB.vhd=VHDL Test Bench
+.\src\TestBench\controller_TB_runtest.do=Macro
+

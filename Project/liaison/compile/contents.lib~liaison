@@ -1,20 +1,15 @@
-<<<<<<< HEAD
-219
-=======
-<<<<<<< HEAD
-153
-=======
-188
->>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
->>>>>>> 62c306b85a65e3243c97805d7110d8095d13a51b
+369
+~E 1 "./src/liaison.vhd" 28 liaison
+~A 1 "./src/liaison.vhd" 15 liaison
+~E 1 "./src/TestBench/controller_TB.vhd" 6 controller_tb
+~A 1 "./src/TestBench/controller_TB.vhd" 9 tb_architecture
+~E 1 "./src/controller.vhd" 28 controller
+~A 1 "./src/controller.vhd" 41 controller
 ~E 1 "./src/ECC.vhd" 4 ecc
-~A 1 "./src/ECC.vhd" 12 ecc
-~E 1 "./src/controller.vhd" 4 controller
-~A 1 "./src/controller.vhd" 15 controller
+~A 1 "./src/ecc.vhd" 12 ecc
+~E 1 "./src/registers.vhd" 4 registers
+~A 1 "./src/registers.vhd" 17 registers
 ~E 1 "./src/onebitvoter.vhd" 14 onebitvoter
 ~A 1 "./src/onebitvoter.vhd" 14 onebitvoter
 ~A 1 "./src/onebitvoter.vhd" 28 behavioral
-~E 1 "./src/liaison.vhd" 28 liaison
-~A 1 "./src/liaison.vhd" 15 liaison
-~E 1 "./src/registers.vhd" 4 registers
-~A 1 "./src/registers.vhd" 17 registers
+~C 1 "./src/TestBench/controller_TB.vhd" 175 testbench_for_controller

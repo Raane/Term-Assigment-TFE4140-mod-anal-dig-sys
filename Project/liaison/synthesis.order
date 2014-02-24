@@ -1,5 +1,6 @@
 i<>.\src\liaison.vhd
 i<>.\src\onebitvoter.vhd
-i<>.\src\controller.vhd
 i<>.\src\ECC.vhd
 i<>.\src\registers.vhd
+i<>.\src\controller.vhd
+i<>.\src\TestBench\controller_TB.vhd
