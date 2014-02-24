@@ -57,6 +57,9 @@ begin
 			if control_signals(8) = '1' then
 				status_reg <= status;
 			end if;
+			if control_signals(8) = '1' then
+				ECC_reg <= ECC_signal;
+			end if;
 		end if;
 	end if;	
 end process;
