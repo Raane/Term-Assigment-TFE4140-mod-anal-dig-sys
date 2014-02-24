@@ -6,11 +6,11 @@ entity controller is
 		 di_ready : in STD_LOGIC;
 		 clk : in STD_LOGIC;
 		 reset : in STD_LOGIC;
-		 controll_signals : out STD_LOGIC
+		 control_signals : out STD_LOGIC_VECTOR (8 downto 0)
 	     );
 end controller;
 
 architecture controller of controller is
-begin
+begin										
 
 end controller;
