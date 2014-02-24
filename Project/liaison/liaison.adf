@@ -69,3 +69,8 @@ UCF=
 .\src\controller.vhd=VHDL Source Code
 .\src\ECC.vhd=VHDL Source Code
 .\src\registers.vhd=VHDL Source Code
+[HierarchyViewer]
+SortInfo=u
+HierarchyInformation=liaison|liaison|0 
+ShowHide=ShowTopLevel
+Selected=

@@ -732,3 +732,62 @@ acom -work liaison -2002  $dsn/src/liaison.vhd
 # Compile Entity "liaison"
 # Compile Architecture "liaison" of Entity "liaison"
 # Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Design: Warning: The design file has read-only attributes. You will not be able to save changes to this design.
+acom -work liaison -2002  $dsn/src/liaison.vhd $dsn/src/onebitvoter.vhd $dsn/src/controller.vhd $dsn/src/ecc.vhd $dsn/src/registers.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd
+# Compile Entity "onebitvoter"
+# Compile Architecture "Behavioral" of Entity "onebitvoter"
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ecc.vhd
+# Compile Entity "ECC"
+# Compile Architecture "ECC" of Entity "ECC"
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd
+# Compile Entity "registers"
+# Compile Architecture "registers" of Entity "registers"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -work liaison -2002  $dsn/src/liaison.vhd $dsn/src/onebitvoter.vhd $dsn/src/controller.vhd $dsn/src/ecc.vhd $dsn/src/registers.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd
+# Compile Entity "onebitvoter"
+# Compile Architecture "Behavioral" of Entity "onebitvoter"
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ecc.vhd
+# Compile Entity "ECC"
+# Compile Architecture "ECC" of Entity "ECC"
+# Error: COMP96_0078: ecc.vhd : (22, 12): Unknown identifier "status".
+# Error: COMP96_0133: ecc.vhd : (22, 12): Cannot find object declaration.
+# Error: COMP96_0078: ecc.vhd : (23, 12): Unknown identifier "status".
+# Error: COMP96_0133: ecc.vhd : (23, 12): Cannot find object declaration.
+# Error: COMP96_0078: ecc.vhd : (24, 12): Unknown identifier "status".
+# Error: COMP96_0133: ecc.vhd : (24, 12): Cannot find object declaration.
+# Error: COMP96_0078: ecc.vhd : (28, 27): Unknown identifier "i".
+# Error: COMP96_0078: ecc.vhd : (28, 29): Unknown identifier "j".
+# Error: COMP96_0078: ecc.vhd : (28, 31): Unknown identifier "k".
+# Error: COMP96_0348: ecc.vhd : (28, 27): Name on sensitivity list must denote a signal.
+# Error: COMP96_0348: ecc.vhd : (28, 29): Name on sensitivity list must denote a signal.
+# Error: COMP96_0348: ecc.vhd : (28, 31): Name on sensitivity list must denote a signal.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd
+# Compile Entity "registers"
+# Compile Architecture "registers" of Entity "registers"
+# Compile failure 12 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -work liaison -2002  $dsn/src/ECC.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd
+# Compile Entity "ECC"
+# Compile Architecture "ECC" of Entity "ECC"
+# Warning: DAGGEN_0002: ECC.vhd : (28, 0): Process has no effect - no sequential statements.
+# Compile success 0 Errors 1 Warnings  Analysis time :  94.0 [ms]
