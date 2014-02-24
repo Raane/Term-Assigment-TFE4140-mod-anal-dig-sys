@@ -6,9 +6,9 @@ entity registers is
 		 voted_data_bit : in STD_LOGIC;
 		 clk : in STD_LOGIC;
 		 reset : in STD_LOGIC;
-		 status_bus : in STD_LOGIC_VECTOR(2 downto 0);
-		 controll_signals : in STD_LOGIC_VECTOR(8 downto 0);
-		 ECC : in STD_LOGIC_VECTOR(7 downto 0);
+		 status : in STD_LOGIC_VECTOR(2 downto 0);
+		 control_signals : in STD_LOGIC_VECTOR(8 downto 0);
+		 ECC_signal : in STD_LOGIC_VECTOR(7 downto 0);
 		 voted_data_out : out STD_LOGIC_VECTOR(7 downto 0);
 		 status_out : out STD_LOGIC_VECTOR(2 downto 0)
 	     );

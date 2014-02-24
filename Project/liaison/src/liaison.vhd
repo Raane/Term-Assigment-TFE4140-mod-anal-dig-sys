@@ -13,13 +13,22 @@ entity liaison is
 end liaison;
 
 architecture liaison of liaison is
+
+signal voted_data_bit: STD_LOGIC;
+signal status: STD_LOGIC_VECTOR (2 downto 0);
+signal control_signals: STD_LOGIC_VECTOR (8 downto 0);
+signal ECC_signal: STD_LOGIC_VECTOR(7 downto 0);
+signal voted_data_out: STD_LOGIC_VECTOR (7 downto 0);
+signal status_out: STD_LOGIC_VECTOR (2 downto 0);	 
+
 begin
+	
 	onebitvoter: entity work.onebitvoter
 	port map(
 	clk => clk,
 	reset => reset,
-	md_data => md_data,
-	voted_data => voted_data_bit,
+	mp_data => mp_data,
+	voted_data_bit => voted_data_bit,
 	status => status
 	);
 	
@@ -28,7 +37,7 @@ begin
 			clk => clk,
 			reset => reset,
 			di_ready => di_ready,
-			controll_signals
+			control_signals => control_signals
 		);
 		
 	registers: entity work.registers
@@ -37,8 +46,8 @@ begin
 		reset => reset,
 		voted_data_bit => voted_data_bit,
 		status => status,
-		controll_signals => controll_signals,
-		ECC => ECC,
+		control_signals => control_signals,
+		ECC_signal => ECC_signal,
 		voted_data_out => voted_data_out,
 		status_out => status_out
 		);
@@ -47,7 +56,7 @@ begin
 		port map(
 		voted_data_out => voted_data_out,
 		status_out => status_out,
-		ECC => ECC
+		ECC_signal => ECC_signal
 		);
 
 end liaison;
