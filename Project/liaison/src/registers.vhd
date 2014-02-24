@@ -9,8 +9,8 @@ entity registers is
 		 status_bus : in STD_LOGIC_VECTOR(2 downto 0);
 		 controll_signals : in STD_LOGIC_VECTOR(8 downto 0);
 		 ECC : in STD_LOGIC_VECTOR(7 downto 0);
-		 voted_data_bus_out : out STD_LOGIC_VECTOR(7 downto 0);
-		 status_bus_out : out STD_LOGIC_VECTOR(2 downto 0)
+		 voted_data_out : out STD_LOGIC_VECTOR(7 downto 0);
+		 status_out : out STD_LOGIC_VECTOR(2 downto 0)
 	     );
 end registers;
 
