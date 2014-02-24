@@ -1,27 +1,3 @@
--------------------------------------------------------------------------------
---
--- Title       : liaison
--- Design      : liaison
--- Author      : Ole Brumm
--- Company     : Hundremeterskogen Dataservice
---
--------------------------------------------------------------------------------
---
--- File        : liaison.vhd
--- Generated   : Mon Feb 24 11:08:09 2014
--- From        : interface description file
--- By          : Itf2Vhdl ver. 1.20
---
--------------------------------------------------------------------------------
---
--- Description : 
---
--------------------------------------------------------------------------------
-
---{{ Section below this comment is automatically maintained
---   and may be overwritten
---{entity {liaison} architecture {liaison}}
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
@@ -36,11 +12,7 @@ entity liaison is
 	     );
 end liaison;
 
---}} End of automatically maintained section
-
 architecture liaison of liaison is
 begin
-
-	 -- enter your statements here --
 
 end liaison;
