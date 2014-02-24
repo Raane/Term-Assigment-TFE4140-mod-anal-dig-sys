@@ -1,0 +1,65 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Error: Architecture 'liaison' of entity 'liaison' not found in library 'liaison'.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+# Design Explorer: Shortcut to "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\liaison.aws" design added.
+acom -work liaison -2002  $dsn/src/controller.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# Error: COMP96_0329: controller.vhd : (27, 2): Generate statement must have a label.
+# Error: COMP96_0019: controller.vhd : (27, 24): Keyword 'generate' expected.
+# Error: COMP96_0016: controller.vhd : (35, 3): Design unit declaration expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work liaison -2002  $dsn/src/controller.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# Error: COMP96_0517: controller.vhd : (27, 13): Unknown syntax error.
+# Error: COMP96_0016: controller.vhd : (36, 2): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -work liaison -2002  $dsn/src/controller.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# Error: COMP96_0019: controller.vhd : (28, 2): Keyword 'begin' expected.
+# Error: COMP96_0016: controller.vhd : (36, 2): Design unit declaration expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -work liaison -2002  $dsn/src/controller.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# Error: COMP96_0019: controller.vhd : (35, 6): Keyword 'if' expected.
+# Error: COMP96_0019: controller.vhd : (37, 5): Keyword 'if' expected.
+# Compile failure 2 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work liaison -2002  $dsn/src/controller.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -work liaison -2002  $dsn/src/controller.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# Error: COMP96_0019: controller.vhd : (49, 2): Keyword 'others' expected.
+# Error: COMP96_0019: controller.vhd : (49, 6): Keyword 'case' expected.
+# Error: COMP96_0019: controller.vhd : (52, 5): Keyword 'process' expected.
+# Error: COMP96_0019: controller.vhd : (53, 0): Keyword 'end' expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work liaison -2002  $dsn/src/controller.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compil

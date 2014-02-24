@@ -1,5 +1,6 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available." 
-MESSAGE "File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd" 
-MESSAGE "Compile Entity "registers"" 
-MESSAGE "Compile Architecture "registers" of Entity "registers"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]" 
+MESSAGE "File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd" 
+MESSAGE "Compile Entity "controller"" 
+MESSAGE "Compile Architecture "controller" of Entity "controller"" 
+WARNING DAGGEN_0002: "Process has no effect - no sequential statements." "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd" 43 0
+SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time :  94.0 [ms]" 
