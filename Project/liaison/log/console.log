@@ -709,4 +709,26 @@ acom -work liaison -2002  $dsn/src/liaison.vhd
 # Compile Entity "liaison"
 # Compile Architecture "liaison" of Entity "liaison"
 # Error: COMP96_0367: liaison.vhd : (49, 23): Improper array length. Actual length is 10. Expected length is 9.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work liaison -2002  $dsn/src/liaison.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# Error: COMP96_0367: liaison.vhd : (49, 23): Improper array length. Actual length is 10. Expected length is 9.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work liaison -2002  $dsn/src/controller.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
+# Compile Entity "controller"
+# Compile Architecture "controller" of Entity "controller"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -work liaison -2002  $dsn/src/liaison.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
+# Compile Entity "liaison"
+# Compile Architecture "liaison" of Entity "liaison"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
