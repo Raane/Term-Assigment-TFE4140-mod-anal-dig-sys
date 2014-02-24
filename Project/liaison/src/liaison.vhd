@@ -19,17 +19,25 @@ signal status: STD_LOGIC_VECTOR (2 downto 0);
 signal control_signals: STD_LOGIC_VECTOR (8 downto 0);
 signal ECC_signal: STD_LOGIC_VECTOR(7 downto 0);
 signal voted_data_out: STD_LOGIC_VECTOR (7 downto 0);
-signal status_out: STD_LOGIC_VECTOR (2 downto 0);	 
+signal status_out: STD_LOGIC_VECTOR (2 downto 0);
+
+alias a is mp_data(0);
+alias b is mp_data(1);
+alias c is mp_data(2);
+alias d is mp_data(3);
 
 begin
 	
 	onebitvoter: entity work.onebitvoter
-	port map(
-	clk => clk,
-	reset => reset,
-	mp_data => mp_data,
-	voted_data_bit => voted_data_bit,
-	status => status
+		port map(
+		clk => clk,
+		reset => reset,
+		a => a,
+		b => b,
+		c => c,
+		d => d,
+		y => voted_data_bit,
+		status => status
 	);
 	
 	controller: entity work.controller
