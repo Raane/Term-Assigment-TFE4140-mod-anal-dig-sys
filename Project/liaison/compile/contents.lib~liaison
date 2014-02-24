@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 153
+=======
+188
+>>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
 ~E 1 "./src/ECC.vhd" 4 ecc
-~A 1 "./src/ECC.vhd" 12 ecc
+~A 1 "./src/ecc.vhd" 12 ecc
 ~E 1 "./src/controller.vhd" 4 controller
 ~A 1 "./src/controller.vhd" 15 controller
 ~E 1 "./src/onebitvoter.vhd" 14 onebitvoter

@@ -1,6 +1,25 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available." 
+<<<<<<< HEAD
 MESSAGE "File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd" 
 MESSAGE "Compile Entity "controller"" 
 MESSAGE "Compile Architecture "controller" of Entity "controller"" 
 WARNING DAGGEN_0002: "Process has no effect - no sequential statements." "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd" 43 0
 SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time :  94.0 [ms]" 
+=======
+MESSAGE "File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd" 
+MESSAGE "Compile Entity "liaison"" 
+MESSAGE "Compile Architecture "liaison" of Entity "liaison"" 
+MESSAGE "File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd" 
+MESSAGE "Compile Entity "onebitvoter"" 
+MESSAGE "Compile Architecture "Behavioral" of Entity "onebitvoter"" 
+MESSAGE "File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd" 
+MESSAGE "Compile Entity "controller"" 
+MESSAGE "Compile Architecture "controller" of Entity "controller"" 
+MESSAGE "File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ecc.vhd" 
+MESSAGE "Compile Entity "ECC"" 
+MESSAGE "Compile Architecture "ECC" of Entity "ECC"" 
+MESSAGE "File: C:\Users\student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd" 
+MESSAGE "Compile Entity "registers"" 
+MESSAGE "Compile Architecture "registers" of Entity "registers"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]" 
+>>>>>>> c5dc22b396669cdf35b6c53bf234b4c49d37f9f6
