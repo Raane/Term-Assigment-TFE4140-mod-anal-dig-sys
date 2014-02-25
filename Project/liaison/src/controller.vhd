@@ -106,7 +106,7 @@ begin
 	end process;
 	
 	-- Activating or incrementing do_counting
-	do_counting : process (do_ready_internal, do_counter)
+	do_counting : process (do_ready_internal, do_counter, reset)
 	begin
 	
 	-- Active reset
