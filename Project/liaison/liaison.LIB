@@ -1,4 +1,4 @@
-timestamp=1393383198036
+timestamp=1393386462507
 
 [controller]
 A/controller=21|./src/controller.vhd|41|1*391722
@@ -55,18 +55,29 @@ M/tb_architecture=M/TB_ARCHITECTURE 21|0|v63|1393383197976|./src/TestBench/liais
 R=./src/TestBench/liaison_TB.vhd|6
 
 [onebitvoter]
-A/behavioral=A/Behavioral 21|./src/onebitvoter.vhd|28|1*382663
+A/behavioral=A/Behavioral 21|./src/onebitvoter.vhd|28|1*424787
 A/onebitvoter=+21|./src/onebitvoter.vhd|14|1*27089
-B/behavioral=3*247141
+B/behavioral=3*295805
 C=8.2.1986.3485  (Windows)
 C/behavioral=8.2.1986.3485  (Windows)
 C/onebitvoter=8.2.1986.3485  (Windows)
 I=0*18420
-I/behavioral=I/Behavioral 0*27057
+I/behavioral=I/Behavioral 0*161540
 M=11|0|v63|1393253592710|./src/onebitvoter.vhd|0*17973*0xe617bcd5ffe78c5b1ddfbc7c2e3c2e6045c3cc07|0*18340*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/behavioral=M/Behavioral 21|0|v63|1393382632986|./src/onebitvoter.vhd|0*24467*0xd1f08e9a696c48eda11d72d8317f34ca90af8c93|0*26963*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/behavioral=M/Behavioral 21|0|v63|1393386462439|./src/onebitvoter.vhd|0*158950*0x69f3b467a11849d720de1ddb7a59029de93e31c3|0*161446*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 M/onebitvoter=21|0|v63|1393252946104|./src/onebitvoter.vhd|0*5785*0x0381e8771be2e1527408330539f432d9e60c95d4|0*5936*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/onebitvoter.vhd|14
+
+[onebitvoter_solution_example_tb]
+A/tb_architecture=A/TB_ARCHITECTURE 21|./src/TestBench/onebitvoter_solution_example_TB.vhd|7|1*418553
+B/tb_architecture=3*281069
+C=8.2.1986.3485  (Windows)
+C/tb_architecture=8.2.1986.3485  (Windows)
+I=0*156890
+I/tb_architecture=I/TB_ARCHITECTURE 0*158750
+M=11|0|v63|1393386180445|./src/TestBench/onebitvoter_solution_example_TB.vhd|0*156511*0xc8aec29a9924ec11318ba448c038bca16d9127b9|0*156760*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|v63|1393386180447|./src/TestBench/onebitvoter_solution_example_TB.vhd|0*157015*0x0aa1dabf639db05fffd1dd837091718e4765aac3|0*158601*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+R=./src/TestBench/onebitvoter_solution_example_TB.vhd|4
 
 [registers]
 A/registers=21|./src/registers.vhd|18|1*388448
@@ -78,6 +89,12 @@ I/registers=0*112711
 M=11|0|v63|1393379188106|./src/registers.vhd|0*110699*0xade47a957caa44076938cc6f8a22410a8b97f7ed|0*111187*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 M/registers=21|0|v63|1393382633052|./src/registers.vhd|0*111366*0x89e0179263863cf2e0488b7616f69f1a8032dbe9|0*112622*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/registers.vhd|4
+
+[testbench]
+C=8.2.1986.3485  (Windows)
+I=0*156269
+M=11|0|v63|1393386071584|./src/TestBench/onebitvoter_solution_example_TB.vhd|0*155979*0x43d665bd9f9fc82f6fd3a8f5caf1ab3f04756af7|0*156161*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+R=./src/TestBench/onebitvoter_solution_example_TB.vhd|4
 
 [testbench_for_controller]
 C=8.2.1986.3485  (Windows)
@@ -94,13 +111,13 @@ M=2|0|v63|1393383197980|./src/TestBench/liaison_TB.vhd|0*155359*0x3797f9f0904a3f
 R=./src/TestBench/liaison_TB.vhd|182
 
 [~A]
-ModifyID=793
+ModifyID=814
 Version=73
 
 [~MFT]
-0=652|0liaison.mgf|155736|123949
-1=294|1liaison.mgf|418151|322320
-3=164|3liaison.mgf|272182|204940
+0=669|0liaison.mgf|161540|126717
+1=299|1liaison.mgf|424787|329228
+3=169|3liaison.mgf|295805|215107
 
 [~U]
 controller=11|0*43476|
@@ -109,7 +126,9 @@ ecc=ECC 11|0*141030|
 liaison=11|0*0|
 liaison_tb=11|0*95480|
 onebitvoter=11|0*17693|
+onebitvoter_solution_example_tb=11|0*156372|
 registers=11|0*110282|
+testbench=11|0*155906|
 testbench_for_controller=TESTBENCH_FOR_controller 2||
 testbench_for_liaison=TESTBENCH_FOR_liaison 2||
 

@@ -79,6 +79,8 @@ TestBench/controller_TB.vhd=-1
 TestBench/controller_TB_runtest.do=-1
 TestBench/liaison_TB.vhd=-1
 TestBench/liaison_TB_runtest.do=-1
+TestBench/onebitvoter_solution_example_TB.vhd=-1
+TestBench/onebitvoter_solution_example_TB_runtest.do=-1
 
 [Files.Data]
 .\src\liaison.vhd=VHDL Source Code
@@ -94,4 +96,6 @@ TestBench/liaison_TB_runtest.do=-1
 .\src\TestBench\controller_TB_runtest.do=Macro
 .\src\TestBench\liaison_TB.vhd=VHDL Test Bench
 .\src\TestBench\liaison_TB_runtest.do=Macro
+.\src\TestBench\onebitvoter_solution_example_TB.vhd=VHDL Test Bench
+.\src\TestBench\onebitvoter_solution_example_TB_runtest.do=Macro
 
