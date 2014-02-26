@@ -1,96 +1,115 @@
-timestamp=1393270356583
+timestamp=1393381558409
 
 [controller]
-A/controller=21|./src/controller.vhd|41|1*210010
-B/controller=3*127245
+A/controller=21|./src/controller.vhd|41|1*338642
+B/controller=3*204234
 C=8.2.1986.3485  (Windows)
 C/controller=8.2.1986.3485  (Windows)
 I=0*44205
-I/controller=0*88563
+I/controller=0*135888
 M=11|0|v63|1393260183214|./src/controller.vhd|0*43771*0xff69337707bbe2d74e35bf97c1e367fe1282f929|0*44127*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/controller=21|0|v63|1393270356242|./src/controller.vhd|0*85621*0xd81645df47220ba630a03ef318300a60adf83dab|0*88471*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/controller=21|0|v63|1393381558351|./src/controller.vhd|0*132938*0xae3524a14b009dc8d9b1322256b0ff5d2f42c37b|0*135796*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/controller.vhd|28
 
 [controller_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|./src/TestBench/controller_TB.vhd|9|1*214461
-B/tb_architecture=3*132987
+A/tb_architecture=A/TB_ARCHITECTURE 21|./src/TestBench/controller_TB.vhd|9|1*293284
+B/tb_architecture=3*191128
 C=8.2.1986.3485  (Windows)
 C/tb_architecture=8.2.1986.3485  (Windows)
 I=0*63550
 I/tb_architecture=I/TB_ARCHITECTURE 0*65782
 M=11|0|v63|1393267661856|./src/TestBench/controller_TB.vhd|0*63280*0xcc80590b649c0b25171edfc49199066921fdd8ec|0*63456*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/tb_architecture=M/TB_ARCHITECTURE 21|0|v63|1393270356479|./src/TestBench/controller_TB.vhd|0*63657*0xdab25c7038ae5ef02f28ed06e96431b6c668825f|0*65669*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|v63|1393378270251|./src/TestBench/controller_TB.vhd|0*63657*0xdab25c7038ae5ef02f28ed06e96431b6c668825f|0*65669*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/TestBench/controller_TB.vhd|6
 
 [ecc]
-A/ecc=A/ECC 21|./src/ecc.vhd|12|1*108464
-B/ecc=3*61622
+A/ecc=A/ECC 21|./src/ECC.vhd|12|1*254661
 C=8.2.1986.3485  (Windows)
 C/ecc=8.2.1986.3485  (Windows)
 I=0*17495
-I/ecc=I/ECC 0*42055
+I/ecc=I/ECC 0*94790
 M=11|0|v63|1393253172215|./src/ECC.vhd|0*17154*0xc37c5802a1e27303d23698139a03026736feba3a|0*17431*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/ecc=M/ECC 21|0|v63|1393259887397|./src/ecc.vhd|0*41528*0xe477bc5dcbd1d87e25ebd81462c2e0e1f9efe6c3|0*41984*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/ecc=M/ECC 21|0|v63|1393376524050|./src/ECC.vhd|0*94319*0x18ccd51e6a28c74e25dc011d2244950aaa2f78c9|0*94719*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/ECC.vhd|4
 
 [liaison]
-A/liaison=21|./src/liaison.vhd|15|1*113903
-B/liaison=3*64465
+A/liaison=21|./src/liaison.vhd|15|1*321626
+B/liaison=3*200260
 C=8.2.1986.3485  (Windows)
 C/liaison=8.2.1986.3485  (Windows)
 I=0*641
-I/liaison=0*46536
+I/liaison=0*125883
 M=11|0|v63|1393249956224|./src/liaison.vhd|0*256*0xf1671279b549d36c45799157efe652427fa41039|0*569*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/liaison=21|0|v63|1393260537495|./src/liaison.vhd|0*44309*0x10551ca6d9f58181441e97728822726092f46059|0*46453*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/liaison=21|0|v63|1393380049838|./src/liaison.vhd|0*123514*0xb9b57238bd1c98c48991c618c11db2526bc843d8|0*125800*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/liaison.vhd|28
 
+[liaison_tb]
+A/tb_architecture=A/TB_ARCHITECTURE 21|./src/TestBench/liaison_TB.vhd|9|1*335543
+B/tb_architecture=3*202079
+C=8.2.1986.3485  (Windows)
+C/tb_architecture=8.2.1986.3485  (Windows)
+I=0*95808
+I/tb_architecture=I/TB_ARCHITECTURE 0*132763
+M=11|0|v63|1393376877101|./src/TestBench/liaison_TB.vhd|0*95556*0xf4761ca4f3638fee6577c658fe7f6a25ba8157fb|0*95720*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|v63|1393380895563|./src/TestBench/liaison_TB.vhd|0*131627*0x01b6e90c6feceb339575b367e2cac6b0f842b0a2|0*132656*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+R=./src/TestBench/liaison_TB.vhd|6
+
 [onebitvoter]
-A/behavioral=A/Behavioral 21|./src/onebitvoter.vhd|28|1*105010
+A/behavioral=A/Behavioral 21|./src/onebitvoter.vhd|28|1*241324
 A/onebitvoter=+21|./src/onebitvoter.vhd|14|1*27089
-B/behavioral=3*51455
+B/behavioral=3*159811
 C=8.2.1986.3485  (Windows)
 C/behavioral=8.2.1986.3485  (Windows)
 C/onebitvoter=8.2.1986.3485  (Windows)
 I=0*18420
 I/behavioral=I/Behavioral 0*27057
 M=11|0|v63|1393253592710|./src/onebitvoter.vhd|0*17973*0xe617bcd5ffe78c5b1ddfbc7c2e3c2e6045c3cc07|0*18340*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/behavioral=M/Behavioral 21|0|v63|1393259887306|./src/onebitvoter.vhd|0*24467*0xd1f08e9a696c48eda11d72d8317f34ca90af8c93|0*26963*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/behavioral=M/Behavioral 21|0|v63|1393376496841|./src/onebitvoter.vhd|0*24467*0xd1f08e9a696c48eda11d72d8317f34ca90af8c93|0*26963*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 M/onebitvoter=21|0|v63|1393252946104|./src/onebitvoter.vhd|0*5785*0x0381e8771be2e1527408330539f432d9e60c95d4|0*5936*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/onebitvoter.vhd|14
 
 [registers]
-A/registers=21|./src/registers.vhd|17|1*110947
-B/registers=3*61852
+A/registers=21|./src/registers.vhd|18|1*296956
+B/registers=3*197151
 C=8.2.1986.3485  (Windows)
 C/registers=8.2.1986.3485  (Windows)
-I=0*28140
-I/registers=0*43363
-M=11|0|v63|1393254662390|./src/registers.vhd|0*27615*0xf69f65c4a2223291772cf01d23fa48eb5ff9cc71|0*28064*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/registers=21|0|v63|1393259887475|./src/registers.vhd|0*42156*0x2c78c7914286a53ca45da5e33fc69a215ae19022|0*43274*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+I=0*111263
+I/registers=0*112711
+M=11|0|v63|1393379188106|./src/registers.vhd|0*110699*0xade47a957caa44076938cc6f8a22410a8b97f7ed|0*111187*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/registers=21|0|v63|1393379188108|./src/registers.vhd|0*111366*0x89e0179263863cf2e0488b7616f69f1a8032dbe9|0*112622*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/registers.vhd|4
 
 [testbench_for_controller]
 C=8.2.1986.3485  (Windows)
-E=1*217713
-I=0*66376
-M=2|0|v63|1393270356482|./src/TestBench/controller_TB.vhd|0*65963*0x191331da3b52ae44ec2e020c3a048bfda1354cf0|0*66255*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+E=1*296536
+I=0*95304
+M=2|0|v63|1393378270254|./src/TestBench/controller_TB.vhd|0*94891*0x191331da3b52ae44ec2e020c3a048bfda1354cf0|0*95183*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/TestBench/controller_TB.vhd|175
 
+[testbench_for_liaison]
+C=8.2.1986.3485  (Windows)
+E=1*338241
+I=0*131457
+M=2|0|v63|1393380895569|./src/TestBench/liaison_TB.vhd|0*131080*0x4bae752c101a20ea5d8203d0cbf63c186afa4b74|0*131345*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+R=./src/TestBench/liaison_TB.vhd|81
+
 [~A]
-ModifyID=369
+ModifyID=631
 Version=73
 
 [~MFT]
-0=355|0liaison.mgf|88563|60812
-1=125|1liaison.mgf|217713|146478
-3=58|3liaison.mgf|132987|72058
+0=554|0liaison.mgf|135888|105363
+1=226|1liaison.mgf|338642|246886
+3=126|3liaison.mgf|204234|140579
 
 [~U]
 controller=11|0*43476|
 controller_tb=11|0*63195|
 ecc=ECC 11|0*16932|
 liaison=11|0*0|
+liaison_tb=11|0*95480|
 onebitvoter=11|0*17693|
-registers=11|0*27235|
+registers=11|0*110282|
 testbench_for_controller=TESTBENCH_FOR_controller 2||
+testbench_for_liaison=TESTBENCH_FOR_liaison 2||
 

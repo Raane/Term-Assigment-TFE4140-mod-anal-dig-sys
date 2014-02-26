@@ -4,3 +4,4 @@
 .\src\registers.vhd
 .\src\controller.vhd
 .\src\TestBench\controller_TB.vhd
+.\src\TestBench\liaison_TB.vhd

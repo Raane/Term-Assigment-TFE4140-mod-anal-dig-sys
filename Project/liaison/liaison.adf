@@ -58,7 +58,7 @@ UCF=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=controller_tb|testbench_for_controller|1 
+HierarchyInformation=controller_tb|testbench_for_controller|1
 ShowHide=ShowTopLevel
 Selected=
 
@@ -75,6 +75,8 @@ TestBench=1
 /8BitControllerTest.awc=-1
 TestBench/controller_TB.vhd=-1
 TestBench/controller_TB_runtest.do=-1
+TestBench/liaison_TB.vhd=-1
+TestBench/liaison_TB_runtest.do=-1
 
 [Files.Data]
 .\src\liaison.vhd=VHDL Source Code
@@ -86,4 +88,6 @@ TestBench/controller_TB_runtest.do=-1
 .\src\8BitControllerTest.awc=Accelerated Waveform Configuration
 .\src\TestBench\controller_TB.vhd=VHDL Test Bench
 .\src\TestBench\controller_TB_runtest.do=Macro
+.\src\TestBench\liaison_TB.vhd=VHDL Test Bench
+.\src\TestBench\liaison_TB_runtest.do=Macro
 
