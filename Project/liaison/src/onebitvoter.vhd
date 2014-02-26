@@ -121,11 +121,11 @@ when others =>
             end case;
         when "010" =>
             case sum_of_inputs is
-                when "011" =>
-                    voted_data <= '1';
                 when "010" =>
-                    voted_data <= '1'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
+                    voted_data <= '1';
                 when "001" =>
+                    voted_data <= '1'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
+                when "000" =>
 voted_data <= '0';
 when others =>
             end case;
