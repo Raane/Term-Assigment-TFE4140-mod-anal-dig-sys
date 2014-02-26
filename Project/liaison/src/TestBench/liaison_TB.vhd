@@ -33,7 +33,7 @@ begin
 	
    	stim_proc: process
    	begin
-		-- Set inputs to 0
+		-- Setup and reset
 		di_ready <= '0';
 		mp_data <= "1111";
 		reset <= '0';
@@ -42,16 +42,117 @@ begin
 		wait for 10 ns;
 		reset <= '0';
 		wait for 10 ns;
+		
+		-- Test with alternating output and no errors
 		di_ready <= '1';
-		wait for 10 ns;
-		di_ready <= '0';
-		wait for 30 ns;
 		mp_data <= "0000";
-		wait for 150 ns;
-		mp_data <= "0001";
-		di_ready <= '1';
 		wait for 10 ns;
 		di_ready <= '0';
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		
+		-- Wait while data is transmited
+		wait for 120 ns;	
+		
+		-- Test with alternating output and a single errorous bit
+		di_ready <= '1';
+		mp_data <= "0000";
+		wait for 10 ns;
+		di_ready <= '0';
+		mp_data <= "1110";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		
+		-- Wait while data is transmited
+		wait for 120 ns;	
+		
+		-- Test with alternating output and a single errorous bit
+		di_ready <= '1';
+		mp_data <= "0000";
+		wait for 10 ns;
+		di_ready <= '0';
+		mp_data <= "1110";
+		wait for 10 ns;
+		mp_data <= "0010";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		
+		-- Wait while data is transmited
+		wait for 120 ns;	
+		
+		-- Test with alternating output and a single errorous bit
+		di_ready <= '1';
+		mp_data <= "0000";
+		wait for 10 ns;
+		di_ready <= '0';
+		mp_data <= "1110";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "0111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		
+		-- Wait while data is transmited
+		wait for 120 ns;
+		
+		reset <= '1';
+		wait for 10 ns;
+		reset <= '0';
+		
+		-- Test with alternating output immediately
+		di_ready <= '1';
+		mp_data <= "0000";
+		wait for 10 ns;
+		di_ready <= '0';
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
+		wait for 10 ns;
+		mp_data <= "0000";
+		wait for 10 ns;	
+		mp_data <= "1111";
 		
 		wait;
    	end process;
