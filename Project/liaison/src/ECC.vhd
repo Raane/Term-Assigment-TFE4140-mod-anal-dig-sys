@@ -25,8 +25,8 @@ alias k is status_out(2);
 
 begin
 
-	process (a,b,c,d,e,f,g,h,i,j,k)
-	begin
-	end process;
+	--process (a,b,c,d,e,f,g,h,i,j,k)
+	--begin
+	--end process;
 	
 end ECC;

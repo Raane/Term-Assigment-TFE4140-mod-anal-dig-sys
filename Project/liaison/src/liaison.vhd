@@ -20,6 +20,7 @@ signal control_signals: STD_LOGIC_VECTOR (9 downto 0);
 signal ECC_signal: STD_LOGIC_VECTOR(7 downto 0);
 signal voted_data_out: STD_LOGIC_VECTOR (7 downto 0);
 signal status_out: STD_LOGIC_VECTOR (2 downto 0);
+signal ECC_out: STD_LOGIC_VECTOR (7 downto 0);
 signal voted_data_selector: STD_LOGIC_VECTOR (4 downto 0);
 
 alias a is mp_data(0);
@@ -43,10 +44,12 @@ begin
 	
 	controller: entity work.controller
 		port map(
-			clk => clk,
-			reset => reset,
-			di_ready => di_ready,
-			control_signals => control_signals
+		clk => clk,
+		reset => reset,
+		di_ready => di_ready,
+		do_ready => do_ready,
+		control_signals => control_signals,
+		voted_data_selector => voted_data_selector
 		);
 		
 	registers: entity work.registers
@@ -58,7 +61,8 @@ begin
 		control_signals => control_signals,
 		ECC_signal => ECC_signal,
 		voted_data_out => voted_data_out,
-		status_out => status_out
+		status_out => status_out,
+		ECC_out => ECC_out
 		);
 		
 	ECC: entity	work.ECC
@@ -68,7 +72,7 @@ begin
 		ECC_signal => ECC_signal
 		);
 		
-	process(voted_data_selector)
+	process(voted_data_selector, voted_data_out)
 	begin
 		case voted_data_selector is
 			when "00000" =>	-- 00
@@ -94,21 +98,21 @@ begin
 			when "01010" =>	-- 10
 				voted_data <= status_out(2);
 			when "01011" =>	-- 11
-				voted_data <= ECC_signal(0);
+				voted_data <= ECC_out(0);
 			when "01100" =>	-- 12
-				voted_data <= ECC_signal(1);
+				voted_data <= ECC_out(1);
 			when "01101" =>	-- 13
-				voted_data <= ECC_signal(2);
+				voted_data <= ECC_out(2);
 			when "01110" =>	-- 14
-				voted_data <= ECC_signal(3);
+				voted_data <= ECC_out(3);
 			when "01111" =>	-- 15
-				voted_data <= ECC_signal(4);
+				voted_data <= ECC_out(4);
 			when "10000" =>	-- 16
-				voted_data <= ECC_signal(5);
+				voted_data <= ECC_out(5);
 			when "10001" =>	-- 17
-				voted_data <= ECC_signal(6);
+				voted_data <= ECC_out(6);
 			when "10010" =>	-- 18
-				voted_data <= ECC_signal(7);
+				voted_data <= ECC_out(7);
 			when others =>
 				voted_data <= '-'; -- should not be reached, but useful to detect glitches
 		end case;				   -- when implementing and perfecting output throughput

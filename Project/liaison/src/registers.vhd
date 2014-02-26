@@ -10,7 +10,8 @@ entity registers is
 		 control_signals : in STD_LOGIC_VECTOR(9 downto 0);
 		 ECC_signal : in STD_LOGIC_VECTOR(7 downto 0);
 		 voted_data_out : out STD_LOGIC_VECTOR(7 downto 0);
-		 status_out : out STD_LOGIC_VECTOR(2 downto 0)
+		 status_out : out STD_LOGIC_VECTOR(2 downto 0);
+		 ECC_out : out STD_LOGIC_VECTOR(7 downto 0)
 	     );
 end registers;
 
@@ -20,7 +21,14 @@ signal voted_data_reg: STD_LOGIC_VECTOR (7 downto 0);
 signal status_reg: STD_LOGIC_VECTOR (2 downto 0);
 signal ECC_reg: STD_LOGIC_VECTOR (7 downto 0);
 
-begin
+begin	
+	
+process(voted_data_reg, status_reg, ECC_reg)
+begin									   
+	voted_data_out <= voted_data_reg;
+	status_out <= status_reg;
+	ECC_out <= ECC_reg; 
+end process;
 	
 process(clk)
 begin
