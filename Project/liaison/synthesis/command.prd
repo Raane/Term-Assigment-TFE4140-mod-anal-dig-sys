@@ -1,0 +1,13 @@
+#-- Synplicity, Inc.
+#-- Version C-2009.06
+#-- Project file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\command.prd
+#-- Written on Wed Feb 26 05:52:31 2014
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

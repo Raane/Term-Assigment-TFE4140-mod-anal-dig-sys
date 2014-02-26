@@ -1,7 +1,7 @@
 #-- Synplicity, Inc.
 #-- Version C-2009.06
 #-- Project file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\scratchproject.prs
-#-- Written on Wed Feb 26 05:32:48 2014
+#-- Written on Wed Feb 26 05:49:11 2014
 
 
 #project files
@@ -34,7 +34,7 @@ set_option -compiler_compatible 0
 set_option -resource_sharing 1
 
 # mapper_options
-set_option -frequency 1
+set_option -frequency 422.8
 set_option -write_verilog 0
 set_option -write_vhdl 1
 

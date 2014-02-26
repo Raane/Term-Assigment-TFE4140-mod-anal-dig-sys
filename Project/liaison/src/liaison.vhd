@@ -72,7 +72,7 @@ begin
 		ECC_signal => ECC_signal
 		);
 		
-	process(voted_data_selector, voted_data_out)
+	process(voted_data_selector, voted_data_out, status_out, ECC_out)
 	begin
 		case voted_data_selector is
 			when "00000" =>	-- 00

@@ -64,50 +64,12 @@ SPEED=-12
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=liaison_tb|tb_architecture|0 onebitvoter_solution_example_tb|tb_architecture|0
+HierarchyInformation=liaison_tb|testbench_for_liaison|1 onebitvoter_solution_example_tb|tb_architecture|0 
 ShowHide=ShowTopLevel
 Selected=
 
 [Groups]
 TestBench=1
-
-[Files]
-/liaison.vhd=-1
-/onebitvoter.vhd=-1
-/ECC.vhd=-1
-/registers.vhd=-1
-/controller.vhd=-1
-/8BitControllerTest.asdb=-1
-/8BitControllerTest.awc=-1
-/lisison.asdb=-1
-/lisison.awc=-1
-/onebitvoter.asdb=-1
-/onebitvoter.awc=-1
-TestBench/controller_TB.vhd=-1
-TestBench/controller_TB_runtest.do=-1
-TestBench/liaison_TB.vhd=-1
-TestBench/liaison_TB_runtest.do=-1
-TestBench/onebitvoter_solution_example_TB.vhd=-1
-TestBench/onebitvoter_solution_example_TB_runtest.do=-1
-
-[Files.Data]
-.\src\liaison.vhd=VHDL Source Code
-.\src\onebitvoter.vhd=VHDL Source Code
-.\src\ECC.vhd=VHDL Source Code
-.\src\registers.vhd=VHDL Source Code
-.\src\controller.vhd=VHDL Source Code
-.\src\8BitControllerTest.asdb=Accelerated Waveform File
-.\src\8BitControllerTest.awc=Accelerated Waveform Configuration
-.\src\lisison.asdb=Accelerated Waveform File
-.\src\lisison.awc=Accelerated Waveform Configuration
-.\src\onebitvoter.asdb=Accelerated Waveform File
-.\src\onebitvoter.awc=Accelerated Waveform Configuration
-.\src\TestBench\controller_TB.vhd=VHDL Test Bench
-.\src\TestBench\controller_TB_runtest.do=Macro
-.\src\TestBench\liaison_TB.vhd=VHDL Test Bench
-.\src\TestBench\liaison_TB_runtest.do=Macro
-.\src\TestBench\onebitvoter_solution_example_TB.vhd=VHDL Test Bench
-.\src\TestBench\onebitvoter_solution_example_TB_runtest.do=Macro
 
 [SYNTHESIS]
 OBSOLETE_ALIASES=1
@@ -193,8 +155,48 @@ STRATIX_II_SPEED=
 JOB_DESCRIPTION=SynthesisTask
 SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*:implement\*.*
-LAST_RUN=1393389157
+LAST_RUN=1393389565
+
 [PHYS_SYNTHESIS]
 FAMILY=Xilinx9x VIRTEX4
 DEVICE=4vfx12sf363
 SPEED=-12
+
+[Files]
+/liaison.vhd=-1
+/onebitvoter.vhd=-1
+/ECC.vhd=-1
+/registers.vhd=-1
+/controller.vhd=-1
+/8BitControllerTest.asdb=-1
+/8BitControllerTest.awc=-1
+/lisison.asdb=-1
+/lisison.awc=-1
+/onebitvoter.asdb=-1
+/onebitvoter.awc=-1
+TestBench/controller_TB.vhd=-1
+TestBench/controller_TB_runtest.do=-1
+TestBench/liaison_TB.vhd=-1
+TestBench/liaison_TB_runtest.do=-1
+TestBench/onebitvoter_solution_example_TB.vhd=-1
+TestBench/onebitvoter_solution_example_TB_runtest.do=-1
+
+[Files.Data]
+.\src\liaison.vhd=VHDL Source Code
+.\src\onebitvoter.vhd=VHDL Source Code
+.\src\ECC.vhd=VHDL Source Code
+.\src\registers.vhd=VHDL Source Code
+.\src\controller.vhd=VHDL Source Code
+.\src\8BitControllerTest.asdb=Accelerated Waveform File
+.\src\8BitControllerTest.awc=Accelerated Waveform Configuration
+.\src\lisison.asdb=Accelerated Waveform File
+.\src\lisison.awc=Accelerated Waveform Configuration
+.\src\onebitvoter.asdb=Accelerated Waveform File
+.\src\onebitvoter.awc=Accelerated Waveform Configuration
+.\src\TestBench\controller_TB.vhd=VHDL Test Bench
+.\src\TestBench\controller_TB_runtest.do=Macro
+.\src\TestBench\liaison_TB.vhd=VHDL Test Bench
+.\src\TestBench\liaison_TB_runtest.do=Macro
+.\src\TestBench\onebitvoter_solution_example_TB.vhd=VHDL Test Bench
+.\src\TestBench\onebitvoter_solution_example_TB_runtest.do=Macro
+

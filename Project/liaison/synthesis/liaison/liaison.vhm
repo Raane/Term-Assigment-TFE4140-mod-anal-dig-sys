@@ -1,0 +1,1335 @@
+--
+-- Written by Synplicity
+-- Product Version "C-2009.06"
+-- Program "Synplify Pro", Mapper "map450rc, Build 029R"
+-- Wed Feb 26 05:49:12 2014
+--
+
+--
+-- Written by Synplify Pro version Build 029R
+-- Wed Feb 26 05:49:12 2014
+--
+
+--
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+library UNISIM;
+use UNISIM.VCOMPONENTS.all;
+
+entity registers is
+port(
+  status : in std_logic_vector(2 downto 0);
+  status_out : out std_logic_vector(2 downto 0);
+  control_signals : in std_logic_vector(8 downto 1);
+  voted_data_out : out std_logic_vector(7 downto 0);
+  do_ready_c :  in std_logic;
+  reset_c :  in std_logic;
+  clk_c :  in std_logic;
+  voted_data_bit :  in std_logic);
+end registers;
+
+architecture beh of registers is
+  signal NN_1 : std_logic ;
+  signal NN_2 : std_logic ;
+begin
+\VOTED_DATA_REG[0]\: FDRE port map (
+    Q => voted_data_out(0),
+    D => voted_data_bit,
+    C => clk_c,
+    R => reset_c,
+    CE => do_ready_c);
+\VOTED_DATA_REG[1]\: FDRE port map (
+    Q => voted_data_out(1),
+    D => voted_data_bit,
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(1));
+\VOTED_DATA_REG[2]\: FDRE port map (
+    Q => voted_data_out(2),
+    D => voted_data_bit,
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(2));
+\VOTED_DATA_REG[3]\: FDRE port map (
+    Q => voted_data_out(3),
+    D => voted_data_bit,
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(3));
+\VOTED_DATA_REG[4]\: FDRE port map (
+    Q => voted_data_out(4),
+    D => voted_data_bit,
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(4));
+\VOTED_DATA_REG[5]\: FDRE port map (
+    Q => voted_data_out(5),
+    D => voted_data_bit,
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(5));
+\VOTED_DATA_REG[6]\: FDRE port map (
+    Q => voted_data_out(6),
+    D => voted_data_bit,
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(6));
+\VOTED_DATA_REG[7]\: FDRE port map (
+    Q => voted_data_out(7),
+    D => voted_data_bit,
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(7));
+\STATUS_REG[2]\: FDRE port map (
+    Q => status_out(2),
+    D => status(2),
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(8));
+\STATUS_REG[1]\: FDRE port map (
+    Q => status_out(1),
+    D => status(1),
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(8));
+\STATUS_REG[0]\: FDRE port map (
+    Q => status_out(0),
+    D => status(0),
+    C => clk_c,
+    R => reset_c,
+    CE => control_signals(8));
+II_GND: GND port map (
+    G => NN_1);
+II_VCC: VCC port map (
+    P => NN_2);
+end beh;
+
+--
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+library UNISIM;
+use UNISIM.VCOMPONENTS.all;
+
+entity controller is
+port(
+voted_data_selector : out std_logic_vector(4 downto 0);
+control_signals : out std_logic_vector(8 downto 1);
+di_ready_c :  in std_logic;
+reset_c :  in std_logic;
+clk_c :  in std_logic;
+do_ready_c :  out std_logic);
+end controller;
+
+architecture beh of controller is
+signal NEXT_DO_COUNTER : std_logic_vector(4 downto 0);
+signal NEXT_VOTED_DATA_SELECTOR : std_logic_vector(4 downto 0);
+signal NEXT_DI_COUNTER : std_logic_vector(3 downto 0);
+signal CONTROL_SIGNALSD_0 : std_logic_vector(8 downto 0);
+signal DI_COUNTER : std_logic_vector(3 downto 0);
+signal DO_COUNTER : std_logic_vector(4 downto 0);
+signal NEXT_DI_COUNTER_3 : std_logic_vector(3 downto 0);
+signal N_73_I : std_logic ;
+signal N_67_I : std_logic ;
+signal UN3_NEXT_DO_COUNTER_AXBXC2 : std_logic ;
+signal N_84_I : std_logic ;
+signal UN3_NEXT_DO_COUNTER_AXBXC3 : std_logic ;
+signal N_4_I : std_logic ;
+signal N_34_I : std_logic ;
+signal UN5_NEXT_DI_COUNTER_AXBXC2 : std_logic ;
+signal N_6_I : std_logic ;
+signal N_8_I : std_logic ;
+signal N_60_1 : std_logic ;
+signal N_4_I_1 : std_logic ;
+signal N_70 : std_logic ;
+signal N_64 : std_logic ;
+signal UN4_DO_READY_INTERNAL_0_A3_1 : std_logic ;
+signal UN3_DI_READY : std_logic ;
+signal DO_READY_C_1 : std_logic ;
+signal N_36 : std_logic ;
+signal NN_1 : std_logic ;
+signal NN_2 : std_logic ;
+begin
+\NEXT_VOTED_DATA_SELECTOR_4_0_.M17\: LUT4_L 
+generic map(
+  INIT => X"2808"
+)
+port map (
+I0 => NEXT_DO_COUNTER(3),
+I1 => NEXT_DO_COUNTER(2),
+I2 => NEXT_DO_COUNTER(1),
+I3 => NEXT_DO_COUNTER(0),
+LO => NEXT_VOTED_DATA_SELECTOR(4));
+\CONTROL_SIGNALS_RNO[1]\: LUT3_L 
+generic map(
+  INIT => X"80"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(1),
+I2 => NEXT_DI_COUNTER(2),
+LO => CONTROL_SIGNALSD_0(1));
+\CONTROL_SIGNALS_RNO[2]\: LUT3_L 
+generic map(
+  INIT => X"40"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(1),
+I2 => NEXT_DI_COUNTER(2),
+LO => CONTROL_SIGNALSD_0(2));
+\CONTROL_SIGNALS_RNO[3]\: LUT3_L 
+generic map(
+  INIT => X"20"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(1),
+I2 => NEXT_DI_COUNTER(2),
+LO => CONTROL_SIGNALSD_0(3));
+\CONTROL_SIGNALS_RNO[4]\: LUT3_L 
+generic map(
+  INIT => X"10"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(1),
+I2 => NEXT_DI_COUNTER(2),
+LO => CONTROL_SIGNALSD_0(4));
+\CONTROL_SIGNALS_RNO[5]\: LUT3_L 
+generic map(
+  INIT => X"08"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(1),
+I2 => NEXT_DI_COUNTER(2),
+LO => CONTROL_SIGNALSD_0(5));
+\CONTROL_SIGNALS_RNO[6]\: LUT4_L 
+generic map(
+  INIT => X"0004"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(1),
+I2 => NEXT_DI_COUNTER(2),
+I3 => NEXT_DI_COUNTER(3),
+LO => CONTROL_SIGNALSD_0(6));
+\CONTROL_SIGNALS_RNO[7]\: LUT4_L 
+generic map(
+  INIT => X"0002"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(1),
+I2 => NEXT_DI_COUNTER(2),
+I3 => NEXT_DI_COUNTER(3),
+LO => CONTROL_SIGNALSD_0(7));
+\CONTROL_SIGNALS_RNO[8]\: LUT2_L 
+generic map(
+  INIT => X"8"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(3),
+LO => CONTROL_SIGNALSD_0(8));
+\CONTROL_SIGNALS_RNO[0]\: LUT3_L 
+generic map(
+  INIT => X"10"
+)
+port map (
+I0 => NEXT_DI_COUNTER(0),
+I1 => NEXT_DI_COUNTER(1),
+I2 => NEXT_DI_COUNTER(3),
+LO => CONTROL_SIGNALSD_0(0));
+\CONTROL_SIGNALS[0]\: FD port map (
+  Q => DO_READY_C_1,
+  D => CONTROL_SIGNALSD_0(0),
+  C => clk_c);
+\CONTROL_SIGNALS[8]_Z90\: FD port map (
+  Q => control_signals(8),
+  D => CONTROL_SIGNALSD_0(8),
+  C => clk_c);
+\CONTROL_SIGNALS[7]_Z91\: FD port map (
+  Q => control_signals(7),
+  D => CONTROL_SIGNALSD_0(7),
+  C => clk_c);
+\CONTROL_SIGNALS[6]_Z92\: FD port map (
+  Q => control_signals(6),
+  D => CONTROL_SIGNALSD_0(6),
+  C => clk_c);
+\CONTROL_SIGNALS[5]_Z93\: FD port map (
+  Q => control_signals(5),
+  D => CONTROL_SIGNALSD_0(5),
+  C => clk_c);
+\CONTROL_SIGNALS[4]_Z94\: FD port map (
+  Q => control_signals(4),
+  D => CONTROL_SIGNALSD_0(4),
+  C => clk_c);
+\CONTROL_SIGNALS[3]_Z95\: FD port map (
+  Q => control_signals(3),
+  D => CONTROL_SIGNALSD_0(3),
+  C => clk_c);
+\CONTROL_SIGNALS[2]_Z96\: FD port map (
+  Q => control_signals(2),
+  D => CONTROL_SIGNALSD_0(2),
+  C => clk_c);
+\CONTROL_SIGNALS[1]_Z97\: FD port map (
+  Q => control_signals(1),
+  D => CONTROL_SIGNALSD_0(1),
+  C => clk_c);
+\DI_COUNTER[0]_Z98\: FD port map (
+  Q => DI_COUNTER(0),
+  D => NEXT_DI_COUNTER(0),
+  C => clk_c);
+\DI_COUNTER[1]_Z99\: FD port map (
+  Q => DI_COUNTER(1),
+  D => NEXT_DI_COUNTER(1),
+  C => clk_c);
+\DI_COUNTER[2]_Z100\: FD port map (
+  Q => DI_COUNTER(2),
+  D => NEXT_DI_COUNTER(2),
+  C => clk_c);
+\DI_COUNTER[3]_Z101\: FD port map (
+  Q => DI_COUNTER(3),
+  D => NEXT_DI_COUNTER(3),
+  C => clk_c);
+\DO_COUNTER[0]_Z102\: FD port map (
+  Q => DO_COUNTER(0),
+  D => NEXT_DO_COUNTER(0),
+  C => clk_c);
+\DO_COUNTER[1]_Z103\: FD port map (
+  Q => DO_COUNTER(1),
+  D => NEXT_DO_COUNTER(1),
+  C => clk_c);
+\DO_COUNTER[2]_Z104\: FD port map (
+  Q => DO_COUNTER(2),
+  D => NEXT_DO_COUNTER(2),
+  C => clk_c);
+\DO_COUNTER[3]_Z105\: FD port map (
+  Q => DO_COUNTER(3),
+  D => NEXT_DO_COUNTER(3),
+  C => clk_c);
+\DO_COUNTER[4]_Z106\: FD port map (
+  Q => DO_COUNTER(4),
+  D => NEXT_DO_COUNTER(4),
+  C => clk_c);
+\VOTED_DATA_SELECTOR[0]_Z107\: FD port map (
+  Q => voted_data_selector(0),
+  D => NEXT_VOTED_DATA_SELECTOR(0),
+  C => clk_c);
+\VOTED_DATA_SELECTOR[1]_Z108\: FD port map (
+  Q => voted_data_selector(1),
+  D => N_73_I,
+  C => clk_c);
+\VOTED_DATA_SELECTOR[2]_Z109\: FD port map (
+  Q => voted_data_selector(2),
+  D => NEXT_VOTED_DATA_SELECTOR(2),
+  C => clk_c);
+\VOTED_DATA_SELECTOR[3]_Z110\: FD port map (
+  Q => voted_data_selector(3),
+  D => N_67_I,
+  C => clk_c);
+\VOTED_DATA_SELECTOR[4]_Z111\: FD port map (
+  Q => voted_data_selector(4),
+  D => NEXT_VOTED_DATA_SELECTOR(4),
+  C => clk_c);
+\NEXT_DO_COUNTER[2]_Z112\: LDC port map (
+  Q => NEXT_DO_COUNTER(2),
+  D => UN3_NEXT_DO_COUNTER_AXBXC2,
+  G => N_84_I,
+  CLR => reset_c);
+\NEXT_DO_COUNTER[3]_Z113\: LDC port map (
+  Q => NEXT_DO_COUNTER(3),
+  D => UN3_NEXT_DO_COUNTER_AXBXC3,
+  G => N_84_I,
+  CLR => reset_c);
+\NEXT_DO_COUNTER[4]_Z114\: LDC port map (
+  Q => NEXT_DO_COUNTER(4),
+  D => N_4_I,
+  G => N_84_I,
+  CLR => reset_c);
+\NEXT_DI_COUNTER[0]_Z115\: LDC port map (
+  Q => NEXT_DI_COUNTER(0),
+  D => NEXT_DI_COUNTER_3(0),
+  G => N_34_I,
+  CLR => reset_c);
+\NEXT_DI_COUNTER[1]_Z116\: LDC port map (
+  Q => NEXT_DI_COUNTER(1),
+  D => NEXT_DI_COUNTER_3(1),
+  G => N_34_I,
+  CLR => reset_c);
+\NEXT_DI_COUNTER[2]_Z117\: LDC port map (
+  Q => NEXT_DI_COUNTER(2),
+  D => UN5_NEXT_DI_COUNTER_AXBXC2,
+  G => N_34_I,
+  CLR => reset_c);
+\NEXT_DI_COUNTER[3]_Z118\: LDC port map (
+  Q => NEXT_DI_COUNTER(3),
+  D => NEXT_DI_COUNTER_3(3),
+  G => N_34_I,
+  CLR => reset_c);
+\NEXT_DO_COUNTER[0]_Z119\: LDC port map (
+  Q => NEXT_DO_COUNTER(0),
+  D => N_6_I,
+  G => N_84_I,
+  CLR => reset_c);
+\NEXT_DO_COUNTER[1]_Z120\: LDC port map (
+  Q => NEXT_DO_COUNTER(1),
+  D => N_8_I,
+  G => N_84_I,
+  CLR => reset_c);
+\NEXT_DO_COUNTER_RNO[4]\: LUT4 
+generic map(
+  INIT => X"CD30"
+)
+port map (
+I0 => N_60_1,
+I1 => N_4_I_1,
+I2 => DO_COUNTER(0),
+I3 => DO_COUNTER(4),
+O => N_4_I);
+\NEXT_DO_COUNTER_RNO_0[4]\: LUT4 
+generic map(
+  INIT => X"3BBB"
+)
+port map (
+I0 => DO_COUNTER(0),
+I1 => DO_COUNTER(1),
+I2 => DO_COUNTER(2),
+I3 => DO_COUNTER(3),
+O => N_4_I_1);
+\NEXT_VOTED_DATA_SELECTOR_4_0_.M5_U\: LUT4_L 
+generic map(
+  INIT => X"5255"
+)
+port map (
+I0 => NEXT_DO_COUNTER(0),
+I1 => NEXT_DO_COUNTER(1),
+I2 => NEXT_DO_COUNTER(2),
+I3 => NEXT_DO_COUNTER(3),
+LO => NEXT_VOTED_DATA_SELECTOR(0));
+\NEXT_VOTED_DATA_SELECTOR_4_0_.N_73_I\: LUT3_L 
+generic map(
+  INIT => X"C5"
+)
+port map (
+I0 => N_70,
+I1 => NEXT_DO_COUNTER(1),
+I2 => NEXT_DO_COUNTER(4),
+LO => N_73_I);
+\NEXT_VOTED_DATA_SELECTOR_4_0_.M12\: LUT4_L 
+generic map(
+  INIT => X"5583"
+)
+port map (
+I0 => NEXT_DO_COUNTER(1),
+I1 => NEXT_DO_COUNTER(2),
+I2 => NEXT_DO_COUNTER(3),
+I3 => NEXT_DO_COUNTER(4),
+LO => NEXT_VOTED_DATA_SELECTOR(2));
+\NEXT_VOTED_DATA_SELECTOR_4_0_.N_67_I\: LUT3_L 
+generic map(
+  INIT => X"F4"
+)
+port map (
+I0 => N_64,
+I1 => NEXT_DO_COUNTER(3),
+I2 => NEXT_DO_COUNTER(4),
+LO => N_67_I);
+\DO_COUNTING.UN4_DO_READY_INTERNAL_0_A3_1_RNI1C71\: LUT4 
+generic map(
+  INIT => X"FDFF"
+)
+port map (
+I0 => N_60_1,
+I1 => DO_COUNTER(0),
+I2 => DO_COUNTER(4),
+I3 => UN4_DO_READY_INTERNAL_0_A3_1,
+O => N_84_I);
+\NEXT_DO_COUNTER_RNO[1]\: LUT4 
+generic map(
+  INIT => X"1C3C"
+)
+port map (
+I0 => N_60_1,
+I1 => DO_COUNTER(0),
+I2 => DO_COUNTER(1),
+I3 => DO_COUNTER(4),
+O => N_8_I);
+\NEXT_DO_COUNTER_RNO[0]\: LUT4 
+generic map(
+  INIT => X"1333"
+)
+port map (
+I0 => N_60_1,
+I1 => DO_COUNTER(0),
+I2 => DO_COUNTER(1),
+I3 => DO_COUNTER(4),
+O => N_6_I);
+\NEXT_DI_COUNTER_3[3]_Z130\: LUT4 
+generic map(
+  INIT => X"7B80"
+)
+port map (
+I0 => DI_COUNTER(0),
+I1 => DI_COUNTER(1),
+I2 => DI_COUNTER(2),
+I3 => DI_COUNTER(3),
+O => NEXT_DI_COUNTER_3(3));
+UN3_NEXT_DO_COUNTER_AXBXC3_Z131: LUT4 
+generic map(
+  INIT => X"7F80"
+)
+port map (
+I0 => DO_COUNTER(0),
+I1 => DO_COUNTER(1),
+I2 => DO_COUNTER(2),
+I3 => DO_COUNTER(3),
+O => UN3_NEXT_DO_COUNTER_AXBXC3);
+\NEXT_DI_COUNTER_3[1]_Z132\: LUT4 
+generic map(
+  INIT => X"6266"
+)
+port map (
+I0 => DI_COUNTER(0),
+I1 => DI_COUNTER(1),
+I2 => DI_COUNTER(2),
+I3 => DI_COUNTER(3),
+O => NEXT_DI_COUNTER_3(1));
+\NEXT_DI_COUNTER_3[0]_Z133\: LUT4 
+generic map(
+  INIT => X"5155"
+)
+port map (
+I0 => DI_COUNTER(0),
+I1 => DI_COUNTER(1),
+I2 => DI_COUNTER(2),
+I3 => DI_COUNTER(3),
+O => NEXT_DI_COUNTER_3(0));
+\NEXT_VOTED_DATA_SELECTOR_4_0_.M9_0\: LUT4_L 
+generic map(
+  INIT => X"36CC"
+)
+port map (
+I0 => NEXT_DO_COUNTER(0),
+I1 => NEXT_DO_COUNTER(1),
+I2 => NEXT_DO_COUNTER(2),
+I3 => NEXT_DO_COUNTER(3),
+LO => N_70);
+\NEXT_VOTED_DATA_SELECTOR_4_0_.M16_0\: LUT3_L 
+generic map(
+  INIT => X"38"
+)
+port map (
+I0 => NEXT_DO_COUNTER(0),
+I1 => NEXT_DO_COUNTER(1),
+I2 => NEXT_DO_COUNTER(2),
+LO => N_64);
+UN3_NEXT_DO_COUNTER_AXBXC2_Z136: LUT3 
+generic map(
+  INIT => X"78"
+)
+port map (
+I0 => DO_COUNTER(0),
+I1 => DO_COUNTER(1),
+I2 => DO_COUNTER(2),
+O => UN3_NEXT_DO_COUNTER_AXBXC2);
+UN5_NEXT_DI_COUNTER_AXBXC2_Z137: LUT3 
+generic map(
+  INIT => X"78"
+)
+port map (
+I0 => DI_COUNTER(0),
+I1 => DI_COUNTER(1),
+I2 => DI_COUNTER(2),
+O => UN5_NEXT_DI_COUNTER_AXBXC2);
+\DI_COUNTING.UN3_DI_READY_P4_RNIAH22\: LUT2 
+generic map(
+  INIT => X"E"
+)
+port map (
+I0 => UN3_DI_READY,
+I1 => di_ready_c,
+O => N_34_I);
+\DO_COUNTING.UN4_DO_READY_INTERNAL_0_A3_1\: LUT2 
+generic map(
+  INIT => X"1"
+)
+port map (
+I0 => DO_COUNTER(1),
+I1 => DO_READY_C_1,
+O => UN4_DO_READY_INTERNAL_0_A3_1);
+\NEXT_DO_COUNTER_3_I_A3_1[4]\: LUT2 
+generic map(
+  INIT => X"1"
+)
+port map (
+I0 => DO_COUNTER(2),
+I1 => DO_COUNTER(3),
+O => N_60_1);
+\DI_COUNTING.UN3_DI_READY_P4\: LUT4 
+generic map(
+  INIT => X"FFFE"
+)
+port map (
+I0 => DI_COUNTER(0),
+I1 => DI_COUNTER(1),
+I2 => DI_COUNTER(2),
+I3 => DI_COUNTER(3),
+O => UN3_DI_READY);
+II_GND: GND port map (
+  G => NN_1);
+II_VCC: VCC port map (
+  P => NN_2);
+do_ready_c <= DO_READY_C_1;
+end beh;
+
+--
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+library UNISIM;
+use UNISIM.VCOMPONENTS.all;
+
+entity onebitvoter is
+port(
+mp_data_c : in std_logic_vector(3 downto 0);
+status : out std_logic_vector(2 downto 0);
+reset_c :  in std_logic;
+reset_c_i :  in std_logic;
+voted_data_bit :  out std_logic;
+clk_c :  in std_logic);
+end onebitvoter;
+
+architecture beh of onebitvoter is
+signal LAST_STATUS : std_logic_vector(2 downto 0);
+signal LAST_STATUS_0 : std_logic_vector(2 downto 0);
+signal LAST_STATUS_0_1 : std_logic_vector(1 downto 0);
+signal STATUS_INTERNAL_I : std_logic_vector(1 to 1);
+signal STATUS_INTERNAL : std_logic_vector(2 downto 0);
+signal EXTENDED_B : std_logic_vector(0 to 0);
+signal EXTENDED_C : std_logic_vector(0 to 0);
+signal EXTENDED_D : std_logic_vector(0 to 0);
+signal STATUS_INTERNAL_OR_0_1 : std_logic_vector(0 to 0);
+signal EXTENDED_A : std_logic_vector(0 to 0);
+signal STATE_C : std_logic ;
+signal N_70_I : std_logic ;
+signal STATE_B : std_logic ;
+signal N_69_I : std_logic ;
+signal STATE_A : std_logic ;
+signal N_68_I : std_logic ;
+signal STATE_D : std_logic ;
+signal N_71_I : std_logic ;
+signal G0_1 : std_logic ;
+signal G0_1_0 : std_logic ;
+signal STATE_A_2 : std_logic ;
+signal STATE_D_1 : std_logic ;
+signal STATUS_INTERNAL_1_REP1 : std_logic ;
+signal VOTED_DATA : std_logic ;
+signal VOTED_DATA23 : std_logic ;
+signal N_30 : std_logic ;
+signal UN1_NUMBER_OF_WINNING_VOTES_2 : std_logic ;
+signal NN_1 : std_logic ;
+signal UN1_SUM_OF_INPUTS_INV_3 : std_logic ;
+signal UN1_SUM_OF_INPUTS_2_U : std_logic ;
+signal UN1_STATE_C : std_logic ;
+signal UN1_STATE_B : std_logic ;
+signal N_29 : std_logic ;
+signal UN1_SUM_OF_INPUTS_2_0_AM : std_logic ;
+signal UN1_SUM_OF_INPUTS_2_0_BM : std_logic ;
+signal N_35 : std_logic ;
+signal N_58 : std_logic ;
+signal N_36 : std_logic ;
+signal UN1_SUM_OF_INPUTS_INV_2 : std_logic ;
+signal UN1_SUM_OF_INPUTS_INV_2_1 : std_logic ;
+signal UN1_SUM_OF_INPUTS_INV_1_0 : std_logic ;
+signal N_23 : std_logic ;
+signal N_22 : std_logic ;
+signal NN_2 : std_logic ;
+begin
+STATE_C_Z73: FD 
+generic map(
+  INIT => '1'
+)
+port map (
+Q => STATE_C,
+D => N_70_I,
+C => clk_c);
+STATE_B_Z74: FD 
+generic map(
+  INIT => '1'
+)
+port map (
+Q => STATE_B,
+D => N_69_I,
+C => clk_c);
+STATE_A_Z75: FD 
+generic map(
+  INIT => '1'
+)
+port map (
+Q => STATE_A,
+D => N_68_I,
+C => clk_c);
+\LAST_STATUS[2]_Z76\: FD 
+generic map(
+  INIT => '0'
+)
+port map (
+Q => LAST_STATUS(2),
+D => LAST_STATUS_0(2),
+C => clk_c);
+\LAST_STATUS[1]_Z77\: FD 
+generic map(
+  INIT => '0'
+)
+port map (
+Q => LAST_STATUS(1),
+D => LAST_STATUS_0(1),
+C => clk_c);
+\LAST_STATUS[0]_Z78\: FD 
+generic map(
+  INIT => '0'
+)
+port map (
+Q => LAST_STATUS(0),
+D => LAST_STATUS_0(0),
+C => clk_c);
+STATE_D_Z79: FD 
+generic map(
+  INIT => '1'
+)
+port map (
+Q => STATE_D,
+D => N_71_I,
+C => clk_c);
+\STATUS_RNO[1]\: LUT4_L 
+generic map(
+  INIT => X"177F"
+)
+port map (
+I0 => G0_1,
+I1 => G0_1_0,
+I2 => STATE_A_2,
+I3 => STATE_D_1,
+LO => STATUS_INTERNAL_1_REP1);
+\STATUS_INTERNAL_I[1]_Z81\: INV port map (
+I => LAST_STATUS_0_1(1),
+O => STATUS_INTERNAL_I(1));
+Y: FDE port map (
+Q => voted_data_bit,
+D => VOTED_DATA,
+C => clk_c,
+CE => reset_c_i);
+\STATUS[0]_Z83\: FDE port map (
+Q => status(0),
+D => STATUS_INTERNAL(0),
+C => clk_c,
+CE => reset_c_i);
+\STATUS[1]_Z84\: FDE port map (
+Q => status(1),
+D => STATUS_INTERNAL_1_REP1,
+C => clk_c,
+CE => reset_c_i);
+\STATUS[2]_Z85\: FDE port map (
+Q => status(2),
+D => STATUS_INTERNAL(2),
+C => clk_c,
+CE => reset_c_i);
+\STATUS_INTERNAL[2]_Z86\: LDCP_1 port map (
+Q => STATUS_INTERNAL(2),
+D => VOTED_DATA23,
+G => N_30,
+CLR => STATUS_INTERNAL_I(1),
+PRE => UN1_NUMBER_OF_WINNING_VOTES_2);
+VOTED_DATA_Z87: LDCP port map (
+Q => VOTED_DATA,
+D => NN_1,
+G => NN_1,
+CLR => UN1_SUM_OF_INPUTS_INV_3,
+PRE => UN1_SUM_OF_INPUTS_2_U);
+STATE_C_RNINFN3: LUT3 
+generic map(
+  INIT => X"82"
+)
+port map (
+I0 => STATE_C,
+I1 => VOTED_DATA,
+I2 => mp_data_c(2),
+O => G0_1);
+STATE_B_RNILFN3: LUT3 
+generic map(
+  INIT => X"82"
+)
+port map (
+I0 => STATE_B,
+I1 => VOTED_DATA,
+I2 => mp_data_c(1),
+O => G0_1_0);
+STATE_B_RNIOUTE: LUT4 
+generic map(
+  INIT => X"177F"
+)
+port map (
+I0 => G0_1,
+I1 => G0_1_0,
+I2 => STATE_A_2,
+I3 => STATE_D_1,
+O => LAST_STATUS_0_1(1));
+STATE_D_RNIPFN3: LUT3 
+generic map(
+  INIT => X"84"
+)
+port map (
+I0 => mp_data_c(3),
+I1 => STATE_D,
+I2 => VOTED_DATA,
+O => STATE_D_1);
+STATE_A_RNIJFN3: LUT3 
+generic map(
+  INIT => X"84"
+)
+port map (
+I0 => mp_data_c(0),
+I1 => STATE_A,
+I2 => VOTED_DATA,
+O => STATE_A_2);
+VOTED_DATA_RNI5PB2: LUT2 
+generic map(
+  INIT => X"6"
+)
+port map (
+I0 => mp_data_c(2),
+I1 => VOTED_DATA,
+O => UN1_STATE_C);
+VOTED_DATA_RNI4PB2: LUT2 
+generic map(
+  INIT => X"6"
+)
+port map (
+I0 => mp_data_c(1),
+I1 => VOTED_DATA,
+O => UN1_STATE_B);
+\STATUS_INTERNAL[0]_Z95\: LUT3_L 
+generic map(
+  INIT => X"13"
+)
+port map (
+I0 => N_29,
+I1 => N_30,
+I2 => LAST_STATUS_0_1(0),
+LO => STATUS_INTERNAL(0));
+STATE_D_RNO: LUT2_L 
+generic map(
+  INIT => X"E"
+)
+port map (
+I0 => STATE_D_1,
+I1 => reset_c,
+LO => N_71_I);
+\LAST_STATUS_0[0]_Z97\: LUT4_L 
+generic map(
+  INIT => X"0013"
+)
+port map (
+I0 => N_29,
+I1 => N_30,
+I2 => LAST_STATUS_0_1(0),
+I3 => reset_c,
+LO => LAST_STATUS_0(0));
+\LAST_STATUS_0[1]_Z98\: LUT2_L 
+generic map(
+  INIT => X"2"
+)
+port map (
+I0 => LAST_STATUS_0_1(1),
+I1 => reset_c,
+LO => LAST_STATUS_0(1));
+\LAST_STATUS_0[2]_Z99\: LUT2_L 
+generic map(
+  INIT => X"2"
+)
+port map (
+I0 => STATUS_INTERNAL(2),
+I1 => reset_c,
+LO => LAST_STATUS_0(2));
+STATE_A_RNO: LUT2_L 
+generic map(
+  INIT => X"E"
+)
+port map (
+I0 => STATE_A_2,
+I1 => reset_c,
+LO => N_68_I);
+STATE_B_RNO: LUT2_L 
+generic map(
+  INIT => X"E"
+)
+port map (
+I0 => G0_1_0,
+I1 => reset_c,
+LO => N_69_I);
+STATE_C_RNO: LUT2_L 
+generic map(
+  INIT => X"E"
+)
+port map (
+I0 => G0_1,
+I1 => reset_c,
+LO => N_70_I);
+UN1_SUM_OF_INPUTS_2_0: MUXF5 port map (
+I0 => UN1_SUM_OF_INPUTS_2_0_AM,
+I1 => UN1_SUM_OF_INPUTS_2_0_BM,
+S => N_35,
+O => N_58);
+UN1_SUM_OF_INPUTS_2_U_Z104: LUT3 
+generic map(
+  INIT => X"E4"
+)
+port map (
+I0 => N_36,
+I1 => N_58,
+I2 => UN1_SUM_OF_INPUTS_INV_2,
+O => UN1_SUM_OF_INPUTS_2_U);
+UN1_SUM_OF_INPUTS_INV_3_Z105: LUT2 
+generic map(
+  INIT => X"4"
+)
+port map (
+I0 => N_36,
+I1 => UN1_SUM_OF_INPUTS_INV_2,
+O => UN1_SUM_OF_INPUTS_INV_3);
+UN1_NUMBER_OF_WINNING_VOTES_2_Z106: LUT2 
+generic map(
+  INIT => X"1"
+)
+port map (
+I0 => N_29,
+I1 => N_30,
+O => UN1_NUMBER_OF_WINNING_VOTES_2);
+UN1_SUM_OF_INPUTS_INV_2_Z107: LUT4 
+generic map(
+  INIT => X"5702"
+)
+port map (
+I0 => N_35,
+I1 => LAST_STATUS(1),
+I2 => LAST_STATUS(2),
+I3 => UN1_SUM_OF_INPUTS_INV_2_1,
+O => UN1_SUM_OF_INPUTS_INV_2);
+UN1_SUM_OF_INPUTS_INV_2_1_Z108: LUT4 
+generic map(
+  INIT => X"7F00"
+)
+port map (
+I0 => EXTENDED_B(0),
+I1 => EXTENDED_C(0),
+I2 => EXTENDED_D(0),
+I3 => UN1_SUM_OF_INPUTS_INV_1_0,
+O => UN1_SUM_OF_INPUTS_INV_2_1);
+VOTED_DATA23_RNIBSFG: LUT4 
+generic map(
+  INIT => X"0069"
+)
+port map (
+I0 => STATE_A_2,
+I1 => STATE_D_1,
+I2 => STATUS_INTERNAL_OR_0_1(0),
+I3 => VOTED_DATA23,
+O => LAST_STATUS_0_1(0));
+\UN8_NUMBER_OF_WINNING_VOTES_2.SUM1_0\: LUT4 
+generic map(
+  INIT => X"7EE8"
+)
+port map (
+I0 => G0_1,
+I1 => G0_1_0,
+I2 => STATE_A_2,
+I3 => STATE_D_1,
+O => N_29);
+\UN8_NUMBER_OF_WINNING_VOTES_2.CO1\: LUT4 
+generic map(
+  INIT => X"8000"
+)
+port map (
+I0 => G0_1,
+I1 => G0_1_0,
+I2 => STATE_A_2,
+I3 => STATE_D_1,
+O => N_30);
+UN1_SUM_OF_INPUTS_2_0_BM_Z112: LUT3 
+generic map(
+  INIT => X"04"
+)
+port map (
+I0 => LAST_STATUS(0),
+I1 => LAST_STATUS(1),
+I2 => LAST_STATUS(2),
+O => UN1_SUM_OF_INPUTS_2_0_BM);
+UN1_SUM_OF_INPUTS_2_0_AM_Z113: LUT4 
+generic map(
+  INIT => X"C800"
+)
+port map (
+I0 => EXTENDED_B(0),
+I1 => EXTENDED_C(0),
+I2 => EXTENDED_D(0),
+I3 => VOTED_DATA23,
+O => UN1_SUM_OF_INPUTS_2_0_AM);
+\UN8_SUM_OF_INPUTS_2.SUM1_0\: LUT4 
+generic map(
+  INIT => X"7EE8"
+)
+port map (
+I0 => EXTENDED_A(0),
+I1 => EXTENDED_B(0),
+I2 => EXTENDED_C(0),
+I3 => EXTENDED_D(0),
+O => N_36);
+\UN8_SUM_OF_INPUTS_2.SUM0_0\: LUT4 
+generic map(
+  INIT => X"6996"
+)
+port map (
+I0 => EXTENDED_A(0),
+I1 => EXTENDED_B(0),
+I2 => EXTENDED_C(0),
+I3 => EXTENDED_D(0),
+O => N_35);
+\N_26_1.SUM0_0_0\: LUT4 
+generic map(
+  INIT => X"0AC6"
+)
+port map (
+I0 => STATE_B,
+I1 => STATE_C,
+I2 => UN1_STATE_B,
+I3 => UN1_STATE_C,
+O => STATUS_INTERNAL_OR_0_1(0));
+UN1_SUM_OF_INPUTS_INV_1_0_Z117: LUT3 
+generic map(
+  INIT => X"07"
+)
+port map (
+I0 => LAST_STATUS(0),
+I1 => LAST_STATUS(1),
+I2 => LAST_STATUS(2),
+O => UN1_SUM_OF_INPUTS_INV_1_0);
+VOTED_DATA23_Z118: LUT3 
+generic map(
+  INIT => X"01"
+)
+port map (
+I0 => LAST_STATUS(0),
+I1 => LAST_STATUS(1),
+I2 => LAST_STATUS(2),
+O => VOTED_DATA23);
+\EXTENDED_A[0]_Z119\: LUT2 
+generic map(
+  INIT => X"8"
+)
+port map (
+I0 => mp_data_c(0),
+I1 => STATE_A,
+O => EXTENDED_A(0));
+\EXTENDED_B[0]_Z120\: LUT2 
+generic map(
+  INIT => X"8"
+)
+port map (
+I0 => mp_data_c(1),
+I1 => STATE_B,
+O => EXTENDED_B(0));
+\EXTENDED_C[0]_Z121\: LUT2 
+generic map(
+  INIT => X"8"
+)
+port map (
+I0 => mp_data_c(2),
+I1 => STATE_C,
+O => EXTENDED_C(0));
+\EXTENDED_D[0]_Z122\: LUT2 
+generic map(
+  INIT => X"8"
+)
+port map (
+I0 => mp_data_c(3),
+I1 => STATE_D,
+O => EXTENDED_D(0));
+II_GND: GND port map (
+G => NN_1);
+II_VCC: VCC port map (
+P => NN_2);
+end beh;
+
+--
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+library UNISIM;
+use UNISIM.VCOMPONENTS.all;
+
+entity liaison is
+port(
+clk :  in std_logic;
+reset :  in std_logic;
+di_ready :  in std_logic;
+mp_data : in std_logic_vector(3 downto 0);
+do_ready :  out std_logic;
+voted_data :  out std_logic);
+end liaison;
+
+architecture beh of liaison is
+signal STATUS : std_logic_vector(2 downto 0);
+signal CONTROL_SIGNALS : std_logic_vector(8 downto 1);
+signal VOTED_DATA_SELECTOR : std_logic_vector(4 downto 0);
+signal VOTED_DATA_OUT : std_logic_vector(7 downto 0);
+signal STATUS_OUT : std_logic_vector(2 downto 0);
+signal MP_DATA_C : std_logic_vector(3 downto 0);
+signal VOTED_DATA_BIT : std_logic ;
+signal NN_1 : std_logic ;
+signal NN_2 : std_logic ;
+signal N_58 : std_logic ;
+signal N_62 : std_logic ;
+signal N_48 : std_logic ;
+signal N_49 : std_logic ;
+signal N_59 : std_logic ;
+signal N_43 : std_logic ;
+signal CLK_C : std_logic ;
+signal RESET_C : std_logic ;
+signal DI_READY_C : std_logic ;
+signal DO_READY_C : std_logic ;
+signal VOTED_DATA_C : std_logic ;
+signal RESET_C_I : std_logic ;
+signal VOTED_DATA_18_0_0_M3_0_AM : std_logic ;
+signal VOTED_DATA_18_0_0_M3_0_BM : std_logic ;
+signal VOTED_DATA_18_0_0_M3_1_AM : std_logic ;
+signal VOTED_DATA_18_0_0_M3_1_BM : std_logic ;
+signal CLK_IBUF_ISO : std_logic ;
+signal NN_3 : std_logic ;
+component onebitvoter
+port(
+mp_data_c : in std_logic_vector(3 downto 0);
+status : out std_logic_vector(2 downto 0);
+reset_c :  in std_logic;
+reset_c_i :  in std_logic;
+voted_data_bit :  out std_logic;
+clk_c :  in std_logic  );
+end component;
+component controller
+port(
+voted_data_selector : out std_logic_vector(4 downto 0);
+control_signals : out std_logic_vector(8 downto 1);
+di_ready_c :  in std_logic;
+reset_c :  in std_logic;
+clk_c :  in std_logic;
+do_ready_c :  out std_logic  );
+end component;
+component registers
+port(
+status : in std_logic_vector(2 downto 0);
+status_out : out std_logic_vector(2 downto 0);
+control_signals : in std_logic_vector(8 downto 1);
+voted_data_out : out std_logic_vector(7 downto 0);
+do_ready_c :  in std_logic;
+reset_c :  in std_logic;
+clk_c :  in std_logic;
+voted_data_bit :  in std_logic  );
+end component;
+begin
+CLK_IBUF: BUFG port map (
+I => CLK_IBUF_ISO,
+O => CLK_C);
+CLK_IBUF_ISO_Z69: IBUFG port map (
+O => CLK_IBUF_ISO,
+I => clk);
+RESET_IBUF_RNI8R8: INV port map (
+I => RESET_C,
+O => RESET_C_I);
+VOTED_DATA_18_0_0: LUT4 
+generic map(
+  INIT => X"CCCE"
+)
+port map (
+I0 => N_58,
+I1 => N_62,
+I2 => VOTED_DATA_SELECTOR(3),
+I3 => VOTED_DATA_SELECTOR(4),
+O => VOTED_DATA_C);
+VOTED_DATA_18_0_0_A3: LUT4 
+generic map(
+  INIT => X"0020"
+)
+port map (
+I0 => N_59,
+I1 => VOTED_DATA_SELECTOR(2),
+I2 => VOTED_DATA_SELECTOR(3),
+I3 => VOTED_DATA_SELECTOR(4),
+O => N_62);
+VOTED_DATA_18_0_0_M3: MUXF6 port map (
+I0 => N_49,
+I1 => N_48,
+S => VOTED_DATA_SELECTOR(2),
+O => N_58);
+VOTED_DATA_18_0_0_O3: LUT4 
+generic map(
+  INIT => X"0CAA"
+)
+port map (
+I0 => N_43,
+I1 => STATUS_OUT(2),
+I2 => VOTED_DATA_SELECTOR(0),
+I3 => VOTED_DATA_SELECTOR(1),
+O => N_59);
+VOTED_DATA_18_0_0_M3_1: MUXF5 port map (
+I0 => VOTED_DATA_18_0_0_M3_1_AM,
+I1 => VOTED_DATA_18_0_0_M3_1_BM,
+S => VOTED_DATA_SELECTOR(0),
+O => N_49);
+VOTED_DATA_18_0_0_M3_1_BM_Z76: LUT3 
+generic map(
+  INIT => X"CA"
+)
+port map (
+I0 => VOTED_DATA_OUT(1),
+I1 => VOTED_DATA_OUT(3),
+I2 => VOTED_DATA_SELECTOR(1),
+O => VOTED_DATA_18_0_0_M3_1_BM);
+VOTED_DATA_18_0_0_M3_1_AM_Z77: LUT3 
+generic map(
+  INIT => X"CA"
+)
+port map (
+I0 => VOTED_DATA_OUT(0),
+I1 => VOTED_DATA_OUT(2),
+I2 => VOTED_DATA_SELECTOR(1),
+O => VOTED_DATA_18_0_0_M3_1_AM);
+VOTED_DATA_18_0_0_M3_0: MUXF5 port map (
+I0 => VOTED_DATA_18_0_0_M3_0_AM,
+I1 => VOTED_DATA_18_0_0_M3_0_BM,
+S => VOTED_DATA_SELECTOR(0),
+O => N_48);
+VOTED_DATA_18_0_0_M3_0_BM_Z79: LUT3 
+generic map(
+  INIT => X"CA"
+)
+port map (
+I0 => VOTED_DATA_OUT(5),
+I1 => VOTED_DATA_OUT(7),
+I2 => VOTED_DATA_SELECTOR(1),
+O => VOTED_DATA_18_0_0_M3_0_BM);
+VOTED_DATA_18_0_0_M3_0_AM_Z80: LUT3 
+generic map(
+  INIT => X"CA"
+)
+port map (
+I0 => VOTED_DATA_OUT(4),
+I1 => VOTED_DATA_OUT(6),
+I2 => VOTED_DATA_SELECTOR(1),
+O => VOTED_DATA_18_0_0_M3_0_AM);
+VOTED_DATA_18_0_0_M3_2: LUT3 
+generic map(
+  INIT => X"CA"
+)
+port map (
+I0 => STATUS_OUT(0),
+I1 => STATUS_OUT(1),
+I2 => VOTED_DATA_SELECTOR(0),
+O => N_43);
+VOTED_DATA_OBUF: OBUF port map (
+O => voted_data,
+I => VOTED_DATA_C);
+DO_READY_OBUF: OBUF port map (
+O => do_ready,
+I => DO_READY_C);
+\MP_DATA_IBUF[3]\: IBUF port map (
+O => MP_DATA_C(3),
+I => mp_data(3));
+\MP_DATA_IBUF[2]\: IBUF port map (
+O => MP_DATA_C(2),
+I => mp_data(2));
+\MP_DATA_IBUF[1]\: IBUF port map (
+O => MP_DATA_C(1),
+I => mp_data(1));
+\MP_DATA_IBUF[0]\: IBUF port map (
+O => MP_DATA_C(0),
+I => mp_data(0));
+DI_READY_IBUF: IBUF port map (
+O => DI_READY_C,
+I => di_ready);
+RESET_IBUF: IBUF port map (
+O => RESET_C,
+I => reset);
+II_ONEBITVOTER: onebitvoter port map (
+mp_data_c(0) => MP_DATA_C(0),
+mp_data_c(1) => MP_DATA_C(1),
+mp_data_c(2) => MP_DATA_C(2),
+mp_data_c(3) => MP_DATA_C(3),
+status(0) => STATUS(0),
+status(1) => STATUS(1),
+status(2) => STATUS(2),
+reset_c => RESET_C,
+reset_c_i => RESET_C_I,
+voted_data_bit => VOTED_DATA_BIT,
+clk_c => CLK_C);
+II_CONTROLLER: controller port map (
+voted_data_selector(0) => VOTED_DATA_SELECTOR(0),
+voted_data_selector(1) => VOTED_DATA_SELECTOR(1),
+voted_data_selector(2) => VOTED_DATA_SELECTOR(2),
+voted_data_selector(3) => VOTED_DATA_SELECTOR(3),
+voted_data_selector(4) => VOTED_DATA_SELECTOR(4),
+control_signals(1) => CONTROL_SIGNALS(1),
+control_signals(2) => CONTROL_SIGNALS(2),
+control_signals(3) => CONTROL_SIGNALS(3),
+control_signals(4) => CONTROL_SIGNALS(4),
+control_signals(5) => CONTROL_SIGNALS(5),
+control_signals(6) => CONTROL_SIGNALS(6),
+control_signals(7) => CONTROL_SIGNALS(7),
+control_signals(8) => CONTROL_SIGNALS(8),
+di_ready_c => DI_READY_C,
+reset_c => RESET_C,
+clk_c => CLK_C,
+do_ready_c => DO_READY_C);
+II_REGISTERS: registers port map (
+status(0) => STATUS(0),
+status(1) => STATUS(1),
+status(2) => STATUS(2),
+status_out(0) => STATUS_OUT(0),
+status_out(1) => STATUS_OUT(1),
+status_out(2) => STATUS_OUT(2),
+control_signals(1) => CONTROL_SIGNALS(1),
+control_signals(2) => CONTROL_SIGNALS(2),
+control_signals(3) => CONTROL_SIGNALS(3),
+control_signals(4) => CONTROL_SIGNALS(4),
+control_signals(5) => CONTROL_SIGNALS(5),
+control_signals(6) => CONTROL_SIGNALS(6),
+control_signals(7) => CONTROL_SIGNALS(7),
+control_signals(8) => CONTROL_SIGNALS(8),
+voted_data_out(0) => VOTED_DATA_OUT(0),
+voted_data_out(1) => VOTED_DATA_OUT(1),
+voted_data_out(2) => VOTED_DATA_OUT(2),
+voted_data_out(3) => VOTED_DATA_OUT(3),
+voted_data_out(4) => VOTED_DATA_OUT(4),
+voted_data_out(5) => VOTED_DATA_OUT(5),
+voted_data_out(6) => VOTED_DATA_OUT(6),
+voted_data_out(7) => VOTED_DATA_OUT(7),
+do_ready_c => DO_READY_C,
+reset_c => RESET_C,
+clk_c => CLK_C,
+voted_data_bit => VOTED_DATA_BIT);
+II_GND: GND port map (
+G => NN_1);
+II_VCC: VCC port map (
+P => NN_3);
+end beh;
+

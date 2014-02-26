@@ -153,10 +153,10 @@ unsigned( extended_vote_a ) +
 end process;
 
 -- Calculate the internal status field based on the inputs matched with the voted data
-process (number_of_winning_votes)
+process (number_of_winning_votes, last_status)
 begin
 if(number_of_winning_votes = "010" and last_status = "000") then
-status_internal <= "111";
+	status_internal <= "111";
 else
      case number_of_winning_votes is
          when "100"=>
