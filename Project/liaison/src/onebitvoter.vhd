@@ -83,7 +83,7 @@ begin
                 when "011" =>
                     voted_data <= '1';
                 when "010" =>
-                    voted_data <= '1'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
+                    voted_data <= '0'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
                 when "001" =>
                     voted_data <= '0';
                 when "000" =>
@@ -107,9 +107,9 @@ when others =>
                 when "010" =>
                     voted_data <= '1';
                 when "001" =>
-                    voted_data <= '1'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
+                    voted_data <= '0'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
                 when "000" =>
-voted_data <= '0';
+					voted_data <= '0';
 when others =>
             end case;
 when others =>
