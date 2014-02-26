@@ -32,10 +32,18 @@ architecture Behavioral of onebitvoter is
     signal state_c: STD_LOGIC := '1';
     signal state_d: STD_LOGIC := '1';
     signal status_internal: STD_LOGIC_VECTOR(2 downto 0);
-signal last_status: STD_LOGIC_VECTOR(2 downto 0) := "000";
+	signal last_status: STD_LOGIC_VECTOR(2 downto 0) := "000";
     signal voted_data: STD_LOGIC;
     signal sum_of_inputs: STD_LOGIC_VECTOR(2 downto 0);
-signal number_of_winning_votes: STD_LOGIC_VECTOR(2 downto 0);
+	signal number_of_winning_votes: STD_LOGIC_VECTOR(2 downto 0);
+	signal extended_a: STD_LOGIC_VECTOR(2 downto 0);
+    signal extended_b: STD_LOGIC_VECTOR(2 downto 0);
+    signal extended_c: STD_LOGIC_VECTOR(2 downto 0);
+    signal extended_d: STD_LOGIC_VECTOR(2 downto 0);
+    signal extended_vote_a: STD_LOGIC_VECTOR(2 downto 0);
+    signal extended_vote_b: STD_LOGIC_VECTOR(2 downto 0);
+    signal extended_vote_c: STD_LOGIC_VECTOR(2 downto 0);
+    signal extended_vote_d: STD_LOGIC_VECTOR(2 downto 0);
     
 begin
     
@@ -61,19 +69,28 @@ last_status <= status_internal;
     end if;
 end process;
 
--- Calculate the sum of the inputs from all the non broken controllers
+
 process (a, b, c, d, state_a, state_b, state_c, state_d)
 begin
+    extended_a <= "00"&(a and state_a);
+    extended_b <= "00"&(b and state_b);
+    extended_c <= "00"&(c and state_c);
+    extended_d <= "00"&(d and state_d);
+end process;
+
+-- Calculate the sum of the inputs from all the non broken controllers
+process (extended_a, extended_b, extended_c, extended_d)
+begin
     sum_of_inputs <= std_logic_vector(
-unsigned(std_logic_vector("00"&(a and state_a))) +
-unsigned(std_logic_vector("00"&(b and state_b))) +
-unsigned(std_logic_vector("00"&(c and state_c))) +
-unsigned(std_logic_vector("00"&(d and state_d))));
+unsigned(extended_a) +
+unsigned(extended_b) +
+unsigned(extended_c) +
+unsigned(extended_d));
 end process;
 
 -- Set the voted data based on the status and the sum of the input data
 -- This is the core of the state machine driving the system
-process (sum_of_inputs)
+process (sum_of_inputs, last_status)
 begin
     case last_status is
         when "000" =>
@@ -83,7 +100,7 @@ begin
                 when "011" =>
                     voted_data <= '1';
                 when "010" =>
-                    voted_data <= '0'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
+                    voted_data <= '1'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
                 when "001" =>
                     voted_data <= '0';
                 when "000" =>
@@ -100,30 +117,38 @@ when others =>
                     voted_data <= '0';
                 when "000" =>
 voted_data <= '0';
-when others =>					                      
+when others =>
             end case;
         when "010" =>
             case sum_of_inputs is
-                when "010" =>
+                when "011" =>
                     voted_data <= '1';
+                when "010" =>
+                    voted_data <= '1'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
                 when "001" =>
-                    voted_data <= '0'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
-                when "000" =>
-					voted_data <= '0';
+voted_data <= '0';
 when others =>
             end case;
 when others =>
     end case;
 end process;
 
+process(voted_data, a, b, c, d, state_a, state_b, state_c, state_d)
+begin
+extended_vote_a <= "00"&(state_a and (voted_data xnor a));
+extended_vote_b <= "00"&(state_b and (voted_data xnor b));
+extended_vote_c <= "00"&(state_c and (voted_data xnor c));
+extended_vote_d <= "00"&(state_d and (voted_data xnor d));
+end process;
+
 -- Calculate the number of votes that matched the vote outcome which came from an input with state '1'
-process(voted_data, a, b, c, d)
+process(extended_vote_a, extended_vote_b, extended_vote_c, extended_vote_d)
 begin
 number_of_winning_votes <= std_logic_vector(
-unsigned( std_logic_vector("00"&(state_a and (voted_data xnor a)))) +
-            unsigned( std_logic_vector("00"&(state_b and (voted_data xnor b)))) +
-            unsigned( std_logic_vector("00"&(state_c and (voted_data xnor c)))) +
-            unsigned( std_logic_vector("00"&(state_d and (voted_data xnor d))))
+unsigned( extended_vote_a ) +
+            unsigned( extended_vote_b ) +
+            unsigned( extended_vote_c ) +
+            unsigned( extended_vote_d )
 ); --Do I need to sub 1?
 end process;
 
