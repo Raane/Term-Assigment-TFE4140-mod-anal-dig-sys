@@ -167,7 +167,7 @@ begin
 	reset <= '0';
 	wait for clock_period*10;
 	
-	-- TEST ENDS HEREbn 
+	-- TEST ENDS HERE 
 		
 	end process;
 end TB_ARCHITECTURE;
