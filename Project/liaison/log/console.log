@@ -1,9 +1,9 @@
+# Design: Design liaison already active.
 # ELBREAD: Elaboration process.
-# ELBREAD: Error: Configuration testbench_for_controller (library liaison) not found.
+# ELBREAD: Error: The contents of entity 'liaison.ecc' instantiated in architecture 'liaison:liaison' differ from the contents available during the compilation of this architecture.
 # ELBREAD: Error: Elaboration process completed with errors.
 # Design: Error: Elaboration failed
-# Design Explorer: Shortcut to "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\liaison.aws" design added.
-acom -work liaison -2002  $dsn/src/liaison.vhd $dsn/src/onebitvoter.vhd $dsn/src/ecc.vhd $dsn/src/registers.vhd $dsn/src/controller.vhd $dsn/src/testbench/controller_tb.vhd
+acom -work liaison -2002  $dsn/src/liaison.vhd $dsn/src/onebitvoter.vhd $dsn/src/ecc.vhd $dsn/src/registers.vhd $dsn/src/controller.vhd $dsn/src/testbench/controller_tb.vhd $dsn/src/testbench/liaison_tb.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
 # File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
@@ -15,7 +15,6 @@ acom -work liaison -2002  $dsn/src/liaison.vhd $dsn/src/onebitvoter.vhd $dsn/src
 # File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ecc.vhd
 # Compile Entity "ECC"
 # Compile Architecture "ECC" of Entity "ECC"
-# Warning: DAGGEN_0002: ecc.vhd : (28, 0): Process has no effect - no sequential statements.
 # File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd
 # Compile Entity "registers"
 # Compile Architecture "registers" of Entity "registers"
@@ -26,78 +25,11 @@ acom -work liaison -2002  $dsn/src/liaison.vhd $dsn/src/onebitvoter.vhd $dsn/src
 # Compile Entity "controller_tb"
 # Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
 # Compile Configuration "TESTBENCH_FOR_controller"
-# Error: VLM_0026: Cannot write data to the MGF file - possibly no space on disk or MGF file corrupted. In the second case, please use command vdel -all to empty library "liaison".
-# Error: DAGGEN_0700: Fatal error : INTERNAL CODE GENERATOR ERROR
-#  (when resetting code generator for package (null))
-# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR (compiled file "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\testbench\controller_tb.vhd" - global process)
-# Compile failure 3 Errors 1 Warnings  Analysis time :  0.4 [s]
-acom -work liaison -2002  $dsn/src/ECC.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd
-# Compile Entity "ECC"
-# Compile Architecture "ECC" of Entity "ECC"
-# Warning: DAGGEN_0002: ECC.vhd : (28, 0): Process has no effect - no sequential statements.
-# Compile success 0 Errors 1 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/onebitvoter.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd
-# Compile Entity "onebitvoter"
-# Compile Architecture "Behavioral" of Entity "onebitvoter"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-acom -work liaison -2002  $dsn/src/registers.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd
-# Compile Entity "registers"
-# Compile Architecture "registers" of Entity "registers"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/ECC.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd
-# Compile Entity "ECC"
-# Compile Architecture "ECC" of Entity "ECC"
-# Warning: DAGGEN_0002: ECC.vhd : (28, 0): Process has no effect - no sequential statements.
-# Compile success 0 Errors 1 Warnings  Analysis time :  62.0 [ms]
-acom -work liaison -2002  $dsn/src/ECC.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd
-# Compile Entity "ECC"
-# Compile Architecture "ECC" of Entity "ECC"
-# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\testbench\liaison_tb.vhd
 # Compile Entity "liaison_tb"
 # Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
 # Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
 # Design: Design liaison already active.
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
@@ -122,14 +54,14 @@ asim -O5 +access +r +m+testbench_for_liaison testbench_for_liaison
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2435 kB (elbread=1023 elab2=1062 kernel=348 sdf=0)
+# Allocation: Simulator allocated 2439 kB (elbread=1023 elab2=1067 kernel=348 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:08, 26. februar 2014
+#  03:44, 26. februar 2014
 #  Simulation has been initialized
 #  Selected Top-Level: testbench_for_liaison
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
+# 18 signal(s) traced.
+run 500 ns
+# KERNEL: stopped at time: 500 ns
 acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
@@ -156,124 +88,13 @@ restart
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2435 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
+# Allocation: Simulator allocated 2439 kB (elbread=1023 elab2=1067 kernel=348 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:11, 26. februar 2014
+#  03:45, 26. februar 2014
 #  Simulation has been initialized
 #  Selected Top-Level: testbench_for_liaison
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-# 17 signal(s) traced.
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2435 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:11, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2435 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:13, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:15, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Error: COMP96_0015: liaison_TB.vhd : (46, 3): ';' expected.
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+run 500 ns
+# KERNEL: stopped at time: 500 ns
 acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
@@ -300,121 +121,15 @@ restart
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
+# Allocation: Simulator allocated 2442 kB (elbread=1023 elab2=1070 kernel=348 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:15, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:15, 26. februar 2014
+#  03:47, 26. februar 2014
 #  Simulation has been initialized
 #  Selected Top-Level: testbench_for_liaison
 run 500 ns
 # KERNEL: stopped at time: 500 ns
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:16, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
 run 500 ns
-# KERNEL: stopped at time: 500 ns
-# 14 signal(s) traced.
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:16, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 500 ns
-# KERNEL: stopped at time: 500 ns
-# 11 signal(s) traced.
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:20, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 500 ns
-# KERNEL: stopped at time: 500 ns
+# KERNEL: stopped at time: 1 us
 acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
@@ -441,54 +156,17 @@ restart
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
+# Allocation: Simulator allocated 2443 kB (elbread=1023 elab2=1071 kernel=348 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:21, 26. februar 2014
+#  03:50, 26. februar 2014
 #  Simulation has been initialized
 #  Selected Top-Level: testbench_for_liaison
 run 500 ns
 # KERNEL: stopped at time: 500 ns
-# 17 signal(s) traced.
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:23, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
 run 500 ns
-# KERNEL: stopped at time: 500 ns
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Error: COMP96_0015: liaison.vhd : (50, 4): ')' expected.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
+# KERNEL: stopped at time: 1 us
+run 500 ns
+# KERNEL: stopped at time: 1500 ns
 acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
@@ -496,39 +174,6 @@ acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
 # Compile Entity "liaison_tb"
 # Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
 # Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:24, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 500 ns
-# KERNEL: stopped at time: 500 ns
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
 # Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
 restart
 # ELBREAD: Elaboration process.
@@ -548,316 +193,17 @@ restart
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
+# Allocation: Simulator allocated 2443 kB (elbread=1023 elab2=1071 kernel=348 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:39, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1063 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:39, 26. februar 2014
+#  03:52, 26. februar 2014
 #  Simulation has been initialized
 #  Selected Top-Level: testbench_for_liaison
 run 500 ns
 # KERNEL: stopped at time: 500 ns
-acom -work liaison -2002  $dsn/src/registers.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd
-# Compile Entity "registers"
-# Compile Architecture "registers" of Entity "registers"
-# Error: COMP96_0367: registers.vhd : (30, 13): Improper array length. Actual length is 8. Expected length is 3.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/registers.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd
-# Compile Entity "registers"
-# Compile Architecture "registers" of Entity "registers"
-# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:47, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
 run 500 ns
-# KERNEL: stopped at time: 500 ns
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:49, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
+# KERNEL: stopped at time: 1 us
 run 500 ns
-# KERNEL: stopped at time: 500 ns
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Error: COMP96_0015: liaison.vhd : (80, 4): ';' expected.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:55, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 500 ns
-# KERNEL: stopped at time: 500 ns
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:57, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 300 ns
-# KERNEL: stopped at time: 300 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:59, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-# KERNEL: Signal '/UUT/voted_data_bit' has already been traced
-# KERNEL: Signal '/UUT/status' has already been traced
-# KERNEL: Signal '/UUT/control_signals' has already been traced
-# KERNEL: Signal '/UUT/ECC_signal' has already been traced
-# KERNEL: Signal '/UUT/voted_data_out' has already been traced
-# KERNEL: Signal '/UUT/status_out' has already been traced
-# KERNEL: Signal '/UUT/voted_data_selector' has already been traced
-# KERNEL: Signal '/UUT/a' has already been traced
-# KERNEL: Signal '/UUT/b' has already been traced
-# KERNEL: Signal '/UUT/c' has already been traced
-# KERNEL: Signal '/UUT/d' has already been traced
-# KERNEL: Signal '/UUT/clk' has already been traced
-# KERNEL: Signal '/UUT/reset' has already been traced
-# KERNEL: Signal '/UUT/di_ready' has already been traced
-# KERNEL: Signal '/UUT/mp_data' has already been traced
-# KERNEL: Signal '/UUT/do_ready' has already been traced
-# KERNEL: Signal '/UUT/voted_data' has already been traced
-# 1 signal(s) traced.
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  02:59, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 300 ns
-# KERNEL: stopped at time: 300 ns
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  03:00, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 300 ns
-# KERNEL: stopped at time: 300 ns
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Error: COMP96_0015: liaison_TB.vhd : (49, 11): ';' expected.
-# Error: COMP96_0019: liaison_TB.vhd : (49, 11): Keyword 'end' expected.
-# Error: COMP96_0019: liaison_TB.vhd : (51, 3): Keyword 'end' expected.
-# Error: COMP96_0016: liaison_TB.vhd : (51, 7): Design unit declaration expected.
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile failure 4 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Error: COMP96_0015: liaison_TB.vhd : (49, 11): ';' expected.
-# Error: COMP96_0019: liaison_TB.vhd : (49, 11): Keyword 'end' expected.
-# Error: COMP96_0019: liaison_TB.vhd : (51, 3): Keyword 'end' expected.
-# Error: COMP96_0016: liaison_TB.vhd : (51, 7): Design unit declaration expected.
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile failure 4 Errors 0 Warnings  Analysis time :  0.0 [ms]
+# KERNEL: stopped at time: 1500 ns
 acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
@@ -877,144 +223,4 @@ restart
 # ELAB2: Create instances complete.
 # SLP: Started
 # SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2436 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  03:02, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 300 ns
-# KERNEL: stopped at time: 300 ns
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Error: COMP96_0015: liaison_TB.vhd : (53, 3): ';' expected.
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2437 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  03:12, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 300 ns
-# KERNEL: stopped at time: 300 ns
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2437 kB (elbread=1023 elab2=1064 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  03:13, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 300 ns
-# KERNEL: stopped at time: 300 ns
-run 300 ns
-# KERNEL: stopped at time: 600 ns
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Error: COMP96_0015: liaison_TB.vhd : (53, 3): ';' expected.
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
-# Compile Entity "liaison_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
-# Compile Configuration "TESTBENCH_FOR_liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2437 kB (elbread=1023 elab2=1065 kernel=348 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  03:14, 26. februar 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_liaison
-run 300 ns
-# KERNEL: stopped at time: 300 ns
-run 300 ns
-# KERNEL: stopped at time: 600 ns
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "
+# SLP: El
