@@ -58,7 +58,7 @@ UCF=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=controller_tb|testbench_for_controller|1
+HierarchyInformation=liaison_tb|tb_architecture|0 onebitvoter_solution_example_tb|tb_architecture|0 
 ShowHide=ShowTopLevel
 Selected=
 

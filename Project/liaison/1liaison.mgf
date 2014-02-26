@@ -7611,7 +7611,7 @@ I 000051 55 3403          1393382632984 Behavioral
 	(_model . Behavioral 5 -1
 	)
 )
-V 000044 55 2287          1393382633044 ECC
+I 000044 55 2287          1393382633044 ECC
 (_unit VHDL (ecc 0 4 (ecc 0 12 ))
 	(_version v63)
 	(_time 1393382633045 2014.02.26 03:43:53)
@@ -8510,5 +8510,42 @@ V 000051 55 3403          1393386462440 Behavioral
 		(197379 )
 	)
 	(_model . Behavioral 5 -1
+	)
+)
+V 000044 55 2287          1393387941792 ECC
+(_unit VHDL (ecc 0 4 (ecc 0 12 ))
+	(_version v63)
+	(_time 1393387941793 2014.02.26 05:12:21)
+	(_source (\./src/ECC.vhd\))
+	(_use (std(standard))(ieee(std_logic_1164)))
+	(_code efb8b9bcbab8b8f9ebbffcb5bd)
+	(_entity
+		(_time 1393382573975)
+		(_use (std(standard))(ieee(std_logic_1164)))
+	)
+	(_object
+		(_type (_internal ~STD_LOGIC_VECTOR{7~downto~0}~12 0 6 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 7)(i 0))))))
+		(_port (_internal voted_data_out ~STD_LOGIC_VECTOR{7~downto~0}~12 0 6 (_entity (_in ))))
+		(_type (_internal ~STD_LOGIC_VECTOR{2~downto~0}~12 0 7 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 2)(i 0))))))
+		(_port (_internal status_out ~STD_LOGIC_VECTOR{2~downto~0}~12 0 7 (_entity (_in ))))
+		(_type (_internal ~STD_LOGIC_VECTOR{7~downto~0}~122 0 8 (_array ~extieee.std_logic_1164.STD_LOGIC ((_downto (i 7)(i 0))))))
+		(_port (_internal ECC_signal ~STD_LOGIC_VECTOR{7~downto~0}~122 0 8 (_entity (_out (_string \"00000000"\)))))
+		(_signal (_alias a ~extieee.std_logic_1164.STD_LOGIC 0 14 (_architecture (0(0)))))
+		(_signal (_alias b ~extieee.std_logic_1164.STD_LOGIC 0 15 (_architecture (0(1)))))
+		(_signal (_alias c ~extieee.std_logic_1164.STD_LOGIC 0 16 (_architecture (0(2)))))
+		(_signal (_alias d ~extieee.std_logic_1164.STD_LOGIC 0 17 (_architecture (0(3)))))
+		(_signal (_alias e ~extieee.std_logic_1164.STD_LOGIC 0 18 (_architecture (0(4)))))
+		(_signal (_alias f ~extieee.std_logic_1164.STD_LOGIC 0 19 (_architecture (0(5)))))
+		(_signal (_alias g ~extieee.std_logic_1164.STD_LOGIC 0 20 (_architecture (0(6)))))
+		(_signal (_alias h ~extieee.std_logic_1164.STD_LOGIC 0 21 (_architecture (0(7)))))
+		(_signal (_alias i ~extieee.std_logic_1164.STD_LOGIC 0 22 (_architecture (1(0)))))
+		(_signal (_alias j ~extieee.std_logic_1164.STD_LOGIC 0 23 (_architecture (1(1)))))
+		(_signal (_alias k ~extieee.std_logic_1164.STD_LOGIC 0 24 (_architecture (1(2)))))
+		(_subprogram
+			(_external resolved (ieee std_logic_1164 15))
+		)
+		(_type (_external ~extieee.std_logic_1164.STD_ULOGIC (ieee std_logic_1164 STD_ULOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC (ieee std_logic_1164 STD_LOGIC)))
+		(_type (_external ~extieee.std_logic_1164.STD_LOGIC_VECTOR (ieee std_logic_1164 STD_LOGIC_VECTOR)))
 	)
 )

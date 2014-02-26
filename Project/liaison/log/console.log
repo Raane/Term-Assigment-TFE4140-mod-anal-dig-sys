@@ -354,4 +354,104 @@ restart
 # ELAB2: Create instances ...
 # ELAB2: Create instances complete.
 # SLP: Started
-# SLP: Elaboration phas
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2309 kB (elbread=1023 elab2=937 kernel=348 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  04:47, 26. februar 2014
+#  Simulation has been initialized
+#  Selected Top-Level: onebitvoter_solution_example_tb (tb_architecture)
+run 300 ns
+# KERNEL: stopped at time: 300 ns
+run 300 ns
+# KERNEL: stopped at time: 600 ns
+restart
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2309 kB (elbread=1023 elab2=937 kernel=348 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  05:12, 26. februar 2014
+#  Simulation has been initialized
+#  Selected Top-Level: onebitvoter_solution_example_tb (tb_architecture)
+#  Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Warning: WAVEFORM: Object matching UUT/voted_data_bit not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/status not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/control_signals not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/ECC_signal not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/voted_data_out not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/status_out not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/ECC_out not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/voted_data_selector not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/a not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/b not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/c not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/d not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/clk not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/reset not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/di_ready not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/mp_data not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/do_ready not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+# Warning: WAVEFORM: Object matching UUT/voted_data not found in C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/wave.asdb.
+asim -O5 +access +r +m+liaison_tb liaison_tb tb_architecture
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom -work liaison -2002  $dsn/src/ECC.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd
+# Compile Entity "ECC"
+# Compile Architecture "ECC" of Entity "ECC"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2443 kB (elbread=1023 elab2=1071 kernel=348 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  05:12, 26. februar 2014
+#  Simulation has been initialized
+#  Selected Top-Level: liaison_tb (tb_architecture)
+# 18 signal(s) traced.
+run 300 ns
+# KERNEL: stopped at time: 300 ns
+run 300 ns
+# KERNEL: stopped at time: 600 ns
+#  Simulation has been stopped

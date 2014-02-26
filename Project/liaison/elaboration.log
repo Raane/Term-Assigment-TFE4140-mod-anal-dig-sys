@@ -1,12 +1,16 @@
-elbread.dll ver. 1.0.5.375 Wed Feb 26 04:47:47 2014
+elbread.dll ver. 1.0.5.375 Wed Feb 26 05:12:21 2014
 
 
---------------------------------------------------------------
-Entity                           | Architecture    | Library
---------------------------------------------------------------
-onebitvoter_solution_example_tb  | tb_architecture | liaison
-onebitvoter                      | behavioral      | liaison
-------------------------------------------------------------
+------------------------------------------
+Entity       | Architecture    | Library
+------------------------------------------
+liaison_tb   | tb_architecture | liaison
+liaison      | liaison         | liaison
+onebitvoter  | behavioral      | liaison
+controller   | controller      | liaison
+registers    | registers       | liaison
+ECC          | ecc             | liaison
+----------------------------------------
 
 ---------------------------
 Package         | Library

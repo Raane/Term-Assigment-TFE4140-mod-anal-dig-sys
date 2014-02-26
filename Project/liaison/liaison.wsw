@@ -10,4 +10,14 @@ TemplateId=0
 TemplateId=6
 [OPENDOC|Aldec.WaveFormASDB.7|.\src\8BitControllerTest.awc|]
 TemplateId=0
+[OPENDOC|Aldec.WaveFormASDB.7|.\src\wave.asdb|]
+TemplateId=0
 ActiveDocument=1
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\TestBench\liaison_TB.vhd|]
+TemplateId=0
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\..\..\..\..\..\AppData\Local\Temp\hamming_enc_11.vhd|]
+TemplateId=0
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\TestBench\onebitvoter_solution_example_TB.vhd|]
+TemplateId=0
+[OPENDOC|Aldec.Hde.HdePlugIn.7|.\src\onebitvoter.vhd|]
+TemplateId=0
