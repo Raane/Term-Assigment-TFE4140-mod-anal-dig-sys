@@ -3,6 +3,3 @@ i<>.\src\onebitvoter.vhd
 i<>.\src\ECC.vhd
 i<>.\src\registers.vhd
 i<>.\src\controller.vhd
-i<>.\src\TestBench\controller_TB.vhd
-i<>.\src\TestBench\liaison_TB.vhd
-i<>.\src\TestBench\onebitvoter_solution_example_TB.vhd

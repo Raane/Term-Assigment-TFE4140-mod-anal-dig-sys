@@ -1,0 +1,50 @@
+#Build: Synplify Pro C-2009.06, Build 063R, May 19 2009
+#install: C:\Program Files (x86)\Synplicity\fpga_C200906
+#OS:  6.1
+#Hostname: SELF
+
+#Implementation: liaison
+
+#Wed Feb 26 05:32:48 2014
+
+$ Start of Compile
+#Wed Feb 26 05:32:48 2014
+
+Synopsys VHDL Compiler, version comp400rc, Build 020R, built May 20 2009
+Copyright (C) 1994-2009, Synopsys Inc.  All Rights Reserved
+
+@N: CD720 :"C:\Program Files (x86)\Synplicity\fpga_C200906\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+Top entity isn't set yet!
+VHDL syntax check successful!
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd":4:7:4:13|Synthesizing liaison.liaison.liaison 
+@W: CG296 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd":75:1:75:7|Incomplete sensitivity list - assuming completeness
+@W: CG290 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd":101:18:101:24|Referenced variable ecc_out is not in sensitivity list
+@W: CG290 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd":95:18:95:27|Referenced variable status_out is not in sensitivity list
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd":4:7:4:9|Synthesizing liaison.ecc.ecc 
+Post processing for liaison.ecc.ecc
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd":4:7:4:15|Synthesizing liaison.registers.registers 
+Post processing for liaison.registers.registers
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":28:7:28:16|Synthesizing liaison.controller.controller 
+Post processing for liaison.controller.controller
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":113:1:113:2|Latch generated from process for signal next_do_counter(4 downto 0), probably caused by a missing assignment in an if or case stmt
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":91:1:91:2|Latch generated from process for signal next_di_counter(3 downto 0), probably caused by a missing assignment in an if or case stmt
+@N: CL177 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":74:1:74:2|Sharing sequential element do_ready_internal.
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":14:7:14:17|Synthesizing liaison.onebitvoter.behavioral 
+@E: CD716 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":71:26:71:29|Expression has ambiguous type
+@E: CD716 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":126:39:126:42|Expression has ambiguous type
+ CONCAT("00", AND(input:a,signal:state_a))
+@E: CD308 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":68:26:68:46|Unable to evaluate expression type
+
+@E:Internal Error in c_vhdl.exe
+Stack trace
+===========
+005045DF
+005045DF
+
+Please open a web case about this problem. A Synopsys CAE will then contact you.
+Instructions to open a web-case:
+	1.  Go to the Synopsys support web site, https://solvnet.synopsys.com.
+	2.  Login with you user name and  password. If you do not have an account, please register and set it up.
+	3.  Click the  'Enter A Call' link.
+	4.  Provide a detailed description of the problem, and fill in all  required fields.
+	5.  Attach any test cases or archived project files required to reproduce the problem.

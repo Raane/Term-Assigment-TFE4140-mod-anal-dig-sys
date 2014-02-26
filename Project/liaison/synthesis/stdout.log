@@ -1,0 +1,41 @@
+
+Starting:    C:\Program Files (x86)\Synplicity\fpga_C200906\BIN\mbin\synplify.exe
+Install:     C:\Program Files (x86)\Synplicity\fpga_C200906
+Date:        Wed Feb 26 05:32:42 2014
+Version:     C-2009.06
+
+
+Arguments:   -product synplify_pro C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/synthesis/command.prj
+ProductType: synplify_pro
+
+License checkout: synplifypremierdp
+License: synplifypremierdp from server europa.iet.ntnu.no (Using premium license)
+
+
+
+hier_report is not supported in current product.
+island_num_paths is not supported in current product.
+island_group_range is not supported in current product.
+island_global_range is not supported in current product.
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Job: "Vhdl Compiler" terminated with error status: 2.
+See log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+Return Code: 2
+
+
+Vhdl Compiler exited with errors
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+exit status=2
+
+
+License checkin: synplifypremierdp
+
