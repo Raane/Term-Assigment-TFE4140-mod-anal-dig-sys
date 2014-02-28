@@ -11,6 +11,7 @@ end ECC;
 
 architecture ECC of ECC is
 
+-- Add aliases for easiers treatment of data
 alias a is voted_data_out(0);
 alias b is voted_data_out(1);
 alias c is voted_data_out(2);
@@ -25,8 +26,4 @@ alias k is status_out(2);
 
 begin
 
-	--process (a,b,c,d,e,f,g,h,i,j,k)
-	--begin
-	--end process;
-	
 end ECC;

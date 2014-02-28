@@ -23,13 +23,14 @@ signal status_out: STD_LOGIC_VECTOR (2 downto 0);
 signal ECC_out: STD_LOGIC_VECTOR (7 downto 0);
 signal voted_data_selector: STD_LOGIC_VECTOR (4 downto 0);
 
+-- Declare aliases for the input votes
 alias a is mp_data(0);
 alias b is mp_data(1);
 alias c is mp_data(2);
 alias d is mp_data(3);
 
 begin
-	
+	-- Add all entities to the top level
 	onebitvoter: entity work.onebitvoter
 		port map(
 		clk => clk,
@@ -72,6 +73,9 @@ begin
 		ECC_signal => ECC_signal
 		);
 		
+    -- End of entity declarations
+
+    -- Add a process for the mux that will control the serial output from liaison
 	process(voted_data_selector, voted_data_out, status_out, ECC_out)
 	begin
 		case voted_data_selector is

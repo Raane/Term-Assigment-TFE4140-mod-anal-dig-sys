@@ -18,7 +18,7 @@ entity onebitvoter is
            b : in STD_LOGIC;
            c : in STD_LOGIC;
            d : in STD_LOGIC;
-		   y : out STD_LOGIC;
+           y : out STD_LOGIC;
            status : out STD_LOGIC_VECTOR(2 downto 0)
            
        );
@@ -32,11 +32,11 @@ architecture Behavioral of onebitvoter is
     signal state_c: STD_LOGIC := '1';
     signal state_d: STD_LOGIC := '1';
     signal status_internal: STD_LOGIC_VECTOR(2 downto 0);
-	signal last_status: STD_LOGIC_VECTOR(2 downto 0) := "000";
+    signal last_status: STD_LOGIC_VECTOR(2 downto 0) := "000";
     signal voted_data: STD_LOGIC;
     signal sum_of_inputs: STD_LOGIC_VECTOR(2 downto 0);
-	signal number_of_winning_votes: STD_LOGIC_VECTOR(2 downto 0);
-	signal extended_a: STD_LOGIC_VECTOR(2 downto 0);
+    signal number_of_winning_votes: STD_LOGIC_VECTOR(2 downto 0);
+    signal extended_a: STD_LOGIC_VECTOR(2 downto 0);
     signal extended_b: STD_LOGIC_VECTOR(2 downto 0);
     signal extended_c: STD_LOGIC_VECTOR(2 downto 0);
     signal extended_d: STD_LOGIC_VECTOR(2 downto 0);
@@ -46,7 +46,8 @@ architecture Behavioral of onebitvoter is
     signal extended_vote_d: STD_LOGIC_VECTOR(2 downto 0);
     
 begin
-    
+
+-- Start of state machine back end
 -- Update outputs when the clock tick occur
 process (clk)
 begin
@@ -69,7 +70,10 @@ last_status <= status_internal;
     end if;
 end process;
 
+-- End of state machine back end
+-- Start of state machine front end
 
+-- Filter out votes from failed micro controllers and extend the vote result to a 3 bit number
 process (a, b, c, d, state_a, state_b, state_c, state_d)
 begin
     extended_a <= "00"&(a and state_a);
@@ -133,6 +137,7 @@ when others =>
     end case;
 end process;
 
+-- Filter out the votes that did not match the winning vote and extend them to a 3 bit number
 process(voted_data, a, b, c, d, state_a, state_b, state_c, state_d)
 begin
 extended_vote_a <= "00"&(state_a and (voted_data xnor a));
@@ -149,7 +154,7 @@ unsigned( extended_vote_a ) +
             unsigned( extended_vote_b ) +
             unsigned( extended_vote_c ) +
             unsigned( extended_vote_d )
-); --Do I need to sub 1?
+);
 end process;
 
 -- Calculate the internal status field based on the inputs matched with the voted data
@@ -173,5 +178,6 @@ when others =>
 end case;	
 end if;
 end process;
+-- End of state machine front end
 
 end Behavioral;

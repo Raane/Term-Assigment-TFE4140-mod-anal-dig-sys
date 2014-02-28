@@ -23,13 +23,15 @@ signal ECC_reg: STD_LOGIC_VECTOR (7 downto 0);
 
 begin	
 	
+-- Connect the registers to the outputs
 process(voted_data_reg, status_reg, ECC_reg)
-begin									   
+begin
 	voted_data_out <= voted_data_reg;
 	status_out <= status_reg;
 	ECC_out <= ECC_reg; 
 end process;
 	
+-- Add registers for storage of data
 process(clk)
 begin
 	if rising_edge(clk) then
