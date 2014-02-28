@@ -1,27 +1,3 @@
--------------------------------------------------------------------------------
---
--- Title       : controller
--- Design      : liaison
--- Author      : Ole Brumm
--- Company     : Hundremeterskogen Dataservice
---
--------------------------------------------------------------------------------
---
--- File        : controller.vhd
--- Generated   : Mon Feb 24 17:42:40 2014
--- From        : interface description file
--- By          : Itf2Vhdl ver. 1.20
---
--------------------------------------------------------------------------------
---
--- Description : 
---
--------------------------------------------------------------------------------
-
---{{ Section below this comment is automatically maintained
---   and may be overwritten
---{entity {controller} architecture {controller}}
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
@@ -35,8 +11,6 @@ entity controller is
 		 voted_data_selector : out STD_LOGIC_VECTOR(4 downto 0)
 	     );
 end controller;
-
---}} End of automatically maintained section
 
 architecture controller of controller is
 	
@@ -98,11 +72,11 @@ begin
 	elsif (di_ready = '1') or (di_counter > 0) then
 		-- Check if counter has reached end
 		if di_counter = 10 then
-			next_di_counter <= 0;			  
+			next_di_counter <= 0;
 		else
 			next_di_counter <= di_counter+1;
-		end if;						   
-	end if;	
+		end if;
+	end if;
 	end process;
 	
 	-- Activating or incrementing do_counting
@@ -116,12 +90,12 @@ begin
 	-- do_ready is set to 1 (usually when do_counter is 0, initilizing it),
 	-- or do_counter is already active
 	elsif (do_ready_internal = '1') or (do_counter > 0) then
-		-- Check if counter has reached end	
-		if do_counter = 18 then	
-			next_do_counter <= 0;			  
+		-- Check if counter has reached end
+		if do_counter = 18 then
+			next_do_counter <= 0;
 		else
 			next_do_counter <= do_counter+1;
-		end if;						   
+		end if;
 	end if;
 	
 	end process;
@@ -232,6 +206,5 @@ begin
 		end case;
 		
 	end process;
-	
 	
 end controller;
