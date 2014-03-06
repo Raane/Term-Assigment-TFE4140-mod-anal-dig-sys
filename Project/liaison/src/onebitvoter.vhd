@@ -137,7 +137,7 @@ begin
 					voted_data <= '0';
             end case;
 		when others =>
-			voted_data <= '0';
+			--voted_data <= '0';
     end case;
 end process;
 
@@ -180,7 +180,7 @@ else
 			status_internal <= "111";
 		 when others =>
 		 	-- This should never be reached
-		 	status_internal <= "111";
+		 	--status_internal <= "111";
 	end case;	
 end if;
 end process;

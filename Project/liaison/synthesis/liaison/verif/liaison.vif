@@ -40,8 +40,6 @@ vif_set_top_module -translated -top liaison
 # RTL sequential redundancies
 
 # Technology sequential redundancies
-vif_set_equiv -translated onebitvoter/state_c_Z onebitvoter/state_c_fast_Z
-vif_set_equiv -translated onebitvoter/state_d_Z onebitvoter/state_d_fast_Z
 
 # Inversion map points
 
@@ -53,6 +51,8 @@ vif_set_equiv -translated onebitvoter/state_d_Z onebitvoter/state_d_fast_Z
 # Other sequential cells, including multidimensional arrays
 
 # Constant Registers
+vif_set_transparent -original -1 onebitvoter/status_internal[0]
+vif_set_transparent -original -1 onebitvoter/status_internal[1]
 vif_set_constant -original -1 controller/voted_data_selector[4]
 vif_set_constant -original -1 controller/control_signals[9]
 

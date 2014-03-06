@@ -65,8 +65,6 @@ begin
 	if (reset = '1') then
 		next_di_counter <= 0;
 		
-		
-		
 	-- di_ready is set to 1 (usually when di_counter is 0, initilizing it),
 	-- or di_counter is already active
 	elsif (di_ready = '1') or (di_counter > 0) then

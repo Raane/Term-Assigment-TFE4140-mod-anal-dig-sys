@@ -11,10 +11,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     49                 100 %                
-LATCHES       8                  100 %                
+REGISTERS     47                 100 %                
+LATCHES       10                 100 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block liaison:	57 (36.54 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block liaison:	57 (39.86 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -22,13 +22,13 @@ COMBINATIONAL LOGIC
 
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-LUTS      80                 100 %                
+LUTS      65                 100 %                
 MUXCY     0                  0.0 %                
 XORCY     0                  0.0 %                
 DSP48     0                  0.0 %                
 SRL16     0                  0.0 %                
 ==================================================
-Total COMBINATIONAL LOGIC in the block liaison:	80 (51.28 % Utilization)
+Total COMBINATIONAL LOGIC in the block liaison:	65 (45.45 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -69,7 +69,7 @@ Name     Total elements     Utilization     Notes
 -------------------------------------------------
 PADS     9                  100 %                
 =================================================
-Total IO PADS in the block liaison:	9 (5.77 % Utilization)
+Total IO PADS in the block liaison:	9 (6.29 % Utilization)
 
 ---------------------------------------------------------
 ########   Utilization report for  cell:   ECC   ########
@@ -92,13 +92,13 @@ COMBINATIONAL LOGIC
 
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-LUTS      8                  10. %                
+LUTS      8                  12.3 %               
 MUXCY     0                  0.0 %                
 XORCY     0                  0.0 %                
 DSP48     0                  0.0 %                
 SRL16     0                  0.0 %                
 ==================================================
-Total COMBINATIONAL LOGIC in the block liaison.ECC:	8 (5.13 % Utilization)
+Total COMBINATIONAL LOGIC in the block liaison.ECC:	8 (5.59 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -151,10 +151,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     21                 42.9 %               
-LATCHES       8                  100 %                
+REGISTERS     21                 44.7 %               
+LATCHES       8                  80. %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block liaison.controller:	29 (18.59 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block liaison.controller:	29 (20.28 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -162,13 +162,13 @@ COMBINATIONAL LOGIC
 
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-LUTS      25                 31.3 %               
+LUTS      22                 33.8 %               
 MUXCY     0                  0.0 %                
 XORCY     0                  0.0 %                
 DSP48     0                  0.0 %                
 SRL16     0                  0.0 %                
 ==================================================
-Total COMBINATIONAL LOGIC in the block liaison.controller:	25 (16.03 % Utilization)
+Total COMBINATIONAL LOGIC in the block liaison.controller:	22 (15.38 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -221,10 +221,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     13                 26.5 %               
-LATCHES       0                  0.0 %                
+REGISTERS     11                 23.4 %               
+LATCHES       2                  20. %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block liaison.onebitvoter:	13 (8.33 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block liaison.onebitvoter:	13 (9.09 % Utilization)
 
 
 COMBINATIONAL LOGIC
@@ -232,13 +232,13 @@ COMBINATIONAL LOGIC
 
 Name      Total elements     Utilization     Notes
 --------------------------------------------------
-LUTS      37                 46.3 %               
+LUTS      25                 38.5 %               
 MUXCY     0                  0.0 %                
 XORCY     0                  0.0 %                
 DSP48     0                  0.0 %                
 SRL16     0                  0.0 %                
 ==================================================
-Total COMBINATIONAL LOGIC in the block liaison.onebitvoter:	37 (23.72 % Utilization)
+Total COMBINATIONAL LOGIC in the block liaison.onebitvoter:	25 (17.48 % Utilization)
 
 
 MEMORY ELEMENTS
@@ -291,10 +291,10 @@ SEQUENTIAL ELEMENTS
 
 Name          Total elements     Utilization     Notes
 ------------------------------------------------------
-REGISTERS     15                 30.6 %               
+REGISTERS     15                 31.9 %               
 LATCHES       0                  0.0 %                
 ======================================================
-Total SEQUENTIAL ELEMENTS in the block liaison.registers:	15 (9.62 % Utilization)
+Total SEQUENTIAL ELEMENTS in the block liaison.registers:	15 (10.49 % Utilization)
 
 
 COMBINATIONAL LOGIC
