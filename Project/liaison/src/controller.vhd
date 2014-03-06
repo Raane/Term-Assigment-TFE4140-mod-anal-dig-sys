@@ -74,6 +74,8 @@ begin
 		else
 			next_di_counter <= di_counter+1;
 		end if;
+	--else
+		--next_di_counter <= 0;
 	end if;
 	end process;
 	
@@ -94,6 +96,8 @@ begin
 		else
 			next_do_counter <= do_counter+1;
 		end if;
+	--else
+		--next_do_counter <= 0;
 	end if;
 	
 	end process;

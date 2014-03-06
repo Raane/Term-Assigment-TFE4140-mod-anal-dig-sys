@@ -1,12 +1,17 @@
-@P:  Worst Slack : 996.918
-@P:  liaison|clk - Estimated Frequency : 324.5 MHz
+@P:  Worst Slack : 994.317
+@P:  liaison|clk - Estimated Frequency : 176.0 MHz
 @P:  liaison|clk - Requested Frequency : 1.0 MHz
-@P:  liaison|clk - Estimated Period : 3.082
+@P:  liaison|clk - Estimated Period : 5.683
 @P:  liaison|clk - Requested Period : 1000.000
-@P:  liaison|clk - Slack : 996.918
+@P:  liaison|clk - Slack : 994.317
+@P:  System - Estimated Frequency : 289.2 MHz
+@P:  System - Requested Frequency : 1.0 MHz
+@P:  System - Estimated Period : 3.458
+@P:  System - Requested Period : 1000.000
+@P:  System - Slack : 996.543
 @P: liaison Part : xc4vfx12sf363-12
 @P: liaison I/O primitives : 9
 @P: liaison I/O Register bits : 0
-@P: liaison Register bits (Non I/O) : 47 (0%)
-@P: liaison Total Luts : 65 (0%)
+@P: liaison Register bits (Non I/O) : 48 (0%)
+@P: liaison Total Luts : 67 (0%)
 @P:  CPU Time : 0h:00m:00s

@@ -6,19 +6,19 @@
 #
 # Created by Synplify VHDL Compiler version comp400rc, Build 020R from Synplicity, Inc.
 # Copyright 1994-2009 Synopsys, Inc. , All rights reserved.
-# Synthesis Netlist written on Thu Mar 06 15:26:21 2014
+# Synthesis Netlist written on Thu Mar 06 15:36:08 2014
 #
 #
 #OPTIONS:"|-enable64bit|-top|liaison.liaison|-dspmac|-primux|-fixsmult|-sdff_counter|-infer_seqShift|-nram|-divnmod|-encrypt|-pro|-lite|-ll|2000|-ui|-fid2|-ram|-sharing|on|-autosm|-ignore_undefined_lib|-lib|liaison|-lib|liaison|-lib|liaison|-lib|liaison|-lib|liaison"
 #CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\bin\\c_vhdl.exe":1242891102
 #CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\lib\\vhd\\location.map":1242828386
 #CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\lib\\vhd\\std.vhd":1242745776
-#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\onebitvoter.vhd":1394115978
+#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\onebitvoter.vhd":1394116486
 #CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\lib\\vhd\\std1164.vhd":1242745776
 #CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\lib\\vhd\\numeric.vhd":1242745776
 #CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\ECC.vhd":1394114163
-#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\registers.vhd":1394114435
-#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\controller.vhd":1394115441
+#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\registers.vhd":1394116565
+#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\controller.vhd":1394116217
 #CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\liaison.vhd":1394113520
 f "C:\Program Files (x86)\Synplicity\fpga_C200906\lib\vhd\std.vhd"; # file 0
 af .is_vhdl 1;
@@ -226,14 +226,14 @@ RNH3Ds0_HFsolMNCOR"FsM0F#D_HNoMD;#"
 RNH3Ds0_HFsolMNCPR"F80C_08NNC_#D0COF;s"
 @bR@nn:46:4::n4.H4RMkPRM84_HF_OkCM0s9rjR4kM__8HOMFk0rCsj89RHF_OkCM0s9rj;R
 b@:@nn44:64:n:R.4HRMPk_M48OH_F0kMC.sr9MRk4H_8_kOFMs0CrR.98OH_F0kMC.sr9b;
-Rn@@::U44U6:44:.RPHMR4kM__8FOMFk0rCsjk9RM84_FF_OkCM0s9rjR_8FOMFk0rCsj
+Rn@@::Ud4U6:d4:.RPHMR4kM__8FOMFk0rCsjk9RM84_FF_OkCM0s9rjR_8FOMFk0rCsj
 9;b@R@j::44::4.sR0k0CRsRkC0Csk;R
 b@:@j4::44R:.V#NDCNRVDR#CV#NDCb;
 Rn@@::cU4U:c:8.RV8VRHF_OkCM0s:rdj89RHF_OkCM0s:rdjM9RC_G08OH_F0kMCdsr:Rj9O;D	
 RNH3Ds0_HFsolMNC8R"HF_OkCM0s
 ";b@R@nU:c:c4:UR:.8RVV8OF_F0kMCdsr:Rj98OF_F0kMCdsr:Rj9M0CG__8FOMFk0rCsd9:jR	OD;H
 NR03sDs_FHNoMl"CR8OF_F0kMC;s"
-@bR@4n:...::.4.:s6RFMlRC_G0O0FMs_FD#MHoNrD#g9:jRGMC0F_OMF0sDH_#oDMN#:rgjM9RC_G08OH_F0kMCdsr:;j9
+@bR@4n:..n::n4.:s6RFMlRC_G0O0FMs_FD#MHoNrD#g9:jRGMC0F_OMF0sDH_#oDMN#:rgjM9RC_G08OH_F0kMCdsr:;j9
 RNH3lsF0DNLCjR"jRj4jjj4jjjjj
 j;jjj4Rjjj4jjjj;jj
 4jj4jRjjjj4jjjj;4
@@ -246,7 +246,7 @@ jRj4jj4jjjjjj
 j;4jj4Rj4jjjjjj;jj
 jjjjjRjjjjjjjjj;;
 "
-@bR@4n:n.4::44n:s6RFMlRC_G0PCF08N_80#N_CODC0rFsc9:jRGMC0F_P0_C88NN0_D#CCFO0s:rcjR9
+@bR@4n:n.6::64n:s6RFMlRC_G0PCF08N_80#N_CODC0rFsc9:jRGMC0F_P0_C88NN0_D#CCFO0s:rcjR9
 RMRRC_G08OF_F0kMCdsr:;j9
 RNH3lsF0DNLCjR"jRjjj4j44j;
 jRj4j4j4jj;
@@ -272,27 +272,27 @@ RORRD
 	;N3HRs_0DFosHMCNlRF"OMF0sDH_#oDMN#
 ";b@R@n.:(:(6:.4:.R8NMPHR8_kOFMM0Hok\3M8g_HC_sNR8$8OH_F0kMH\Mo3gkM__8Hs8CN$MRk4H_8_kOFMs0Cr
 j9RRRR8OH_F0kMC4sr9MRk4H_8_kOFMs0CrR.98OH_F0kMCdsr9b;
-Rn@@::g.6.:g:R.4NPM8R_8FOMFk0oHM\M3k48._FC_sN_8$HCM0sDMNR_8FOMFk0oHM\M3k48._FC_sN_8$HCM0sDMN
+Rn@@::gc6c:g:R.4NPM8R_8FOMFk0oHM\M3k48._FC_sN_8$HCM0sDMNR_8FOMFk0oHM\M3k48._FC_sN_8$HCM0sDMN
 RRRR4kM__8FOMFk0rCsj89RFF_OkCM0s9r4R_8FOMFk0rCs.89RFF_OkCM0s9rd;R
 b@:@n(.j:Uj:(:Rc4D80RHF_OkHM0M3o\k_Md8sH_C$N8R_8HOMFk0oHM\M3kdH_8_NsC8V$RNCD#,DVN#VC,NCD#,DVN#RC
 R8RRHF_OkCM0s:rdj
-9;b@R@nj:g::d(g6j:j0RDR_8FOMFk0oHM\M3knF_8_NsC8H$_Ms0CMRND8OF_F0kMH\Mo3nkM__8Fs8CN$M_H0MCsNRD
+9;b@R@n.:g::d(g6.:j0RDR_8FOMFk0oHM\M3knF_8_NsC8H$_Ms0CMRND8OF_F0kMH\Mo3nkM__8Fs8CN$M_H0MCsNRD
 RVRRNCD#,DVN#VC,NCD#,DVN#8CRFF_OkCM0s:rdj
 9;b@R@n6:(::..(d6:d8RN8MRk6C_MG80_HF_OkCM0sgr.:9d.R6kM_GMC0H_8_kOFMs0Cr:.gdR.98OH_F0kMCdsr:
 j9RRRR0Csk;R
-b@:@ng.6:.6:g:RddNR88k_MdM0CG__8FOMFk0rCs.dg:.k9RMMd_C_G08OF_F0kMC.srg.:d9FR8_kOFMs0Crjd:9R
+b@:@ng.(:.(:g:RddNR88k_MdM0CG__8FOMFk0rCs.dg:.k9RMMd_C_G08OF_F0kMC.srg.:d9FR8_kOFMs0Crjd:9R
 RRsR0k
 C;b@R@nj:(:(U:j4:cRPFsR_8HOMFk0oHM\M3k4H_8_NsC88$RHF_OkHM0M3o\k_M48sH_C$N8R_8Hs8CN$R
 RRHR8_kOFMM0Hok\3M8d_HC_sN;8$
-@bR@gn:j::Ug6j:jsRFPFR8_kOFMM0Hok\3M8c_FC_sN_8$HCM0sDMNR_8FOMFk0oHM\M3kcF_8_NsC8H$_Ms0CM
+@bR@gn:.::Ug6.:jsRFPFR8_kOFMM0Hok\3M8c_FC_sN_8$HCM0sDMNR_8FOMFk0oHM\M3kcF_8_NsC8H$_Ms0CM
 NDRRRRO0FMs_FD#MHoNrD#j89RFF_OkHM0M3o\k_Mn8sF_C$N8_0HMCNsMDb;
 Rn@@::(...:(:ldRkMGRC_G08OH_F0kMCds_rj4:9CRMG80_HF_OkCM0sr_d49:jR6kM_GMC0H_8_kOFMs0Cr:d4d
 .9RRRRV#NDCN,VDR#C8OH_F0kMH\Mo3gkM__8Hs8CN$b;
 Rn@@::(...:(:ldRkMGRC_G08OH_F0kMCds_rRd9M0CG__8HOMFk0_Csd9rdR6kM_GMC0H_8_kOFMs0Cr9.g
 RRRRDVN#8CRHF_OkHM0M3o\k_Mg8sH_C$N8;R
-b@:@ng..:::g.dkRlGFR8_kOFMM0HoM\3C_G08OF_F0kMCds_rjd:9FR8_kOFMM0HoM\3C_G08OF_F0kMCds_rjd:9R
+b@:@ng.c:::gcdkRlGFR8_kOFMM0HoM\3C_G08OF_F0kMCds_rjd:9FR8_kOFMM0HoM\3C_G08OF_F0kMCds_rjd:9R
 RRMRkdC_MG80_FF_OkCM0sgr.:9d.RDVN#VC,NCD#,DVN#VC,NCD#R_8FOMFk0oHM\M3k48._FC_sN_8$HCM0sDMN;R
-b@:@nU46:::U6.NRD0MsRC_G08OF_F0kMCdsr:Rj9M0CG__8FOMFk0rCsd9:jR_8FOMFk0oHM\C3MG80_FF_OkCM0sr_dd9:j
+b@:@nU4(:::U(.NRD0MsRC_G08OF_F0kMCdsr:Rj9M0CG__8FOMFk0rCsd9:jR_8FOMFk0oHM\C3MG80_FF_OkCM0sr_dd9:j
 RRRR_8FOMFk0oHM\M3kcF_8_NsC8H$_Ms0CMRNDsCC#0N;
 HsR30FD_sMHoNRlC"GMC0F_8_kOFMs0C"b;
 Rn@@::n646:n:D.RNR0sM0CG__8HOMFk0rCsd9:jRGMC0H_8_kOFMs0Crjd:9CRMG80_HF_OkCM0sr_ddk9,MM6_C_G08OH_F0kMCdsrjM9,C_G08OH_F0kMCds_rj4:9R
@@ -351,7 +351,7 @@ R6@@::d(4(:d:#.R8sVVC0R#N#0k_osCrj.:90R#N#0k_osCrj.:90R#N#0krj.:9DRO	CRs#
 C0RRRRO0FMs_FD#MHoNrD#U
 9;N3HRs_0DFosHMCNlR0"#N#0k_osC"b;
 R6@@::d(4(:d:#.R8sVVCBR BC_so:rdj 9RBsB_Cdor:Rj9 _BB#MHoNdDr:Rj9ORD	sCC#0R
-RRFROMF0sDH_#oDMN#9rU;H
+RRFROMF0sDH_#oDMN#9rg;H
 NR03sDs_FHNoMl"CR _BBs"Co;R
 b@:@6ccc:::cc.ljRkPGRF80C_08NNC_sor_6jP9RF80C_08NNC_sor_6jP9RF80C_08NNC_so9rj
 RRRR0PFC88_N_0NLRH0O0FMs_FD#MHoNrD#j

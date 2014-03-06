@@ -5,7 +5,7 @@ Post processing for liaison.ecc.ecc
 Post processing for liaison.registers.registers
 @N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":4:7:4:16|Synthesizing liaison.controller.controller 
 Post processing for liaison.controller.controller
-@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":85:1:85:2|Latch generated from process for signal next_do_counter(3 downto 0), probably caused by a missing assignment in an if or case stmt
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":87:1:87:2|Latch generated from process for signal next_do_counter(3 downto 0), probably caused by a missing assignment in an if or case stmt
 @W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":65:1:65:2|Latch generated from process for signal next_di_counter(3 downto 0), probably caused by a missing assignment in an if or case stmt
 @N: CL177 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":48:1:48:2|Sharing sequential element do_ready_internal.
 @N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":14:7:14:17|Synthesizing liaison.onebitvoter.behavioral 
@@ -13,4 +13,3 @@ Post processing for liaison.onebitvoter.behavioral
 @W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":99:4:99:7|Latch generated from process for signal voted_data, probably caused by a missing assignment in an if or case stmt
 @W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":167:0:167:1|Latch generated from process for signal status_internal(2 downto 0), probably caused by a missing assignment in an if or case stmt
 Post processing for liaison.liaison.liaison
-@W: CL247 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd":10:3:10:17|Input port bit 9 of control_signals(9 downto 0) is unused 
