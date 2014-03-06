@@ -17,10 +17,10 @@ architecture liaison of liaison is
 signal voted_data_bit: STD_LOGIC;
 signal status: STD_LOGIC_VECTOR (2 downto 0);
 signal control_signals: STD_LOGIC_VECTOR (9 downto 0);
-signal ECC_signal: STD_LOGIC_VECTOR(7 downto 0);
+signal ECC_signal: STD_LOGIC_VECTOR(3 downto 0);
 signal voted_data_out: STD_LOGIC_VECTOR (7 downto 0);
 signal status_out: STD_LOGIC_VECTOR (2 downto 0);
-signal ECC_out: STD_LOGIC_VECTOR (7 downto 0);
+signal ECC_out: STD_LOGIC_VECTOR (3 downto 0);
 signal voted_data_selector: STD_LOGIC_VECTOR (4 downto 0);
 
 -- Declare aliases for the input votes
@@ -109,14 +109,6 @@ begin
 				voted_data <= ECC_out(2);
 			when "01110" =>	-- 14
 				voted_data <= ECC_out(3);
-			when "01111" =>	-- 15
-				voted_data <= ECC_out(4);
-			when "10000" =>	-- 16
-				voted_data <= ECC_out(5);
-			when "10001" =>	-- 17
-				voted_data <= ECC_out(6);
-			when "10010" =>	-- 18
-				voted_data <= ECC_out(7);
 			when others =>
 				voted_data <= '-'; -- should not be reached, but useful to detect glitches
 		end case;				   -- when implementing and perfecting output throughput

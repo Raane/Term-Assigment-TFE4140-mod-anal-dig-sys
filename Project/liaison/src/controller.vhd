@@ -29,8 +29,8 @@ architecture controller of controller is
 	-- do_counter used to select outputs from all registers: 
 	-- 8 voted_data, 3 status, and 8 parity bits. 
 	-- 19 cycles needed
-	signal do_counter: integer range 0 to 18;
-	signal next_do_counter: integer range 0 to 18;
+	signal do_counter: integer range 0 to 14;
+	signal next_do_counter: integer range 0 to 14;
 	
 	-- Next-signals used for clock updates
 	signal next_control_signals: std_logic_vector(9 downto 0);
@@ -91,7 +91,7 @@ begin
 	-- or do_counter is already active
 	elsif (do_ready_internal = '1') or (do_counter > 0) then
 		-- Check if counter has reached end
-		if do_counter = 18 then
+		if do_counter = 14 then
 			next_do_counter <= 0;
 		else
 			next_do_counter <= do_counter+1;
@@ -186,21 +186,13 @@ begin
 			when 10 =>
 				next_voted_data_selector <= "01000"; -- set output from liaison to status bit 0
 			when 11 =>
-				next_voted_data_selector <= "10010"; -- set output from liaison to ECC bit 7
+				next_voted_data_selector <= "10010"; -- set output from liaison to ECC bit 3
 			when 12 =>
-				next_voted_data_selector <= "10001"; -- set output from liaison to ECC bit 6
+				next_voted_data_selector <= "10001"; -- set output from liaison to ECC bit 2
 			when 13 =>
-			   	next_voted_data_selector <= "10000"; -- set output from liaison to ECC bit 5
+			   	next_voted_data_selector <= "10000"; -- set output from liaison to ECC bit 1
 			when 14 =>
-				next_voted_data_selector <= "01111"; -- set output from liaison to ECC bit 4
-			when 15 =>
-				next_voted_data_selector <= "01110"; -- set output from liaison to ECC bit 3
-			when 16 =>
-			   	next_voted_data_selector <= "01101"; -- set output from liaison to ECC bit 2
-			when 17 =>
-				next_voted_data_selector <= "01100"; -- set output from liaison to ECC bit 1
-			when 18 =>
-				next_voted_data_selector <= "01011"; -- set output from liaison to ECC bit 0
+				next_voted_data_selector <= "01111"; -- set output from liaison to ECC bit 0
 			when others =>
 				-- Do nothing. Should in theory not be reached.
 		end case;

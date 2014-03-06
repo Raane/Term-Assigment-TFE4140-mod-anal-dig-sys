@@ -7,6 +7,6 @@
 @P: liaison Part : xc4vfx12sf363-12
 @P: liaison I/O primitives : 9
 @P: liaison I/O Register bits : 0
-@P: liaison Register bits (Non I/O) : 45 (0%)
-@P: liaison Total Luts : 74 (0%)
+@P: liaison Register bits (Non I/O) : 43 (0%)
+@P: liaison Total Luts : 67 (0%)
 @P:  CPU Time : 0h:00m:00s

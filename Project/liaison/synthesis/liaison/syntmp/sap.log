@@ -13,6 +13,6 @@ Reading Xilinx Rocket I/O parameter type table from file <C:\Program Files (x86)
 @N: BN115 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\liaison.vhd":69:13:69:20|Removing instance ECC of view:liaison.ECC(ecc) because there are no references to its outputs 
 @N: BN225 |Writing default property annotation file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.sap.
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu Mar 06 14:39:24 2014
+# Thu Mar 06 14:45:23 2014
 
 ###########################################################]

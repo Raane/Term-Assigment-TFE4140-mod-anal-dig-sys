@@ -53,6 +53,7 @@ vif_set_top_module -translated -top liaison
 # Constant Registers
 vif_set_transparent -original -1 onebitvoter/status_internal[0]
 vif_set_transparent -original -1 onebitvoter/status_internal[1]
+vif_set_constant -original -1 controller/voted_data_selector[4]
 vif_set_constant -original -1 controller/control_signals[9]
 
 # Retimed Registers

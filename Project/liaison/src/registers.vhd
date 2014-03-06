@@ -8,10 +8,10 @@ entity registers is
 		 reset : in STD_LOGIC;
 		 status : in STD_LOGIC_VECTOR(2 downto 0);
 		 control_signals : in STD_LOGIC_VECTOR(9 downto 0);
-		 ECC_signal : in STD_LOGIC_VECTOR(7 downto 0);
+		 ECC_signal : in STD_LOGIC_VECTOR(3 downto 0);
 		 voted_data_out : out STD_LOGIC_VECTOR(7 downto 0);
 		 status_out : out STD_LOGIC_VECTOR(2 downto 0);
-		 ECC_out : out STD_LOGIC_VECTOR(7 downto 0)
+		 ECC_out : out STD_LOGIC_VECTOR(3 downto 0)
 	     );
 end registers;
 
@@ -19,7 +19,7 @@ architecture registers of registers is
 
 signal voted_data_reg: STD_LOGIC_VECTOR (7 downto 0);
 signal status_reg: STD_LOGIC_VECTOR (2 downto 0);
-signal ECC_reg: STD_LOGIC_VECTOR (7 downto 0);
+signal ECC_reg: STD_LOGIC_VECTOR (3 downto 0);
 
 begin	
 	
@@ -38,7 +38,7 @@ begin
 		if(reset='1') then
 			voted_data_reg <= "00000000";
 			status_reg <= "000";
-			ECC_reg <= "00000000";
+			ECC_reg <= "0000";
 		else
 			if control_signals(0) = '1' then
 				voted_data_reg(0) <= voted_data_bit;
