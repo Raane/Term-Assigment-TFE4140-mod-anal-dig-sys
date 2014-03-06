@@ -18,3 +18,329 @@ island_num_paths is not supported in current product.
 island_group_range is not supported in current product.
 island_global_range is not supported in current product.
 
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\registers.vhd
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\registers.vhd
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Job: "Vhdl Compiler" terminated with error status: 2.
+See log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+Return Code: 2
+
+
+Vhdl Compiler exited with errors
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Opening object source file c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Running synthesis on command:liaison
+
+log file: "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srr"
+
+
+Running Vhdl Compiler...
+
+Vhdl Compiler Completed
+Return Code: 0
+
+
+Running Analysis Property Generator...
+
+Launching mapper in pro mode
+
+Analysis Property Generator Completed
+Return Code: 0
+
+
+Analysis Property Generator Complete
+
+Running VIRTEX4 Mapper...
+
+Launching mapper in pro mode
+
+VIRTEX4 Mapper Completed with warnings
+Return Code: 1
+
+
+Running synthesis on command:liaison
+

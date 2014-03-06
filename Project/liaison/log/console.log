@@ -121,4 +121,14 @@ acom -work liaison -2002  $dsn/src/TestBench/onebitvoter_solution_example_TB.vhd
 # Compile Entity "onebitvoter_solution_example_tb"
 # Compile Architecture "TB_ARCHITECTURE" of Entity "onebitvoter_solution_example_tb"
 # Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/Te
+acom -work liaison -2002  $dsn/src/TestBench/liaison_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\liaison_TB.vhd
+# Compile Entity "liaison_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "liaison_tb"
+# Compile Configuration "TESTBENCH_FOR_liaison"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+# Synplify has been started.
+# Synplify has been started.
+# Synplify has been started.

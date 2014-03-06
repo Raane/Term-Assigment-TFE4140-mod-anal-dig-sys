@@ -1,0 +1,415 @@
+#Build: Synplify Pro C-2009.06, Build 063R, May 19 2009
+#install: C:\Program Files (x86)\Synplicity\fpga_C200906
+#OS:  6.1
+#Hostname: DYLAN
+
+#Implementation: liaison
+
+#Thu Mar 06 14:56:47 2014
+
+$ Start of Compile
+#Thu Mar 06 14:56:47 2014
+
+Synopsys VHDL Compiler, version comp400rc, Build 020R, built May 20 2009
+Copyright (C) 1994-2009, Synopsys Inc.  All Rights Reserved
+
+@N: CD720 :"C:\Program Files (x86)\Synplicity\fpga_C200906\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+Top entity isn't set yet!
+VHDL syntax check successful!
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd":4:7:4:13|Synthesizing liaison.liaison.liaison 
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd":4:7:4:9|Synthesizing liaison.ecc.ecc 
+Post processing for liaison.ecc.ecc
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd":4:7:4:15|Synthesizing liaison.registers.registers 
+Post processing for liaison.registers.registers
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":4:7:4:16|Synthesizing liaison.controller.controller 
+Post processing for liaison.controller.controller
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":87:1:87:2|Latch generated from process for signal next_do_counter(3 downto 0), probably caused by a missing assignment in an if or case stmt
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":65:1:65:2|Latch generated from process for signal next_di_counter(3 downto 0), probably caused by a missing assignment in an if or case stmt
+@N: CL177 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":48:1:48:2|Sharing sequential element do_ready_internal.
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":14:7:14:17|Synthesizing liaison.onebitvoter.behavioral 
+Post processing for liaison.onebitvoter.behavioral
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":163:0:163:1|Latch generated from process for signal status_internal(2 downto 0), probably caused by a missing assignment in an if or case stmt
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":99:4:99:7|Latch generated from process for signal voted_data, probably caused by a missing assignment in an if or case stmt
+Post processing for liaison.liaison.liaison
+@W: CL247 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd":10:3:10:17|Input port bit 9 of control_signals(9 downto 0) is unused 
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Mar 06 14:56:48 2014
+
+###########################################################]
+Synopsys Xilinx Technology Mapper, Version map450rc, Build 029R, Built May 22 2009 15:55:09
+Copyright (C) 1994-2009, Synopsys Inc.  All Rights Reserved
+Product Version C-2009.06
+@W|Ignoring top level module 'liaison.liaison' as specified in project file
+@N: MF249 |Running in 32-bit mode.
+@N: MF257 |Gated clock conversion enabled 
+Reading Xilinx I/O pad type table from file <C:\Program Files (x86)\Synplicity\fpga_C200906\lib\xilinx\x_io_tbl.txt> 
+Reading Xilinx Rocket I/O parameter type table from file <C:\Program Files (x86)\Synplicity\fpga_C200906\lib\xilinx\gttype.txt> 
+@N|Running in logic synthesis mode without enhanced optimization
+@W: FX474 |User specified initial value found in some of the sequential elements in the design. Applying an initial value to a register may not deliver the best synthesis results. For example, registers with initial values may be preserved and retiming/pipelining may not be performed. To improve synthesis results you may want to remove the register initialization from the RTL code 
+
+@W: MO129 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":163:0:163:1|Sequential instance status_internal[0] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":163:0:163:1|Sequential instance status_internal[1] has been reduced to a combinational gate by constant propagation
+Automatic dissolve at startup in view:liaison.liaison(liaison) of registers(registers)
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: FX493 |Applying Initial value "000" on instance: onebitvoter.last_status[2:0] 
+@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":163:2:163:5|Rom next_voted_data_selector[4:0] mapped in logic.
+@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":124:2:124:5|Rom next_control_signals[9:0] mapped in logic.
+@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":163:2:163:5|Rom next_voted_data_selector[4:0] mapped in logic.
+@N: MO106 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":163:2:163:5|Found ROM, 'next_voted_data_selector[4:0]', 15 words by 5 bits 
+@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":124:2:124:5|Rom next_control_signals[9:0] mapped in logic.
+@N: MO106 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":124:2:124:5|Found ROM, 'next_control_signals[9:0]', 11 words by 10 bits 
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 63MB peak: 66MB)
+
+@N: BN116 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":48:1:48:2|Removing sequential instance controller.voted_data_selector[4] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+@N: BN116 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":48:1:48:2|Removing sequential instance controller.control_signals[9] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+
+
+#################### START OF GENERATED CLOCK OPTIMIZATION REPORT ####################[
+
+======================================================================================
+                                Instance:Pin        Generated Clock Optimization Status
+======================================================================================
+
+
+##################### END OF GENERATED CLOCK OPTIMIZATION REPORT #####################]
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+
+Clock Buffers:
+  Inserting Clock buffer for port clk,
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		    -0.03ns		  96 /        47
+   2		0h:00m:00s		    -0.03ns		  80 /        47
+   3		0h:00m:00s		    -0.03ns		  80 /        47
+------------------------------------------------------------
+
+Timing driven replication report
+@N: FX271 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":163:0:163:1|Instance "onebitvoter.g0" with 3 loads has been replicated 1 time(s) to improve timing 
+Added 0 Registers via timing driven replication
+Added 1 LUTs via timing driven replication
+
+Timing driven replication report
+No replication required.
+
+Net buffering Report for view:liaison.liaison(liaison):
+No nets needed buffering.
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+@N: FX164 |The option to pack flops in the IOB has not been specified 
+Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Writing Analyst data base C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\liaison.srm
+Finished Writing Netlist Databases (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Writing EDIF Netlist and constraint files
+Reading Xilinx net attributes from file <C:\Program Files (x86)\Synplicity\fpga_C200906\lib\xilinx\netattr.txt> 
+C-2009.06
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Writing VHDL Simulation files
+Finished Writing VHDL Simulation files (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Starting Writing Gated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+@N: MF276 |Gated clock conversion enabled, but no gated clocks found in design 
+Finished Writing Gated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Starting Writing Generated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+@N: MF333 |Generated clock conversion enabled, but no generated clocks found in design 
+Finished Writing Generated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Found clock liaison|clk with period 2.37ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Thu Mar 06 14:56:49 2014
+#
+
+
+Top view:               liaison
+Requested Frequency:    422.8 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 0.000
+
+                   Requested     Estimated     Requested     Estimated               Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack     Type         Group              
+---------------------------------------------------------------------------------------------------------------------
+liaison|clk        422.8 MHz     422.8 MHz     2.365         2.365         0.000     inferred     Inferred_clkgroup_0
+=====================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                    |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+----------------------------------------------------------------------------------------------------------------
+Starting     Ending       |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+----------------------------------------------------------------------------------------------------------------
+liaison|clk  liaison|clk  |  2.365       0.000  |  No paths    -      |  No paths    -      |  No paths    -    
+================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+Detailed Report for Clock: liaison|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                               Starting                                            Arrival          
+Instance                       Reference       Type     Pin     Net                Time        Slack
+                               Clock                                                                
+----------------------------------------------------------------------------------------------------
+onebitvoter.state_b            liaison|clk     FD       Q       state_b            0.265       0.000
+onebitvoter.state_d            liaison|clk     FD       Q       state_d            0.265       0.000
+onebitvoter.state_a            liaison|clk     FD       Q       state_a            0.265       0.001
+onebitvoter.state_c            liaison|clk     FD       Q       state_c            0.265       0.001
+onebitvoter.last_status[1]     liaison|clk     FD       Q       last_status[1]     0.265       0.050
+onebitvoter.last_status[2]     liaison|clk     FD       Q       last_status[2]     0.265       0.050
+onebitvoter.last_status[0]     liaison|clk     FD       Q       last_status[0]     0.265       0.059
+registers.status_reg[2]        liaison|clk     FDRE     Q       status_out[2]      0.265       1.015
+registers.status_reg[0]        liaison|clk     FDRE     Q       status_out[0]      0.265       1.022
+registers.status_reg[1]        liaison|clk     FDRE     Q       status_out[1]      0.265       1.022
+====================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                   Starting                                                      Required          
+Instance                           Reference       Type       Pin     Net                        Time         Slack
+                                   Clock                                                                           
+-------------------------------------------------------------------------------------------------------------------
+onebitvoter.last_status[0]         liaison|clk     FD         D       last_status_0[0]           2.351        0.000
+onebitvoter.status[0]              liaison|clk     FDE        D       status_internal[0]         2.351        0.000
+onebitvoter.last_status[1]         liaison|clk     FD         D       last_status_0[1]           2.351        0.034
+onebitvoter.status_internal[2]     liaison|clk     LDCP_1     D       voted_data23               2.152        0.653
+onebitvoter.state_b                liaison|clk     FD         D       N_69_i                     2.351        0.689
+onebitvoter.state_d                liaison|clk     FD         D       N_71_i                     2.351        0.689
+onebitvoter.status[1]              liaison|clk     FDE        D       status_internal_1_rep1     2.351        0.689
+onebitvoter.state_a                liaison|clk     FD         D       N_68_i                     2.351        0.690
+onebitvoter.state_c                liaison|clk     FD         D       N_70_i                     2.351        0.690
+registers.ECC_reg[2]               liaison|clk     FDRE       D       ECC_signal[2]              2.351        1.015
+===================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Requested Period:                        2.365
+    - Setup time:                            0.015
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         2.351
+
+    - Propagation time:                      2.350
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     0.000
+
+    Number of logic level(s):                3
+    Starting point:                          onebitvoter.state_b / Q
+    Ending point:                            onebitvoter.last_status[0] / D
+    The start point is clocked by            liaison|clk [rising] on pin C
+    The end   point is clocked by            liaison|clk [rising] on pin C
+
+Instance / Net                                               Pin      Pin               Arrival     No. of    
+Name                                              Type       Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------------------------
+onebitvoter.state_b                               FD         Q        Out     0.265     0.265       -         
+state_b                                           Net        -        -       0.552     -           3         
+onebitvoter.state_b_RNILFN3                       LUT3       I0       In      -         0.817       -         
+onebitvoter.state_b_RNILFN3                       LUT3       O        Out     0.146     0.964       -         
+g0_1_0                                            Net        -        -       0.552     -           5         
+onebitvoter.un8_number_of_winning_votes_2.CO1     LUT4       I1       In      -         1.516       -         
+onebitvoter.un8_number_of_winning_votes_2.CO1     LUT4       O        Out     0.146     1.662       -         
+N_30                                              Net        -        -       0.542     -           4(3)      
+onebitvoter.last_status_0[0]                      LUT4_L     I1       In      -         2.204       -         
+onebitvoter.last_status_0[0]                      LUT4_L     LO       Out     0.146     2.350       -         
+last_status_0[0]                                  Net        -        -       0.000     -           1         
+onebitvoter.last_status[0]                        FD         D        In      -         2.350       -         
+==============================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 2.365 is 0.719(30.4%) logic and 1.646(69.6%) route.
+Fanout format: logic fanout (physical fanout)
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                   Starting                                                Arrival          
+Instance                           Reference     Type       Pin     Net                    Time        Slack
+                                   Clock                                                                    
+------------------------------------------------------------------------------------------------------------
+controller.next_di_counter[0]      System        LDC        Q       next_di_counter[0]     0.265       1.292
+controller.next_di_counter[1]      System        LDC        Q       next_di_counter[1]     0.265       1.296
+controller.next_di_counter[2]      System        LDC        Q       next_di_counter[2]     0.265       1.300
+controller.next_di_counter[3]      System        LDC        Q       next_di_counter[3]     0.265       1.319
+controller.next_do_counter[1]      System        LDC        Q       next_do_counter[1]     0.265       1.319
+controller.next_do_counter[2]      System        LDC        Q       next_do_counter[2]     0.265       1.319
+controller.next_do_counter[3]      System        LDC        Q       next_do_counter[3]     0.265       1.319
+controller.next_do_counter[0]      System        LDC        Q       next_do_counter[0]     0.265       1.326
+onebitvoter.status_internal[2]     System        LDCP_1     Q       status_internal[2]     0.265       1.345
+============================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                  Starting                                                 Required          
+Instance                          Reference     Type     Pin     Net                       Time         Slack
+                                  Clock                                                                      
+-------------------------------------------------------------------------------------------------------------
+controller.di_counter[0]          System        FD       D       next_di_counter[0]        2.152        1.292
+controller.di_counter[1]          System        FD       D       next_di_counter[1]        2.152        1.296
+controller.di_counter[2]          System        FD       D       next_di_counter[2]        2.152        1.300
+controller.di_counter[3]          System        FD       D       next_di_counter[3]        2.152        1.319
+controller.do_counter[1]          System        FD       D       next_do_counter[1]        2.152        1.319
+controller.do_counter[2]          System        FD       D       next_do_counter[2]        2.152        1.319
+controller.do_counter[3]          System        FD       D       next_do_counter[3]        2.152        1.319
+controller.do_counter[0]          System        FD       D       next_do_counter[0]        2.152        1.326
+controller.control_signals[0]     System        FD       D       control_signalsd_0[0]     2.351        1.344
+controller.control_signals[1]     System        FD       D       control_signalsd_0[1]     2.351        1.344
+=============================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Requested Period:                        2.365
+    - Setup time:                            0.213
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         2.152
+
+    - Propagation time:                      0.860
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 1.292
+
+    Number of logic level(s):                0
+    Starting point:                          controller.next_di_counter[0] / Q
+    Ending point:                            controller.di_counter[0] / D
+    The start point is clocked by            System [falling] on pin G
+    The end   point is clocked by            liaison|clk [rising] on pin C
+
+Instance / Net                             Pin      Pin               Arrival     No. of    
+Name                              Type     Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------
+controller.next_di_counter[0]     LDC      Q        Out     0.265     0.265       -         
+next_di_counter[0]                Net      -        -       0.595     -           10        
+controller.di_counter[0]          FD       D        In      -         0.860       -         
+============================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 1.073 is 0.478(44.5%) logic and 0.595(55.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+Resource Usage Report for liaison 
+
+Mapping to part: xc4vfx12sf363-12
+Cell usage:
+FD              28 uses
+FDE             4 uses
+FDRE            15 uses
+GND             2 uses
+LDC             8 uses
+LDCP            1 use
+LDCP_1          1 use
+MUXF5           5 uses
+LUT2            17 uses
+LUT3            26 uses
+LUT4            35 uses
+
+I/O ports: 9
+I/O primitives: 9
+IBUF           6 uses
+IBUFG          1 use
+OBUF           2 uses
+
+BUFG           1 use
+
+I/O Register bits:                  0
+Register bits not including I/Os:   47 (0%)
+Latch bits not including I/Os:      10 (0%)
+
+Global Clock Buffers: 1 of 32 (3%)
+
+Total load per clock:
+   liaison|clk: 47
+
+Mapping Summary:
+Total  LUTs: 78 (0%)
+
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Thu Mar 06 14:56:49 2014
+
+###########################################################]

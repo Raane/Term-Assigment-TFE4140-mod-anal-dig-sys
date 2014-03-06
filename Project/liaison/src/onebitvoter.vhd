@@ -108,8 +108,9 @@ begin
                 when "001" =>
                     voted_data <= '0';
                 when "000" =>
-voted_data <= '0';
-when others =>
+					voted_data <= '0';
+				when others =>
+					voted_data <= '0';
             end case;
         when "001" =>
             case sum_of_inputs is
@@ -120,8 +121,9 @@ when others =>
                 when "001" =>
                     voted_data <= '0';
                 when "000" =>
-voted_data <= '0';
-when others =>
+					voted_data <= '0';
+				when others =>
+					voted_data <= '0';
             end case;
         when "010" =>
             case sum_of_inputs is
@@ -130,10 +132,12 @@ when others =>
                 when "001" =>
                     voted_data <= '1'; -- in 2v2 votes the data doesn't matter, we are going to status 111 anyway
                 when "000" =>
-voted_data <= '0';
-when others =>
+					voted_data <= '0';
+				when others =>
+					voted_data <= '0';
             end case;
-when others =>
+		when others =>
+			voted_data <= '0';
     end case;
 end process;
 
@@ -173,9 +177,11 @@ else
          when "001"=>
              status_internal <= "111";
          when "000"=>
-status_internal <= "111";
-when others =>
-end case;	
+			status_internal <= "111";
+		 when others =>
+		 	-- This should never be reached
+		 	status_internal <= "111";
+	end case;	
 end if;
 end process;
 -- End of state machine front end
