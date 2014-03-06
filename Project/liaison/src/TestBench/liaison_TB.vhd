@@ -63,7 +63,7 @@ begin
 		mp_data <= "1111";
 		
 		-- Wait while data is transmited
-		wait for 120 ns;	
+		wait for 80 ns;	
 		
 		-- Test with alternating output and a single errorous bit
 		di_ready <= '1';
@@ -85,7 +85,7 @@ begin
 		mp_data <= "1111";
 		
 		-- Wait while data is transmited
-		wait for 120 ns;	
+		wait for 80 ns;	
 		
 		-- Test with alternating output and a single errorous bit
 		di_ready <= '1';
@@ -107,7 +107,7 @@ begin
 		mp_data <= "1111";
 		
 		-- Wait while data is transmited
-		wait for 120 ns;	
+		wait for 80 ns;	
 		
 		-- Test with alternating output and a single errorous bit
 		di_ready <= '1';
@@ -129,7 +129,7 @@ begin
 		mp_data <= "1111";
 		
 		-- Wait while data is transmited
-		wait for 120 ns;
+		wait for 80 ns;
 		
 		reset <= '1';
 		wait for 10 ns;

@@ -64,7 +64,7 @@ SPEED=-12
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=liaison_tb|testbench_for_liaison|1 onebitvoter_solution_example_tb|tb_architecture|0 
+HierarchyInformation=liaison_tb|testbench_for_liaison|1 onebitvoter_solution_example_tb|tb_architecture|0
 ShowHide=ShowTopLevel
 Selected=
 
@@ -199,3 +199,4 @@ TestBench/onebitvoter_solution_example_TB_runtest.do=-1
 .\src\TestBench\liaison_TB_runtest.do=Macro
 .\src\TestBench\onebitvoter_solution_example_TB.vhd=VHDL Test Bench
 .\src\TestBench\onebitvoter_solution_example_TB_runtest.do=Macro
+
