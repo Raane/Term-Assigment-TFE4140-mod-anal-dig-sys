@@ -1,14 +1,14 @@
 #Build: Synplify Pro C-2009.06, Build 063R, May 19 2009
 #install: C:\Program Files (x86)\Synplicity\fpga_C200906
 #OS:  6.1
-#Hostname: SELF
+#Hostname: DYLAN
 
 #Implementation: liaison
 
-#Wed Feb 26 05:49:11 2014
+#Thu Mar 06 14:39:24 2014
 
 $ Start of Compile
-#Wed Feb 26 05:49:11 2014
+#Thu Mar 06 14:39:24 2014
 
 Synopsys VHDL Compiler, version comp400rc, Build 020R, built May 20 2009
 Copyright (C) 1994-2009, Synopsys Inc.  All Rights Reserved
@@ -16,28 +16,30 @@ Copyright (C) 1994-2009, Synopsys Inc.  All Rights Reserved
 @N: CD720 :"C:\Program Files (x86)\Synplicity\fpga_C200906\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
 Top entity isn't set yet!
 VHDL syntax check successful!
-File C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd changed - recompiling
+
+Compiler output is up to date.  No re-compile necessary
+
 @N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd":4:7:4:13|Synthesizing liaison.liaison.liaison 
 @N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd":4:7:4:9|Synthesizing liaison.ecc.ecc 
 Post processing for liaison.ecc.ecc
 @N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd":4:7:4:15|Synthesizing liaison.registers.registers 
 Post processing for liaison.registers.registers
-@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":28:7:28:16|Synthesizing liaison.controller.controller 
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":4:7:4:16|Synthesizing liaison.controller.controller 
 Post processing for liaison.controller.controller
-@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":113:1:113:2|Latch generated from process for signal next_do_counter(4 downto 0), probably caused by a missing assignment in an if or case stmt
-@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":91:1:91:2|Latch generated from process for signal next_di_counter(3 downto 0), probably caused by a missing assignment in an if or case stmt
-@N: CL177 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":74:1:74:2|Sharing sequential element do_ready_internal.
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":87:1:87:2|Latch generated from process for signal next_do_counter(4 downto 0), probably caused by a missing assignment in an if or case stmt
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":65:1:65:2|Latch generated from process for signal next_di_counter(3 downto 0), probably caused by a missing assignment in an if or case stmt
+@N: CL177 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":48:1:48:2|Sharing sequential element do_ready_internal.
 @N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":14:7:14:17|Synthesizing liaison.onebitvoter.behavioral 
 Post processing for liaison.onebitvoter.behavioral
-@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":158:0:158:1|Latch generated from process for signal status_internal(2 downto 0), probably caused by a missing assignment in an if or case stmt
-@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":95:4:95:7|Latch generated from process for signal voted_data, probably caused by a missing assignment in an if or case stmt
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":163:0:163:1|Latch generated from process for signal status_internal(2 downto 0), probably caused by a missing assignment in an if or case stmt
+@W: CL117 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":99:4:99:7|Latch generated from process for signal voted_data, probably caused by a missing assignment in an if or case stmt
 Post processing for liaison.liaison.liaison
 @W: CL247 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd":10:3:10:17|Input port bit 9 of control_signals(9 downto 0) is unused 
 @W: CL159 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd":6:3:6:16|Input voted_data_out is unused
 @W: CL159 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd":7:3:7:12|Input status_out is unused
 @END
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 26 05:49:11 2014
+# Thu Mar 06 14:39:24 2014
 
 ###########################################################]
 Synopsys Xilinx Technology Mapper, Version map450rc, Build 029R, Built May 22 2009 15:55:09
@@ -51,8 +53,8 @@ Reading Xilinx Rocket I/O parameter type table from file <C:\Program Files (x86)
 @N|Running in logic synthesis mode without enhanced optimization
 @W: FX474 |User specified initial value found in some of the sequential elements in the design. Applying an initial value to a register may not deliver the best synthesis results. For example, registers with initial values may be preserved and retiming/pipelining may not be performed. To improve synthesis results you may want to remove the register initialization from the RTL code 
 
-@W: MO129 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":158:0:158:1|Sequential instance status_internal[0] has been reduced to a combinational gate by constant propagation
-@W: MO129 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":158:0:158:1|Sequential instance status_internal[1] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":163:0:163:1|Sequential instance status_internal[0] has been reduced to a combinational gate by constant propagation
+@W: MO129 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":163:0:163:1|Sequential instance status_internal[1] has been reduced to a combinational gate by constant propagation
 Automatic dissolve during optimization of view:liaison.liaison(liaison) of ECC(ECC)
 Automatic dissolve at startup in view:liaison.liaison(liaison) of registers(registers)
 
@@ -60,15 +62,15 @@ Available hyper_sources - for debug and ip models
 	None Found
 
 @N: FX493 |Applying Initial value "000" on instance: onebitvoter.last_status[2:0] 
-@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":189:2:189:5|Rom next_voted_data_selector[4:0] mapped in logic.
-@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":150:2:150:5|Rom next_control_signals[9:0] mapped in logic.
-@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":189:2:189:5|Rom next_voted_data_selector[4:0] mapped in logic.
-@N: MO106 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":189:2:189:5|Found ROM, 'next_voted_data_selector[4:0]', 19 words by 5 bits 
-@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":150:2:150:5|Rom next_control_signals[9:0] mapped in logic.
-@N: MO106 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":150:2:150:5|Found ROM, 'next_control_signals[9:0]', 11 words by 10 bits 
+@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":163:2:163:5|Rom next_voted_data_selector[4:0] mapped in logic.
+@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":124:2:124:5|Rom next_control_signals[9:0] mapped in logic.
+@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":163:2:163:5|Rom next_voted_data_selector[4:0] mapped in logic.
+@N: MO106 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":163:2:163:5|Found ROM, 'next_voted_data_selector[4:0]', 19 words by 5 bits 
+@N: FA239 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":124:2:124:5|Rom next_control_signals[9:0] mapped in logic.
+@N: MO106 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":124:2:124:5|Found ROM, 'next_control_signals[9:0]', 11 words by 10 bits 
 Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 63MB peak: 66MB)
 
-@N: BN116 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":74:1:74:2|Removing sequential instance controller.control_signals[9] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
+@N: BN116 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":48:1:48:2|Removing sequential instance controller.control_signals[9] of view:UNILIB.FDCPE(PRIM) because there are no references to its outputs 
 Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
 
 
@@ -109,7 +111,7 @@ Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
 
 Timing driven replication report
-@N: FX271 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":158:0:158:1|Instance "onebitvoter.g0" with 3 loads has been replicated 1 time(s) to improve timing 
+@N: FX271 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\onebitvoter.vhd":163:0:163:1|Instance "onebitvoter.g0" with 3 loads has been replicated 1 time(s) to improve timing 
 Added 0 Registers via timing driven replication
 Added 1 LUTs via timing driven replication
 
@@ -149,7 +151,7 @@ Found clock liaison|clk with period 2.37ns
 
 
 ##### START OF TIMING REPORT #####[
-# Timing Report written on Wed Feb 26 05:49:12 2014
+# Timing Report written on Thu Mar 06 14:39:25 2014
 #
 
 
@@ -421,6 +423,6 @@ Total  LUTs: 74 (0%)
 
 Mapper successful!
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Wed Feb 26 05:49:12 2014
+# Thu Mar 06 14:39:25 2014
 
 ###########################################################]

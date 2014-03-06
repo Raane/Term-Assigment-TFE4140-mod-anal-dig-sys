@@ -1,4 +1,4 @@
-831
+841
 ~E 1 "./src/liaison.vhd" 28 liaison
 ~A 1 "./src/liaison.vhd" 15 liaison
 ~E 1 "./src/TestBench/controller_TB.vhd" 6 controller_tb
