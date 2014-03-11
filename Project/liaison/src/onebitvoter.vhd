@@ -110,7 +110,7 @@ begin
                 when "000" =>
 					voted_data <= '0';
 				when others =>
-					voted_data <= '0';
+					voted_data <= 'X'; -- This is never reached
             end case;
         when "001" =>
             case sum_of_inputs is
@@ -123,7 +123,7 @@ begin
                 when "000" =>
 					voted_data <= '0';
 				when others =>
-					voted_data <= '0';
+					voted_data <= 'X'; -- This is never reached
             end case;
         when "010" =>
             case sum_of_inputs is
@@ -134,10 +134,10 @@ begin
                 when "000" =>
 					voted_data <= '0';
 				when others =>
-					voted_data <= '0';
+					voted_data <= 'X'; -- This is never reached
             end case;
 		when others =>
-			--voted_data <= '0';
+			voted_data <= 'Z'; -- This is never reached, Z is used instead of X because it is more efficient here
     end case;
 end process;
 
