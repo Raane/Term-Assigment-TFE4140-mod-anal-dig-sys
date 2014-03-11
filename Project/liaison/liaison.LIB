@@ -1,25 +1,28 @@
-timestamp=1394113724237
+timestamp=1394559127845
 
 [controller]
-A/controller=21|./src/controller.vhd|15|1*475577
-B/controller=3*345101
+A/controller=21|./src/controller.vhd|15|1*734062
+A/controllerimproved=+21|./src/controller.vhd|15|1*528362
+B/controller=3*987735
 C=8.2.1986.3485  (Windows)
 C/controller=8.2.1986.3485  (Windows)
-I=0*44205
-I/controller=0*181165
-M=11|0|v63|1393260183214|./src/controller.vhd|0*43771*0xff69337707bbe2d74e35bf97c1e367fe1282f929|0*44127*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/controller=21|0|v63|1394113604552|./src/controller.vhd|0*178395*0x456f266ba4546add93cf572f9cdb4ecaeceda9f8|0*181073*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-R=./src/controller.vhd|28
+C/controllerimproved=8.2.1986.3485  (Windows)
+I=0*223982
+I/controller=0*226509
+M=11|0|v63|1394558566136|./src/controller.vhd|0*223548*0x2df184ed31c43d670784c3c14e2f8c6293833a3f|0*223904*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/controller=21|0|v63|1394559127782|./src/controller.vhd|0*224086*0x79dc9fc67858108d7feca219cb862d192ca95a86|0*226417*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/controllerimproved=M/controllerImproved 21|0|v63|1394552539360|./src/controllerImproved.vhd|0*187599*0x787f3a351b313c6b06e83b49843c12e5547642ff|0*189856*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+R=./src/controller.vhd|4
 
 [controller_tb]
-A/tb_architecture=A/TB_ARCHITECTURE 21|./src/TestBench/controller_TB.vhd|9|1*484237
-B/tb_architecture=3*352242
+A/tb_architecture=A/TB_ARCHITECTURE 21|./src/TestBench/controller_TB.vhd|9|1*730390
+B/tb_architecture=3*981712
 C=8.2.1986.3485  (Windows)
 C/tb_architecture=8.2.1986.3485  (Windows)
 I=0*63550
-I/tb_architecture=I/TB_ARCHITECTURE 0*65782
+I/tb_architecture=I/TB_ARCHITECTURE 0*231289
 M=11|0|v63|1393267661856|./src/TestBench/controller_TB.vhd|0*63280*0xcc80590b649c0b25171edfc49199066921fdd8ec|0*63456*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/tb_architecture=M/TB_ARCHITECTURE 21|0|v63|1394113641157|./src/TestBench/controller_TB.vhd|0*63657*0xdab25c7038ae5ef02f28ed06e96431b6c668825f|0*65669*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/tb_architecture=M/TB_ARCHITECTURE 21|0|v63|1394558647914|./src/TestBench/controller_TB.vhd|0*229164*0x88a69c66de5208f5b2da59f5d0a1955dfc21ae80|0*231176*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/TestBench/controller_TB.vhd|6
 
 [ecc]
@@ -33,14 +36,14 @@ M/ecc=M/ECC 21|0|v63|1394113602352|./src/ecc.vhd|0*175397*0xdb1fa68a44c47fcc5b21
 R=./src/ecc.vhd|4
 
 [liaison]
-A/liaison=21|./src/liaison.vhd|15|1*479952
-B/liaison=3*350579
+A/liaison=21|./src/liaison.vhd|15|1*714944
+B/liaison=3*931184
 C=8.2.1986.3485  (Windows)
 C/liaison=8.2.1986.3485  (Windows)
 I=0*641
-I/liaison=0*183504
+I/liaison=0*228833
 M=11|0|v63|1393249956224|./src/liaison.vhd|0*256*0xf1671279b549d36c45799157efe652427fa41039|0*569*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
-M/liaison=21|0|v63|1394113605939|./src/liaison.vhd|0*181280*0xd232f4b786889083fd5b1e6ae5d4acf73e1c2640|0*183421*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+M/liaison=21|0|v63|1394558624698|./src/liaison.vhd|0*226624*0x3c9c1850d592041e014af306b94024170e41b019|0*228750*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/liaison.vhd|28
 
 [liaison_tb]
@@ -98,9 +101,9 @@ R=./src/TestBench/onebitvoter_solution_example_TB.vhd|4
 
 [testbench_for_controller]
 C=8.2.1986.3485  (Windows)
-E=1*487489
-I=0*184248
-M=2|0|v63|1394113641158|./src/TestBench/controller_TB.vhd|0*183835*0x191331da3b52ae44ec2e020c3a048bfda1354cf0|0*184127*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
+E=1*733642
+I=0*202272
+M=2|0|v63|1394558647917|./src/TestBench/controller_TB.vhd|0*201859*0x191331da3b52ae44ec2e020c3a048bfda1354cf0|0*202151*0xfce7a17cbf8a959a0c8fb6f5d0fad10d
 R=./src/TestBench/controller_TB.vhd|175
 
 [testbench_for_liaison]
@@ -111,16 +114,16 @@ M=2|0|v63|1394113724165|./src/TestBench/liaison_TB.vhd|0*184424*0x3797f9f0904a3f
 R=./src/TestBench/liaison_TB.vhd|182
 
 [~A]
-ModifyID=943
+ModifyID=1399
 Version=73
 
 [~MFT]
-0=749|0liaison.mgf|187424|152025
-1=337|1liaison.mgf|502061|374237
-3=201|3liaison.mgf|381888|298570
+0=880|0liaison.mgf|231289|193717
+1=510|1liaison.mgf|734062|594207
+3=321|3liaison.mgf|987735|901260
 
 [~U]
-controller=11|0*43476|
+controller=11|0*223253|
 controller_tb=11|0*63195|
 ecc=ECC 11|0*174745|
 liaison=11|0*0|

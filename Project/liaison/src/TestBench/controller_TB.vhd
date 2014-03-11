@@ -15,7 +15,7 @@ architecture TB_ARCHITECTURE of controller_tb is
 		reset : in STD_LOGIC;
 		do_ready : out STD_LOGIC;
 		control_signals : out STD_LOGIC_VECTOR(9 downto 0);
-		voted_data_selector : out STD_LOGIC_VECTOR(4 downto 0) );
+		voted_data_selector : out STD_LOGIC_VECTOR(3 downto 0) );
 	end component;
 
 	-- Stimulus signals - signals mapped to the input and inout ports of tested entity
@@ -25,12 +25,12 @@ architecture TB_ARCHITECTURE of controller_tb is
 	-- Observed signals - signals mapped to the output ports of tested entity
 	signal do_ready : STD_LOGIC;
 	signal control_signals : STD_LOGIC_VECTOR(9 downto 0);
-	signal voted_data_selector : STD_LOGIC_VECTOR(4 downto 0);
+	signal voted_data_selector : STD_LOGIC_VECTOR(3 downto 0);
 
 	constant clock_period : time := 10 ns;
 	-- Full output period is 19 cycles, but 1 must be used to set di_ready on and off,
 	-- therefore 18 cycles are set.
-	constant output_period : time := clock_period*18; 
+	constant output_period : time := clock_period*14; 
 	
 	
 	
@@ -67,9 +67,9 @@ begin
 	wait for clock_period*2;
 	reset <= '0';
 	wait for clock_period*2;
-	-- Making sure that di_ready is set at falling_edge
+	-- Making sure that di_ready is set at falling_edge, by waiting 5 ns before using clock_period as standard wait time
 	wait for 5 ns; 
-	-- Test and implementation assumes that the inputs for di_ready and mp_data
+	-- Test and implementation assumes that the inputs for  di_ready and mp_data
 	-- to liasion are set on their own, assumed to be falling_edge of clock here	
 		
 	-- BEGIN TEST

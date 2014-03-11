@@ -1,0 +1,352 @@
+#Build: Synplify Pro C-2009.06, Build 063R, May 19 2009
+#install: C:\Program Files (x86)\Synplicity\fpga_C200906
+#OS:  6.1
+#Hostname: BASIC
+
+#Implementation: controller
+
+#Tue Mar 11 18:26:02 2014
+
+$ Start of Compile
+#Tue Mar 11 18:26:02 2014
+
+Synopsys VHDL Compiler, version comp400rc, Build 020R, built May 20 2009
+Copyright (C) 1994-2009, Synopsys Inc.  All Rights Reserved
+
+@N: CD720 :"C:\Program Files (x86)\Synplicity\fpga_C200906\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+Top entity isn't set yet!
+VHDL syntax check successful!
+@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":4:7:4:16|Synthesizing liaison.controller.controller 
+Post processing for liaison.controller.controller
+@N: CL201 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":37:1:37:2|Trying to extract state machine for register control_signals_internal
+Extracted state machine for register control_signals_internal
+State machine has 11 reachable states with original encodings of:
+   0000000000
+   0000000001
+   0000000010
+   0000000100
+   0000001000
+   0000010000
+   0000100000
+   0001000000
+   0010000000
+   0100000000
+   1000000000
+@N: CL201 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":37:1:37:2|Trying to extract state machine for register vdsi
+Extracted state machine for register vdsi
+State machine has 15 reachable states with original encodings of:
+   0000
+   0001
+   0010
+   0011
+   0100
+   0101
+   0110
+   0111
+   1000
+   1001
+   1010
+   1011
+   1100
+   1101
+   1110
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Mar 11 18:26:02 2014
+
+###########################################################]
+Synopsys Xilinx Technology Mapper, Version map450rc, Build 029R, Built May 22 2009 15:55:09
+Copyright (C) 1994-2009, Synopsys Inc.  All Rights Reserved
+Product Version C-2009.06
+@W|Ignoring top level module 'liaison.controller' as specified in project file
+@N: MF249 |Running in 32-bit mode.
+@N: MF257 |Gated clock conversion enabled 
+Reading Xilinx I/O pad type table from file <C:\Program Files (x86)\Synplicity\fpga_C200906\lib\xilinx\x_io_tbl.txt> 
+Reading Xilinx Rocket I/O parameter type table from file <C:\Program Files (x86)\Synplicity\fpga_C200906\lib\xilinx\gttype.txt> 
+@N|Running in logic synthesis mode without enhanced optimization
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+Finished RTL optimizations (Time elapsed 0h:00m:00s; Memory used current: 63MB peak: 66MB)
+
+Encoding state machine liaison.controller(controller)-vdsi[0:14]
+original code -> new code
+   0000 -> 000000000000001
+   0001 -> 000000000000010
+   0010 -> 000000000000100
+   0011 -> 000000000001000
+   0100 -> 000000000010000
+   0101 -> 000000000100000
+   0110 -> 000000001000000
+   0111 -> 000000010000000
+   1000 -> 000000100000000
+   1001 -> 000001000000000
+   1010 -> 000010000000000
+   1011 -> 000100000000000
+   1100 -> 001000000000000
+   1101 -> 010000000000000
+   1110 -> 100000000000000
+Encoding state machine liaison.controller(controller)-control_signals_internal[0:10]
+original code -> new code
+   0000000000 -> 00000000001
+   0000000001 -> 00000000010
+   0000000010 -> 00000000100
+   0000000100 -> 00000001000
+   0000001000 -> 00000010000
+   0000010000 -> 00000100000
+   0000100000 -> 00001000000
+   0001000000 -> 00010000000
+   0010000000 -> 00100000000
+   0100000000 -> 01000000000
+   1000000000 -> 10000000000
+Finished factoring (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+
+
+#################### START OF GENERATED CLOCK OPTIMIZATION REPORT ####################[
+
+======================================================================================
+                                Instance:Pin        Generated Clock Optimization Status
+======================================================================================
+
+
+##################### END OF GENERATED CLOCK OPTIMIZATION REPORT #####################]
+
+Finished gated-clock and generated-clock conversion (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+
+Clock Buffers:
+  Inserting Clock buffer for port clk,
+Finished generic timing optimizations - Pass 1 (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Starting Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Finished Early Timing Optimization (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Finished generic timing optimizations - Pass 2 (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+@W: BN132 :"c:\users\student\documents\github\term-assigment-tfe4140-mod-anal-dig-sys\project\liaison\src\controller.vhd":37:1:37:2|Removing instance do_ready_internal,  because it is equivalent to instance control_signals_internal[9]
+Finished preparing to map (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Finished technology mapping (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+------------------------------------------------------------
+
+Net buffering Report for view:liaison.controller(controller):
+No nets needed buffering.
+
+Finished technology timing optimizations and critical path resynthesis (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+@N: FX164 |The option to pack flops in the IOB has not been specified 
+Finished restoring hierarchy (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Writing Analyst data base C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\controller\controller.srm
+Finished Writing Netlist Databases (Time elapsed 0h:00m:00s; Memory used current: 63MB peak: 66MB)
+
+Writing EDIF Netlist and constraint files
+Reading Xilinx net attributes from file <C:\Program Files (x86)\Synplicity\fpga_C200906\lib\xilinx\netattr.txt> 
+C-2009.06
+Finished Writing EDIF Netlist and constraint files (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Writing VHDL Simulation files
+Finished Writing VHDL Simulation files (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Starting Writing Gated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+@N: MF276 |Gated clock conversion enabled, but no gated clocks found in design 
+Finished Writing Gated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Starting Writing Generated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+@N: MF333 |Generated clock conversion enabled, but no generated clocks found in design 
+Finished Writing Generated Clock Conversion Report (Time elapsed 0h:00m:00s; Memory used current: 64MB peak: 66MB)
+
+Found clock controller|clk with period 1000.00ns 
+
+
+##### START OF TIMING REPORT #####[
+# Timing Report written on Tue Mar 11 18:26:04 2014
+#
+
+
+Top view:               controller
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report estimates place and route data. Please look at the place and route timing report for final timing..
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock..
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 998.309
+
+                   Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack       Type         Group              
+-----------------------------------------------------------------------------------------------------------------------
+controller|clk     1.0 MHz       591.4 MHz     1000.000      1.691         998.309     inferred     Inferred_clkgroup_0
+=======================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                          |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+------------------------------------------------------------------------------------------------------------------------
+Starting        Ending          |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+------------------------------------------------------------------------------------------------------------------------
+controller|clk  controller|clk  |  1000.000    998.309  |  No paths    -      |  No paths    -      |  No paths    -    
+========================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+		No IO constraint found 
+
+
+
+====================================
+Detailed Report for Clock: controller|clk
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                Starting                                                            Arrival            
+Instance                        Reference          Type     Pin     Net                             Time        Slack  
+                                Clock                                                                                  
+-----------------------------------------------------------------------------------------------------------------------
+control_signals_internal[1]     controller|clk     FDR      Q       control_signals_internal[1]     0.265       998.309
+control_signals_internal[2]     controller|clk     FDR      Q       control_signals_internal[2]     0.265       998.309
+control_signals_internal[3]     controller|clk     FDR      Q       control_signals_internal[3]     0.265       998.309
+control_signals_internal[9]     controller|clk     FDR      Q       do_ready_internal               0.265       998.636
+control_signals_internal[4]     controller|clk     FDR      Q       control_signals_internal[4]     0.265       998.665
+control_signals_internal[5]     controller|clk     FDR      Q       control_signals_internal[5]     0.265       998.665
+control_signals_internal[6]     controller|clk     FDR      Q       control_signals_internal[6]     0.265       998.665
+control_signals_internal[7]     controller|clk     FDR      Q       control_signals_internal[7]     0.265       998.665
+control_signals_internal[8]     controller|clk     FDR      Q       control_signals_internal[8]     0.265       998.665
+vdsi[0]                         controller|clk     FDR      Q       vdsi[0]                         0.265       998.970
+=======================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                   Starting                                                            Required            
+Instance                           Reference          Type     Pin     Net                             Time         Slack  
+                                   Clock                                                                                   
+---------------------------------------------------------------------------------------------------------------------------
+control_signals_internal_i[10]     controller|clk     FDR      D       control_signals_internal_ic     999.986      998.309
+control_signals_internal[1]        controller|clk     FDR      D       do_ready_internal               999.787      998.941
+control_signals_internal[0]        controller|clk     FDR      D       control_signals_internal[1]     999.787      998.970
+control_signals_internal[3]        controller|clk     FDR      D       control_signals_internal[2]     999.787      998.970
+control_signals_internal[4]        controller|clk     FDR      D       control_signals_internal[3]     999.787      998.970
+control_signals_internal[5]        controller|clk     FDR      D       control_signals_internal[4]     999.787      998.970
+control_signals_internal[6]        controller|clk     FDR      D       control_signals_internal[5]     999.787      998.970
+control_signals_internal[7]        controller|clk     FDR      D       control_signals_internal[6]     999.787      998.970
+control_signals_internal[8]        controller|clk     FDR      D       control_signals_internal[7]     999.787      998.970
+control_signals_internal[9]        controller|clk     FDR      D       control_signals_internal[8]     999.787      998.970
+===========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+    Requested Period:                        1000.000
+    - Setup time:                            0.014
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         999.986
+
+    - Propagation time:                      1.677
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     998.309
+
+    Number of logic level(s):                3
+    Starting point:                          control_signals_internal[1] / Q
+    Ending point:                            control_signals_internal_i[10] / D
+    The start point is clocked by            controller|clk [rising] on pin C
+    The end   point is clocked by            controller|clk [rising] on pin C
+
+Instance / Net                                            Pin      Pin               Arrival     No. of    
+Name                                           Type       Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------------
+control_signals_internal[1]                    FDR        Q        Out     0.265     0.265       -         
+control_signals_internal[1]                    Net        -        -       0.552     -           3         
+control_signals_internal_nss_i_i_a4_0_5[0]     LUT4_L     I0       In      -         0.817       -         
+control_signals_internal_nss_i_i_a4_0_5[0]     LUT4_L     LO       Out     0.146     0.964       -         
+control_signals_internal_nss_i_i_a4_0_5[0]     Net        -        -       0.210     -           1         
+control_signals_internal_nss_i_i_a4_0_7[0]     LUT3_L     I1       In      -         1.174       -         
+control_signals_internal_nss_i_i_a4_0_7[0]     LUT3_L     LO       Out     0.146     1.320       -         
+control_signals_internal_nss_i_i_a4_0_7[0]     Net        -        -       0.210     -           1         
+control_signals_internal_ic                    LUT4_L     I2       In      -         1.530       -         
+control_signals_internal_ic                    LUT4_L     LO       Out     0.146     1.677       -         
+control_signals_internal_ic                    Net        -        -       0.000     -           1         
+control_signals_internal_i[10]                 FDR        D        In      -         1.677       -         
+===========================================================================================================
+Total path delay (propagation time + ICD at startpoint + setup - ICD at endpoint) of 1.691 is 0.719(42.5%) logic and 0.972(57.5%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+*Arrival time includes intrinsic clock delay at start point and clock delay at startpoint
+
+
+
+##### END OF TIMING REPORT #####]
+
+---------------------------------------
+Resource Usage Report for controller 
+
+Mapping to part: xc4vfx12sf363-12
+Cell usage:
+FDR             24 uses
+FDS             2 uses
+LUT1            2 uses
+LUT2            4 uses
+LUT3            4 uses
+LUT4            8 uses
+
+I/O ports: 18
+I/O primitives: 18
+IBUF           2 uses
+IBUFG          1 use
+OBUF           15 uses
+
+BUFG           1 use
+
+I/O Register bits:                  0
+Register bits not including I/Os:   26 (0%)
+
+Global Clock Buffers: 1 of 32 (3%)
+
+Total load per clock:
+   controller|clk: 26
+
+Mapping Summary:
+Total  LUTs: 18 (0%)
+
+Mapper successful!
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Mar 11 18:26:04 2014
+
+###########################################################]

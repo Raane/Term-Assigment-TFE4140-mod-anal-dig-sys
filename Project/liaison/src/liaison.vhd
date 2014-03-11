@@ -21,7 +21,7 @@ signal ECC_signal: STD_LOGIC_VECTOR(3 downto 0);
 signal voted_data_out: STD_LOGIC_VECTOR (7 downto 0);
 signal status_out: STD_LOGIC_VECTOR (2 downto 0);
 signal ECC_out: STD_LOGIC_VECTOR (3 downto 0);
-signal voted_data_selector: STD_LOGIC_VECTOR (4 downto 0);
+signal voted_data_selector: STD_LOGIC_VECTOR (3 downto 0);
 
 -- Declare aliases for the input votes
 alias a is mp_data(0);
@@ -79,35 +79,35 @@ begin
 	process(voted_data_selector, voted_data_out, status_out, ECC_out)
 	begin
 		case voted_data_selector is
-			when "00000" =>	-- 00
+			when "0000" =>	-- 00
 				voted_data <= voted_data_out(0);
-			when "00001" =>	-- 01
+			when "0001" =>	-- 01
 				voted_data <= voted_data_out(1);
-			when "00010" => -- 02
+			when "0010" => -- 02
 				voted_data <= voted_data_out(2);
-			when "00011" =>	-- 03
+			when "0011" =>	-- 03
 				voted_data <= voted_data_out(3);
-			when "00100" =>	-- 04
+			when "0100" =>	-- 04
 				voted_data <= voted_data_out(4);
-			when "00101" =>	-- 05
+			when "0101" =>	-- 05
 				voted_data <= voted_data_out(5);
-			when "00110" =>	-- 06
+			when "0110" =>	-- 06
 				voted_data <= voted_data_out(6);
-			when "00111" =>	-- 07
+			when "0111" =>	-- 07
 				voted_data <= voted_data_out(7);
-			when "01000" =>	-- 08
+			when "1000" =>	-- 08
 				voted_data <= status_out(0);								  
-			when "01001" =>	-- 09
+			when "1001" =>	-- 09
 				voted_data <= status_out(1);
-			when "01010" =>	-- 10
+			when "1010" =>	-- 10
 				voted_data <= status_out(2);
-			when "01011" =>	-- 11
+			when "1011" =>	-- 11
 				voted_data <= ECC_out(0);
-			when "01100" =>	-- 12
+			when "1100" =>	-- 12
 				voted_data <= ECC_out(1);
-			when "01101" =>	-- 13
+			when "1101" =>	-- 13
 				voted_data <= ECC_out(2);
-			when "01110" =>	-- 14
+			when "1110" =>	-- 14
 				voted_data <= ECC_out(3);
 			when others =>
 				voted_data <= '-'; -- should not be reached, but useful to detect glitches

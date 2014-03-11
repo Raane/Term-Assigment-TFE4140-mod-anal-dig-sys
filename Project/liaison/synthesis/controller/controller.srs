@@ -1,0 +1,177 @@
+%%% protect protected_file
+@E
+@ 
+#
+#
+#
+# Created by Synplify VHDL Compiler version comp400rc, Build 020R from Synplicity, Inc.
+# Copyright 1994-2009 Synopsys, Inc. , All rights reserved.
+# Synthesis Netlist written on Tue Mar 11 18:26:02 2014
+#
+#
+#OPTIONS:"|-top|liaison.controller|-dspmac|-primux|-fixsmult|-sdff_counter|-infer_seqShift|-nram|-divnmod|-encrypt|-pro|-lite|-ll|2000|-ui|-fid2|-ram|-sharing|on|-autosm|-ignore_undefined_lib|-lib|liaison|-lib|liaison|-lib|liaison|-lib|liaison|-lib|liaison"
+#CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\bin\\c_vhdl.exe":1242894702
+#CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\lib\\vhd\\location.map":1242831986
+#CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\lib\\vhd\\std.vhd":1242749376
+#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\onebitvoter.vhd":1394550377
+#CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\lib\\vhd\\std1164.vhd":1242749376
+#CUR:"C:\\Program Files (x86)\\Synplicity\\fpga_C200906\\lib\\vhd\\numeric.vhd":1242749376
+#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\ECC.vhd":1394550377
+#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\registers.vhd":1394550377
+#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\controller.vhd":1394558619
+#CUR:"C:\\Users\\Student\\Documents\\GitHub\\Term-Assigment-TFE4140-mod-anal-dig-sys\\Project\\liaison\\src\\liaison.vhd":1394558529
+f "C:\Program Files (x86)\Synplicity\fpga_C200906\lib\vhd\std.vhd"; # file 0
+af .is_vhdl 1;
+f "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd"; # file 1
+af .is_vhdl 1;
+f "C:\Program Files (x86)\Synplicity\fpga_C200906\lib\vhd\std1164.vhd"; # file 2
+af .is_vhdl 1;
+f "C:\Program Files (x86)\Synplicity\fpga_C200906\lib\vhd\numeric.vhd"; # file 3
+af .is_vhdl 1;
+f "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd"; # file 4
+af .is_vhdl 1;
+f "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd"; # file 5
+af .is_vhdl 1;
+f "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd"; # file 6
+af .is_vhdl 1;
+f "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd"; # file 7
+af .is_vhdl 1;
+@E
+@ 
+ftell;
+@E@MR@cn::c(::R4nDHHN#RFMO0FMsDFDCOsRFsM0FCDDsN;
+PHR3#8PED;R4
+RNP3_H#PDE8R
+4;N3PR#_$MVblNRH"DNFH#M"R\B\:\zs#C#1\\0Ck8M\0\7kFOl0CM#t\\Hk0]La\\C-slqH##oMlC0w-a cc4jF-l8M-NN8D-H#o-$\#\u[sFC\O0\NDHHM#F\s\#OD\\H#NHFPM3E"8\
+NDHHM#FRB\":z\\##Cs\0\1kM8C07\\FlOkC#M0\H\t0L]k\C\asql-#o#Hl0CM- awcj4c-8lF-NNMDH-8o$-##u\\sCF[O\0\DHHN#\FM\O#s\M\FC0LHPCF0sE3P8
+\"DHHN#RFM\:"B\#\zC\s#\k1080CM\F\7OCklM\0#\0tH]\kL\saCl#-q#lHoC-M0acw 4-cjl-F8NDMN-o8H-##$\s\uFO[C0D\\H#NHF\M\#\sO\B B38PE\D"
+H#NHF\MR"\B:\Cz#s\#\180kC\M0\O7FkMlC0\#\t]H0k\L\alCs-#q#HColMa0-w4 cclj-FN8-M-ND8-Ho#\$#\Fus[0CO\H\DNFH#M#\\s\O\sHCo#s0C#E3P8
+\"DHHN#RFM\:"B\#\zC\s#\k1080CM\F\7OCklM\0#\0tH]\kL\saCl#-q#lHoC-M0acw 4-cjl-F8NDMN-o8H-##$\s\uFO[C0D\\H#NHF\M\#\sO\MOF0DsFD3CsP\E8";
+"
+@HR@nn::nd::R4j8sH_C$N8R_8Hs8CN$N;
+HsR30FD_sMHoNRlC"_8Hs8CN$
+";
+@HR@(n::(d::O6RDO	RD
+	;N3HRs_0DFosHMCNlRD"O	
+";
+@HR@Un::Ud::s(RC0#CR#sCC
+0;N3HRs_0DFosHMCNlRC"s#"C0;
+
+
+
+@FR@gn::gd::R4j8sF_C$N8R_8Fs8CN$M_H0MCsN
+D;N3HRs_0DFosHMCNlRF"8_NsC8;$"
+@FR@4n:j::d44j:(FROMF0sDH_#oDMN#:rgjO9RFsM0F#D_HNoMDH#_Ms0CMrNDj9:g;H
+NR03sDs_FHNoMl"CRO0FMs_FD#MHoN"D#;
+
+
+
+@FR@4n:4::d4.4:4FRP0_C88NN0_D#CCFO0s:rdjk9RMr4nj9:d;H
+NR03sDs_FHNoMl"CRPCF08N_80#N_CODC0"Fs;R
+b@:@j4::44R:.0CskRk0sCsR0k
+C;b@R@j::44::4.NRVDR#CV#NDCNRVD;#C
+@#R@dn:(::4d.(:RMOF0DsF_o#HM#ND_0HMCNsMD:rj4Rj9y0R#NR0ClENOH
+MC3N#00RC#jjjjjjjjjjjRjjjjjjjj4jRjjjjjjjj4Rjjjjjjj4Rjjjjjjjjj4jjjRjjjj4jjjjjRjjjj4jjjj
+03#N#0CRjjj4jjjjRjjjjj4jjjjjjjR4jjjjjjjjjR4jjjjjjjj
+03#N_0CHFMVRn@@::n.d.:n:R..jjjjjjjjjjjRjjjjjjjjj#
+30CN0_VHMF@R@nd:U:Ud:d.:.RjjjjjjjjRj4jjjjjjjjj34
+#00NCM_HV@FR@Un:j::dU.j:.jRjjjjjjjj4Rjjjjjjjj
+4j3N#00HC_MRVF@:@n(dU:::(U.j.Rjjjjjjj4jjRjjjjjjj4j
+03#N_0CHFMVRn@@::(ndn:(:R..jjjjjjj4jjjRjjjjjj4jj#
+30CN0_VHMF@R@nc:(:(d:c.:.Rjjjjjj4jRjjjjjjjj4jj3j
+#00NCM_HV@FR@(n:.::d(..:.jRjjjj4jjjjRjjjjj4jj
+jj3N#00HC_MRVF@:@n(dj:::(j.j.Rjjj4jjjjjjRjjj4jjjjj
+03#N_0CHFMVRn@@::nUdU:n:R..jjj4jjjjjjjRjj4jjjjjj#
+30CN0_VHMF@R@n6:U:Ud:6.:.Rjj4jjjjjRjjjj4jjjjjj3j
+HkMb0lMNC8#RHC_sNR8$sCC#0O
+3D	FOR	ODR#sHH_MoCC8o
+R-jjj4jjjjjj4jRjjjjjjjjj-R
+jjRjjjjjj4jjRjj4jjjjjRjj
+R4jjjjjjjjjjjjRjj4jjjjjj-R
+jjRj4jjjjjjjRjjj4jjjjRjj
+R-jj4jjjjjjjjjRj4jjjjjjj-R
+jjRjjjj4jjjjRjjjjjj4jRjj
+R-jjjjjjj4jjjjRjjjjjj4jj-R
+jjRjjjjj4jjjRjjjjjjj4Rjj
+R-jjjjjj4jjjjjRjjjjj4jjj-R
+jjRjjjjjjjj4RjjjjjjjjRj4
+R--4jjjjjjjjjjRjjjjjjjjj-R
+44RjjjjjjjjjRjjjjjjjjRjj
+R-4jjj4jjjjjjjRjjjjjjjjj-R
+4jRjjj4jjjjjRjjjjjjjjRjj
+R-4jjjj4jjjjjjRjjjjjjjjj-R
+4jRjj4jjjjjjRjjjjjjjjRjj
+R-4jjjjjjj4jjjRjjjjjjjjj-R
+4jRjjjjjjj4jRjjjjjjjjRjj
+R-4jjjjjjjj4jjRjjjjjjjjj-R
+4jRjjjjjj4jjRjjjjjjjjRjj
+R-4jjjjjjjjjjjRjjjjjjjjjjR
+-jRjjjjjjjjjRjjjjjjjjRjj
+y;RR8CMRRFV#00NCNRlOMEHCH
+NR03sD0C_F;R4
+RNH#_$MV_#lH"8Rn4d(d"(4;H
+NR03sDs_FHNoMl"CRO0FMs_FD#MHoN_D#HCM0sDMN"b;
+Rn@@::d(4(:d:#.R8sVVR_8Fs8CN$M_H0MCsN8DRFC_sN_8$HCM0sDMNRMOF0DsF_o#HM#ND_0HMCNsMD9rU
+RRRR	ODR#sCC
+0;N3HRs_0DFosHMCNlRF"8_NsC8H$_Ms0CM"ND;R
+#@:@nd4(:::d(.8RP#jHr:94cR#yR0CN0ROlNECHM
+03#N#0CRjjjjjRjjj4RjR4jj4j4Rjj4j4Rjjj4R4R4jj444Rj4jjjR4j44RjR4j44j4Rj44j4R4j44R4
+4j3N#00HC_MRVF@:@n4:4nd4:4nn:4RjjjjjRjj3j
+#00NCM_HV@FR@4n:4dc::c44:R4nj4jjRjjj4#
+30CN0_VHMF@R@n4:4.::d4:4.4jnRjR4jjjj4
+03#N_0CHFMVRn@@:j44:4d:44j:njRj4j4Rj
+443N#00HC_MRVF@:@n4:jUdj:4Un:4Rjj4j4Rjj3j
+#00NCM_HV@FR@4n:jdn::n4j:R4nj44jRjj44#
+30CN0_VHMF@R@nj:4c::d4:jc4jnR4R4jjj44
+03#N_0CHFMVRn@@::gUdU:g:R4nj444R4j44#
+30CN0_VHMF@R@n.:4.::d4:..44nRjRjj4jjj
+03#N_0CHFMVRn@@:j4.:4d:.4j:njR4j44Rj
+j43N#00HC_MRVF@:@n4:4Ud4:4Un:4R44jjjR443j
+#00NCM_HV@FR@4n:.dU::U4.:R4n4j4jRj44j#
+30CN0_VHMF@R@n.:4n::d4:.n44nR4Rj4444j
+03#N_0CHFMVRn@@:c4.:4d:.4c:n4R444jR4
+4j3bHMkN0MlRC#sCC#0FR8_NsC8H$_Ms0CM
+ND3FODOO	RDs	RHM#Ho8_CojC
+-jR4j4jR4R4j
+Rj-4j44Rj444jR
+-4R4j44R4Rjj
+Rj-4j4jR44j4jR
+-jRjj4jRjR4j
+Rj-4jj4Rj4j4jR
+-jR4j44RjRjj
+R4-4j44R4j444R
+-4R4jj4R4R44
+R4-4j4jR4j44-R
+-jR44j4R4R44
+R4-4jj4R4j444R
+-jR4jj4R4R44
+R4-4jjjR4j444R
+-4Rj4j4R4R44
+R-jj444R4j444R
+-4Rj4jjR4R44
+R4-j44jR4j444R
+-4RjjjjR4R44
+R4-j4j4R4j444R
+-jRj4jjR4R44
+R4-j4jjR4j444R
+-jRjjjjR4R44
+Rj4j444R4j4jjR
+-4Rj4jjR4Rj4
+Rj-j44jRjj4jjR
+-4RjjjjRjR44
+Rj-j4j4R4jjjjR
+-jRj4jjRjRj4
+Rj-j4jjRjjjj;R
+RCyRMF8RV0R#NR0ClENOH
+MCN3HRsC0D_R0F4N;
+H$R#M#_Vl8_HRd"n((4d.
+";N3HRs_0DFosHMCNlR8"P#;H"
+@bR@dn:(::4d.(:RkblGMRk4jnr:Rd9knM4rdj:9NRVD,#CV#NDCN,VD,#CV#NDC8,P#4HrcV9RNCD#,DVN#VC,NCD#,k0sC8,P#4HrdR9
+RVRRNCD#,DVN#0C,s,kCV#NDC8,P#4Hr.V9RNCD#,DVN#0C,s,kC0Csk,#P8H4r49NRVD,#C0Csk,DVN#VC,NCD#,#P8Hjr49R
+RRNRVD,#C0Csk,DVN#0C,s,kCPH8#rRg9V#NDCs,0k0C,s,kCV#NDC8,P#UHr9NRVD,#C0Csk,k0sCs,0kPC,8r#H(R9
+R0RRs,kCV#NDCN,VD,#CV#NDC8,P#nHr9sR0kVC,NCD#,DVN#0C,s,kCPH8#rR690Csk,DVN#0C,s,kCV#NDC8,P#cHr9R
+RRsR0kVC,NCD#,k0sCs,0kPC,8r#Hd09Rs,kC0Csk,DVN#VC,NCD#,#P8H9r.Rk0sCs,0kVC,NCD#,k0sC8,P#4Hr9R
+RRsR0k0C,s,kC0Csk,DVN#PC,8r#Hj
+9;C
+;
+

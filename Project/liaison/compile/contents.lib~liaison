@@ -1,9 +1,10 @@
-943
+1399
 ~E 1 "./src/liaison.vhd" 28 liaison
 ~A 1 "./src/liaison.vhd" 15 liaison
 ~E 1 "./src/TestBench/controller_TB.vhd" 6 controller_tb
 ~A 1 "./src/TestBench/controller_TB.vhd" 9 tb_architecture
-~E 1 "./src/controller.vhd" 28 controller
+~E 1 "./src/controller.vhd" 4 controller
+~A 1 "./src/controller.vhd" 15 controllerimproved
 ~A 1 "./src/controller.vhd" 15 controller
 ~E 1 "./src/ecc.vhd" 4 ecc
 ~A 1 "./src/ECC.vhd" 12 ecc

@@ -1,0 +1,91 @@
+#
+# Synplicity Verification Interface File
+# Generated using Synplify-pro
+#
+# Copyright (C) 1994-2009, Synopsys Inc.  All Rights Reserved
+
+# All rights reserved
+#
+
+# Set logfile options
+vif_set_result_file  controller.vlf
+
+# Set technology for TCL script
+vif_set_technology -architecture FPGA -vendor Xilinx
+
+# RTL and technology files
+vif_add_file -original -vhdl -lib liaison ../../src/liaison.vhd
+vif_add_file -original -vhdl -lib liaison ../../src/onebitvoter.vhd
+vif_add_file -original -vhdl -lib liaison ../../src/ECC.vhd
+vif_add_file -original -vhdl -lib liaison ../../src/registers.vhd
+vif_add_file -original -vhdl -lib liaison ../../src/controller.vhd
+vif_set_top_module -original -top controller
+ 
+vif_add_library -translated $XILINX/verilog/verification/unisims
+vif_add_library -translated $XILINX/verilog/verification/simprims
+vif_add_file -translated -verilog controller.vm
+vif_set_top_module -translated -top controller 
+# Read FSM encoding
+vif_set_fsm -fsm fsm_0
+vif_set_fsmreg -original -fsm fsm_0 vdsi[3:0]
+vif_set_fsmreg -translated -fsm  fsm_0 vdsi[14:0]
+vif_set_state_map -fsm fsm_0 -original "0000" -translated "100000000000000"
+vif_set_state_map -fsm fsm_0 -original "0001" -translated "010000000000000"
+vif_set_state_map -fsm fsm_0 -original "0010" -translated "001000000000000"
+vif_set_state_map -fsm fsm_0 -original "0011" -translated "000100000000000"
+vif_set_state_map -fsm fsm_0 -original "0100" -translated "000010000000000"
+vif_set_state_map -fsm fsm_0 -original "0101" -translated "000001000000000"
+vif_set_state_map -fsm fsm_0 -original "0110" -translated "000000100000000"
+vif_set_state_map -fsm fsm_0 -original "0111" -translated "000000010000000"
+vif_set_state_map -fsm fsm_0 -original "1000" -translated "000000001000000"
+vif_set_state_map -fsm fsm_0 -original "1001" -translated "000000000100000"
+vif_set_state_map -fsm fsm_0 -original "1010" -translated "000000000010000"
+vif_set_state_map -fsm fsm_0 -original "1011" -translated "000000000001000"
+vif_set_state_map -fsm fsm_0 -original "1100" -translated "000000000000100"
+vif_set_state_map -fsm fsm_0 -original "1101" -translated "000000000000010"
+vif_set_state_map -fsm fsm_0 -original "1110" -translated "000000000000001"
+vif_set_fsm -fsm fsm_1
+vif_set_fsmreg -original -fsm fsm_1 control_signals_internal[9:0]
+vif_set_fsmreg -translated -fsm  fsm_1 control_signals_internal[10:0]
+vif_set_state_map -fsm fsm_1 -original "0000000000" -translated "10000000000"
+vif_set_state_map -fsm fsm_1 -original "0000000001" -translated "01000000000"
+vif_set_state_map -fsm fsm_1 -original "0000000010" -translated "00100000000"
+vif_set_state_map -fsm fsm_1 -original "0000000100" -translated "00010000000"
+vif_set_state_map -fsm fsm_1 -original "0000001000" -translated "00001000000"
+vif_set_state_map -fsm fsm_1 -original "0000010000" -translated "00000100000"
+vif_set_state_map -fsm fsm_1 -original "0000100000" -translated "00000010000"
+vif_set_state_map -fsm fsm_1 -original "0001000000" -translated "00000001000"
+vif_set_state_map -fsm fsm_1 -original "0010000000" -translated "00000000100"
+vif_set_state_map -fsm fsm_1 -original "0100000000" -translated "00000000010"
+vif_set_state_map -fsm fsm_1 -original "1000000000" -translated "00000000001"
+
+# Memory map points
+
+# SRL map points
+
+# Compiler constant registers
+
+# Compiler constant latches
+
+# Compiler RTL sequential redundancies
+
+# RTL sequential redundancies
+vif_set_merge -original -fsmopt  control_signals_internal[9] do_ready_internal
+
+# Technology sequential redundancies
+
+# Inversion map points
+vif_set_map_point -register -inverted -original control_signals_internal[10] -translated control_signals_internal_i_Z[10]
+vif_set_map_point -register -inverted -original vdsi[14] -translated vdsi_i_Z[14]
+
+# Port mappping and directions
+
+# Black box mapping
+
+
+# Other sequential cells, including multidimensional arrays
+
+# Constant Registers
+
+# Retimed Registers
+

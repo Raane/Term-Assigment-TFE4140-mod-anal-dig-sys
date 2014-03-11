@@ -1,0 +1,65 @@
+#-- Synplicity, Inc.
+#-- Version C-2009.06
+#-- Project file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\controller\scratchproject.prs
+#-- Written on Tue Mar 11 18:26:02 2014
+
+
+#project files
+add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/liaison.vhd"
+add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/onebitvoter.vhd"
+add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/ECC.vhd"
+add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/registers.vhd"
+add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/controller.vhd"
+
+
+#implementation: "controller"
+impl -add C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\controller -type fpga
+
+#device options
+set_option -technology VIRTEX4
+set_option -part XC4VFX12
+set_option -package SF363
+set_option -speed_grade -12
+set_option -part_companion ""
+
+#compilation/mapping options
+set_option -use_fsm_explorer 0
+set_option -top_module "liaison.controller"
+
+# sequential_optimization_options
+set_option -symbolic_fsm_compiler 1
+
+# Compiler Options
+set_option -compiler_compatible 0
+set_option -resource_sharing 1
+
+# mapper_options
+set_option -frequency 1
+set_option -write_verilog 0
+set_option -write_vhdl 1
+
+# Xilinx Virtex2
+set_option -run_prop_extract 1
+set_option -maxfan 10000
+set_option -disable_io_insertion 0
+set_option -pipe 1
+set_option -update_models_cp 0
+set_option -retiming 0
+set_option -no_sequential_opt 0
+set_option -fixgatedclocks 3
+set_option -fixgeneratedclocks 3
+
+#VIF options
+set_option -write_vif 1
+
+#automatic place and route (vendor) options
+set_option -write_apr_constraint 1
+
+#set result format/file last
+project -result_file "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/synthesis/controller/controller.edf"
+
+#
+#implementation attributes
+
+set_option -vlog_std v2001
+impl -active "controller"

@@ -155,7 +155,7 @@ STRATIX_II_SPEED=
 JOB_DESCRIPTION=SynthesisTask
 SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*:implement\*.*
-LAST_RUN=1394113792
+LAST_RUN=1394558840
 
 [PHYS_SYNTHESIS]
 FAMILY=Xilinx9x VIRTEX4
@@ -174,12 +174,14 @@ SPEED=-12
 /lisison.awc=-1
 /onebitvoter.asdb=-1
 /onebitvoter.awc=-1
-TestBench/controller_TB.vhd=-1
-TestBench/controller_TB_runtest.do=-1
+/controllerImproved.asdb=-1
+/controllerImproved.awc=-1
 TestBench/liaison_TB.vhd=-1
 TestBench/liaison_TB_runtest.do=-1
 TestBench/onebitvoter_solution_example_TB.vhd=-1
 TestBench/onebitvoter_solution_example_TB_runtest.do=-1
+TestBench/controller_TB.vhd=-1
+TestBench/controller_TB_runtest.do=-1
 
 [Files.Data]
 .\src\liaison.vhd=VHDL Source Code
@@ -193,10 +195,12 @@ TestBench/onebitvoter_solution_example_TB_runtest.do=-1
 .\src\lisison.awc=Accelerated Waveform Configuration
 .\src\onebitvoter.asdb=Accelerated Waveform File
 .\src\onebitvoter.awc=Accelerated Waveform Configuration
-.\src\TestBench\controller_TB.vhd=VHDL Test Bench
-.\src\TestBench\controller_TB_runtest.do=Macro
+.\src\controllerImproved.asdb=Accelerated Waveform File
+.\src\controllerImproved.awc=Accelerated Waveform Configuration
 .\src\TestBench\liaison_TB.vhd=VHDL Test Bench
 .\src\TestBench\liaison_TB_runtest.do=Macro
 .\src\TestBench\onebitvoter_solution_example_TB.vhd=VHDL Test Bench
 .\src\TestBench\onebitvoter_solution_example_TB_runtest.do=Macro
+.\src\TestBench\controller_TB.vhd=VHDL Test Bench
+.\src\TestBench\controller_TB_runtest.do=Macro
 

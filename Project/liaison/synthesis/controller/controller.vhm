@@ -1,0 +1,444 @@
+--
+-- Written by Synplicity
+-- Product Version "C-2009.06"
+-- Program "Synplify Pro", Mapper "map450rc, Build 029R"
+-- Tue Mar 11 18:26:03 2014
+--
+
+--
+-- Written by Synplify Pro version Build 029R
+-- Tue Mar 11 18:26:03 2014
+--
+
+--
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+library synplify;
+use synplify.components.all;
+library UNISIM;
+use UNISIM.VCOMPONENTS.all;
+
+entity controller is
+port(
+  di_ready :  in std_logic;
+  clk :  in std_logic;
+  reset :  in std_logic;
+  do_ready :  out std_logic;
+  control_signals : out std_logic_vector(9 downto 0);
+  voted_data_selector : out std_logic_vector(3 downto 0));
+end controller;
+
+architecture beh of controller is
+  signal CONTROL_SIGNALS_INTERNAL : std_logic_vector(8 downto 0);
+  signal VDSI : std_logic_vector(13 downto 0);
+  signal VDSI_I : std_logic_vector(14 downto 13);
+  signal CONTROL_SIGNALS_INTERNAL_I : std_logic_vector(10 to 10);
+  signal UN16_I_A2_2 : std_logic_vector(0 to 0);
+  signal UN16_I_A2_1 : std_logic_vector(1 to 1);
+  signal VDSI_I_I : std_logic_vector(14 to 14);
+  signal UN16_I_A2_3 : std_logic_vector(2 to 2);
+  signal UN16_I_A2_0 : std_logic_vector(0 to 0);
+  signal UN16_I_A2_4 : std_logic_vector(3 to 3);
+  signal CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_5 : std_logic_vector(0 to 0);
+  signal CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_6 : std_logic_vector(0 to 0);
+  signal CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_7 : std_logic_vector(0 to 0);
+  signal DO_READY_INTERNAL : std_logic ;
+  signal NN_1 : std_logic ;
+  signal NN_2 : std_logic ;
+  signal N_3 : std_logic ;
+  signal N_4 : std_logic ;
+  signal N_5 : std_logic ;
+  signal N_6 : std_logic ;
+  signal N_7 : std_logic ;
+  signal N_8 : std_logic ;
+  signal N_9 : std_logic ;
+  signal N_10 : std_logic ;
+  signal N_11 : std_logic ;
+  signal N_12 : std_logic ;
+  signal N_13 : std_logic ;
+  signal N_14 : std_logic ;
+  signal N_15 : std_logic ;
+  signal N_16 : std_logic ;
+  signal N_17 : std_logic ;
+  signal N_95 : std_logic ;
+  signal N_96 : std_logic ;
+  signal N_97 : std_logic ;
+  signal N_98 : std_logic ;
+  signal N_99 : std_logic ;
+  signal N_100 : std_logic ;
+  signal N_101 : std_logic ;
+  signal N_102 : std_logic ;
+  signal N_103 : std_logic ;
+  signal N_104 : std_logic ;
+  signal N_105 : std_logic ;
+  signal DI_READY_C : std_logic ;
+  signal CLK_C : std_logic ;
+  signal RESET_C : std_logic ;
+  signal N_79_I : std_logic ;
+  signal N_78_I : std_logic ;
+  signal N_77_I : std_logic ;
+  signal N_76_I : std_logic ;
+  signal CONTROL_SIGNALS_INTERNAL_IC : std_logic ;
+  signal CONTROL_SIGNALS_INTERNALC : std_logic ;
+  signal VDSIC : std_logic ;
+  signal VDSIS_I : std_logic ;
+  signal CLK_IBUF_ISO : std_logic ;
+  signal NN_3 : std_logic ;
+  signal NN_4 : std_logic ;
+begin
+CLK_IBUF: BUFG port map (
+    I => CLK_IBUF_ISO,
+    O => CLK_C);
+CLK_IBUF_ISO_Z112: IBUFG port map (
+    O => CLK_IBUF_ISO,
+    I => clk);
+CONTROL_SIGNALS_INTERNAL_IC_Z113: LUT4_L 
+generic map(
+  INIT => X"3F15"
+)
+port map (
+  I0 => CONTROL_SIGNALS_INTERNAL(0),
+  I1 => CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_6(0),
+  I2 => CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_7(0),
+  I3 => DO_READY_INTERNAL,
+  LO => CONTROL_SIGNALS_INTERNAL_IC);
+CONTROL_SIGNALS_INTERNALC_Z114: LUT2_L 
+generic map(
+  INIT => X"4"
+)
+port map (
+  I0 => CONTROL_SIGNALS_INTERNAL_I(10),
+  I1 => DI_READY_C,
+  LO => CONTROL_SIGNALS_INTERNALC);
+\VDSI_RNO[7]\: LUT3_L 
+generic map(
+  INIT => X"DC"
+)
+port map (
+  I0 => DO_READY_INTERNAL,
+  I1 => VDSI(3),
+  I2 => VDSI(7),
+  LO => VDSIS_I);
+VDSIC_Z116: LUT2_L 
+generic map(
+  INIT => X"8"
+)
+port map (
+  I0 => DO_READY_INTERNAL,
+  I1 => VDSI(7),
+  LO => VDSIC);
+\VDSI_I_I[14]_Z117\: LUT1_L 
+generic map(
+  INIT => X"1"
+)
+port map (
+  I0 => VDSI_I(14),
+  LO => VDSI_I_I(14));
+\VDSI_I_RNO[14]\: LUT1_L 
+generic map(
+  INIT => X"1"
+)
+port map (
+  I0 => VDSI(13),
+  LO => VDSI_I(13));
+\VOTED_DATA_SELECTOR_OBUF_RNO[3]\: LUT4 
+generic map(
+  INIT => X"FFFD"
+)
+port map (
+  I0 => UN16_I_A2_0(0),
+  I1 => VDSI(4),
+  I2 => VDSI(5),
+  I3 => VDSI(6),
+  O => N_79_I);
+\VOTED_DATA_SELECTOR_OBUF_RNO[1]\: LUT3 
+generic map(
+  INIT => X"FD"
+)
+port map (
+  I0 => UN16_I_A2_3(2),
+  I1 => VDSI(11),
+  I2 => VDSI(12),
+  O => N_77_I);
+\VOTED_DATA_SELECTOR_OBUF_RNO[2]\: LUT4 
+generic map(
+  INIT => X"FFF7"
+)
+port map (
+  I0 => UN16_I_A2_1(1),
+  I1 => UN16_I_A2_2(0),
+  I2 => VDSI(9),
+  I3 => VDSI(10),
+  O => N_78_I);
+\VOTED_DATA_SELECTOR_OBUF_RNO[0]\: LUT4 
+generic map(
+  INIT => X"FFFD"
+)
+port map (
+  I0 => UN16_I_A2_4(3),
+  I1 => VDSI(1),
+  I2 => VDSI(3),
+  I3 => VDSI(13),
+  O => N_76_I);
+\CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_7[0]_Z123\: LUT3_L 
+generic map(
+  INIT => X"04"
+)
+port map (
+  I0 => CONTROL_SIGNALS_INTERNAL(8),
+  I1 => CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_5(0),
+  I2 => DO_READY_INTERNAL,
+  LO => CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_7(0));
+\UN16_I_A2_0[0]_Z124\: LUT2 
+generic map(
+  INIT => X"2"
+)
+port map (
+  I0 => UN16_I_A2_2(0),
+  I1 => VDSI(3),
+  O => UN16_I_A2_0(0));
+\UN16_I_A2_3[2]_Z125\: LUT4 
+generic map(
+  INIT => X"0002"
+)
+port map (
+  I0 => UN16_I_A2_1(1),
+  I1 => VDSI(0),
+  I2 => VDSI(3),
+  I3 => VDSI(4),
+  O => UN16_I_A2_3(2));
+\CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_6[0]_Z126\: LUT4 
+generic map(
+  INIT => X"0001"
+)
+port map (
+  I0 => CONTROL_SIGNALS_INTERNAL(4),
+  I1 => CONTROL_SIGNALS_INTERNAL(5),
+  I2 => CONTROL_SIGNALS_INTERNAL(6),
+  I3 => CONTROL_SIGNALS_INTERNAL(7),
+  O => CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_6(0));
+\CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_5[0]_Z127\: LUT4_L 
+generic map(
+  INIT => X"0001"
+)
+port map (
+  I0 => CONTROL_SIGNALS_INTERNAL(1),
+  I1 => CONTROL_SIGNALS_INTERNAL(2),
+  I2 => CONTROL_SIGNALS_INTERNAL(3),
+  I3 => DI_READY_C,
+  LO => CONTROL_SIGNALS_INTERNAL_NSS_I_I_A4_0_5(0));
+\UN16_I_A2_4[3]_Z128\: LUT4 
+generic map(
+  INIT => X"0001"
+)
+port map (
+  I0 => VDSI(5),
+  I1 => VDSI(7),
+  I2 => VDSI(9),
+  I3 => VDSI(11),
+  O => UN16_I_A2_4(3));
+\UN16_I_A2_2[1]\: LUT3 
+generic map(
+  INIT => X"01"
+)
+port map (
+  I0 => VDSI(0),
+  I1 => VDSI(1),
+  I2 => VDSI(2),
+  O => UN16_I_A2_2(0));
+\UN16_I_A2_2[2]\: LUT2 
+generic map(
+  INIT => X"1"
+)
+port map (
+  I0 => VDSI(7),
+  I1 => VDSI(8),
+  O => UN16_I_A2_1(1));
+\VDSI_I[14]_Z131\: FDS port map (
+    Q => VDSI_I(14),
+    D => VDSI_I(13),
+    C => CLK_C,
+    S => RESET_C);
+\VDSI[4]_Z132\: FDR port map (
+    Q => VDSI(4),
+    D => VDSI_I_I(14),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[3]_Z133\: FDR port map (
+    Q => VDSI(3),
+    D => VDSI(2),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[2]_Z134\: FDR port map (
+    Q => VDSI(2),
+    D => VDSI(1),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[1]_Z135\: FDR port map (
+    Q => VDSI(1),
+    D => VDSI(0),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[0]_Z136\: FDR port map (
+    Q => VDSI(0),
+    D => VDSI(6),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[13]_Z137\: FDR port map (
+    Q => VDSI(13),
+    D => VDSI(12),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[12]_Z138\: FDR port map (
+    Q => VDSI(12),
+    D => VDSI(11),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[11]_Z139\: FDR port map (
+    Q => VDSI(11),
+    D => VDSI(10),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[10]_Z140\: FDR port map (
+    Q => VDSI(10),
+    D => VDSI(9),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[9]_Z141\: FDR port map (
+    Q => VDSI(9),
+    D => VDSI(8),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[8]_Z142\: FDR port map (
+    Q => VDSI(8),
+    D => VDSIC,
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[7]_Z143\: FDS port map (
+    Q => VDSI(7),
+    D => VDSIS_I,
+    C => CLK_C,
+    S => RESET_C);
+\VDSI[6]_Z144\: FDR port map (
+    Q => VDSI(6),
+    D => VDSI(5),
+    C => CLK_C,
+    R => RESET_C);
+\VDSI[5]_Z145\: FDR port map (
+    Q => VDSI(5),
+    D => VDSI(4),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[9]\: FDR port map (
+    Q => DO_READY_INTERNAL,
+    D => CONTROL_SIGNALS_INTERNAL(8),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[8]_Z147\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(8),
+    D => CONTROL_SIGNALS_INTERNAL(7),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[7]_Z148\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(7),
+    D => CONTROL_SIGNALS_INTERNAL(6),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[6]_Z149\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(6),
+    D => CONTROL_SIGNALS_INTERNAL(5),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[5]_Z150\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(5),
+    D => CONTROL_SIGNALS_INTERNAL(4),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[4]_Z151\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(4),
+    D => CONTROL_SIGNALS_INTERNAL(3),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[3]_Z152\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(3),
+    D => CONTROL_SIGNALS_INTERNAL(2),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[2]_Z153\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(2),
+    D => CONTROL_SIGNALS_INTERNALC,
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[1]_Z154\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(1),
+    D => DO_READY_INTERNAL,
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL[0]_Z155\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL(0),
+    D => CONTROL_SIGNALS_INTERNAL(1),
+    C => CLK_C,
+    R => RESET_C);
+\CONTROL_SIGNALS_INTERNAL_I[10]_Z156\: FDR port map (
+    Q => CONTROL_SIGNALS_INTERNAL_I(10),
+    D => CONTROL_SIGNALS_INTERNAL_IC,
+    C => CLK_C,
+    R => RESET_C);
+\VOTED_DATA_SELECTOR_OBUF[3]\: OBUF port map (
+    O => voted_data_selector(3),
+    I => N_79_I);
+\VOTED_DATA_SELECTOR_OBUF[2]\: OBUF port map (
+    O => voted_data_selector(2),
+    I => N_78_I);
+\VOTED_DATA_SELECTOR_OBUF[1]\: OBUF port map (
+    O => voted_data_selector(1),
+    I => N_77_I);
+\VOTED_DATA_SELECTOR_OBUF[0]\: OBUF port map (
+    O => voted_data_selector(0),
+    I => N_76_I);
+\CONTROL_SIGNALS_OBUF[9]\: OBUF port map (
+    O => control_signals(9),
+    I => CONTROL_SIGNALS_INTERNAL(0));
+\CONTROL_SIGNALS_OBUF[8]\: OBUF port map (
+    O => control_signals(8),
+    I => CONTROL_SIGNALS_INTERNAL(1));
+\CONTROL_SIGNALS_OBUF[7]\: OBUF port map (
+    O => control_signals(7),
+    I => CONTROL_SIGNALS_INTERNAL(2));
+\CONTROL_SIGNALS_OBUF[6]\: OBUF port map (
+    O => control_signals(6),
+    I => CONTROL_SIGNALS_INTERNAL(3));
+\CONTROL_SIGNALS_OBUF[5]\: OBUF port map (
+    O => control_signals(5),
+    I => CONTROL_SIGNALS_INTERNAL(4));
+\CONTROL_SIGNALS_OBUF[4]\: OBUF port map (
+    O => control_signals(4),
+    I => CONTROL_SIGNALS_INTERNAL(5));
+\CONTROL_SIGNALS_OBUF[3]\: OBUF port map (
+    O => control_signals(3),
+    I => CONTROL_SIGNALS_INTERNAL(6));
+\CONTROL_SIGNALS_OBUF[2]\: OBUF port map (
+    O => control_signals(2),
+    I => CONTROL_SIGNALS_INTERNAL(7));
+\CONTROL_SIGNALS_OBUF[1]\: OBUF port map (
+    O => control_signals(1),
+    I => CONTROL_SIGNALS_INTERNAL(8));
+\CONTROL_SIGNALS_OBUF[0]\: OBUF port map (
+    O => control_signals(0),
+    I => DO_READY_INTERNAL);
+DO_READY_OBUF: OBUF port map (
+    O => do_ready,
+    I => DO_READY_INTERNAL);
+RESET_IBUF: IBUF port map (
+    O => RESET_C,
+    I => reset);
+DI_READY_IBUF: IBUF port map (
+    O => DI_READY_C,
+    I => di_ready);
+II_GND: GND port map (
+    G => NN_3);
+II_VCC: VCC port map (
+    P => NN_4);
+end beh;
+

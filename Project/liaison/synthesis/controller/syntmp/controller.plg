@@ -1,0 +1,12 @@
+@P:  Worst Slack : 998.309
+@P:  controller|clk - Estimated Frequency : 591.4 MHz
+@P:  controller|clk - Requested Frequency : 1.0 MHz
+@P:  controller|clk - Estimated Period : 1.691
+@P:  controller|clk - Requested Period : 1000.000
+@P:  controller|clk - Slack : 998.309
+@P: controller Part : xc4vfx12sf363-12
+@P: controller I/O primitives : 18
+@P: controller I/O Register bits : 0
+@P: controller Register bits (Non I/O) : 26 (0%)
+@P: controller Total Luts : 18 (0%)
+@P:  CPU Time : 0h:00m:00s
