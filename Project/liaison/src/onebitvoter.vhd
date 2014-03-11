@@ -180,7 +180,7 @@ else
 			status_internal <= "111";
 		 when others =>
 		 	-- This should never be reached
-		 	--status_internal <= "111";
+		 	status_internal <= "XXX";
 	end case;	
 end if;
 end process;
