@@ -1,12 +1,12 @@
-elbread.dll ver. 1.0.5.375 Tue Mar 11 18:24:08 2014
+elbread.dll ver. 1.0.5.375 Fri Mar 28 11:12:31 2014
 
 
---------------------------------------------
-Entity         | Architecture    | Library
---------------------------------------------
-controller_tb  | tb_architecture | liaison
-controller     | controller      | liaison
-------------------------------------------
+-------------------------------------
+Entity  | Architecture    | Library
+-------------------------------------
+ecc_tb  | tb_architecture | liaison
+ECC     | ecc             | liaison
+-----------------------------------
 
 ---------------------------
 Package         | Library
@@ -15,9 +15,3 @@ standard        | std
 TEXTIO          | std
 std_logic_1164  | ieee
 -------------------------
-
--------------------------------------
-Configuration             | Library
--------------------------------------
-testbench_for_controller  | liaison
------------------------------------

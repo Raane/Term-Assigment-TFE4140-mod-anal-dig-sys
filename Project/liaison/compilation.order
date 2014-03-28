@@ -6,3 +6,4 @@
 .\src\TestBench\liaison_TB.vhd
 .\src\TestBench\onebitvoter_solution_example_TB.vhd
 .\src\TestBench\controller_TB.vhd
+.\src\TestBench\ecc_TB.vhd

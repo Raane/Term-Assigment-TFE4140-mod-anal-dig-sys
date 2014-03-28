@@ -1,102 +1,167 @@
-# Design Explorer: Shortcut to "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\liaison.aws" design added.
-# There is no path to the Synplify executables folder.
-# Choose 'Flow Configuration Settings' and set the synthesis flow.
-# Error: Path to the Synplify synthesis tool not found. Specify the path to the vendor tool in the Flows -> Integrated Tools category of the Preferences window.
-# There is no path to the Synplify executables folder.
-# Choose 'Flow Configuration Settings' and set the synthesis flow.
-# Error: Path to the Synplify synthesis tool not found. Specify the path to the vendor tool in the Flows -> Integrated Tools category of the Preferences window.
-# Error: 'BIN/synplify.exe' not found. Specify the path to the vendor tool in the Flows -> Integrated Tools category of the Preferences window.
-# Error: Synplify not installed!
-# Synplify has been started.
-# Synplify has been started.
-# Synplify has been started.
-acom -work liaison -2002  $dsn/src/controllerImproved.vhd
+# ELBREAD: Elaboration process.
+# ELBREAD: Error: Configuration testbench_for_controller (library liaison) not found.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+# Design Explorer: Shortcut to "C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\liaison.aws" design added.
+acom -work liaison -2002  $dsn/src/ECC.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controllerImproved.vhd
-# Compile Entity "controller"
-# Compile Architecture "controllerImproved" of Entity "controller"
-# Error: COMP96_0358: controllerImproved.vhd : (138, 4): Statement is not labeled.
-# Error: COMP96_0015: controllerImproved.vhd : (138, 18): ';' expected.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd
+# Compile Entity "ECC"
+# Compile Architecture "ECC" of Entity "ECC"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+acom -work liaison -2002  $dsn/src/ECC.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd
+# Compile Entity "ECC"
+# Compile Architecture "ECC" of Entity "ECC"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Error: COMP96_0019: ecc_TB.vhd : (37, 1): Keyword 'end' expected.
+# Error: COMP96_0016: ecc_TB.vhd : (38, 1): Design unit declaration expected.
+# Compile Configuration "TESTBENCH_FOR_ecc"
 # Compile failure 2 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -work liaison -2002  $dsn/src/controllerImproved.vhd
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controllerImproved.vhd
-# Compile Entity "controller"
-# Compile Architecture "controllerImproved" of Entity "controller"
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Error: COMP96_0015: ecc_TB.vhd : (58, 17): ';' expected.
+# Error: COMP96_0019: ecc_TB.vhd : (58, 17): Keyword 'end' expected.
+# Error: COMP96_0015: ecc_TB.vhd : (59, 13): ';' expected.
+# Error: COMP96_0019: ecc_TB.vhd : (59, 13): Keyword 'end' expected.
+# Error: COMP96_0016: ecc_TB.vhd : (59, 15): Design unit declaration expected.
+# Compile Configuration "TESTBENCH_FOR_ecc"
+# Compile failure 5 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Error: COMP96_0015: ecc_TB.vhd : (75, 1): ';' expected.
+# Error: COMP96_0019: ecc_TB.vhd : (77, 1): Keyword 'end' expected.
+# Error: COMP96_0016: ecc_TB.vhd : (77, 15): Design unit declaration expected.
+# Error: COMP96_0018: ecc_TB.vhd : (80, 8): Identifier expected.
+# Error: COMP96_0016: ecc_TB.vhd : (80, 15): Design unit declaration expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+# Error: Accelerated Waveform: Accelerated Waveform: Simulation database is not connected.
+# Error: Accelerated Waveform: Accelerated Waveform: Simulation database is not connected.
+asim -O5 +access +r +m+ecc ecc ecc
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2248 kB (elbread=1023 elab2=878 kernel=346 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  10:39, 28. mars 2014
+#  Simulation has been initialized
+#  Selected Top-Level: ecc (ecc)
+# 14 signal(s) traced.
+run 300 ns
+# KERNEL: stopped at time: 300 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+#  Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +r +m+ecc_tb ecc_tb tb_architecture
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
+# SLP: Finished : 0.0 [s]
+# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 2249 kB (elbread=1023 elab2=879 kernel=346 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  10:40, 28. mars 2014
+#  Simulation has been initialized
+#  Selected Top-Level: ecc_tb (tb_architecture)
+# 3 signal(s) traced.
+run 300 ns
+# KERNEL: stopped at time: 300 ns
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
 # Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
-acom -work liaison -2002  $dsn/src/controllerImproved.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controllerImproved.vhd
-# Compile Entity "controller"
-# Compile Architecture "controllerImproved" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controllerImproved" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controllerImproved" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controllerImproved" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Error: VLM_0026: Cannot write data to the MGF file - possibly no space on disk or MGF file corrupted. In the second case, please use command vdel -all to empty library "liaison".
-# Error: DAGGEN_0700: Fatal error : INTERNAL CODE GENERATOR ERROR
-#  (when resetting code generator for package (null))
-# Error: COMP96_0236: Fatal error : INTERNAL COMPILER ERROR (compiled file "C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd" - global process)
-# Compile failure 3 Errors 0 Warnings  Analysis time :  78.0 [ms]
-# Error: DO_001 in file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB_runtest.do line 3
-# Error: Cannot run C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB_runtest.do
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controllerImproved" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
+endsim
+#  Simulation has been stopped
+asim -O5 +access +r +m+ecc_tb ecc_tb tb_architecture
 # ELBREAD: Elaboration process.
-# ELBREAD: Warning: Design unit controller:controller instantiated in liaison.controller_tb(tb_architecture) not found in searched libraries: liaison.
-# ELBREAD: Warning: Component UUT : controller not bound.
 # ELBREAD: Elaboration time 0.0 [s].
 # asim: Stack memory: 32MB
 # asim: Retval memory: 32MB
@@ -115,118 +180,40 @@ asim TESTBENCH_FOR_controller
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2124 kB (elbread=1023 elab2=754 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:42, 11. mars 2014
+# Allocation: Simulator allocated 2249 kB (elbread=1023 elab2=879 kernel=346 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  10:46, 28. mars 2014
 #  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
+#  Selected Top-Level: ecc_tb (tb_architecture)
+# 3 signal(s) traced.
+run 300 ns
 # KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
+run 300 ns
 # KERNEL: stopped at time: 600 ns
-run 100 ns
-# KERNEL: stopped at time: 700 ns
-run 100 ns
-# KERNEL: stopped at time: 800 ns
-run 100 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 300 ns
 # KERNEL: stopped at time: 900 ns
-run 100 ns
-# KERNEL: stopped at time: 1 us
-run 100 ns
-# KERNEL: stopped at time: 1100 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Warning: Design unit controller:controller instantiated in liaison.controller_tb(tb_architecture) not found in searched libraries: liaison.
-# ELBREAD: Warning: Component UUT : controller not bound.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2124 kB (elbread=1023 elab2=754 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:43, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Error: COMP96_0111: controller.vhd : (143, 5): Labels do not match.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run 300 ns
 #  Simulation has been stopped
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim -O5 +access +r +m+ecc_tb ecc_tb tb_architecture
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
 # asim: Stack memory: 32MB
@@ -246,224 +233,25 @@ asim TESTBENCH_FOR_controller
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:45, 11. mars 2014
+# Allocation: Simulator allocated 2249 kB (elbread=1023 elab2=879 kernel=346 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  11:01, 28. mars 2014
 #  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:45, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:46, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-# 1 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
+#  Selected Top-Level: ecc_tb (tb_architecture)
+# 3 signal(s) traced.
+run 40 ns
+# KERNEL: stopped at time: 40 ns
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:49, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2395 kB (elbread=1023 elab2=1025 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:51, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
+# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+run 40 ns
+# KERNEL: stopped at time: 80 ns
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
 restart
 # ELBREAD: Elaboration process.
@@ -479,82 +267,26 @@ restart
 # SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
 # SLP: Finished : 0.0 [s]
 # ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2395 kB (elbread=1023 elab2=1025 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:51, 11. mars 2014
+# Allocation: Simulator allocated 2249 kB (elbread=1023 elab2=879 kernel=346 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  11:02, 28. mars 2014
 #  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-run 100 ns
-# KERNEL: stopped at time: 100 ns
+#  Selected Top-Level: ecc_tb (tb_architecture)
+run 40 ns
+# KERNEL: stopped at time: 40 ns
 # KERNEL: Simulation has finished. There are no more test vectors to simulate.
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
+acom -work liaison -2002  $dsn/src/TestBench/ecc_TB.vhd
 # Compile...
 # Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
+# File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd
+# Compile Entity "ecc_tb"
+# Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"
+# Compile Configuration "TESTBENCH_FOR_ecc"
 # Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:52, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
 restart
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
@@ -573,1145 +305,11 @@ restart
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:52, 11. mars 2014
+# Allocation: Simulator allocated 2249 kB (elbread=1023 elab2=879 kernel=346 sdf=0)
+# KERNEL: ASDB file was created in location C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
+#  11:02, 28. mars 2014
 #  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-# 3 signal(s) traced.
-# 3 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
+#  Selected Top-Level: ecc_tb (tb_architecture)
+run 40 ns
 #  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:55, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:55, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  16:56, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-# 3 signal(s) traced.
-# 3 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:00, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:00, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:06, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2399 kB (elbread=1023 elab2=1029 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:09, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2399 kB (elbread=1023 elab2=1029 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:09, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:57, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:57, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-# 3 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:59, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  17:59, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-# 3 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Error: COMP96_0367: liaison.vhd : (53, 26): Improper array length. Actual length is 4. Expected length is 5.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  18:08, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-run 100 ns
-# KERNEL: stopped at time: 700 ns
-run 100 ns
-# KERNEL: stopped at time: 800 ns
-run 100 ns
-# KERNEL: stopped at time: 900 ns
-run 100 ns
-# KERNEL: stopped at time: 1 us
-run 100 ns
-# KERNEL: stopped at time: 1100 ns
-run 100 ns
-# KERNEL: stopped at time: 1200 ns
-run 100 ns
-# KERNEL: stopped at time: 1300 ns
-run 100 ns
-# KERNEL: stopped at time: 1400 ns
-run 100 ns
-# KERNEL: stopped at time: 1500 ns
-run 100 ns
-# KERNEL: stopped at time: 1600 ns
-run 100 ns
-# KERNEL: stopped at time: 1700 ns
-run 100 ns
-# KERNEL: stopped at time: 1800 ns
-run 100 ns
-# KERNEL: stopped at time: 1900 ns
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1031 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  18:11, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-run 100 ns
-# KERNEL: stopped at time: 700 ns
-run 100 ns
-# KERNEL: stopped at time: 800 ns
-run 100 ns
-# KERNEL: stopped at time: 900 ns
-run 100 ns
-# KERNEL: stopped at time: 1 us
-run 100 ns
-# KERNEL: stopped at time: 1100 ns
-run 100 ns
-# KERNEL: stopped at time: 1200 ns
-run 100 ns
-# KERNEL: stopped at time: 1300 ns
-run 100 ns
-# KERNEL: stopped at time: 1400 ns
-run 100 ns
-# KERNEL: stopped at time: 1500 ns
-run 100 ns
-# KERNEL: stopped at time: 1600 ns
-run 100 ns
-# KERNEL: stopped at time: 1700 ns
-run 100 ns
-# KERNEL: stopped at time: 1800 ns
-run 100 ns
-# KERNEL: stopped at time: 1900 ns
-run 100 ns
-# KERNEL: stopped at time: 2 us
-run 100 ns
-# KERNEL: stopped at time: 2100 ns
-run 100 ns
-# KERNEL: stopped at time: 2200 ns
-run 100 ns
-# KERNEL: stopped at time: 2300 ns
-run 100 ns
-# KERNEL: stopped at time: 2400 ns
-run 100 ns
-# KERNEL: stopped at time: 2500 ns
-run 100 ns
-# KERNEL: stopped at time: 2600 ns
-run 100 ns
-# KERNEL: stopped at time: 2700 ns
-run 100 ns
-# KERNEL: stopped at time: 2800 ns
-# Adding file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controllerImproved.asdb ... Done
-# Adding file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controllerImproved.awc ... Done
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-# Synplify has been started.
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Error: COMP96_0367: liaison.vhd : (53, 26): Improper array length. Actual length is 4. Expected length is 5.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Error: COMP96_0015: controller.vhd : (23, 37): ';' expected.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  15.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Error: COMP96_0078: controller.vhd : (23, 28): Unknown identifier "std_logig".
-# Error: COMP96_0064: controller.vhd : (23, 28): Unknown type.
-# Error: COMP96_0104: controller.vhd : (30, 14): Undefined type of expression.
-# Error: COMP96_0077: controller.vhd : (30, 14): Assignment target incompatible with right side. Expected type 'STD_ULOGIC'.
-# Error: COMP96_0367: controller.vhd : (40, 12): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0150: controller.vhd : (95, 33): Signal name on sensitivity list is not static.
-# Error: COMP96_0104: controller.vhd : (99, 8): Undefined type of expression.
-# Error: COMP96_0098: controller.vhd : (99, 8): 'BOOLEAN' type expected.
-# Error: COMP96_0367: controller.vhd : (100, 19): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (102, 19): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (105, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (107, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (109, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (111, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (113, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (115, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (117, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (119, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (121, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (123, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (125, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (127, 21): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (129, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (131, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (98, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (104, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (106, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (108, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (110, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (112, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (114, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (116, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (118, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (120, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (122, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (124, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (126, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (128, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Compile failure 38 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Error: COMP96_0367: controller.vhd : (40, 12): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (100, 19): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (102, 19): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (105, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (107, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (109, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (111, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (113, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (115, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (117, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (119, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (121, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (123, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (125, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (127, 21): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (129, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (131, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (98, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (104, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (106, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (108, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (110, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (112, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (114, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (116, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (118, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (120, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (122, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (124, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (126, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (128, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Compile failure 31 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Error: COMP96_0367: controller.vhd : (100, 19): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (102, 19): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (105, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (107, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (109, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (111, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (113, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (115, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (117, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (119, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (121, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (123, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (125, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (127, 21): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (129, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (131, 18): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (98, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (104, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (106, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (108, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (110, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (112, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (114, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (116, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (118, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (120, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (122, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (124, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (126, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Error: COMP96_0367: controller.vhd : (128, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Compile failure 30 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Error: COMP96_0367: controller.vhd : (106, 9): Improper array length. Actual length is 5. Expected length is 4.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -work liaison -2002  $dsn/src/liaison.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd
-# Compile Entity "liaison"
-# Compile Architecture "liaison" of Entity "liaison"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Error: ELAB1_0028: controller_TB.vhd : (42, 0): Entity port length is 4. voted_data_selector length is 5.
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Error: ELAB1_0028: controller_TB.vhd : (177, 1): Entity port length is 4. voted_data_selector length is 5.
-# Error: COMP96_0203: controller_TB.vhd : (178, 4): Binding indication has neither a generic map aspect nor a port map aspect.
-# Error: ELAB1_0028: controller_TB.vhd : (178, 1): Entity port length is 4. voted_data_selector length is 5.
-# Compile failure 4 Errors 0 Warnings  Analysis time :  15.0 [ms]
-# Error: DO_001 in file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB_runtest.do line 3
-# Error: Cannot run C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB_runtest.do
-acom -work liaison -2002  $dsn/src/TestBench/controller_TB.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-SetActiveLib -work
-comp -include "$dsn\src\controller.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd
-# Compile Entity "controller"
-# Compile Architecture "controller" of Entity "controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-comp -include "$dsn\src\TestBench\controller_TB.vhd" 
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available.
-# File: C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\controller_TB.vhd
-# Compile Entity "controller_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "controller_tb"
-# Compile Configuration "TESTBENCH_FOR_controller"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-asim TESTBENCH_FOR_controller 
-#  Simulation has been stopped
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# asim: Stack memory: 32MB
-# asim: Retval memory: 32MB
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: You do not have a license to run VHDL performance optimized simulation. Contact Aldec for ordering information - sales@aldec.com.
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 2401 kB (elbread=1023 elab2=1030 kernel=346 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\wave.asdb
-#  18:24, 11. mars 2014
-#  Simulation has been initialized
-#  Selected Top-Level: testbench_for_controller
-wave 
-wave -noreg di_ready
-wave -noreg clk
-wave -noreg reset
-wave -noreg do_ready
-wave -noreg control_signals
-wave -noreg voted_data_selector
-# # The following lines can be used for timing simulation
-# # acom <backannotated_vhdl_file_name>
-# # comp -include "$dsn\src\TestBench\controller_TB_tim_cfg.vhd" 
-# # asim TIMING_FOR_controller 
-# 6 signal(s) traced.
-run 100 ns
-# KERNEL: stopped at time: 100 ns
-run 100 ns
-# KERNEL: stopped at time: 200 ns
-run 100 ns
-# KERNEL: stopped at time: 300 ns
-run 100 ns
-# KERNEL: stopped at time: 400 ns
-run 100 ns
-# KERNEL: stopped at time: 500 ns
-run 100 ns
-# KERNEL: stopped at time: 600 ns
-run 100 ns
-# KERNEL: stopped at time: 700 ns
-run 100 ns
-# KERNEL: stopped at time: 800 ns
-run 100 ns
-# KERNEL: stopped at time: 900 ns
-run 100 ns
-# KERNEL: stopped at time: 1 us
-run 100 ns
-# KERNEL: stopped at time: 1100 ns
-run 100 ns
-# KERNEL: stopped at time: 1200 ns
-# Synplify has been started.
-# Synplify has been started.
-acom -work liaison -2002  $dsn/src/controller.vhd
-# Compile...
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and code coverage will n
+acom -work li

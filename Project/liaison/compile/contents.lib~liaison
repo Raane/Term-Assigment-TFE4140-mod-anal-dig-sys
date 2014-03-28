@@ -1,6 +1,8 @@
-1399
-~E 1 "./src/liaison.vhd" 28 liaison
-~A 1 "./src/liaison.vhd" 15 liaison
+1493
+~E 1 "./src/TestBench/onebitvoter_solution_example_TB.vhd" 4 onebitvoter_solution_example_tb
+~A 1 "./src/TestBench/onebitvoter_solution_example_TB.vhd" 7 tb_architecture
+~E 1 "./src/TestBench/ecc_TB.vhd" 6 ecc_tb
+~A 1 "./src/TestBench/ecc_TB.vhd" 9 tb_architecture
 ~E 1 "./src/TestBench/controller_TB.vhd" 6 controller_tb
 ~A 1 "./src/TestBench/controller_TB.vhd" 9 tb_architecture
 ~E 1 "./src/controller.vhd" 4 controller
@@ -8,15 +10,16 @@
 ~A 1 "./src/controller.vhd" 15 controller
 ~E 1 "./src/ecc.vhd" 4 ecc
 ~A 1 "./src/ECC.vhd" 12 ecc
-~E 1 "./src/registers.vhd" 4 registers
-~A 1 "./src/registers.vhd" 18 registers
+~E 1 "./src/TestBench/liaison_TB.vhd" 6 liaison_tb
+~A 1 "./src/TestBench/liaison_TB.vhd" 9 tb_architecture
+~E 1 "./src/liaison.vhd" 28 liaison
+~A 1 "./src/liaison.vhd" 15 liaison
 ~E 1 "./src/onebitvoter.vhd" 14 onebitvoter
 ~A 1 "./src/onebitvoter.vhd" 14 onebitvoter
 ~A 1 "./src/onebitvoter.vhd" 28 behavioral
-~E 1 "./src/TestBench/liaison_TB.vhd" 6 liaison_tb
-~A 1 "./src/TestBench/liaison_TB.vhd" 9 tb_architecture
-~E 1 "./src/TestBench/onebitvoter_solution_example_TB.vhd" 4 onebitvoter_solution_example_tb
-~A 1 "./src/TestBench/onebitvoter_solution_example_TB.vhd" 7 tb_architecture
-~C 1 "./src/TestBench/controller_TB.vhd" 175 testbench_for_controller
 ~E 1 "./src/TestBench/onebitvoter_solution_example_TB.vhd" 4 testbench
+~E 1 "./src/registers.vhd" 4 registers
+~A 1 "./src/registers.vhd" 18 registers
+~C 1 "./src/TestBench/ecc_TB.vhd" 99 testbench_for_ecc
+~C 1 "./src/TestBench/controller_TB.vhd" 175 testbench_for_controller
 ~C 1 "./src/TestBench/liaison_TB.vhd" 182 testbench_for_liaison

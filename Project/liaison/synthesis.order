@@ -3,3 +3,4 @@ i<>.\src\onebitvoter.vhd
 i<>.\src\ECC.vhd
 i<>.\src\registers.vhd
 i<>.\src\controller.vhd
+i<>.\src\TestBench\ecc_TB.vhd
