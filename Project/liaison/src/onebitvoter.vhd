@@ -136,6 +136,8 @@ begin
 				when others =>
 					voted_data <= 'X'; -- This is never reached
             end case;
+		when "111" =>
+			voted_data <= '1';
 		when others =>
 			voted_data <= 'Z'; -- This is never reached, Z is used instead of X because it is more efficient here
     end case;
