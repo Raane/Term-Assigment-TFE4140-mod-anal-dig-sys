@@ -1,19 +1,19 @@
 #-- Synplicity, Inc.
 #-- Version C-2009.06
-#-- Project file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\scratchproject.prs
-#-- Written on Tue Mar 11 18:27:27 2014
+#-- Project file C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison\scratchproject.prs
+#-- Written on Sun Mar 30 19:11:15 2014
 
 
 #project files
-add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/liaison.vhd"
-add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/onebitvoter.vhd"
-add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/ECC.vhd"
-add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/registers.vhd"
-add_file -vhdl -lib liaison "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/controller.vhd"
+add_file -vhdl -lib liaison_post_synthesis "C:/Users/Student.AD-IME-NTNU-NO/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/liaison.vhd"
+add_file -vhdl -lib liaison_post_synthesis "C:/Users/Student.AD-IME-NTNU-NO/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/onebitvoter.vhd"
+add_file -vhdl -lib liaison_post_synthesis "C:/Users/Student.AD-IME-NTNU-NO/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/ECC.vhd"
+add_file -vhdl -lib liaison_post_synthesis "C:/Users/Student.AD-IME-NTNU-NO/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/registers.vhd"
+add_file -vhdl -lib liaison_post_synthesis "C:/Users/Student.AD-IME-NTNU-NO/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/src/controller.vhd"
 
 
 #implementation: "liaison"
-impl -add C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison -type fpga
+impl -add C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\liaison -type fpga
 
 #device options
 set_option -technology VIRTEX4
@@ -24,7 +24,7 @@ set_option -part_companion ""
 
 #compilation/mapping options
 set_option -use_fsm_explorer 0
-set_option -top_module "liaison.liaison"
+set_option -top_module "liaison_post_synthesis.liaison"
 
 # sequential_optimization_options
 set_option -symbolic_fsm_compiler 1
@@ -56,7 +56,7 @@ set_option -write_vif 1
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "C:/Users/Student/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/synthesis/liaison/liaison.edf"
+project -result_file "C:/Users/Student.AD-IME-NTNU-NO/Documents/GitHub/Term-Assigment-TFE4140-mod-anal-dig-sys/Project/liaison/synthesis/liaison/liaison.edf"
 
 #
 #implementation attributes

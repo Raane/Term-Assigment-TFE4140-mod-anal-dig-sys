@@ -1,0 +1,17 @@
+elbread.dll ver. 1.0.5.375 Sun Mar 30 19:11:43 2014
+
+
+-----------------------------------------------------------
+Entity         | Architecture    | Library               
+-----------------------------------------------------------
+controller_tb  | tb_architecture | liaison_post_synthesis
+controller     | controller      | liaison_post_synthesis
+---------------------------------------------------------
+
+---------------------------
+Package         | Library
+---------------------------
+standard        | std
+TEXTIO          | std
+std_logic_1164  | ieee
+-------------------------

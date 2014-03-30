@@ -6,7 +6,7 @@ set FamilyName	"VIRTEX4"
 set DeviceName	"XC4VFX12"
 set PackageName	"SF363"
 set SpeedGrade	"-12"
-set TopModule	"liaison.liaison"
+set TopModule	"liaison_post_synthesis.liaison"
 set EdifFile	"liaison.edf"
 if {![file exists $DesignName.ise]} {
 

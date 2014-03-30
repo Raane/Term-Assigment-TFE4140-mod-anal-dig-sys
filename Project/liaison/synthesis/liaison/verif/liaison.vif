@@ -14,11 +14,11 @@ vif_set_result_file  liaison.vlf
 vif_set_technology -architecture FPGA -vendor Xilinx
 
 # RTL and technology files
-vif_add_file -original -vhdl -lib liaison ../../src/liaison.vhd
-vif_add_file -original -vhdl -lib liaison ../../src/onebitvoter.vhd
-vif_add_file -original -vhdl -lib liaison ../../src/ECC.vhd
-vif_add_file -original -vhdl -lib liaison ../../src/registers.vhd
-vif_add_file -original -vhdl -lib liaison ../../src/controller.vhd
+vif_add_file -original -vhdl -lib liaison_post_synthesis ../../src/liaison.vhd
+vif_add_file -original -vhdl -lib liaison_post_synthesis ../../src/onebitvoter.vhd
+vif_add_file -original -vhdl -lib liaison_post_synthesis ../../src/ECC.vhd
+vif_add_file -original -vhdl -lib liaison_post_synthesis ../../src/registers.vhd
+vif_add_file -original -vhdl -lib liaison_post_synthesis ../../src/controller.vhd
 vif_set_top_module -original -top liaison
  
 vif_add_library -translated $XILINX/verilog/verification/unisims

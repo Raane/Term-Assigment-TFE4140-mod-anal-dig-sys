@@ -5,10 +5,11 @@ version=2
 Current Config=compile
 
 [Configurations]
-compile=liaison
+compile=liaison_post_synthesis
 
 [Library]
 liaison=.\liaison.LIB
+liaison_post_synthesis=.\liaison_post_synthesis\liaison_post_synthesis.lib
 
 [Settings]
 AccessRead=0
@@ -38,6 +39,8 @@ DVM_DISPLAY=NO
 FAMILY=Xilinx9x VIRTEX4
 SYNTH_STATUS=none
 VerilogDirsChanged=0
+FUNC_LIB=liaison
+POST_LIB=liaison_post_synthesis
 
 [LocalVerilogSets]
 EnableSLP=1
@@ -152,7 +155,7 @@ STRATIX_II_SPEED=
 JOB_DESCRIPTION=SynthesisTask
 SERVERFARM_INCLUDE_INPUT_FILES=*.*
 SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*:implement\*.*
-LAST_RUN=1394558840
+LAST_RUN=1396199462
 
 [PHYS_SYNTHESIS]
 FAMILY=Xilinx9x VIRTEX4
@@ -207,4 +210,13 @@ TestBench/ecc_TB_runtest.do=-1
 .\src\TestBench\controller_TB_runtest.do=Macro
 .\src\TestBench\ecc_TB.vhd=VHDL Test Bench
 .\src\TestBench\ecc_TB_runtest.do=Macro
-
+[SIM.POST]
+FJD=PostSynthesisSimTask
+FST=-all
+SERVERFARM_INCLUDE_INPUT_FILES=*.*
+SERVERFARM_EXCLUDE_INPUT_FILES=log\*.*:implement\*.*
+OPTION=0
+TOPLEVEL=controller_tb
+WAVEFORMS=
+DEFWAVE=1
+ADD_HIERARCHY_SIGNALS=0

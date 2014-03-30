@@ -1,0 +1,6 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and code coverage will not be available." 
+MESSAGE "File: C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\TestBench\ecc_TB.vhd" 
+MESSAGE "Compile Entity "ecc_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "ecc_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_ecc"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]" 

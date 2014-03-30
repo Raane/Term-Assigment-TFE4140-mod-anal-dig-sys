@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timeStamp 2014 3 11 18 27 29)
+      (timeStamp 2014 3 30 19 11 17)
       (author "Synplicity, Inc.")
       (program "Synplify Pro" (version "C-2009.06, mapper map450rc, Build 029R"))
      )
@@ -195,7 +195,7 @@
        )
     )
   )
-  (library liaison
+  (library liaison_post_synthesis
     (edifLevel 0)
     (technology (numberDefinition ))
     (cell ECC (cellType GENERIC)
@@ -218,10 +218,10 @@
           (instance (rename ECC_signal_1_0_3 "ECC_signal_1_0[3]") (viewRef PRIM (cellRef LUT4_L (libraryRef VIRTEX)))
            (property INIT (string "6996"))
           )
-          (instance (rename ECC_signal_1_0_2_0 "ECC_signal_1_0_2[0]") (viewRef PRIM (cellRef LUT4_L (libraryRef VIRTEX)))
+          (instance (rename ECC_signal_1_0_2_1 "ECC_signal_1_0_2[1]") (viewRef PRIM (cellRef LUT4_L (libraryRef VIRTEX)))
            (property INIT (string "6996"))
           )
-          (instance (rename ECC_signal_1_0_2_1 "ECC_signal_1_0_2[1]") (viewRef PRIM (cellRef LUT4_L (libraryRef VIRTEX)))
+          (instance (rename ECC_signal_1_0_2_0 "ECC_signal_1_0_2[0]") (viewRef PRIM (cellRef LUT4_L (libraryRef VIRTEX)))
            (property INIT (string "6996"))
           )
           (instance (rename ECC_signal_1_0_2_2 "ECC_signal_1_0_2[2]") (viewRef PRIM (cellRef LUT4_L (libraryRef VIRTEX)))
@@ -244,8 +244,8 @@
           ))
           (net (rename status_out_2 "status_out(2)") (joined
            (portRef (member status_out 0))
+           (portRef I2 (instanceRef ECC_signal_1_0_3_3))
            (portRef I2 (instanceRef ECC_signal_1_0_2_2))
-           (portRef I1 (instanceRef ECC_signal_1_0_3))
            (portRef I1 (instanceRef ECC_signal_1_0_1))
            (portRef I1 (instanceRef ECC_signal_1_0_0))
           ))
@@ -257,7 +257,7 @@
           ))
           (net (rename voted_data_out_6 "voted_data_out(6)") (joined
            (portRef (member voted_data_out 1))
-           (portRef I3 (instanceRef ECC_signal_1_0_3))
+           (portRef I2 (instanceRef ECC_signal_1_0_3))
            (portRef I3 (instanceRef ECC_signal_1_0_1))
            (portRef I3 (instanceRef ECC_signal_1_0_0))
           ))
@@ -277,29 +277,34 @@
            (portRef LO (instanceRef ECC_signal_1_0_3_3))
            (portRef I0 (instanceRef ECC_signal_1_0_3))
           ))
+          (net (rename voted_data_out_7 "voted_data_out(7)") (joined
+           (portRef (member voted_data_out 0))
+           (portRef I3 (instanceRef ECC_signal_1_0_3))
+           (portRef I3 (instanceRef ECC_signal_1_0_2))
+          ))
           (net (rename ecc_signal_3 "ECC_signal(3)") (joined
            (portRef LO (instanceRef ECC_signal_1_0_3))
            (portRef (member ECC_signal 0))
-          ))
-          (net (rename voted_data_out_1 "voted_data_out(1)") (joined
-           (portRef (member voted_data_out 6))
-           (portRef I2 (instanceRef ECC_signal_1_0_2_0))
-           (portRef I1 (instanceRef ECC_signal_1_0_2))
-          ))
-          (net (rename voted_data_out_0 "voted_data_out(0)") (joined
-           (portRef (member voted_data_out 7))
-           (portRef I1 (instanceRef ECC_signal_1_0_2_1))
-           (portRef I1 (instanceRef ECC_signal_1_0_2_0))
           ))
           (net (rename voted_data_out_2 "voted_data_out(2)") (joined
            (portRef (member voted_data_out 5))
            (portRef I2 (instanceRef ECC_signal_1_0_2_1))
            (portRef I2 (instanceRef ECC_signal_1_0_2))
           ))
-          (net (rename voted_data_out_5 "voted_data_out(5)") (joined
-           (portRef (member voted_data_out 2))
-           (portRef I3 (instanceRef ECC_signal_1_0_2_1))
-           (portRef I2 (instanceRef ECC_signal_1_0_3))
+          (net (rename voted_data_out_0 "voted_data_out(0)") (joined
+           (portRef (member voted_data_out 7))
+           (portRef I1 (instanceRef ECC_signal_1_0_2_0))
+           (portRef I1 (instanceRef ECC_signal_1_0_2_1))
+          ))
+          (net (rename voted_data_out_1 "voted_data_out(1)") (joined
+           (portRef (member voted_data_out 6))
+           (portRef I2 (instanceRef ECC_signal_1_0_2_0))
+           (portRef I1 (instanceRef ECC_signal_1_0_2))
+          ))
+          (net (rename voted_data_out_4 "voted_data_out(4)") (joined
+           (portRef (member voted_data_out 3))
+           (portRef I3 (instanceRef ECC_signal_1_0_2_0))
+           (portRef I1 (instanceRef ECC_signal_1_0_3))
           ))
           (net (rename status_out_0 "status_out(0)") (joined
            (portRef (member status_out 2))
@@ -313,15 +318,10 @@
            (portRef I1 (instanceRef ECC_signal_1_0_2_2))
            (portRef I0 (instanceRef ECC_signal_1_0_2_1))
           ))
-          (net (rename voted_data_out_4 "voted_data_out(4)") (joined
-           (portRef (member voted_data_out 3))
-           (portRef I2 (instanceRef ECC_signal_1_0_3_3))
-           (portRef I3 (instanceRef ECC_signal_1_0_2_0))
-          ))
-          (net (rename voted_data_out_7 "voted_data_out(7)") (joined
-           (portRef (member voted_data_out 0))
+          (net (rename voted_data_out_5 "voted_data_out(5)") (joined
+           (portRef (member voted_data_out 2))
            (portRef I3 (instanceRef ECC_signal_1_0_3_3))
-           (portRef I3 (instanceRef ECC_signal_1_0_2))
+           (portRef I3 (instanceRef ECC_signal_1_0_2_1))
           ))
          )
        )
@@ -697,14 +697,14 @@
           ))
           (net (rename vdsiZ0Z_3 "vdsi(3)") (joined
            (portRef Q (instanceRef vdsi_3))
-           (portRef I0 (instanceRef un16_i_a2_4_3))
-           (portRef I0 (instanceRef un16_i_a2_4_2))
+           (portRef I1 (instanceRef un16_i_a2_2))
+           (portRef I2 (instanceRef un16_i_a2_3))
            (portRef I3 (instanceRef un16_i_a2_0))
            (portRef I0 (instanceRef vdsi_RNO_7))
           ))
           (net (rename vdsiZ0Z_7 "vdsi(7)") (joined
            (portRef Q (instanceRef vdsi_7))
-           (portRef I2 (instanceRef un16_i_a2_4_3))
+           (portRef I1 (instanceRef un16_i_a2_4_3))
            (portRef I2 (instanceRef un16_i_a2_4_2))
            (portRef I2 (instanceRef un16_i_a2_1))
            (portRef I0 (instanceRef vdsic))
@@ -780,7 +780,7 @@
           (net (rename vdsiZ0Z_9 "vdsi(9)") (joined
            (portRef Q (instanceRef vdsi_9))
            (portRef D (instanceRef vdsi_10))
-           (portRef I3 (instanceRef un16_i_a2_4_3))
+           (portRef I2 (instanceRef un16_i_a2_4_3))
            (portRef I2 (instanceRef un16_i_a2_3_1))
           ))
           (net (rename vdsiZ0Z_10 "vdsi(10)") (joined
@@ -798,12 +798,6 @@
            (portRef I1 (instanceRef un16_i_a2_1_0))
            (portRef I1 (instanceRef un16_i_a2_3))
           ))
-          (net (rename vdsiZ0Z_11 "vdsi(11)") (joined
-           (portRef Q (instanceRef vdsi_11))
-           (portRef D (instanceRef vdsi_12))
-           (portRef I3 (instanceRef un16_i_a2_4_2))
-           (portRef I2 (instanceRef un16_i_a2_3))
-          ))
           (net (rename n_76 "N_76") (joined
            (portRef O (instanceRef un16_i_a2_3))
            (portRef N_76)
@@ -811,12 +805,6 @@
           (net (rename un16_i_a2_4Z0Z_2 "un16_i_a2_4(2)") (joined
            (portRef O (instanceRef un16_i_a2_4_2))
            (portRef I0 (instanceRef un16_i_a2_2))
-          ))
-          (net (rename vdsiZ0Z_0 "vdsi(0)") (joined
-           (portRef Q (instanceRef vdsi_0))
-           (portRef D (instanceRef vdsi_1))
-           (portRef I0 (instanceRef un16_i_a2_1_0))
-           (portRef I1 (instanceRef un16_i_a2_2))
           ))
           (net (rename vdsiZ0Z_12 "vdsi(12)") (joined
            (portRef Q (instanceRef vdsi_12))
@@ -832,17 +820,29 @@
            (portRef I3 (instanceRef control_signals_internal_nss_i_i_a4_0_5_0))
            (portRef I1 (instanceRef control_signals_internalc))
           ))
+          (net (rename vdsiZ0Z_0 "vdsi(0)") (joined
+           (portRef Q (instanceRef vdsi_0))
+           (portRef D (instanceRef vdsi_1))
+           (portRef I0 (instanceRef un16_i_a2_1_0))
+           (portRef I0 (instanceRef un16_i_a2_4_2))
+          ))
           (net (rename vdsiZ0Z_4 "vdsi(4)") (joined
            (portRef Q (instanceRef vdsi_4))
            (portRef D (instanceRef vdsi_5))
            (portRef I0 (instanceRef un16_i_a2_5_0))
            (portRef I1 (instanceRef un16_i_a2_4_2))
           ))
+          (net (rename vdsiZ0Z_11 "vdsi(11)") (joined
+           (portRef Q (instanceRef vdsi_11))
+           (portRef D (instanceRef vdsi_12))
+           (portRef I3 (instanceRef un16_i_a2_4_3))
+           (portRef I3 (instanceRef un16_i_a2_4_2))
+          ))
           (net (rename vdsiZ0Z_5 "vdsi(5)") (joined
            (portRef Q (instanceRef vdsi_5))
            (portRef D (instanceRef vdsi_6))
            (portRef I1 (instanceRef un16_i_a2_5_0))
-           (portRef I1 (instanceRef un16_i_a2_4_3))
+           (portRef I0 (instanceRef un16_i_a2_4_3))
           ))
           (net (rename vdsiZ0Z_6 "vdsi(6)") (joined
            (portRef Q (instanceRef vdsi_6))
@@ -979,9 +979,6 @@
            (port clk_c (direction INPUT))
          )
          (contents
-          (instance state_a (viewRef PRIM (cellRef FD (libraryRef UNILIB)))
-           (property INIT (string "1"))
-          )
           (instance (rename last_status_2 "last_status[2]") (viewRef PRIM (cellRef FD (libraryRef UNILIB)))
            (property INIT (string "0"))
           )
@@ -998,6 +995,9 @@
            (property INIT (string "1"))
           )
           (instance state_b (viewRef PRIM (cellRef FD (libraryRef UNILIB)))
+           (property INIT (string "1"))
+          )
+          (instance state_a (viewRef PRIM (cellRef FD (libraryRef UNILIB)))
            (property INIT (string "1"))
           )
           (instance (rename status_RNO_2 "status_RNO[2]") (viewRef PRIM (cellRef LUT4_L (libraryRef VIRTEX)))
@@ -1018,6 +1018,12 @@
           (instance (rename status_RNO_1 "status_RNO[1]") (viewRef PRIM (cellRef LUT3_L (libraryRef VIRTEX)))
            (property INIT (string "CD"))
           )
+          (instance (rename un1_voted_data_0_sqmuxa_N_7_i "un1_voted_data_0_sqmuxa.N_7_i") (viewRef PRIM (cellRef LUT2_L (libraryRef VIRTEX)))
+           (property INIT (string "E"))
+          )
+          (instance state_a_RNO (viewRef PRIM (cellRef LUT2_L (libraryRef VIRTEX)))
+           (property INIT (string "E"))
+          )
           (instance state_b_RNO (viewRef PRIM (cellRef LUT2_L (libraryRef VIRTEX)))
            (property INIT (string "E"))
           )
@@ -1036,9 +1042,6 @@
           (instance (rename last_status_0_2 "last_status_0[2]") (viewRef PRIM (cellRef LUT2_L (libraryRef VIRTEX)))
            (property INIT (string "1"))
           )
-          (instance state_a_RNO (viewRef PRIM (cellRef LUT2_L (libraryRef VIRTEX)))
-           (property INIT (string "E"))
-          )
           (instance (rename status_internal_0 "status_internal[0]") (viewRef PRIM (cellRef LUT4_L (libraryRef VIRTEX)))
            (property INIT (string "20A1"))
           )
@@ -1051,20 +1054,17 @@
           (instance (rename N_24_1_SUM0_0 "N_24_1.SUM0_0") (viewRef PRIM (cellRef LUT3 (libraryRef VIRTEX)))
            (property INIT (string "96"))
           )
-          (instance (rename extended_vote_b_0 "extended_vote_b[0]") (viewRef PRIM (cellRef LUT3 (libraryRef VIRTEX)))
-           (property INIT (string "84"))
+          (instance (rename extended_vote_a_0 "extended_vote_a[0]") (viewRef PRIM (cellRef LUT4 (libraryRef VIRTEX)))
+           (property INIT (string "A090"))
           )
-          (instance (rename extended_vote_c_0 "extended_vote_c[0]") (viewRef PRIM (cellRef LUT3 (libraryRef VIRTEX)))
-           (property INIT (string "84"))
+          (instance (rename extended_vote_b_0 "extended_vote_b[0]") (viewRef PRIM (cellRef LUT4 (libraryRef VIRTEX)))
+           (property INIT (string "A090"))
           )
-          (instance (rename extended_vote_d_0 "extended_vote_d[0]") (viewRef PRIM (cellRef LUT3 (libraryRef VIRTEX)))
-           (property INIT (string "84"))
+          (instance (rename extended_vote_c_0 "extended_vote_c[0]") (viewRef PRIM (cellRef LUT4 (libraryRef VIRTEX)))
+           (property INIT (string "A090"))
           )
-          (instance (rename extended_vote_a_0 "extended_vote_a[0]") (viewRef PRIM (cellRef LUT3 (libraryRef VIRTEX)))
-           (property INIT (string "84"))
-          )
-          (instance (rename last_status_RNIQCOD_0 "last_status_RNIQCOD[0]") (viewRef PRIM (cellRef LUT4 (libraryRef VIRTEX)))
-           (property INIT (string "0700"))
+          (instance (rename extended_vote_d_0 "extended_vote_d[0]") (viewRef PRIM (cellRef LUT4 (libraryRef VIRTEX)))
+           (property INIT (string "A090"))
           )
           (instance (rename un1_voted_data_0_sqmuxa_m5 "un1_voted_data_0_sqmuxa.m5") (viewRef PRIM (cellRef LUT4 (libraryRef VIRTEX)))
            (property INIT (string "DBB3"))
@@ -1078,32 +1078,36 @@
           (instance un14_number_of_winning_votes_1 (viewRef PRIM (cellRef LUT3 (libraryRef VIRTEX)))
            (property INIT (string "01"))
           )
+          (instance (rename extended_a_0 "extended_a[0]") (viewRef PRIM (cellRef LUT2 (libraryRef VIRTEX)))
+           (property INIT (string "8"))
+          )
           (instance (rename extended_c_0 "extended_c[0]") (viewRef PRIM (cellRef LUT2 (libraryRef VIRTEX)))
            (property INIT (string "8"))
           )
           (instance (rename extended_d_0 "extended_d[0]") (viewRef PRIM (cellRef LUT2 (libraryRef VIRTEX)))
            (property INIT (string "8"))
           )
-          (instance (rename extended_a_0 "extended_a[0]") (viewRef PRIM (cellRef LUT2 (libraryRef VIRTEX)))
-           (property INIT (string "8"))
-          )
-          (net (rename state_aZ0 "state_a") (joined
-           (portRef Q (instanceRef state_a))
-           (portRef I1 (instanceRef extended_a_0))
-           (portRef I1 (instanceRef extended_vote_a_0))
-          ))
-          (net N_75_i (joined
-           (portRef LO (instanceRef state_a_RNO))
-           (portRef D (instanceRef state_a))
-          ))
           (net (rename last_statusZ0Z_2 "last_status(2)") (joined
            (portRef Q (instanceRef last_status_2))
            (portRef I2 (instanceRef un14_number_of_winning_votes_1))
-           (portRef I2 (instanceRef last_status_RNIQCOD_0))
+           (portRef I1 (instanceRef extended_vote_d_0))
+           (portRef I1 (instanceRef extended_vote_c_0))
+           (portRef I1 (instanceRef extended_vote_b_0))
+           (portRef I1 (instanceRef extended_vote_a_0))
+           (portRef I0 (instanceRef un1_voted_data_0_sqmuxa_N_7_i))
           ))
           (net (rename last_status_0Z0Z_2 "last_status_0(2)") (joined
            (portRef LO (instanceRef last_status_0_2))
            (portRef D (instanceRef last_status_2))
+          ))
+          (net (rename last_statusZ0Z_1 "last_status(1)") (joined
+           (portRef Q (instanceRef last_status_1))
+           (portRef I1 (instanceRef un14_number_of_winning_votes_1))
+           (portRef I3 (instanceRef un1_voted_data_0_sqmuxa_m5))
+          ))
+          (net (rename last_status_0Z0Z_1 "last_status_0(1)") (joined
+           (portRef LO (instanceRef last_status_0_1))
+           (portRef D (instanceRef last_status_1))
           ))
           (net clk_c (joined
            (portRef clk_c)
@@ -1111,28 +1115,17 @@
            (portRef C (instanceRef status_2))
            (portRef C (instanceRef status_1))
            (portRef C (instanceRef status_0))
+           (portRef C (instanceRef state_a))
            (portRef C (instanceRef state_b))
            (portRef C (instanceRef state_c))
            (portRef C (instanceRef state_d))
            (portRef C (instanceRef last_status_0))
            (portRef C (instanceRef last_status_1))
            (portRef C (instanceRef last_status_2))
-           (portRef C (instanceRef state_a))
-          ))
-          (net (rename last_statusZ0Z_1 "last_status(1)") (joined
-           (portRef Q (instanceRef last_status_1))
-           (portRef I1 (instanceRef un14_number_of_winning_votes_1))
-           (portRef I3 (instanceRef un1_voted_data_0_sqmuxa_m5))
-           (portRef I1 (instanceRef last_status_RNIQCOD_0))
-          ))
-          (net (rename last_status_0Z0Z_1 "last_status_0(1)") (joined
-           (portRef LO (instanceRef last_status_0_1))
-           (portRef D (instanceRef last_status_1))
           ))
           (net (rename last_statusZ0Z_0 "last_status(0)") (joined
            (portRef Q (instanceRef last_status_0))
            (portRef I0 (instanceRef un14_number_of_winning_votes_1))
-           (portRef I0 (instanceRef last_status_RNIQCOD_0))
           ))
           (net (rename last_status_0Z0Z_0 "last_status_0(0)") (joined
            (portRef LO (instanceRef last_status_0_0))
@@ -1141,7 +1134,7 @@
           (net (rename state_dZ0 "state_d") (joined
            (portRef Q (instanceRef state_d))
            (portRef I1 (instanceRef extended_d_0))
-           (portRef I1 (instanceRef extended_vote_d_0))
+           (portRef I2 (instanceRef extended_vote_d_0))
           ))
           (net N_78_i (joined
            (portRef LO (instanceRef state_d_RNO))
@@ -1150,7 +1143,7 @@
           (net (rename state_cZ0 "state_c") (joined
            (portRef Q (instanceRef state_c))
            (portRef I1 (instanceRef extended_c_0))
-           (portRef I1 (instanceRef extended_vote_c_0))
+           (portRef I2 (instanceRef extended_vote_c_0))
           ))
           (net N_77_i (joined
            (portRef LO (instanceRef state_c_RNO))
@@ -1160,11 +1153,20 @@
            (portRef Q (instanceRef state_b))
            (portRef I3 (instanceRef N_31_1_SUM0_0))
            (portRef I3 (instanceRef N_31_1_CO0))
-           (portRef I1 (instanceRef extended_vote_b_0))
+           (portRef I2 (instanceRef extended_vote_b_0))
           ))
           (net N_76_i (joined
            (portRef LO (instanceRef state_b_RNO))
            (portRef D (instanceRef state_b))
+          ))
+          (net (rename state_aZ0 "state_a") (joined
+           (portRef Q (instanceRef state_a))
+           (portRef I1 (instanceRef extended_a_0))
+           (portRef I2 (instanceRef extended_vote_a_0))
+          ))
+          (net N_75_i (joined
+           (portRef LO (instanceRef state_a_RNO))
+           (portRef D (instanceRef state_a))
           ))
           (net (rename un14_number_of_winning_votesZ0Z_1 "un14_number_of_winning_votes_1") (joined
            (portRef O (instanceRef un14_number_of_winning_votes_1))
@@ -1177,8 +1179,8 @@
            (portRef O (instanceRef extended_vote_a_0))
            (portRef I2 (instanceRef status_internal_2))
            (portRef I2 (instanceRef status_internal_0))
-           (portRef I0 (instanceRef state_a_RNO))
            (portRef I2 (instanceRef last_status_0_1))
+           (portRef I0 (instanceRef state_a_RNO))
            (portRef I2 (instanceRef status_RNO_1))
            (portRef I1 (instanceRef status_RNO_0))
            (portRef I1 (instanceRef status_RNO_2))
@@ -1236,10 +1238,17 @@
            (portRef Q (instanceRef y_1))
            (portRef voted_data_bit)
           ))
-          (net m5 (joined
-           (portRef O (instanceRef un1_voted_data_0_sqmuxa_m5))
-           (portRef I3 (instanceRef last_status_RNIQCOD_0))
+          (net N_7_i (joined
+           (portRef LO (instanceRef un1_voted_data_0_sqmuxa_N_7_i))
            (portRef D (instanceRef y_1))
+          ))
+          (net N_6 (joined
+           (portRef O (instanceRef un1_voted_data_0_sqmuxa_m5))
+           (portRef I3 (instanceRef extended_vote_d_0))
+           (portRef I3 (instanceRef extended_vote_c_0))
+           (portRef I3 (instanceRef extended_vote_b_0))
+           (portRef I3 (instanceRef extended_vote_a_0))
+           (portRef I1 (instanceRef un1_voted_data_0_sqmuxa_N_7_i))
           ))
           (net (rename extended_vote_bZ0Z_0 "extended_vote_b(0)") (joined
            (portRef O (instanceRef extended_vote_b_0))
@@ -1247,21 +1256,21 @@
            (portRef I0 (instanceRef N_24_1_CO0))
            (portRef I0 (instanceRef state_b_RNO))
           ))
-          (net (rename extended_vote_cZ0Z_0 "extended_vote_c(0)") (joined
-           (portRef O (instanceRef extended_vote_c_0))
-           (portRef I1 (instanceRef N_24_1_SUM0_0))
-           (portRef I1 (instanceRef N_24_1_CO0))
-           (portRef I0 (instanceRef state_c_RNO))
-          ))
           (net reset_c (joined
            (portRef reset_c)
-           (portRef I1 (instanceRef state_a_RNO))
            (portRef I1 (instanceRef last_status_0_2))
            (portRef I3 (instanceRef last_status_0_1))
            (portRef I1 (instanceRef last_status_0_0))
            (portRef I1 (instanceRef state_d_RNO))
            (portRef I1 (instanceRef state_c_RNO))
            (portRef I1 (instanceRef state_b_RNO))
+           (portRef I1 (instanceRef state_a_RNO))
+          ))
+          (net (rename extended_vote_cZ0Z_0 "extended_vote_c(0)") (joined
+           (portRef O (instanceRef extended_vote_c_0))
+           (portRef I1 (instanceRef N_24_1_SUM0_0))
+           (portRef I1 (instanceRef N_24_1_CO0))
+           (portRef I0 (instanceRef state_c_RNO))
           ))
           (net (rename extended_vote_dZ0Z_0 "extended_vote_d(0)") (joined
            (portRef O (instanceRef extended_vote_d_0))
@@ -1276,13 +1285,6 @@
           (net N_79 (joined
            (portRef LO (instanceRef status_internal_2))
            (portRef I0 (instanceRef last_status_0_2))
-          ))
-          (net voted_data_1 (joined
-           (portRef O (instanceRef last_status_RNIQCOD_0))
-           (portRef I2 (instanceRef extended_vote_a_0))
-           (portRef I2 (instanceRef extended_vote_d_0))
-           (portRef I2 (instanceRef extended_vote_c_0))
-           (portRef I2 (instanceRef extended_vote_b_0))
           ))
           (net SUM0_0 (joined
            (portRef O (instanceRef N_31_1_SUM0_0))
@@ -1312,6 +1314,11 @@
            (portRef I2 (instanceRef N_31_1_SUM0_0))
            (portRef I2 (instanceRef N_31_1_CO0))
           ))
+          (net (rename mp_data_c_0 "mp_data_c(0)") (joined
+           (portRef (member mp_data_c 3))
+           (portRef I0 (instanceRef extended_a_0))
+           (portRef I0 (instanceRef extended_vote_a_0))
+          ))
           (net (rename mp_data_c_2 "mp_data_c(2)") (joined
            (portRef (member mp_data_c 1))
            (portRef I0 (instanceRef extended_c_0))
@@ -1321,11 +1328,6 @@
            (portRef (member mp_data_c 0))
            (portRef I0 (instanceRef extended_d_0))
            (portRef I0 (instanceRef extended_vote_d_0))
-          ))
-          (net (rename mp_data_c_0 "mp_data_c(0)") (joined
-           (portRef (member mp_data_c 3))
-           (portRef I0 (instanceRef extended_a_0))
-           (portRef I0 (instanceRef extended_vote_a_0))
           ))
          )
        )
@@ -1550,6 +1552,10 @@
            (portRef voted_data_bit (instanceRef onebitvoter))
            (portRef voted_data_bit (instanceRef registers))
           ))
+          (net (rename controller_N_76 "controller.N_76") (joined
+           (portRef N_76 (instanceRef controller))
+           (portRef I2 (instanceRef voted_data_14_0_1))
+          ))
           (net clk_c (joined
            (portRef O (instanceRef clk_ibuf))
            (portRef clk_c (instanceRef registers))
@@ -1623,10 +1629,6 @@
            (portRef O (instanceRef voted_data_obuf))
            (portRef voted_data)
           ))
-          (net (rename controller_N_76 "controller.N_76") (joined
-           (portRef N_76 (instanceRef controller))
-           (portRef I2 (instanceRef voted_data_14_0_1))
-          ))
           (net N_12 (joined
            (portRef O (instanceRef voted_data_12_0))
            (portRef I1 (instanceRef voted_data_14_0_1))
@@ -1656,6 +1658,7 @@
            (portRef I1 (instanceRef voted_data_11_0))
            (portRef I1 (instanceRef voted_data_10_0_am))
            (portRef I1 (instanceRef voted_data_6_0_am))
+           (portRef I0 (instanceRef voted_data_6_0_bm))
            (portRef I1 (instanceRef voted_data_3_0_am))
           ))
           (net N_6 (joined
@@ -1669,7 +1672,6 @@
           (net (rename controller_N_79_5 "controller.N_79_5") (joined
            (portRef N_79_5 (instanceRef controller))
            (portRef I0 (instanceRef voted_data_10_0_bm))
-           (portRef I0 (instanceRef voted_data_6_0_bm))
            (portRef I0 (instanceRef voted_data_3_0_bm))
           ))
           (net reset_c_i (joined
@@ -1712,6 +1714,6 @@
        )
     )
   )
-  (design liaison (cellRef liaison (libraryRef liaison))
+  (design liaison (cellRef liaison (libraryRef liaison_post_synthesis))
 	(property PART (string "xc4vfx12sf363-12") (owner "Xilinx")))
 )

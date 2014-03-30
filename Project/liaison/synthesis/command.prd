@@ -1,7 +1,7 @@
 #-- Synplicity, Inc.
 #-- Version C-2009.06
-#-- Project file C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\command.prd
-#-- Written on Thu Mar 06 15:52:28 2014
+#-- Project file C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\synthesis\command.prd
+#-- Written on Sun Mar 30 19:11:33 2014
 
 #
 ### Watch Implementation type ###
@@ -10,4 +10,4 @@ watch_impl -all
 #
 ### Watch Implementation properties ###
 #
-watch_prop -clear
+watch_prop -clear { liaison Total Luts }

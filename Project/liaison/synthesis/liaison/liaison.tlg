@@ -1,14 +1,14 @@
-@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd":4:7:4:13|Synthesizing liaison.liaison.liaison 
-@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd":4:7:4:9|Synthesizing liaison.ecc.ecc 
-Post processing for liaison.ecc.ecc
-@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd":4:7:4:15|Synthesizing liaison.registers.registers 
-Post processing for liaison.registers.registers
-@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":4:7:4:16|Synthesizing liaison.controller.controller 
-Post processing for liaison.controller.controller
-@N: CD630 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":14:7:14:17|Synthesizing liaison.onebitvoter.behavioral 
-Post processing for liaison.onebitvoter.behavioral
-Post processing for liaison.liaison.liaison
-@N: CL201 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":37:1:37:2|Trying to extract state machine for register control_signals_internal
+@N: CD630 :"C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\liaison.vhd":4:7:4:13|Synthesizing liaison_post_synthesis.liaison.liaison 
+@N: CD630 :"C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\ECC.vhd":4:7:4:9|Synthesizing liaison_post_synthesis.ecc.ecc 
+Post processing for liaison_post_synthesis.ecc.ecc
+@N: CD630 :"C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\registers.vhd":4:7:4:15|Synthesizing liaison_post_synthesis.registers.registers 
+Post processing for liaison_post_synthesis.registers.registers
+@N: CD630 :"C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":4:7:4:16|Synthesizing liaison_post_synthesis.controller.controller 
+Post processing for liaison_post_synthesis.controller.controller
+@N: CD630 :"C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\onebitvoter.vhd":14:7:14:17|Synthesizing liaison_post_synthesis.onebitvoter.behavioral 
+Post processing for liaison_post_synthesis.onebitvoter.behavioral
+Post processing for liaison_post_synthesis.liaison.liaison
+@N: CL201 :"C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":37:1:37:2|Trying to extract state machine for register control_signals_internal
 Extracted state machine for register control_signals_internal
 State machine has 11 reachable states with original encodings of:
    0000000000
@@ -22,7 +22,7 @@ State machine has 11 reachable states with original encodings of:
    0010000000
    0100000000
    1000000000
-@N: CL201 :"C:\Users\Student\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":37:1:37:2|Trying to extract state machine for register vdsi
+@N: CL201 :"C:\Users\Student.AD-IME-NTNU-NO\Documents\GitHub\Term-Assigment-TFE4140-mod-anal-dig-sys\Project\liaison\src\controller.vhd":37:1:37:2|Trying to extract state machine for register vdsi
 Extracted state machine for register vdsi
 State machine has 15 reachable states with original encodings of:
    0000
