@@ -13,7 +13,7 @@
 
 \author{
     Rune Holmgren,
-    Torbjørn Langland
+    TorbjÃ¸rn Langland
 }
 
 \begin{document}
@@ -21,94 +21,193 @@
 \maketitle
 
 \begin{abstract}
-    \todo{ Create a fitting abstract here}
+    \todo{ Compulsory (means that it is specified in the Term Project in description of report set up, and at this very location). Create a fitting abstract here. Also create a FRONT PAGE. Yes, you didn't read wrong. I wrote in capital letters. If we miss this now, we must indeed be quite stupid...}
 \end{abstract}
 
+\section{Front Page}
+\todo{ Compulsory. Again, create FRONT PAGE. Didn't immediatly know better how to put this in, so just added this as first section (NOOB!). }
+
 \section{Introduction}
+\todo{ Compulsory. Introduction that explains what to expect of the report. Introduction of the term project should be covered in abstract? }
 
-\todo{ Write briefly about the project, the course it belongs to and the goal}
-This is the introduction section.
-Here we write something appealing for you to continue on.
-If you finish this, you will be baked a cake.
+\section{Table of Contents}
+\todo{ Compulsory. Must generate. I leave that to you, Rune}
 
-As part of the course TDT4260 Computer Architecture, students in groups of 3 or 4 were to implement and test a prefetcher.
-This report describes the implementation with test results done by group 11.
-The report will describe the implemented prefetcher, how it was implemented, the framework and the test results.
+\section{Problem to be solved. Method.}
+\todo{ Insert chapter introduction here. }
+\break
+\break
+\todo{ Describe the student satelite }
+\break
+\break
+\todo{ Describe the communication syste. Describe the need for voters }
+\break
+\break
+\todo{ Describe the idea for the Liaison system. Treat it like a black box and explain what it is supposed to do.}
+\break
+\break
+\todo{ Include figure(s) from pages 4-5 in order to explain the wanted functionality. }
+\break
+\break
+\todo{ Also mention that the solution to this problem is split into different sub-sproblems? }
 
-\section{Related Work}
+\section{ Solution to the problem}
+\todo{ Term project specifies that the answer to all subproblems is to be explained. We should therefore split these into subsection. }
+\break
+\break
+\todo{ Insert chapter introduction here. Remember to mention that we used Active HDL and Synplify Pro.}
+\break
+\break
+\todo{ WARNING: Points of Term project report specifiaction sort of overlaps. Perhaps own chapters for testing and verification, or only the sub-chapters of this one are enough. Discuss, choose, live, rule, win!} 
 
-\todo{ Not sure, mention related work?}
-Here we mention related work. Do you want cake for your relatives?
+\subsection{Sub-Problem 1: State analysis}
+\todo{ Insert the State Machine figure here. Explain it, and choices the group has done in the design. }
 
-\section{Prefetcher Description}
+\subsection{Sub-Problem 2: One-Bit voter}
+\todo{ Explain the implementation of the One-bit Voter.}
+\break 
+\break
+\todo{ Explain test results. Include figures. OR explain in section "Testing and verification" }
+\break
+\break
+\todo{ Explain synthesis results: Estimated Frequency and generated LUTs}
+\break
+\break
+\todo{ Find out if one or both voters must be explained (at least mention synthesis results of the second one). }
 
-\todo{Describe how the final prefetcher works. I suggest adding a figure. Maybe briefly mention other attempts while if we have space?}
+\subsection{Sub-Problem 3: 8-Bit voter}
+\todo{ Explain the different options for implementations. Include figures. (Can screenshot from technical note. Yehaa, there was some use from that long night after all :P ) }
+\break
+\break
+\todo{ Explain the chosen architecture. Include figure (screenshot it from the presentation). }
+\break
+\break
+\todo{ Explain test results. Include figures. OR explain in section "Testing and verification" }
+\break
+\break
+\todo{ Explain synthesis results}
+\break
+\break
 
+
+TEXT
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.5\textwidth]{Figures/DCTable}
-  \caption{Delta Correlation Prediction Table}
-  \label{fig:DCTable}
+      \includegraphics[width=0.5\textwidth]{Figures/ArchitectureFinal}
+  \caption{Chosen architecture for the 8-bit Voter}
+  \label{fig:ArchitectureFinal}
 \end{figure}
-
-Figure \ref{fig:DCTable} shows the Delta Correlation Prediction table used by the Prefetcher.
-As can be seen, the a row in the table contains fields for the PC, last address, last prefetch, deltas 1 to n, and delta pointer.
-PC stores the address to the load instruction, and works as index in the table.
-The Last Address stores the missed address when there is a miss in the cache.
-The delta fields stores the address difference, or the deltas, for each time this instruction is called.
-By using the pattern in these deltas, one may predict the next loads, and thus issue prefetches based on the pattern.
-An example would be the deltas 1, 2, 4, 1, 2, 4, ..., where 1, 2, 4, is repeated, and prefetches on addresses with these deltas in between may be issued.
-Last prefetch contains the address of the last issued prefetch.
-The Delta Pointer points to the head (first Delta field) in the row, since the delta fields are used as circular buffer.
-
-\todo{There is more to be written, and current contents is... a bit poorly written}
-
+TEXT
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.5\textwidth]{Figures/DCExample}
-  \caption{Delta Correlation Example}
-  \label{fig:DCExample}
+      \includegraphics[width=0.5\textwidth]{Figures/ArchitectureOption2}
+  \caption{Chosen architecture for the 8-bit Voter}
+  \label{fig:ArchitectureOption2}
+\end{figure}
+TEXT
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/ArchitectureOption3}
+  \caption{Chosen architecture for the 8-bit Voter}
+  \label{fig:ArchitectureOption3}
 \end{figure}
 
-Figure \ref{fig:DCExample} shows an example where the beginning load address is 10, with the deltas 1,9 in repeating pattern, and the addresses are 11, 20, 21, 30. 
-\todo{ Write how this will work in the DCPT table}.
+TEXT
+\subsubsection{ Details of the 8-bit voter}.
+\todo{ Detail the controller.}
+\break
+\break
+\todo{ Detail the Registers.}
+\break
+\break
+TEXT
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/Registers}
+  \caption{Chosen architecture for the 8-bit Voter}
+  \label{fig:Registers}
+\end{figure}
 
+\subsection{Sub-Problem 4: Error Correction Circuit}
+\todo{ Explain how the ECC is implemented, perhaps explain Hamming Coding. Include figure (screenshot it from the presentation). }
+\break
+\break
+\todo{ The term project states: "Your final report should comment on the use of intellectual property-modules and the reasoning behind why this scheme is appropriate." To this.}
+\break
+\break
+\todo{ Explain test results. Include figures. OR explain in section "Testing and verification" }
+\break
+\break
+\todo{ Explain synthesis results}
 
-Here we describe the cake...uh, I mean the pretecher. Hey, Vance! Can you prefetch that cake?
+\subsection{Sub-Problem 5: Analysis of error probabilities}
+\todo{ Explain briefly the theory behind a microcontroller failure. }
+\break
+\break
+\todo{ Explain the mathematical expressions for P(Max(1)), P(Max(2)), P(Least(3), and the results from calculating MTTF.}
+\break
+\break
+\todo{ Refer to Appendix C for full calculation.}
 
-\section{Methodology}
+\section{ Testing and verification }
+\todo{ Either explein the testing and verification here, or do it seperately in the subchapters of the previous chapter. Delete this chapter if we choose the other solution. I vote this one. But if we do so, for consistensy we may then have to create a independent chapter for Synthesis }
+\break
+\break
+\todo{ Insert introduction }
 
-\todo{Mention the framework. Explain PFJudge. Maybe or maybe not mention C++?}
-Here we describe how we did it.
+\subsection{ Tests and verification of One-Bit Voter}
+\todo{ Explain choice of test bench. Explain why it gives full coverage}
+\break
+\break
+\todo{ Explain test results. Include screenshot (Uh... the provided test bench is not of that kind).}
 
-WARNING: Recipee too long. Insert cake recipe here!
+\subsection{ Control Unit}
+\todo{ Explain choice of test bench. Explain why it gives full coverage}
+\break
+\break
+\todo{ Explain test results. Include screenshot. }
 
-\section{Results}
+\subsection{ ECC }
+\todo{ Explain choice of test bench. Explain why only partial coverage is enough. }
+\break
+\break
+\todo{ Explain test results. Include screenshot. }
 
-\todo{ Describe results from both local and PFJudge.}
+\subsection{ Liasion }
+\todo{ Explain choice of test bench. Explain why only partial coverage is enough. }
+\break
+\break
+\todo{ Explain test results. Include figure. (Screenshot it from the presentation) }
 
-EXPLOSION!
+\section{Synthesis }
+\todo{ Decide whether we should have a own chapter for this or not. If we choose this option for testing and verification, we should do this for synthesis as well in the name of consistency. }
+\break
+\break
+\todo{ Insert introduction }
+\break
+\break
+\todo{ Refer to Appendix B for schematics. Both RTL and that other one. }
 
-\section{Discussion}
-
-\todo{ Not exactly sure, just say it works better? Compare with other prefetcher IF we chose to describe them. }
-
-You killed GLaDOS.
-You monster.
 
 \section{Conclusion}
-
-\todo{ Mention what could have been done better or different? Future ideas? }
-
-The cake is a lie!
+\todo{ Compulsory. Have a good wrap up, somehow. }
 
 \section{Acknowledgements (optional)}
 
-GLaDOS
+Indiana Jones. Should also mention group 2 and the student assistant.
 
-yoyo \cite{assignment-text}
+\section{ Other problems/needs to be solved:}
+\subsection{ Appendixes}
+\todo{ Appendix A: Project codes }
+\break
+\break
+\todo{ Appendix B: Synthesis Schematics. Both RTL and that other type, propose top architecture first then One-bit-Voter, Controller, Registers and ECC. RTL first then that other type.}
+\break
+\break
+\todo{ Appendix C: The Probability Calculation. I got it covered. }
+\subsection{ Other problems/needs:}
+\todo{ Find out where to list up time spent in the project.}
 
-\bibliography{bibliography}
 \bibliographystyle{plain}
 \nocite{*}
 
