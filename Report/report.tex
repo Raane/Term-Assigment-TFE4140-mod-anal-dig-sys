@@ -36,10 +36,14 @@
 \section{Problem to be solved. Method.}
 \todo{ Insert chapter introduction here. }
 \break
-\break
-\todo{ Describe the student satelite }
-\break
-\break
+\subsection{Introduction}
+This chapter will introduce the reader to the details of the problem that is to be solved through this Term Assignment. First the NTNU Student Satellite and the use need for a fault tolerant communication module will be described, then the Framework for the project will be detailed.
+
+\subsection{The Liasion Fault Tolerant System}.
+NTNU is working with a Student Satellite, which is to orbit Earth and measure atmospheric data and deliver this to a ground stattion. The goal of this Assignment is to design a fault tolerant system called Liasion, which exploits redundancy. The system will contain four independent microcontrollers, that perform the same calculations. Every computation will procude 8-bit words. There is always the chance due to cosmic radiation that one more microcontrollers may produce incorrect data. If this is the case, the majority will decide the correct data, in a process known as \textit{voting}. The voted data is to be accompanied by a 3-bit status signal which contains the number of failed microcontrollers. If too many microcontrollers have failed, this status signal will indicate it so that recieved data cannot be trusted. Additionally, data may be corrupted before reaching Earth. This problem is to be solved by implementing a module with Error Correcting Circuit (ECC) that uses Hamming Code. The chosen solution must be able to correct single-bit errors and detect double-bit errors.
+\break 
+\TODO{Insert reference, this is from the introduction of the Term Assignment}. 
+
 \todo{ Describe the communication syste. Describe the need for voters }
 \break
 \break
