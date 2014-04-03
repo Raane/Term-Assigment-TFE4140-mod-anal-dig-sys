@@ -51,22 +51,65 @@ FIND A WAY TO REMOVE a)
 
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.5\textwidth]{Figures/LIASIONBlackBox}
+      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonBlackBox}
   \caption{The Liaison module with inputs and outputs}
-  \label{fig:LiasionBlackBox}
+  \label{fig:LiaisonBlackBox}
 \end{figure}
 
-Figure \ref{fig:LiasionBlackBox} shows the Liaison module with the inputs and outputs that are specified for the procject:
+Figure \ref{fig:LiaisonBlackBox} shows the Liaison module with the inputs and outputs that are specified for the procject:
 \begin{itemize}
-    \item \textbf{di\_ ready}: A pulse that warns the module that data starts arriving from the microcontrollers. Active high.
-    \item \textbf{mp\_ data}: input from the microcontrollers. The bus is 4 bits wide, one bit for each microcontroller. The bits arrive serially, with MSB arriving first.
+    \item \textbf{di\_ready}: A pulse that warns the module that data starts arriving from the microcontrollers. Active high.
+    \item \textbf{mp\_data}: input from the microcontrollers. The bus is 4 bits wide, one bit for each microcontroller. The bits arrive serially, with MSB arriving first.
     \item \textbf{reset}: Synchronous reset of the system. Active high.
     \item \textbf{clk}: Clock. All flip-flops are clocked on the positive edge of the clock.
-    \item \textbf{do\_ ready}: A output pulse that indicates that data starts arriving from the Liasion to the receiver, through the output \textit{voted\_ data}.
-    \item  \textbf{voted\_ data}: The voted result (8 bits) are sent out, clocked and serially, followed by status bits (3 bits) and error correction code (m bits). MSB first.
+    \item \textbf{do\_ready}: A output pulse that indicates that data starts arriving from the Liasion to the receiver, through the output \textit{voted\_data}.
+    \item  \textbf{voted\_data}: The voted result (8 bits) are sent out, clocked and serially, followed by status bits (3 bits) and error correction code (m bits). MSB first.
 \end{itemize}
 
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonOutput}
+  \caption{The total output of data}
+  \label{fig:LiaisonOutput}
+\end{figure}
 
+Figure \ref{LiaisonOutput} shows all output data from the Liasion module. After voting is performed, the output will be the 8 voted\_data bits, then 3 status bits, then 4 ECC \todo{ First use of "ECC", pehaps define them somewhere?} bits. The output is sendt serially, one bit per cycle.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonInputOutput}
+  \caption{The relationship between the inputs and the outputs of the module.}
+  \label{fig:LiaisonInputOutput}
+\end{figure}
+
+Figure \ref{LiaisonInputOutput} shows the difference between the inputs and the outputs to the Liasion system. The only inputs are the \textit{di\_ready} signal and 8 bit words from the microcontrollers through the \textit{mp\_data}. The \textit{do\_ready} signal and \textit{voted\_data} are the outputs, and \textit{voted\_data} has more outputs. In addition to the voted data, there are also the status bits and the ECC bits, therefore there will be some delay on the inputs in other to allow maximum throughput. 
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonDiReadyDoReady}
+  \caption{A pulse of di\_ready causes a do\_ready pulse after n cycles.}
+  \label{fig:LiaisonDiReadyDoReady}
+\end{figure}
+
+Figure \ref{LiaisonDiReadyDoReady} shows that there are some delay between \textit{di\_ready} and \textit{do\_ready} that is specified by m cycles. The latter must be caused by the first, and output data must be sendt from the moment \textit{do\_ready} pulses.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonResetDiReady}
+  \caption{Reset has precedence over di\_ready.}
+  \label{fig:LiaisonResetDiReady}
+\end{figure}
+
+Figure \ref{fig:LiaisonResetDiReady} shows that the \textit{reset} signal must have precedence over the \textit{di\_ready} signal. \todo{ Write some more.}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonMaxThroughput}
+  \caption{The maximum throughput is 11+m, each di\_ready signals may not arrive sooner than that}
+  \label{fig:LiaisonMaxThroughput}
+\end{figure}
+
+INSERT TEXT HERE
 
 \subsection{Project Framework}
 The system is to be encoded in VHDL, tested and verified in simulation, and synthesized, with a goal of having a few Look Up Tables (LUTs) as possible. \todo{ Perhaps briefly explain what a LUT is?}
@@ -83,6 +126,8 @@ Active HDL \todo{ Version number?} is used for programming in VHDL, as well as c
     \item \textbf{April 3rd, 2014}: Presentation of the project for groups 7, 10-19.
     \item \textbf{April 4th, 2014}: Final report delivery.
 \end{itemize}
+
+
 
 \break
 \break
@@ -136,21 +181,21 @@ Active HDL \todo{ Version number?} is used for programming in VHDL, as well as c
 TEXT
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ArchitectureFinal}
+      \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureFinal}
   \caption{Chosen architecture for the 8-bit Voter}
   \label{fig:ArchitectureFinal}
 \end{figure}
 TEXT
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ArchitectureOption2}
+      \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption2}
   \caption{Chosen architecture for the 8-bit Voter}
   \label{fig:ArchitectureOption2}
 \end{figure}
 TEXT
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ArchitectureOption3}
+      \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption3}
   \caption{Chosen architecture for the 8-bit Voter}
   \label{fig:ArchitectureOption3}
 \end{figure}
@@ -166,7 +211,7 @@ TEXT
 TEXT
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.5\textwidth]{Figures/Registers}
+      \includegraphics[width=0.5\textwidth]{Figures/Solution/Registers}
   \caption{Chosen architecture for the 8-bit Voter}
   \label{fig:Registers}
 \end{figure}
