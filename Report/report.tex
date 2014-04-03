@@ -34,10 +34,8 @@
 \todo{ Compulsory. Must generate. I leave that to you, Rune}
 
 \section{Problem to be solved. Method.}
-\todo{ Insert chapter introduction here. }
-\break
 \subsection{Introduction}
-This chapter will introduce the reader to the details of the problem that is to be solved through this Term Assignment. First the NTNU Student Satellite and the use need for a fault tolerant communication module will be described, then the Framework for the project will be detailed.
+This chapter will introduce the reader to the details of the problem that is to be solved through this Term Assignment. First the NTNU Student Satellite and the need for a fault tolerant communication module will be described, then a description of the specified behaviour of the module will be detailed, and finally the Framework for the project will be described.
 
 \subsection{The Liasion Fault Tolerant System}
 NTNU is working with a Student Satellite, which is to orbit Earth and measure atmospheric data and deliver this to a ground stattion. The goal of this Assignment is to design a fault tolerant system called Liasion, which exploits redundancy. The system will contain four independent microcontrollers, that perform the same calculations. Every computation will procude 8-bit words. There is always the chance due to cosmic radiation that one more microcontrollers may produce incorrect data. If this is the case, the majority will decide the correct data, in a process known as \textit{voting}. The voted data is to be accompanied by a 3-bit status signal which contains the number of failed microcontrollers. If too many microcontrollers have failed, this status signal will indicate it so that recieved data cannot be trusted. Additionally, data may be corrupted before reaching Earth. This problem is to be solved by implementing a module with Error Correcting Circuit (ECC) that uses Hamming Code. The chosen solution must be able to correct single-bit errors and detect double-bit errors.
@@ -48,7 +46,27 @@ FIND A WAY TO REMOVE a)
 
 
 \subsection{The Liasion Module functionality in details}
-kkk
+
+\todo{ Warn that all figrures in this subsection and almost all information is from the Term Assignment paper. Reference needed}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/LIASIONBlackBox}
+  \caption{The Liaison module with inputs and outputs}
+  \label{fig:LiasionBlackBox}
+\end{figure}
+
+Figure \ref{fig:LiasionBlackBox} shows the Liaison module with the inputs and outputs that are specified for the procject:
+\begin{itemize}
+    \item \textbf{di\_ ready}: A pulse that warns the module that data starts arriving from the microcontrollers. Active high.
+    \item \textbf{mp\_ data}: input from the microcontrollers. The bus is 4 bits wide, one bit for each microcontroller. The bits arrive serially, with MSB arriving first.
+    \item \textbf{reset}: Synchronous reset of the system. Active high.
+    \item \textbf{clk}: Clock. All flip-flops are clocked on the positive edge of the clock.
+    \item \textbf{do\_ ready}: A output pulse that indicates that data starts arriving from the Liasion to the receiver, through the output \textit{voted\_ data}.
+    \item  \textbf{voted\_ data}: The voted result (8 bits) are sent out, clocked and serially, followed by status bits (3 bits) and error correction code (m bits). MSB first.
+\end{itemize}
+
+
 
 \subsection{Project Framework}
 The system is to be encoded in VHDL, tested and verified in simulation, and synthesized, with a goal of having a few Look Up Tables (LUTs) as possible. \todo{ Perhaps briefly explain what a LUT is?}
@@ -58,12 +76,12 @@ Active HDL \todo{ Version number?} is used for programming in VHDL, as well as c
 \break
 \todo{ Yes, new paragraph here} The Term Assignment was handed out at \todo{ Insert date here, somewhere in January}. These are the milestones: \todo{ Again, need reference from the Term Assignment}
 \begin{itemize}
-    \item February 18th, 2014: Assignment 3 of the Course, where the individual One-Bit Voters are designed. They serve as basis of the 8-bit voters
-    \item February 28th, 2014: Delivery of technical notes, that will contain preliminary solutions to sub-problems 1, 2 and 3.
-    \item March 3rd, 2014: Delivery of Peer Evaluation, containing evaluation of the technical note and project of another group.
-    \item March 31st, 2014: Presentation of the project for groups 1-9 (minus 7).
-    \item April 3rd, 2014: Presentation of the project for groups 7, 10-19.
-    \item April 4th, 2014: Final report delivery.
+    \item \textbf{February 18th, 2014}: Assignment 3 of the Course, where the individual One-Bit Voters are designed. They serve as basis of the 8-bit voters
+    \item \textbf{February 28th, 2014}: Delivery of technical notes, that will contain preliminary solutions to sub-problems 1, 2 and 3.
+    \item \textbf{March 3rd, 2014}: Delivery of Peer Evaluation, containing evaluation of the technical note and project of another group.
+    \item \textbf{March 31st}, 2014: Presentation of the project for groups 1-9 (minus 7).
+    \item \textbf{April 3rd, 2014}: Presentation of the project for groups 7, 10-19.
+    \item \textbf{April 4th, 2014}: Final report delivery.
 \end{itemize}
 
 \break
