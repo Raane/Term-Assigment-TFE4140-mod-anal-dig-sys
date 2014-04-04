@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx} 
 \usepackage{multirow, pgfplotstable,booktabs,colortbl,lmodern}
+\usepackage{mathtools}
 
 \newcommand\TODO[1]{\textcolor{red}{TODO:#1}}
 \newcommand\todo[1]{\TODO{#1}}
@@ -329,20 +330,35 @@ The second state machine is activated by the \textit{do\_ready} signal, and is r
 \todo{ Explain synthesis results}
 
 \subsection{Sub-Problem 5: Analysis of error probabilities}
-\todo{ Explain briefly the theory behind a microcontroller failure. }
-\break
-\break
-\todo{ Explain the mathematical expressions for P(Max(1)), P(Max(2)), P(Least(3), and the results from calculating MTTF.}
-\break
-\break
-\todo{ Refer to Appendix C for full calculation.}
+A microcontroller is expected to fail on an avarage of 6 years.
+Sub-Problem 5 of the Term Assignment specified that 3 mathematical expressions on failure after a time \textit{t}, as well as Mean Time To Failure (MTTF) for the system are to be calculated:
+\begin{itemize}
+    \item The probability for error in maximum one controller (that is zero or one) after \textit{t} time. This will be expressed as P(Max(1)). 
+    \item The probability for error in maximum two controllers after \textit{t} time. This will be expressed as P(Max(2)).
+    \item The probability for error at least three controllers after \textit{t} time. This will be expressed as P(Least(3)).
+    \item The MTTF for the whole system.
+\end{itemize}
+
+The propability that a machine does not fail after a time \textit{t}, given the expected life time \textit{T}, is expressed as $P = P(t) = e^{-t/T}$.
+Since the expected life time for a microcontroller is T = 6, the probability is expressed as $P = P(t) = e^{-t/6}$. 
+The different probabilites that are calculated are:
+\begin{itemize}
+    \item $P(Max(1)) = e^{-t/2}+3(e^{-t/2}-e^{-2t/3})$
+    \item $P(Max(2)) = 3e^{-2t/3}-8e^{-t/2}+6e^{-t/3}$
+    \item $P(Least(3)) = 1-3e^{-2t/3}+8e^{-t/2}-6e^{-t/3}$
+    \item MTTF = 6.5 years.
+\end{itemize}
+
+The details behind these calculations are explained deeply in Appendix C.
+ 
+\todo{ Refer properly to Appendix C.}
 
 \section{ Testing and verification }
 \todo{ Either explein the testing and verification here, or do it seperately in the subchapters of the previous chapter. Delete this chapter if we choose the other solution. I vote this one. But if we do so, for consistensy we may then have to create a independent chapter for Synthesis }
 \break
 \break
 \todo{ Insert introduction }
-
+\subsection{ Introduction}
 \subsection{ Tests and verification of One-Bit Voter}
 \todo{ Explain choice of test bench. Explain why it gives full coverage}
 \break
