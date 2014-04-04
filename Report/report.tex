@@ -210,7 +210,6 @@ Synplify Pro C-2009.06 is used for synthesizing, creating resulting LUTs and est
 
 
 \section{ Solution to the problem.}
-\todo{ Term project specifies that the answer to all subproblems is to be explained. We should therefore split these into subsection. }
 This chapter will explain how the group has implemented the solution for the Term Assignment.
 The Term Assignment was split into 5 sub-problems, therefore this report will detail the solution to each sub-problem accordingly.
 This chapter explains the concept and functionality behind the design.
@@ -255,7 +254,7 @@ Examples are:
 
 \subsection{Sub-Problem 2: Design of 1-Bit voter}
 Sub-problem 2 concerns the design of the voting system, that will vote one bit at a time.
-According to assignments 3 and 4 in the course \todo{ A reference could certainly be useful}, both members of the team were to design a 1-bit voter each, with both in VHDL, simulated and synthesized.
+According to the course assignments 3 and 4 \todo{ A reference could certainly be useful. Should I add them in the bibliography?}, both members of the team were to design a 1-bit voter each, with both in VHDL, simulated and synthesized. 
 
 The one-bit voter has the following inputs and outputs:
 \begin{itemize}
@@ -381,11 +380,6 @@ If the next \textit{di\_ready} signal arrives too early, it will have to be igno
 \break
 \break
 
-\todo{ Explain test results. Include figures. OR explain in section "Testing and verification" }
-\break
-\break
-\todo{ Explain synthesis results}
-
 \subsection{Sub-Problem 5: Analysis of error probabilities}
 A microcontroller is expected to fail on an avarage of 6 years.
 Sub-Problem 5 of the Term Assignment specified that 3 mathematical expressions on failure after a time \textit{t}, as well as Mean Time To Failure (MTTF) for the system are to be calculated:
@@ -449,7 +443,43 @@ The Controller Module is tested for these different situations:
     Reset is tested for both before activating second state machine, and after. 
 \end{itemize}
 These are the different situations that might occur for the controller module, therefore this test is concidered to give full coverage for the controller module.
-\todo{ Include screenshot from test. Explain results}
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/Tests/ControllerRegular}
+  \caption{Screenshot from Controller test: A regular flowthrough. \todo{ Could use better word than "Flowthrough.} }
+  \label{fig:ControllerRegular}
+\end{figure}
+Figure \ref{fig:ControllerRegular} shows a regular flowthrough \todo{ Could use better word than "Flowthrough} in the controller after the \textit{di\_ready} signal pulses.
+The output for register storing are set accordingly for every cycle, \textit{do\_ready} pulses after 7 cycles, and the output to the multiplexer are set afterwards for each cycle. 
+he outputs in the figure are tagged to show what data are stored, and what data are to be sent out based on the control signals.
+Notice that when idle, the multiplexer is set to constantly reading v7.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/Tests/ControllerTooEarlyDiReady}
+  \caption{Screenshot from Controller test: Too early \textit{di\_ready}.}
+  \label{fig:ControllerTooEarlyDiReady}
+\end{figure}
+Figure \ref{fig:ControllerTooEarlyDiReady} shows an example where the signal \textit{di\_ready} arrives too soon after the previous one.
+What happens is that it is simply ignored, and no additional data are stored and sent out in addition to the data that is already being processed.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/Tests/ControllerThroughput}
+  \caption{Screenshot from Controller test: Maximum throughput.}
+  \label{fig:ControllerThroughput}
+\end{figure}
+Figure \ref{fig:ControllerThroughput} shows that when the interval between the \textit{di\_ready} signals are 15 cycles, the output to the multiplexer changes every cycle, which is consistent with sending out data bits from the Liasison system every cycle.
+Also notice that there are some delays on the control signal for input storing.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/Tests/ControllerReset}
+  \caption{Screenshot from Controller test: Reset is active.}
+  \label{fig:ControllerReset}
+\end{figure}
+Figure \ref{fig:ControllerReset} shows that when reset is active, the controller is reset and the outputs are set to their idle values.
 
 \subsection{ ECC }
 \todo{ Explain choice of test bench. Explain why only partial coverage is enough. }
@@ -501,12 +531,6 @@ Total number of flip-flops in the system is: \todo{ Synthesize and find out}
 Estimated frequency of the system is: 213.7 MHz
 \break
 The resulting Schematics for both RTL view and Technology view are detailed in Appendix B \todo{ Add proper reference to Appendix b}.
-
-\break
-\todo{ Insert introduction }
-\break
-\break
-\todo{ Refer to Appendix B for schematics. Both RTL and that other one. }
 
 \section{Feedback and other Information}
 \todo{ The teachers wanted feedback. They also want to know the time spent on the work. This is where it should be added}.
