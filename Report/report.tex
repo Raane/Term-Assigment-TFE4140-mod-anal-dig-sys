@@ -131,12 +131,19 @@ The heavy radiation in space will affect the onboard computer system, and can at
 The likelyhood of such a catastrophic failiure can however be reduced significantly by indrodusing redundancy to the system.
 This redundance is to be managed by the liaison module, as described in this paper.
 The module allow the system to run 4 identical microcontrollers, and compare the outputs to each other.
-Anytime a microcontroller fails, the liaison system will notice the fault by comparing the microcontrollers outputs.
+Anytime a microcontroller fails, the Liaison system will notice the fault by comparing the microcontrollers outputs.
 The failed microcontroller will then be ignored for the rest of the systems lifetime, while the other microcontrollers will be able to continue working.
 By allowing the system to work even at just two non-faulty microcontrollers, the system have an improved expected life time.
 In addition to faulty microcontrollers, the radiation of space introduce a risk of bit errors in transmissions back to earth.
 The system will have to add error correcting and detecting bits to each transmission back to earth, that can then be used to verify and potentially correct the data.
 This is achived through use of Hamming code.
+\break
+This report presents the solution for the Liasion system designed by group 1.
+Chapter 2 presents the problem and all required functionality in details.
+Chapter 3 presents the technical solutions to the problem, split into different sub-problems according to the Term Assignment paper\cite{assignment-text}.
+Chapter 4 presents the testing and verification that is done of the product.
+Chapter 5 presents the results from synthesizing the product.
+Chapters 6 and 7 adds additional information and concludes the report.
 
 \section{Problem}
 
@@ -386,14 +393,31 @@ The 10th bit is used for storing data in the ECC registers, since ECC data are c
 If none of these control bits are active, no new data will be stored.
 
 \subsubsection{The Controller Module}
-The Controller Module is responsible for controlling the registers when storing data, and setting the multiplexer so that correct data is sent out.
+The Controller Module is responsible for controlling the registers when storing data, and setting the multiplexer so that correct data is sent out per cycle.
 The module is implemented as two state machines.
-The first is activated by the \textit{di\_ready} signal, and sets the 10-bit control\_signal that is connected to the register module.
-After a specified number of cycles, in this case 7, the \textit{do\_ready} pulses for one cycle.
-The second state machine is activated by the \textit{do\_ready} signal, and is responsible for setting the 4-bit voted\_data\_selector that is connected to the multiplexer, so that data from the registers are sent out in the correct order.
-There are 7 cycles before activating the second state machine, and 15 (11+m) cycles for the second state machine for setting the output data. 
-In total this makes up 22 cycles \todo{ Count in test} before going idle, should there be no more \textit{di\_ready} signals.
-If the next \textit{di\_ready} signal arrives too early, it will have to be ignored, since the shortest possible intervals for the syste are 15 cycles.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.50\textwidth]{Figures/Solution/ControllerStateMachine1}
+    \caption{Controller state machine 1}
+    \label{fig:ControllerStateMachine1}
+\end{figure}
+Figure \ref{fig:ControllerStateMachine1} shows the first state machine.
+It is activated by the \textit{di\_ready} signal, and sets the 10-bit \textit{control\_signal} that is connected to the register module.
+After a specified number of cycles, in this case 7 after \textit{di\_ready}, the \textit{do\_ready} pulses for one cycle.
+It can also be seen in the figure which registers are affected by the different states.
+Though it is not seen in the figure, if the \textit{reset} signal is activated, the initial state is set.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.50\textwidth]{Figures/Solution/ControllerStateMachine2}
+    \caption{Controller state machine 2}
+    \label{fig:ControllerStateMachine2}
+\end{figure}
+Figure \ref{fig:ControllerStateMachine2} shows the second state machine.
+It is activated by the \textit{do\_ready} signal, and sets the 4-bit control\_signal{4-bit voted\_data\_selector} that is connected to the multiplexer, so that data from the registers are sent out in the correct order.
+This figure shows as well the connection between the output and the registers, and though it is not seen, an active \textit{reset} will return the machine to the initial state.
+There are 7 cycles before activating the second state machine, and 15 cycles for the second state machine for setting the output data.
+In total this makes up 22 cycles before going idle, should there be no more \textit{di\_ready} signals.
+If the next \textit{di\_ready} signal arrives too early, it will have to be ignored, since the shortest possible intervals for the system are 15 cycles.
 
 \todo{ Concider implementing figures with the stateMachines.}
 
@@ -546,10 +570,6 @@ The output of this tests show that the components cooperate as expected.
 This depends on that each component works as expected, but that is already tested in the other test benches.
 
 \section{Synthesis Results}
-\todo{ Decide whether we should have a own chapter for this or not. If we choose this option for testing and verification, we should do this for synthesis as well in the name of consistency. }
-This section will detail the results from the synthesis in Synplify Pro, when it comes to the resulting LUTs, flip-flops and estimated frequency.
-\break
-\break
 Both members of the team implemented one 1-Bit Voter each and synthesized them, according to course assignments 3 and 4.
 Torbjørn Langland's 1-Bit Voter had a resulting estimated frequency of 230.2 MHz, and 73 LUTs, which is concidered to be mediocre.
 Rune Holmgren's Voter had a resulted estimated frequency of 423 MHz and 33 LUTs, which was clearly much better.
@@ -564,7 +584,7 @@ The final resulting number of LUTs implemented in the system is:
     \item Toplevel: 8
     \item \textbf{Total: 62}
 \end{itemize}
-Total number of flip-flops in the system is: \todo{ Synthesize and find out}
+Total number of flip-flops in the system is: 52.
 \break
 Estimated frequency of the system is: 213.7 MHz
 \break
