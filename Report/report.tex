@@ -431,7 +431,7 @@ data_out(1) <= data_in(0) xor data_in(2) xor data_in(3) xor data_in(5) xor data_
 data_out(2) <= data_in(1) xor data_in(2) xor data_in(3) xor data_in(7) xor data_in(8) xor data_in(9) xor data_in(10);
 data_out(3) <= data_in(4) xor data_in(5) xor data_in(6) xor data_in(7) xor data_in(8) xor data_in(9) xor data_in(10);
 \end{lstlisting}
-\caption{The hamming code example from the staff in TFE4140 \protect\cite{hamming-codes}.}
+\caption{The hamming code example from the staff in TFE4140 \protect\cite{hamming-codes}. \Todo You're sure this is correct cite?}
 \label{fig:HammingCodeLogic}
 \end{figure}
 Based on the logic from the example ECC module\protect\cite{hamming-codes} constructing a module for the liaison system was straight forward.
@@ -539,10 +539,17 @@ Also notice that there are some delays on the control signal for input storing.
 Figure \ref{fig:ControllerReset} shows that when reset is active, the controller is reset and the outputs are set to their idle values.
 
 \subsection{ ECC }
-\todo{ Explain choice of test bench. Explain why only partial coverage is enough. }
-\break
-\break
-\todo{ Explain test results. Include screenshot. }
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/Tests/ECCTest}
+  \caption{Screenshot from ECC Test}
+  \label{fig:ECCTest}
+\end{figure}
+
+Figure \ref{fig:ECCTest} shows the test for the ECC module.
+Since the ECC module is purely combinatorial, only a partial test is used to check that input gives expected output.
+In this test, there are three different inputs that are tested: Only 0's, only 1's, and 0's and 1's alternating. The expected outputs, given the code presented in figure \ref{fig:HammingCodeLogic}, are 0000, 1111 and 1010, which can indeed be seen in the output in the test.
+The choice behind this is that the module, which consists only of 4 sets of xor-gates, is never expected to change in behaviour in any situation.
 
 \subsection{ Liaison }
 The test bench for the Liaison system is a test of the top level.
