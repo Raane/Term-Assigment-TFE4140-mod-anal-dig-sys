@@ -20,14 +20,82 @@
 
 \begin{document}
 
-\maketitle
+\begin{titlepage}
 
-\begin{abstract}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+    \center % Center everything on the page
+
+    \vspace*{3cm}
+
+    %----------------------------------------------------------------------------------------
+    %   HEADING SECTIONS
+    %----------------------------------------------------------------------------------------
+
+    \textsc{\LARGE Norwegian University of Science and Technology}\\[1.5cm] % Name of your university/college
+    \vspace*{1cm}
+    \textsc{\Large Term assignment}\\[0.5cm] % Major heading such as course name
+    \textsc{\large TFE4140 Modeling and Analysis of Digital Systems}\\[0.5cm] % Minor heading such as course title
+    \vspace*{1.4cm}
+
+    %----------------------------------------------------------------------------------------
+    %   TITLE SECTION
+    %----------------------------------------------------------------------------------------
+
+    \HRule \\[0.4cm]
+    { \huge \bfseries Liaison}\\[0.4cm] % Title of your document
+    \textsc{\large A fault tolerant communication system}\\[0.5cm] % Minor heading such as course title
+    \HRule \\[1.5cm]
+     
+    %----------------------------------------------------------------------------------------
+    %   AUTHOR SECTION
+    %----------------------------------------------------------------------------------------
+    \vspace*{1cm}
+
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \large
+            \emph{Author:}\\
+            Rune \textsc{Holmgren} \newline% Your name
+            Torbjoern \textsc{Langland} % Your name
+        \end{flushleft}
+    \end{minipage}
+    ~
+    \begin{minipage}{0.4\textwidth}
+        \begin{flushright} \large
+            \emph{} \\
+             \textsc{} % Supervisor's Name
+        \end{flushright}
+    \end{minipage}\\[4cm]
+
+    % If you don't want a supervisor, uncomment the two lines below and remove the section above
+    %\Large \emph{Author:}\\
+    %John \textsc{Smith}\\[3cm] % Your name
+
+    %----------------------------------------------------------------------------------------
+    %   DATE SECTION
+    %----------------------------------------------------------------------------------------
+
+    \vspace*{2cm}
+    {\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+    %----------------------------------------------------------------------------------------
+    %   LOGO SECTION
+    %----------------------------------------------------------------------------------------
+
+    %\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+     
+    %----------------------------------------------------------------------------------------
+
+    \vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\clearpage
+
+\begin{abstract}*
     \todo{ Compulsory (means that it is specified in the Term Project in description of report set up, and at this very location). Create a fitting abstract here. Also create a FRONT PAGE. Yes, you didn't read wrong. I wrote in capital letters. If we miss this now, we must indeed be quite stupid...}
 \end{abstract}
 
-\section{Front Page}
-\todo{ Compulsory. Again, create FRONT PAGE. Didn't immediatly know better how to put this in, so just added this as first section (NOOB!). }
+\clearpage
 
 \section{Introduction}
 \todo{ Compulsory. Introduction that explains what to expect of the report. Introduction of the term project should be covered in abstract? }
@@ -162,7 +230,7 @@ When a third breaks down, the system will go into shutdown because there are no 
 This is implemented as a system state machine, and is illustrated in figure \ref{fig:StateMachine}.
 \begin{figure}[h!]
   \centering
-      \includegraphics[width=0.5\textwidth]{Figures/Solution/Statemachine}
+      \includegraphics[width=0.5\textwidth]{Figures/Solution/StateMachine}
   \caption{System state machine.}
   \label{fig:StateMachine}
 \end{figure}
