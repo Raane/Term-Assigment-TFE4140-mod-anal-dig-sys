@@ -113,6 +113,7 @@ The failed microcontroller will then be ignored for the rest of the systems life
 By allowing the system to work even at just two non-faulty microcontrollers, the system have an improved expected life time.
 In addition to faulty microcontrollers, the radiation of space introduce a risk of bit errors in transmissions back to earth.
 The system will have to add error correcting and detecting bits to each transmission back to earth, that can then be used to verify and potentially correct the data.
+This is achived through use of Hamming code.
 
 \section{Problem}
 
@@ -328,7 +329,7 @@ Note that output status data must be handled differently in lack of the designed
 The Controller has this responsibility in this case.
 
 \subsubsection{Choice of Archtecture}
-While the second option uses less space than the first one, and it is possible to pass on data immediatly as soon as it arrives, the Term Assignment specifies that the ECC module is to be imeplemented using Hamming Codes.\todo{ This is currently the first time Hamming Code is mentioned. Perhaps define earlier?} 
+While the second option uses less space than the first one, and it is possible to pass on data immediatly as soon as it arrives, the Term Assignment specifies that the ECC module is to be imeplemented using Hamming Codes.
 The ECC calculation cannot be done before all data have \todo{ "Have" or "has" when using the word data?} arrived, voting is done and the status bits are updated.
 But with this implementation, the data is sent immediatly, but not stored.
 The ECC module will have to implement registers, but this contradicts the idea behind this option of not using registers.
@@ -342,7 +343,8 @@ Only status data or ECC data from the previous vote can be sent out while an 8-b
 Though maximum throughput is possible, the design is more difficult to implement.
 This solution is likely to have greater complexity than the first option, and the use of four sets of registers make the 8-Bit Voter conciderably larger than the first option.
 Given these premises, the group has chosen to implement the first option, since the other options are concidered weaker.
-The full architecture, which includes the ECC module, can be seen in figure \ref{fig:ArchitectureFinal}. Note that this is named Liasion, since it is used as topmodule for the Liasion system.
+The full architecture, which includes the ECC module, can be seen in figure \ref{fig:ArchitectureFinal}.
+Note that this is named Liasion, since it is used as topmodule for the Liasion system.
 
 \begin{figure}[h!]
     \centering
