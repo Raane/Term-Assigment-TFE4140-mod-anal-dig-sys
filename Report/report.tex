@@ -7,6 +7,29 @@
 \usepackage{pdfpages}
 \usepackage{multirow, pgfplotstable,booktabs,colortbl,lmodern}
 \usepackage{mathtools}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+    language=VHDL,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true
+    tabsize=3
+}
 
 \newcommand\TODO[1]{\textcolor{red}{TODO:#1}}
 \newcommand\todo[1]{\TODO{#1}}
@@ -381,15 +404,25 @@ If the next \textit{di\_ready} signal arrives too early, it will have to be igno
 \todo{ Concider implementing figures with the stateMachines.}
 
 \subsection{Sub-Problem 4: Error Correction Circuit}
-\todo{ Explain how the ECC is implemented, perhaps explain Hamming Coding. Include figure (screenshot it from the presentation). }
-\break
-\break
-\todo{ The term project states: "Your final report should comment on the use of intellectual property-modules and the reasoning behind why this scheme is appropriate." To this.}
-\break
-\break
-\todo{ Explain the alternative of using 8 bits, possible pros, and the cons that were the reason for choosing 4 bits instead} 
-\break
-\break
+When transmitting data there is always a risk of the data being received with one or more bits flipped.
+This effect pose a way greater threat when the datatransmission is a wireless transmission from a small satelite in space.
+To battle this effect the Liaison system feature an error correcting circuit that add 4 bits to each transmission.
+This mean that every set of 8 bits from the microcontrollers will be accompanied by not only the 3 status bits, but also 4 bits that provide confidence in the other 11.
+
+\begin{figure}[h!]
+\begin{lstlisting}
+data_out(0) <= data_in(0) xor data_in(1) xor data_in(3) xor data_in(4) xor data_in(6) xor data_in(8) xor data_in(10);
+data_out(1) <= data_in(0) xor data_in(2) xor data_in(3) xor data_in(5) xor data_in(6) xor data_in(9) xor data_in(10);
+data_out(2) <= data_in(1) xor data_in(2) xor data_in(3) xor data_in(7) xor data_in(8) xor data_in(9) xor data_in(10);
+data_out(3) <= data_in(4) xor data_in(5) xor data_in(6) xor data_in(7) xor data_in(8) xor data_in(9) xor data_in(10);
+\end{lstlisting}
+\caption{The hamming code example from the staff in TFE4140 \protect\cite{hamming-codes}.}
+\label{fig:HammingCodeLogic}
+\end{figure}
+Based on the logic from the example ECC module\protect\cite{hamming-codes} constructing a module for the liaison system was straight forward.
+The module is a simple combinatorial module that continously read the states of the voted data and status registers.
+Whenever one of these registers are updated, the ECC module will also update it's value.
+It is the then up the the control unit to write the values from the ECC at the right point of time.
 
 \subsection{Sub-Problem 5: Analysis of error probabilities}
 A microcontroller is expected to fail on an avarage of 6 years.
