@@ -495,9 +495,31 @@ The output also includes status bits and ECC bits.
 The output of this tests show that the components cooperate as expected.
 This depends on that each component works as expected, but that is already tested in the other test benches.
 
-\section{Synthesis }
+\section{Synthesis Results}
 \todo{ Decide whether we should have a own chapter for this or not. If we choose this option for testing and verification, we should do this for synthesis as well in the name of consistency. }
+This section will detail the results from the synthesis in Synplify Pro, when it comes to the resulting LUTs, flip-flops and estimated frequency.
 \break
+\break
+Both members of the team implemented one 1-Bit Voter each and synthesized them, according to course assignments 3 and 4.
+Torbjørn Langland's 1-Bit Voter had a resulting estimated frequency of 230.2 MHz, and 73 LUTs, which is concidered to be mediocre.
+Rune Holmgren's Voter had a resulted estimated frequency of 423 MHz and 33 LUTs, which was clearly much better.
+Rune's Voter was chosen for the implementation of the Liaison system.
+It has also been futher optimalized in the latter stages of the project.
+The final resulting number of LUTs implemented in the system is:
+\begin{itemize}
+    \item 1-Bit Voter: 27
+    \item Controller: 18
+    \item ECC: 9
+    \item Registers: 0
+    \item Toplevel: 8
+    \item \textbf{Total: 62}
+\end{itemize}
+Total number of flip-flops in the system is: \todo{ Synthesize and find out}
+\break
+Estimated frequency of the system is: \todo{ Synthesize and add number}
+\break
+The resulting Schematics for both RTL view and Technology view are detailed in Appendix B \todo{ Add proper reference to Appendix b}.
+
 \break
 \todo{ Insert introduction }
 \break
@@ -509,27 +531,34 @@ This depends on that each component works as expected, but that is already teste
 \subsection{Feedback}
 \todo{ The cake is a lie!}
 
-\subsection{Time spent}
+\subsection{Time spent by the group}
+Rune Holmgren has recorded a total number of XX hours \todo{ Rune must add this himself. No one but he can do it. Not even Indiana Jones or James Earl Jones} spent on this project.
+\break
+Torbjørn Langland was unfortunate and broke his computer by spilling coffee on it.
+His record data which contained the information about time spent on the project was stored on it, therefore the total number of hours spent is now unknown.
+\todo{ Mention agreement with the teacher that estimation is accepted?}
+He estimates that he has spent roughly about 70 hours on this project before this incident.
+With the logged activity after the incident Torbjørn estimates to have spent a total number of XX hours on this project.
+This includes writing this report.
+\todo{ Fill in spent hours at last, since report also counts as work}
 \todo{insert details of how much time spent on the project, including on this report.}
 
 \section{Conclusion}
 \todo{ Compulsory. Have a good wrap up, somehow. }
 
 \section{Acknowledgements (optional)}
+The group would like to extend their sincere thanks to the following individuals:
+\begin{itemize}
+    \item Group 2 with Solveig Fure and Erick Castillo, for review and feedback of the project.
+    \item Student assistent Kyrre Erlend Gonsholt for helping out in situations where we were stuck.
+    \item Indiana Jones. \todo{ ! }
+\end{itemize}
 
-Indiana Jones. Should also mention group 2 and the student assistant.
 
 \section{ Other problems/needs to be solved:}
 \subsection{ Appendixes}
 \todo{ Appendix A: Project codes }
 \break
-\break
-\todo{ Appendix B: Synthesis Schematics. Both RTL and that other type, propose top architecture first then One-bit-Voter, Controller, Registers and ECC. RTL first then that other type.}
-\break
-\break
-\todo{ Appendix C: The Probability Calculation. I got it covered. }
-\subsection{ Other problems/needs:}
-\todo{ Find out where to list up time spent in the project.}
 
 \bibliography{bibliography}
 \bibliographystyle{plain}
