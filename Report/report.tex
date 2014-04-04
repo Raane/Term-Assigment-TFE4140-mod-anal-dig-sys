@@ -101,7 +101,6 @@
 \todo{ Compulsory. Must generate. I leave that to you, Rune}
 
 \section{Problem to be solved.}
-\subsection{Introduction}
 This chapter will introduce the reader to the details of the problem that is to be solved through this Term Assignment.
 First the NTNU Student Satellite and the need for a fault tolerant communication module will be described, then a description of the specified behaviour of the module will be detailed, and finally the Framework for the project will be described.
 
@@ -141,7 +140,7 @@ Figure \ref{fig:LiaisonBlackBox} shows the Liaison module with the inputs and ou
     \item \textbf{do\_ready}: A output pulse that indicates that data starts arriving from the Liasion to the receiver, through the output \textit{voted\_data}.
     \item  \textbf{voted\_data}: The voted result (8 bits) are sent out, clocked and serially, followed by status bits (3 bits) and error correction code (m bits).
         MSB first.
-        This can be seen in figure \ref{fig:LiaisonOutput}, where it will take 11+m cycles for a full data package to be sent out. \todo{ "Data packege" might be clumsy, concider revision.}
+        This can be seen in figure \ref{fig:LiaisonOutput}, where it will take 11+m cycles for a full set of data package to be sent out.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -159,7 +158,7 @@ Figure \ref{fig:LiaisonBlackBox} shows the Liaison module with the inputs and ou
 \end{figure}
 
 Figure \ref{fig:LiaisonInputOutput} shows the system operating with maximum throughput, and it can be seen that there are some delays in the inputs in order to allow the maximum throughput.
-Since the Liasion has to send more than just the voted data, it cannot read input data constantly.
+Since the Liasion has to send more than just the voted data, it cannot store input data constantly.
 
 \begin{figure}[h!]
     \centering
@@ -187,12 +186,12 @@ Figure \ref{fig:LiaisonResetDiReady} shows that the \textit{reset} signal must h
     \label{fig:LiaisonMaxThroughput}
 \end{figure}
 
-Figure \ref{fig:LiaisonResetDiReady} shows the intervals between the pulses of \textit{di\_ready}. The signal may arrive at any time, but there must be at least 11+m cycles between each interval.
+Figure \ref{fig:LiaisonMaxThroughput} shows the intervals between the pulses of \textit{di\_ready}. The signal may arrive at any time, but there must be at least 11+m cycles between each interval.
 
 \subsection{Project Framework}
-The system is to be encoded in VHDL, tested and verified in simulation, and synthesized, with a goal of having a few Look Up Tables (LUTs) as possible. \todo{ Perhaps briefly explain what a LUT is?}
-Active HDL \todo{ Version number?} is used for programming in VHDL, as well as creating test benches and running simulations for verification.
-Synplify Pro \todo{ Version number?} is used for synthesizing, creating resulting LUTs and estimated frequency, and creating RTL schematics and Gate-Level \todo{ Find correct name} schematics. 
+The system is to be encoded in VHDL, tested and verified in simulation, and synthesized. A goal is to achieve as few Look Up Tables (LUTs) as possible. \todo{ Perhaps briefly explain what a LUT is?}
+Active HDL 8.2 is used for programming in VHDL, as well as creating test benches and running simulations for verification.
+Synplify Pro C-2009.06 is used for synthesizing, creating resulting LUTs and estimated frequency, and creating RTL view schematics and Technology view schematics. 
 \break 
 \todo{ Replace break with new paragraph in such a way that \textit{a)}, \textit{b)}, \textit{c)}, ... is not added}
 \break
@@ -209,12 +208,9 @@ Synplify Pro \todo{ Version number?} is used for synthesizing, creating resultin
 
 \section{ Solution to the problem.}
 \todo{ Term project specifies that the answer to all subproblems is to be explained. We should therefore split these into subsection. }
-\subsection{Introduction}
 This chapter will explain how the group has implemented the solution for the Term Assignment.
 The Term Assignment was split into 5 sub-problems, therefore this report will detail the solution to each sub-problem accordingly.
-
-\todo{ Insert chapter introduction here. Remember to mention that we used Active HDL and Synplify Pro.}
-\todo{ WARNING: Points of Term project report specifiaction sort of overlaps. Perhaps own chapters for testing and verification, or only the sub-chapters of this one are enough. Discuss, choose, live, rule, win!} 
+This chapter explains the concept and functionality behind the design.
 
 \subsection{Sub-Problem 1: State analysis}
 
@@ -281,21 +277,8 @@ The different status outputs are:
 \end{itemize}
 If the \textit{reset} signal is activated, the state machine is reset to initial state, the output status is set to 000, and there are not voting until the \textit{reset} signal is no longer active. 
 
-\todo{ Explain test results. Include figures. OR explain in section "Testing and verification" }
-\break
-\break
-\todo{ Explain synthesis results: Estimated Frequency and generated LUTs}
-\break
-\todo{ Find out if one or both voters must be explained (at least mention synthesis results of the second one). }
-
 \subsection{Sub-Problem 3: 8-Bit voter}
 
-\todo{ Explain test results. Include figures. OR explain in section "Testing and verification" }
-\break
-\break
-\todo{ Explain synthesis results}
-\break
-\break
 The 8-bit voter's main function is to read 8 bits serially from the 4 microcontrollers, and perform voting and error tagging. 
 There are several ways of implementing this.
 
@@ -512,7 +495,7 @@ The final resulting number of LUTs implemented in the system is:
 \end{itemize}
 Total number of flip-flops in the system is: \todo{ Synthesize and find out}
 \break
-Estimated frequency of the system is: \todo{ Synthesize and add number}
+Estimated frequency of the system is: 213.7 MHz
 \break
 The resulting Schematics for both RTL view and Technology view are detailed in Appendix B \todo{ Add proper reference to Appendix b}.
 
