@@ -129,21 +129,21 @@ This is achived through hammingcodes handeling one bit error correction and two 
 
 \section{Introduction}
 When technology is brought into extreme enviroments, it need to be designed to withstand that enviroment.
-The new NTNU student satelite is a good example of such a technological product.
+The new NTNU student satellite is a good example of such a technological product.
 The heavy radiation in space will affect the onboard computer system, and can at any time break it.
-The likelyhood of such a catastrophic failiure can however be reduced significantly by indrodusing redundancy to the system.
-This redundance is to be managed by the liaison module, as described in this paper.
-The module allow the system to run 4 identical microcontrollers, and compare the outputs to each other.
-Anytime a microcontroller fails, the Liaison system will notice the fault by comparing the microcontrollers outputs.
+The likelyhood of such a catastrophic failure can however be reduced significantly by introducing redundancy to the system.
+This redundancy is to be managed by the Liaison module, as described in this paper.
+The module allows the system to run 4 identical microcontrollers, and compare the outputs from each controller.
+Anytime a microcontroller fails, the Liaison system will notice the fault by a voting process.
 The failed microcontroller will then be ignored for the rest of the systems lifetime, while the other microcontrollers will be able to continue working.
-By allowing the system to work even at just two non-faulty microcontrollers, the system have an improved expected life time.
+By allowing the system to work even with only two non-faulty microcontrollers, the system has an improved expected life time.
 In addition to faulty microcontrollers, the radiation of space introduce a risk of bit errors in transmissions back to earth.
-The system will have to add error correcting and detecting bits to each transmission back to earth, that can then be used to verify and potentially correct the data.
-This is achived through use of Hamming code.
+The system will have to add error correction and detection bits to each transmission back to Earth, that can then be used to verify and possibly correct the data.
+This is achieved through use of Hamming code.
 \break
-This report presents the solution for the Liasion system designed by group 1.
+This report presents the solution for the Liasion system designed by group 1. The problem and the requirements are described in the Term Assignment\cite{assignment-text} for the Course TFE4140 Modelling and Analysis of Digital Systems
 Chapter 2 presents the problem and all required functionality in details.
-Chapter 3 presents the technical solutions to the problem, split into different sub-problems according to the Term Assignment paper\cite{assignment-text}.
+Chapter 3 presents the technical solutions to the problem, split into different sub-problems similarly to the Term Assignment paper\cite{assignment-text}.
 Chapter 4 presents the testing and verification that is done of the product.
 Chapter 5 presents the results from synthesizing the product.
 Chapters 6 and 7 adds additional information and concludes the report.
@@ -152,19 +152,19 @@ Chapters 6 and 7 adds additional information and concludes the report.
 
 \subsection{The Liasion Fault Tolerant System}
 NTNU is working with a Student Satellite, which is to orbit Earth and measure atmospheric data and deliver this to a ground stattion.
-The goal of this Assignment is to design a fault tolerant system called Liasion, which exploits redundancy.
+The goal of this assignment\cite{assignment-text} is to design a fault tolerant system called Liasion, which exploits redundancy.
 The system will contain four independent microcontrollers, that perform the same calculations.
 Every computation will procude 8-bit words.
-There is always the chance due to cosmic radiation that one more microcontrollers may produce incorrect data.
-If this is the case, the majority will decide the correct data, in a \textit{voting} process.
+There is always the chance due to cosmic radiation that one or more microcontrollers may produce incorrect data.
+If this is the case, the majority will decide the correct data, in a voting process.
 The voted data is to be accompanied by a 3-bit status signal which contains the number of failed microcontrollers.
-If too many microcontrollers have failed, this status signal will indicate it so that recieved data cannot be trusted.
+If too many microcontrollers have failed, this status signal will indicate it with a distinct value so that the system receiving on Earth will know this.
 Additionally, data may be corrupted before reaching Earth.
-This problem is to be solved by implementing a module with Error Correcting Circuit (ECC) that uses Hamming Code.
+This problem is to be solved by implementing a module with Error Correcting Circuit (ECC) that uses Hamming Code\cite{hamming-codes}.
 The chosen solution must be able to correct single-bit errors and detect double-bit errors\protect\cite{assignment-text}.
 
 \subsection{The Liasion Module functionality in details}
-
+The description that follows is directly specified in the Term Assignment\cite{assignment-text}.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonBlackBox}
@@ -178,8 +178,8 @@ Figure \ref{fig:LiaisonBlackBox} shows the Liaison module with the inputs and ou
     \item \textbf{mp\_data}: input from the microcontrollers. The bus is 4 bits wide, one bit for each microcontroller. The bits arrive serially, with MSB arriving first.
     \item \textbf{reset}: Synchronous reset of the system. Active high.
     \item \textbf{clk}: Clock. All flip-flops are clocked on the positive edge of the clock.
-    \item \textbf{do\_ready}: A output pulse that indicates that data starts arriving from the Liasion to the receiver, through the output \textit{voted\_data}.
-    \item  \textbf{voted\_data}: The voted result (8 bits) are sent out, clocked and serially, followed by status bits (3 bits) and error correction code (m bits).
+    \item \textbf{do\_ready}: An output pulse that indicates that data starts arriving from the Liasion to the receiver, through the output \textit{voted\_data}.
+    \item  \textbf{voted\_data}: The voted result (8 bits) is sent out, clocked and serially, followed by status bits (3 bits) and error correction code (m bits).
         MSB first.
         This can be seen in figure \ref{fig:LiaisonOutput}, where it will take 11+m cycles for a full set of data package to be sent out.
 \end{itemize}
@@ -199,7 +199,7 @@ Figure \ref{fig:LiaisonBlackBox} shows the Liaison module with the inputs and ou
 \end{figure}
 
 Figure \ref{fig:LiaisonInputOutput} shows the system operating with maximum throughput, and it can be seen that there are some delays in the inputs in order to allow the maximum throughput.
-Since the Liasion has to send more than just the voted data, it cannot store input data constantly.
+Since the Liasion has to send more than just the voted data, it cannot store and pass input data constantly.
 
 \begin{figure}[h!]
     \centering
@@ -208,7 +208,7 @@ Since the Liasion has to send more than just the voted data, it cannot store inp
     \label{fig:LiaisonDiReadyDoReady}
 \end{figure}
 
-Figure \ref{fig:LiaisonDiReadyDoReady} shows that there are some delay between \textit{di\_ready} and \textit{do\_ready} that is specified by m cycles.
+Figure \ref{fig:LiaisonDiReadyDoReady} shows that there are some delay between \textit{di\_ready} and \textit{do\_ready} that is specified by n cycles.
 The latter must be caused by the first, and output data must be sent from the moment \textit{do\_ready} pulses.
 
 \begin{figure}[h!]
@@ -232,12 +232,12 @@ Figure \ref{fig:LiaisonMaxThroughput} shows the intervals between the pulses of 
 \subsection{Project Framework}
 The system is to be encoded in VHDL, tested and verified in simulation, and synthesized. A goal is to achieve as few Look Up Tables (LUTs) as possible. \todo{ Perhaps briefly explain what a LUT is?}
 Active HDL 8.2 is used for programming in VHDL, as well as creating test benches and running simulations for verification.
-Synplify Pro C-2009.06 is used for synthesizing, creating resulting LUTs and estimated frequency, and creating RTL view schematics and Technology view schematics. 
-\\
+Synplify Pro C-2009.06 is used for synthesizing, creating resulting LUTs, flip-flops and estimated frequency, as well as creating RTL view schematics and Technology view schematics. 
+
 \indent The Term Assignment was handed out at January 31st, 2014.
 These are the milestones\protect\cite{assignment-text}:
 \begin{itemize}
-    \item \textbf{February 18th, 2014}: Assignment 3 of the Course, where the individual One-Bit Voters are designed. They serve as basis of the 8-bit voters
+    \item \textbf{February 18th, 2014}: Assignment 3 \todo{ INSERT CITATIon TO ASSIGNMENT 3 here}. of the Course, where the individual One-Bit Voters are designed. They serve as basis of the 8-bit voters
     \item \textbf{February 28th, 2014}: Delivery of technical notes, that will contain preliminary solutions to sub-problems 1, 2 and 3.
     \item \textbf{March 3rd, 2014}: Delivery of Peer Evaluation, containing evaluation of the technical note and project of another group.
     \item \textbf{March 31st}, 2014: Presentation of the project for groups 1-9 (minus 7).
@@ -247,8 +247,8 @@ These are the milestones\protect\cite{assignment-text}:
 
 
 \section{ Solution to the problem.}
-This chapter will explain how the group has implemented the solution for the Term Assignment.
-The Term Assignment was split into 5 sub-problems, therefore this report will detail the solution to each sub-problem accordingly.
+This chapter will explain how the group has implemented the solution for the Term Assignment\cite{assignment-text}.
+The Term Assignment\cite{assignment-text} was split into 5 sub-problems, therefore this report will detail the solution to each sub-problem accordingly.
 This chapter explains the concept and functionality behind the design.
 
 \subsection{Sub-Problem 1: State analysis}
@@ -258,7 +258,7 @@ As time passes, one by one will fail.
 First one microcontroller will fail, and it will be tagged as faulty.
 It's input will be disregarded.
 The next microcontroller breaks down after more time, and only two will remain.
-When a third breaks down, the system will go into shutdown because there are no ways to know which one is correct.
+When a third breaks down, the system will go into shutdown because there are no ways to tell which one is correct.
 This is implemented as a system state machine, and is illustrated in figure \ref{fig:StateMachine}.
 \begin{figure}[h!]
     \centering
@@ -268,13 +268,14 @@ This is implemented as a system state machine, and is illustrated in figure \ref
 \end{figure}
 
 As long as all microcontrollers agree, no one will be tagged for error and the system will remain in the same state.
-For this system, the group has chosen to implement immediate error tagging as soon as an microcontroller disagree with the rest.
+For this system, the group has chosen to implement immediate error tagging as soon as a microcontroller disagree with the rest.
 Another option could be to not implement error tagging until a series of errors pass and the pattern of errors is recognized.
-But a microcontroller should never under any circumstanced disagree with the others as long as it is working, therefore the solution with immediatly error tagging is chosen.
+But a microcontroller should never under any circumstances disagree with the others as long as it is working, therefore the solution with immediate error tagging is chosen.
 This is also less complex to implement, saving the system for LUTs.
-As one by one microcontroller fails, they are tagged and the status changes (expected from 0 to 1, 1 to 2 and 2 to 3).
-There is also a special case, as can be seen in Figure \ref{fig:StateMachine}:
-If two out of the four microcontrollers fail at the same time, the system will go to immediate shutdown, since it can no longer be known which two are working.
+
+As one by one microcontroller fails, they are tagged and the status changes (expected from 0 to 1, 1 to 2, and 2 to 3).
+There is also a special case, as can be seen in figure \ref{fig:StateMachine}:
+If two of the four microcontrollers fail at the same time, the system will go to immediate shutdown, since it can no longer be known which two are working.
 The probability for this to happen is very low, but let's say that something unprecedented happens, that damages the satellite (like if it is hit by a small meteorite).
 If the damage affects two of the four microcontrollers, so that they disagree, then immediate shutdown would be needed.
 The state diagram also shows that when reset occurs, the system returns to the initial state.
