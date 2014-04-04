@@ -486,29 +486,29 @@ These calculations and how they are done are explained in full details in Append
 To ensure correct funtionallity of each of the modules, and the liaison system as a whole, they are all covered by testbenches.
 These testbenches simulate the behaviour of the modules and expose all potential errors in the system.
 All such errors can then be fixed, and the result is a fully functioning system.
-After synthesising the project in Synplify Pro, the all tests were run in "post synthesis simulation".
+After synthesising the project in Synplify Pro, the all tests had a final run in "post synthesis simulation".
 This chapter will present what were tested in each component, and the final test results.
 
-\subsection{ Tests and verification of 1-Bit Voter}
-Originally, each member of the group created a test bench of their own for their 1-Bit Voters, as part of assignment 3.
-The group later received a test bench from the course staff for the evaluation of assignment 3, and this has replaced the old test benches.
+\subsection{ Tests and verification of 1-bit voter}
+Originally, each member of the group created a testbench of their own for their 1-bit voters, as part of assignment 3\protect\cite{assignment-3}.
+The group later received a testbench from the course staff for the evaluation of assignment 3, and this has replaced the old testbenches.
 The reason behind this choice is that the group conciders the scenario in the test bench to be realistic for all situations.
 It is not likely that there will arise other situations when it comes to inputs and behaviour of the module as is tested in this test bench.
-Therefore the group conciders this test bench to do full coverage of the 1-Bit Voter.
-The test bench compares outputs with expected results, and throws an error whenever there is a difference between test outputs and expected outputs.
-Different combinations of inputs are tested, and one by one microcontroller are set to fail.
-The failed microcontrollers are tested for error tagging by testing whether their data has any affection on the output \textit{voted\_data}.
+Therefore the group conciders this test bench to do full coverage of the 1-bit voter.
+The testbench compares outputs with expected results, and throws an error whenever there is a difference between test outputs and expected outputs.
+Different combinations of inputs are tested, and one by one microcontroller are set to provoke failure.
+The failed microcontrollers are tested for error tagging by testing whether their data has any affection on the output \textit{voted\_data} or not.
 \textit{Reset} is always activated to reset and test for other input combinations.
-The entire test passes with the current 1-Bit Voter. 
-\todo{ Explain test results. Include screenshot (Uh... the provided test bench is not of that kind).}
+The entire test passes with the current 1-bit voter. 
 
-\subsection{ Controller Module}
-The Controller Module is tested for these different situations:
+\subsection{ Tests and verification of Controller Module}
+The Controller Module is tested for these situations:
+
 \begin{itemize}
     \item \textbf{Long intervals between \textit{di\_ready}}. 
         The controller should set it's outputs so that only the one stream of input data associated with the received \textit{di\_ready} signal should be stored and sent out of the Liasion module.
         This is seen in the test as changes in the outputs of the module.
-        These changes should be traversed only once per \textit{di\_ready}, and is expected to last for 22 \todo{ Count in test} cycles.
+        These changes should be traversed only once per \textit{di\_ready}, and is expected to last for 22 cycles.
     \item \textbf{Too short intervals between \textit{di\_ready}}.
         The controller should ignore \textit{di\_ready} signals that arrive too early, since the system is not finished receiving and/or processing the current data.
     \item \textbf{Maximum throughput}.
@@ -519,6 +519,7 @@ The Controller Module is tested for these different situations:
         Any waiting \textit{do\_ready} signal should not be sent out.
         Reset is tested for both before activating second state machine, and after. 
 \end{itemize}
+
 These are the different situations that might occur for the controller module, therefore this test is concidered to give full coverage for the controller module.
 
 \begin{figure}[h!]
@@ -527,10 +528,11 @@ These are the different situations that might occur for the controller module, t
   \caption{Screenshot from Controller test: A full regular message transmission cycle.}
   \label{fig:ControllerRegular}
 \end{figure}
+
 Figure \ref{fig:ControllerRegular} shows a regular data transmission cycle in the controller after the \textit{di\_ready} signal pulses.
 The output for register storing are set accordingly for every cycle, \textit{do\_ready} pulses after 7 cycles, and the output to the multiplexer are set afterwards for each cycle. 
-he outputs in the figure are tagged to show what data are stored, and what data are to be sent out based on the control signals.
-Notice that when idle, the multiplexer is set to constantly reading v7.
+The outputs in the figure are tagged to show what data are stored, and what data are to be sent out based on the control signals.
+Notice that when idle, the multiplexer is set to constantly reading v7 (hence illustrating the need for the \textit{do\_ready} signal for the receiver to know when it is receiving).
 
 \begin{figure}[h!]
   \centering
@@ -538,6 +540,7 @@ Notice that when idle, the multiplexer is set to constantly reading v7.
   \caption{Screenshot from Controller test: Too early \textit{di\_ready}.}
   \label{fig:ControllerTooEarlyDiReady}
 \end{figure}
+
 Figure \ref{fig:ControllerTooEarlyDiReady} shows an example where the signal \textit{di\_ready} arrives too soon after the previous one.
 What happens is that it is simply ignored, and no additional data are stored and sent out in addition to the data that is already being processed.
 
@@ -547,7 +550,8 @@ What happens is that it is simply ignored, and no additional data are stored and
   \caption{Screenshot from Controller test: Maximum throughput.}
   \label{fig:ControllerThroughput}
 \end{figure}
-Figure \ref{fig:ControllerThroughput} shows that when the interval between the \textit{di\_ready} signals are 15 cycles, the output to the multiplexer changes every cycle, which is consistent with sending out data bits from the Liasison system every cycle.
+
+Figure \ref{fig:ControllerThroughput} shows that when the interval between the \textit{di\_ready} signals is 15 cycles, the output to the multiplexer changes every cycle, which is consistent with sending out data bits from the Liason system every cycle.
 Also notice that there are some delays on the control signal for input storing.
 
 \begin{figure}[h!]
@@ -556,9 +560,11 @@ Also notice that there are some delays on the control signal for input storing.
   \caption{Screenshot from Controller test: Reset is active.}
   \label{fig:ControllerReset}
 \end{figure}
+
 Figure \ref{fig:ControllerReset} shows that when reset is active, the controller is reset and the outputs are set to their idle values.
 
 \subsection{ ECC }
+
 \begin{figure}[h!]
   \centering
       \includegraphics[width=0.5\textwidth]{Figures/Tests/ECCTest}
@@ -569,13 +575,13 @@ Figure \ref{fig:ControllerReset} shows that when reset is active, the controller
 Figure \ref{fig:ECCTest} shows the test for the ECC module.
 Since the ECC module is purely combinatorial, only a partial test is used to check that input gives expected output.
 In this test, there are three different inputs that are tested: Only 0's, only 1's, and 0's and 1's alternating. The expected outputs, given the code presented in figure \ref{fig:HammingCodeLogic}, are 0000, 1111 and 1010, which can indeed be seen in the output in the test.
-The choice behind this is that the module, which consists only of 4 sets of xor-gates, is never expected to change in behaviour in any situation.
+The choice of having a small test is that the module, which consists only of 4 sets of xor-gates, is never expected to change in behaviour in any situation.
 
 \subsection{ Liaison }
 The test bench for the Liaison system is a test of the top level.
-The behaviour of the Liaison relies heavily on the 1-Bit Voter and the Controller Module.
-These two components are already tested in full coverage, therefore most of the Liasion is indirectly tested.
-The test bench gives thus only partial cover, only to do a small control to ensure that the components and the toplevel cooperate as expected.
+The behaviour of the Liaison relies heavily on the 1-bit voter and the controller module.
+These two components are already tested in full coverage, therefore most of the Liasion is indirectly tested already.
+The test bench is thus designed with only partial cover, only to do a small control to ensure that the components in the toplevel cooperate as expected.
 
 \begin{figure}[h!]
     \centering
@@ -592,9 +598,9 @@ The output of this tests show that the components cooperate as expected.
 This depends on that each component works as expected, but that is already tested in the other test benches.
 
 \section{Synthesis Results}
-Both members of the team implemented one 1-Bit Voter each and synthesized them, according to course assignments 3 and 4.
-Torbjørn Langland's 1-Bit Voter had a resulting estimated frequency of 230.2 MHz, and 73 LUTs, which is concidered to be mediocre.
-Rune Holmgren's Voter had a resulted estimated frequency of 423 MHz and 33 LUTs, which was clearly much better.
+Both members of the team implemented one 1-bit coter each and synthesized them, according to course assignments 3 and 4 \protect\cite{assignment-3} \protect\cite{assignment-4}.
+Torbjørn Langland's 1-bit voter had a resulting estimated frequency of 230.2 MHz, and 73 LUTs, which is concidered to be mediocre.
+Rune Holmgren's voter had a resulted estimated frequency of 423 MHz and 33 LUTs, which was clearly much better.
 Rune's Voter was chosen for the implementation of the Liaison system.
 It has also been futher optimalized in the latter stages of the project.
 The final resulting number of LUTs implemented in the system is:
@@ -612,11 +618,7 @@ Estimated frequency of the system is: 213.7 MHz
 \break
 The resulting Schematics for both RTL view and Technology view are detailed in Appendix B.
 
-\section{Feedback and other Information}
-\todo{ The teachers wanted feedback. They also want to know the time spent on the work. This is where it should be added}.
-\subsection{Feedback}
-\todo{ The cake is a lie!}
-
+\section{Other Information}
 \subsection{Time spent by the group}
 Rune Holmgren has recorded a total number of 95 hours spent on this project.
 \break
@@ -624,19 +626,17 @@ Torbjørn Langland was unfortunate and broke his computer by spilling coffee on 
 His record data which contained the information about time spent on the project was stored on it, therefore the total number of hours spent is now unknown.
 \todo{ Mention agreement with the teacher that estimation is accepted?}
 He estimates that he has spent roughly about 70 hours on this project before this incident.
-With the logged activity after the incident Torbjørn estimates to have spent a total number of XX hours on this project.
-This includes writing this report.
-\todo{ Fill in spent hours at last, since report also counts as work}
-\todo{insert details of how much time spent on the project, including on this report.}
+With the logged activity after the incident Torbjørn estimates to have spent a total number of 105.5 hours on this project.
+The time spent includes writing this report.
 
 \section{Conclusion}
 \todo{ Compulsory. Have a good wrap up, somehow. }
-The purpose of this assignment was to construct a fully functional system, meeting the requirements for the liaison system.
-Solution had to be able to fullfill both the redundancy system management and error correction and detection.
+The purpose of this assignment was to construct a fully functional system, meeting the requirements for the Liaison system.
+The solution had to be able to fullfill both the redundancy system management and error correction and detection.
 As verified by the testbenches, the solution described in this paper works as expected.
-The modular design give code that is easier to maintain, verify and read, and allow the code quality to be kept high.
+The component based design gives code that is more maintainable, verifiable and readable, and allows the code quality to be kept high.
 The system does have a bit of potential with regards to lowering the LUT count.
-The main metric for the project was to obtain a low LUT count, this was met to some degree with a count of 62.
+The main metric for the project was to obtain as low LUT count as possible, this was met to some degree with a count of 62.
 
 \section{Acknowledgements}
 The group would like to extend their sincere thanks to the following individuals:
