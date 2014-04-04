@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx} 
+\usepackage{pdfpages}
 \usepackage{multirow, pgfplotstable,booktabs,colortbl,lmodern}
 \usepackage{mathtools}
 
@@ -46,7 +47,7 @@
     { \huge \bfseries Liaison}\\[0.4cm] % Title of your document
     \textsc{\large A fault tolerant communication system}\\[0.5cm] % Minor heading such as course title
     \HRule \\[1.5cm]
-     
+
     %----------------------------------------------------------------------------------------
     %   AUTHOR SECTION
     %----------------------------------------------------------------------------------------
@@ -63,7 +64,7 @@
     \begin{minipage}{0.4\textwidth}
         \begin{flushright} \large
             \emph{} \\
-             \textsc{} % Supervisor's Name
+            \textsc{} % Supervisor's Name
         \end{flushright}
     \end{minipage}\\[4cm]
 
@@ -83,7 +84,7 @@
     %----------------------------------------------------------------------------------------
 
     %\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
-     
+
     %----------------------------------------------------------------------------------------
 
     \vfill % Fill the rest of the page with whitespace
@@ -129,10 +130,10 @@ FIND A WAY TO REMOVE a)
 \subsection{The Liasion Module functionality in details}
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonBlackBox}
-  \caption{The Liaison module with inputs and outputs (reprinted from \protect\cite{assignment-text}).}
-  \label{fig:LiaisonBlackBox}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonBlackBox}
+    \caption{The Liaison module with inputs and outputs (reprinted from \protect\cite{assignment-text}).}
+    \label{fig:LiaisonBlackBox}
 \end{figure}
 
 Figure \ref{fig:LiaisonBlackBox} shows the Liaison module with the inputs and outputs that are specified for the procject:
@@ -143,51 +144,51 @@ Figure \ref{fig:LiaisonBlackBox} shows the Liaison module with the inputs and ou
     \item \textbf{clk}: Clock. All flip-flops are clocked on the positive edge of the clock.
     \item \textbf{do\_ready}: A output pulse that indicates that data starts arriving from the Liasion to the receiver, through the output \textit{voted\_data}.
     \item  \textbf{voted\_data}: The voted result (8 bits) are sent out, clocked and serially, followed by status bits (3 bits) and error correction code (m bits).
-    MSB first.
-    This can be seen in figure \ref{fig:LiaisonOutput}, where it will take 11+m cycles for a full data package to be sent out. \todo{ "Data packege" might be clumsy, concider revision.}
+        MSB first.
+        This can be seen in figure \ref{fig:LiaisonOutput}, where it will take 11+m cycles for a full data package to be sent out. \todo{ "Data packege" might be clumsy, concider revision.}
 \end{itemize}
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonOutput}
-  \caption{The total output of data (reprinted from \protect\cite{assignment-text}).}
-  \label{fig:LiaisonOutput}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonOutput}
+    \caption{The total output of data (reprinted from \protect\cite{assignment-text}).}
+    \label{fig:LiaisonOutput}
 \end{figure}
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonInputOutput}
-  \caption{The relationship between the inputs and the outputs of the module (reprinted from \protect\cite{assignment-text}).}
-  \label{fig:LiaisonInputOutput}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonInputOutput}
+    \caption{The relationship between the inputs and the outputs of the module (reprinted from \protect\cite{assignment-text}).}
+    \label{fig:LiaisonInputOutput}
 \end{figure}
 
 Figure \ref{fig:LiaisonInputOutput} shows the system operating with maximum throughput, and it can be seen that there are some delays in the inputs in order to allow the maximum throughput.
 Since the Liasion has to send more than just the voted data, it cannot read input data constantly.
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonDiReadyDoReady}
-  \caption{A pulse of di\_ready causes a do\_ready pulse after n cycles (reprinted from \protect\cite{assignment-text}).}
-  \label{fig:LiaisonDiReadyDoReady}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonDiReadyDoReady}
+    \caption{A pulse of di\_ready causes a do\_ready pulse after n cycles (reprinted from \protect\cite{assignment-text}).}
+    \label{fig:LiaisonDiReadyDoReady}
 \end{figure}
 
 Figure \ref{fig:LiaisonDiReadyDoReady} shows that there are some delay between \textit{di\_ready} and \textit{do\_ready} that is specified by m cycles.
 The latter must be caused by the first, and output data must be sent from the moment \textit{do\_ready} pulses.
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonResetDiReady}
-  \caption{Reset has precedence over di\_ready (reprinted from \protect\cite{assignment-text}).}
-  \label{fig:LiaisonResetDiReady}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonResetDiReady}
+    \caption{Reset has precedence over di\_ready (reprinted from \protect\cite{assignment-text}).}
+    \label{fig:LiaisonResetDiReady}
 \end{figure}
 
 Figure \ref{fig:LiaisonResetDiReady} shows that the \textit{reset} signal must have precedence over the \textit{di\_ready} signal. Liaison must be ready to recieve data immediatly when \textit{reset} is no longer active.
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonMaxThroughput}
-  \caption{The maximum throughput is 11+m, each di\_ready signals may not arrive sooner than that (reprinted from \protect\cite{assignment-text}).}
-  \label{fig:LiaisonMaxThroughput}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonMaxThroughput}
+    \caption{The maximum throughput is 11+m, each di\_ready signals may not arrive sooner than that (reprinted from \protect\cite{assignment-text}).}
+    \label{fig:LiaisonMaxThroughput}
 \end{figure}
 
 Figure \ref{fig:LiaisonResetDiReady} shows the intervals between the pulses of \textit{di\_ready}. The signal may arrive at any time, but there must be at least 11+m cycles between each interval.
@@ -229,10 +230,10 @@ The next microcontroller breaks down after more time, and only two will remain.
 When a third breaks down, the system will go into shutdown because there are no ways to know which one is correct.
 This is implemented as a system state machine, and is illustrated in figure \ref{fig:StateMachine}.
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/Solution/StateMachine}
-  \caption{System state machine.}
-  \label{fig:StateMachine}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/Solution/StateMachine}
+    \caption{System state machine.}
+    \label{fig:StateMachine}
 \end{figure}
 
 As long as all microcontrollers agree, no one will be tagged for error and the system will remain in the same state.
@@ -308,27 +309,27 @@ For the three alternatives discussed, they all have in common that they are comp
 The inputs and the outputs are the same as specified for the Liaison system, and it is possible to use the entire 8-Bit Voter for the entire System, naming it Liaison. 
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption1}
-  \caption{Optional architecture for the 8-bit Voter: Using 1-bit voter and registers}
-  \label{fig:ArchitectureOption1}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption1}
+    \caption{Optional architecture for the 8-bit Voter: Using 1-bit voter and registers}
+    \label{fig:ArchitectureOption1}
 \end{figure}
 Figure \ref{fig:ArchitectureOption1} shows a component based implementation that includes the 1-bit voter, a controller module, a register module and a multiplexer. Data are received serially, voted serially by the 1-Bit Voter, and the resulting data are stored in registers. After a specified number of cycles, data are to be sent out serially, together with the \textit{do\_ready} signal.
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption2}
-  \caption{Optional architecture for the 8-bit Voter: Not using registers}
-  \label{fig:ArchitectureOption2}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption2}
+    \caption{Optional architecture for the 8-bit Voter: Not using registers}
+    \label{fig:ArchitectureOption2}
 \end{figure}
 Figure \ref{fig:ArchitectureOption2} shows an option where no registers are implemented. 
 The idea is to have as small 8-Bit Voter as possible. 
 Data that are read and voted serially must be passed on immediatly.
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption3}
-  \caption{Optional architecture for the 8-bit Voter: Not using 1-bit voter}
-  \label{fig:ArchitectureOption3}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption3}
+    \caption{Optional architecture for the 8-bit Voter: Not using 1-bit voter}
+    \label{fig:ArchitectureOption3}
 \end{figure}
 Figure \ref{fig:ArchitectureOption3} shows an option where the 1-Bit Voter is not used. In this scenario, 4 sets of 8-Bit words are stored and voted.
 Though the voting can be done serially for each arrived sets of bits, the idea is that it can also perform instant voting on the entire 8 bit words.
@@ -353,18 +354,18 @@ Given these premises, the group has chosen to implement the first option, since 
 The full architecture, which includes the ECC module, can be seen in figure \ref{fig:ArchitectureFinal}. Note that this is named Liasion, since it is used as topmodule for the Liasion system.
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureFinal}
-  \caption{Chosen architecture for the 8-bit Voter}
-  \label{fig:ArchitectureFinal}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureFinal}
+    \caption{Chosen architecture for the 8-bit Voter}
+    \label{fig:ArchitectureFinal}
 \end{figure}
 
 \subsubsection{The Register Module}
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.10\textwidth]{Figures/Solution/Registers}
-  \caption{Implemented registers}
-  \label{fig:Registers}
+    \centering
+    \includegraphics[width=0.10\textwidth]{Figures/Solution/Registers}
+    \caption{Implemented registers}
+    \label{fig:Registers}
 \end{figure}
 Figure \ref{fig:Registers} shows the contents of the register modules.
 There are 8 registers for storing voted data and 3 for storing status data from the 1-Bit Voter.
@@ -421,7 +422,7 @@ The different probabilites that are calculated are:
 \end{itemize}
 
 These calculations and how they are done are explained in full details in Appendix C.
- 
+
 \todo{ Refer properly to Appendix C.}
 
 \section{ Testing and verification }
@@ -438,7 +439,7 @@ The group later received a test bench from the course staff for the evaluation o
 The reason behind this choice is that the group conciders the scenario \todo{ Find better word than scenario?} in the test bench to be realistic for all situations.
 It is not likely that there will arise other situations when it comes to inputs and behaviour of the module as is tested in this test bench.
 Therefore the group conciders this test bench to do full coverage of the 1-Bit Voter.
-The test bench compares outputs with expected results, and throws an error whenever there is a difference between test outputs and expected outputs.
+The test bench compares outputs with expected results, and throws an error whenever there is a difference between test outputs and expected outputs.
 Different combinations of inputs are tested, and one by one microcontroller are set to fail.
 The failed microcontrollers are tested for error tagging by testing whether their data has any affection on the output \textit{voted\_data}.
 \textit{Reset} is always activated to reset and test for other input combinations.
@@ -501,5 +502,45 @@ Indiana Jones. Should also mention group 2 and the student assistant.
 \bibliography{bibliography}
 \bibliographystyle{plain}
 \nocite{*}
+
+\clearpage
+\begin{titlepage}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+    \center % Center everything on the page
+    \vspace*{3cm}
+    \HRule \\[0.4cm]
+    { \huge \bfseries Appendices}\\[0.4cm] % Title of your document
+    \HRule \\[1.5cm]
+\end{titlepage}
+\clearpage
+\begin{titlepage}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+    \center % Center everything on the page
+    \vspace*{3cm}
+    \HRule \\[0.4cm]
+    { \huge \bfseries Appendix A}\\[0.4cm] % Title of your document
+    \HRule \\[1.5cm]
+\end{titlepage}
+%\includepdf[pages={1}]{Appendixes/AppendixA.pdf}
+\clearpage
+\begin{titlepage}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+    \center % Center everything on the page
+    \vspace*{3cm}
+    \HRule \\[0.4cm]
+    { \huge \bfseries Appendix B}\\[0.4cm] % Title of your document
+    \HRule \\[1.5cm]
+\end{titlepage}
+\includepdf[pages={1,2,3,4,5,6,7,8}]{Appendixes/AppendixB.pdf}
+\clearpage
+\begin{titlepage}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+    \center % Center everything on the page
+    \vspace*{3cm}
+    \HRule \\[0.4cm]
+    { \huge \bfseries Appendix C}\\[0.4cm] % Title of your document
+    \HRule \\[1.5cm]
+\end{titlepage}
+\includepdf[pages={1,2,3,4}]{Appendixes/AppendixB.pdf}
 
 \end{document}
