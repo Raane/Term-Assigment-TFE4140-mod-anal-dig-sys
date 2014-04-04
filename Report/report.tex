@@ -382,6 +382,9 @@ The module is implemented as two state machines.
 The first is activated by the \textit{di\_ready} signal, and sets the 10-bit control\_signal that is connected to the register module.
 After a specified number of cycles, in this case 7, the \textit{do\_ready} pulses for one cycle.
 The second state machine is activated by the \textit{do\_ready} signal, and is responsible for setting the 4-bit voted\_data\_selector that is connected to the multiplexer, so that data from the registers are sent out in the correct order.
+There are 7 cycles before activating the second state machine, and 15 (11+m) cycles for the second state machine for setting the output data. 
+In total this makes up 22 cycles \todo{ Count in test} before going idle, should there be no more \textit{di\_ready} signals.
+If the next \textit{di\_ready} signal arrives too early, it will have to be ignored, since the shortest possible intervals for the syste are 15 cycles.
 
 \todo{ Concider implementing figures with the stateMachines.}
 
@@ -447,9 +450,24 @@ The entire test passes with the current 1-Bit Voter.
 \todo{ Explain test results. Include screenshot (Uh... the provided test bench is not of that kind).}
 
 \subsection{ Controller Module}
-The Controller Module
-
-\todo{ Explain test results. Include screenshot. }
+The Controller Module is tested for these different situations:
+\begin{itemize}
+    \item \textbf{Long intervals between \textit{di\_ready}}. 
+    The controller should set it's outputs so that only the one stream of input data associated with the received \textit{di\_ready} signal should be stored and sent out of the Liasion module.
+    This is seen in the test as changes in the outputs of the module.
+    These changes should be traversed only once per \textit{di\_ready}, and is expected to last for 22 \todo{ Count in test} cycles.
+    \item \textbf{Too short intervals between \textit{di\_ready}}.
+    The controller should ignore \textit{di\_ready} signals that arrive too early, since the system is not finished receiving and/or processing the current data.
+    \item \textbf{Maximum throughput}.
+    The controller should enable maximum througput when \textit{di\_ready} signals are received every 15 cycles.
+    This can be seen as there are changes on the output \textit{voted\_data\_selector} at every clock cycle.
+    \item \textbf{Reset}.
+    Whenever the \textit{reset} signal pulses, the controller should synchronously halt any activity, and reset both state machines and outputs to initial value.
+    Any waiting \textit{do\_ready} signal should not be sent out.
+    Reset is tested for both before activating second state machine, and after. 
+\end{itemize}
+These are the different situations that might occur for the controller module, therefore this test is concidered to give full coverage for the controller module.
+\todo{ Include screenshot from test. Explain results}
 
 \subsection{ ECC }
 \todo{ Explain choice of test bench. Explain why only partial coverage is enough. }
@@ -457,11 +475,25 @@ The Controller Module
 \break
 \todo{ Explain test results. Include screenshot. }
 
-\subsection{ Liasion }
-\todo{ Explain choice of test bench. Explain why only partial coverage is enough. }
-\break
-\break
-\todo{ Explain test results. Include figure. (Screenshot it from the presentation) }
+\subsection{ Liaison }
+The test bench for the Liaison system is a test of the top level.
+The behaviour of the Liaison relies heavily on the 1-Bit Voter and the Controller Module.
+These two components are already tested in full coverage, therefore most of the Liasion is indirectly tested.
+The test bench gives thus only partial cover, only to do a small control to ensure that the components and the toplevel cooperate as expected.
+
+\begin{figure}[h!]
+  \centering
+      \includegraphics[width=0.5\textwidth]{Figures/Tests/LiaisionTest}
+  \caption{Screenshot from Liaison Test}
+  \label{fig:LiaisonTests}
+\end{figure}
+
+Figure \ref{fig:LiaisonTests} shows a screenshot of the test output.
+The red arrow marks the interval between the \textit{di\_ready} and the \textit{do\_ready}, illustrating that the first activates the second.
+The inputs are also markes, and are sent out as the 8 first bits of the output.
+The output also includes status bits and ECC bits.
+The output of this tests show that the components cooperate as expected.
+This depends on that each component works as expected, but that is already tested in the other test benches.
 
 \section{Synthesis }
 \todo{ Decide whether we should have a own chapter for this or not. If we choose this option for testing and verification, we should do this for synthesis as well in the name of consistency. }
