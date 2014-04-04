@@ -358,20 +358,28 @@ These calculations and how they are done are explained in full details in Append
 
 \section{ Testing and verification }
 \todo{ Either explein the testing and verification here, or do it seperately in the subchapters of the previous chapter. Delete this chapter if we choose the other solution. I vote this one. But if we do so, for consistensy we may then have to create a independent chapter for Synthesis }
-\break
-\break
-\todo{ Insert introduction }
 \subsection{ Introduction}
-\subsection{ Tests and verification of One-Bit Voter}
-\todo{ Explain choice of test bench. Explain why it gives full coverage}
-\break
-\break
+The Liasion System, with all it's components, are to be throuthoroughly tested by simulating the behaviour and ensuring that desired behaviour occurs.
+Whenever an error in behaviour has occured, the VHDL code for the component has been modified in order to remove the error.
+After completing synthesis in Synplify Pro, the group redid the tests in Sythesis Simulation in Active HDL, which do the tests with any changes that might have occurred after synthesizing the project. 
+This section will present what were tested in each component, and the final test results.
+
+\subsection{ Tests and verification of 1-Bit Voter}
+Originally, each member of the group created a test bench of their own for their 1-Bit Voters, as part of assignment 3.
+The group later received a test bench from the course staff for the evaluation of assignment 3, and this has replaced the old test benches.
+The reason behind this choice is that the group conciders the scenario \todo{ Find better word than scenario?} in the test bench to be realistic for all situations.
+It is not likely that there will arise other situations when it comes to inputs and behaviour of the module as is tested in this test bench.
+Therefore the group conciders this test bench to do full coverage of the 1-Bit Voter.
+The test bench compares outputs with expected results, and throws an error whenever there is a difference between test outputs and expected outputs.
+Different combinations of inputs are tested, and one by one microcontroller are set to fail.
+The failed microcontrollers are tested for error tagging by testing whether their data has any affection on the output \textit{voted\_data}.
+\textit{Reset} is always activated to reset and test for other input combinations.
+The entire test passes with the current 1-Bit Voter. 
 \todo{ Explain test results. Include screenshot (Uh... the provided test bench is not of that kind).}
 
-\subsection{ Control Unit}
-\todo{ Explain choice of test bench. Explain why it gives full coverage}
-\break
-\break
+\subsection{ Controller Module}
+The Controller Module
+
 \todo{ Explain test results. Include screenshot. }
 
 \subsection{ ECC }
