@@ -111,8 +111,11 @@
 \begin{titlepage}
     \vspace*{2cm}
     \begin{abstract}
-        \todo{ Compulsory (means that it is specified in the Term Project in description of report set up, and at this very location). Create a fitting abstract here. Also create a FRONT PAGE. Yes, you didn't read wrong. I wrote in capital letters. If we miss this now, we must indeed be quite stupid...}
-
+The norwegian univercity of Science and Technology is going to launch a student satelite.
+This paper explore a solution with a liaison module for the satelite, that will handle multiple redundant computing systems onboard the satelite.
+This redundancy will help increase the expected lifetime of the satelite by allowing the system to remain fully functional even with one or more systems failed.
+The system will also ensure error correction and detection on transmitted data.
+This is achived through hamming codes handeling one bit error correction and two bit error detection.
     \end{abstract}
 \end{titlepage}
 
@@ -227,14 +230,14 @@ Figure \ref{fig:LiaisonResetDiReady} shows that the \textit{reset} signal must h
 Figure \ref{fig:LiaisonMaxThroughput} shows the intervals between the pulses of \textit{di\_ready}. The signal may arrive at any time, but there must be at least 11+m cycles between each interval.
 
 \subsection{Project Framework}
-The system is to be encoded in VHDL, tested and verified in simulation, and synthesized. A goal is to achieve as few Look Up Tables (LUTs) as possible. \todo{ Perhaps briefly explain what a LUT is?}
+The system is to be encoded in VHDL, tested and verified in simulation, and synthesized. A goal is to achieve as few Look Up Tables (LUTs) as possible.
 Active HDL 8.2 is used for programming in VHDL, as well as creating test benches and running simulations for verification.
 Synplify Pro C-2009.06 is used for synthesizing, creating resulting LUTs, flip-flops and estimated frequency, as well as creating RTL view schematics and Technology view schematics. 
 
 \indent The Term Assignment was handed out at January 31st, 2014.
 These are the milestones\protect\cite{assignment-text}:
 \begin{itemize}
-    \item \textbf{February 18th, 2014}: Assignment 3 \protect\cite{assignment-3}. of the Course, where the individual One-Bit Voters are designed. They serve as basis of the 8-bit voters
+    \item \textbf{February 18th, 2014}: Assignment 3\protect\cite{assignment-3} of the course, where the individual One-Bit Voters are designed. They serve as basis of the 8-bit voters
     \item \textbf{February 28th, 2014}: Delivery of technical notes, that will contain preliminary solutions to sub-problems 1, 2 and 3.
     \item \textbf{March 3rd, 2014}: Delivery of Peer Evaluation, containing evaluation of the technical note and project of another group.
     \item \textbf{March 31st}, 2014: Presentation of the project for groups 1-9 (minus 7).
@@ -447,7 +450,7 @@ data_out(1) <= data_in(0) xor data_in(2) xor data_in(3) xor data_in(5) xor data_
 data_out(2) <= data_in(1) xor data_in(2) xor data_in(3) xor data_in(7) xor data_in(8) xor data_in(9) xor data_in(10);
 data_out(3) <= data_in(4) xor data_in(5) xor data_in(6) xor data_in(7) xor data_in(8) xor data_in(9) xor data_in(10);
 \end{lstlisting}
-\caption{The hamming code example from the staff in TFE4140 \protect\cite{hamming-codes}. \Todo You're sure this is correct cite?}
+\caption{The hamming code example from the staff in TFE4140 \protect\cite{assignment-text}}
 \label{fig:HammingCodeLogic}
 \end{figure}
 
@@ -628,24 +631,26 @@ This includes writing this report.
 
 \section{Conclusion}
 \todo{ Compulsory. Have a good wrap up, somehow. }
+The purpose of this assignment was to construct a fully functional system, meeting the requirements for the liaison system.
+Solution had to be able to fullfill both the redundancy system management and error correction and detection.
+As verified by the testbenches, the solution described in this paper works as expected.
+The modular design give code that is easier to maintain, verify and read, and allow the code quality to be kept high.
+The system does have a bit of potential with regards to lowering the LUT count.
+The main metric for the project was to obtain a low LUT count, this was met to some degree with a count of 62.
 
-\section{Acknowledgements (optional)}
+\section{Acknowledgements}
 The group would like to extend their sincere thanks to the following individuals:
 \begin{itemize}
     \item Group 2 with Solveig Fure and Erick Castillo, for review and feedback of the project.
     \item Student assistent Kyrre Erlend Gonsholt for helping out in situations where we were stuck.
-    \item Indiana Jones. \todo{ ! }
 \end{itemize}
 
-
-\section{ Other problems/needs to be solved:}
-\subsection{ Appendixes}
-\todo{ Appendix A: Project code }
-\break
-
+\clearpage
+\begin{titlepage}
 \bibliography{bibliography}
 \bibliographystyle{plain}
 \nocite{*}
+\end{titlepage}
 
 \clearpage
 \begin{titlepage}
@@ -667,6 +672,7 @@ The group would like to extend their sincere thanks to the following individuals
     { \huge \bfseries Appendix A}\\[0.4cm] % Title of your document
     \HRule \\[1.5cm]
     All code in this appendix is also availabe from : \break \href{https://github.com/Raane/Term-Assigment-TFE4140-mod-anal-dig-sys}{https://github.com/Raane/Term-Assigment-TFE4140-mod-anal-dig-sys}
+
 %one bit voter
 \begin{figure}[h!]
     \lstinputlisting[firstline=0, lastline=65]{../Project/liaison/src/onebitvoter.vhd}
@@ -680,7 +686,6 @@ The group would like to extend their sincere thanks to the following individuals
     \lstinputlisting[firstline=131, lastline=191]{../Project/liaison/src/onebitvoter.vhd}
 \caption{onebitvoter.vhd part 3}
 \end{figure}
-
 %liaison
 \begin{figure}[h!]
     \lstinputlisting[firstline=0, lastline=65]{../Project/liaison/src/liaison.vhd}
@@ -690,7 +695,6 @@ The group would like to extend their sincere thanks to the following individuals
     \lstinputlisting[firstline=66, lastline=117]{../Project/liaison/src/liaison.vhd}
 \caption{liaison.vhd part 2}
 \end{figure}
-
 %Registers
 \begin{figure}[h!]
     \lstinputlisting[firstline=0, lastline=65]{../Project/liaison/src/registers.vhd}
@@ -700,7 +704,6 @@ The group would like to extend their sincere thanks to the following individuals
     \lstinputlisting[firstline=66, lastline=76]{../Project/liaison/src/registers.vhd}
 \caption{registers.vhd part 2}
 \end{figure}
-
 %Controller
 \begin{figure}[h!]
     \lstinputlisting[firstline=0, lastline=65]{../Project/liaison/src/controller.vhd}
@@ -714,7 +717,6 @@ The group would like to extend their sincere thanks to the following individuals
     \lstinputlisting[firstline=131, lastline=140]{../Project/liaison/src/controller.vhd}
 \caption{controller.vhd part 3}
 \end{figure}
-
 %ECC
 \begin{figure}[h!]
     \lstinputlisting{../Project/liaison/src/ECC.vhd}
