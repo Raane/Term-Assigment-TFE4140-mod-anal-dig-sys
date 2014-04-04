@@ -269,6 +269,7 @@ For this system, the group has chosen to implement immediate error tagging as so
 Another option could be to not implement error tagging until a series of errors pass and the pattern of errors is recognized.
 But a microcontroller should never under any circumstances disagree with the others as long as it is working, therefore the solution with immediate error tagging is chosen.
 This is also less complex to implement, saving the system for LUTs.
+
 As one by one microcontroller fails, they are tagged and the status changes (expected from 0 to 1, 1 to 2, and 2 to 3).
 There is also a special case, as can be seen in figure \ref{fig:StateMachine}:
 If two of the four microcontrollers fail at the same time, the system will go to immediate shutdown, since it can no longer be known which two are working.
@@ -287,7 +288,7 @@ Examples are:
 
 \subsection{Sub-Problem 2: Design of 1-Bit voter}
 Sub-problem 2 concerns the design of the voting system, that will vote one bit at a time.
-According to the course assignments 3 and 4 \todo{ A reference could certainly be useful. Should I add them in the bibliography?}, both members of the team were to design a 1-bit voter each, with both in VHDL, simulated and synthesized. 
+According to the course assignments 3 and 4\protect\cite{assignment-3} \protect\cite{assignment-4}, both members of the team were to design a 1-bit voter each, with both in VHDL, simulated and synthesized. 
 
 The one-bit voter has the following inputs and outputs:
 \begin{itemize}
@@ -352,7 +353,7 @@ The Controller has this responsibility in this case.
 
 \subsubsection{Choice of Archtecture}
 While the second option uses less space than the first one, and it is possible to pass on data immediatly as soon as it arrives, the Term Assignment specifies that the ECC module is to be imeplemented using Hamming Codes.
-The ECC calculation cannot be done before all data have \todo{ "Have" or "has" when using the word data?} arrived, voting is done and the status bits are updated.
+The ECC calculation cannot be done before all data have arrived, voting is done and the status bits are updated.
 But with this implementation, the data is sent immediatly, but not stored.
 The ECC module will have to implement registers, but this contradicts the idea behind this option of not using registers.
 The second option is thus not compatible with expanding the system with an ECC module.
@@ -418,8 +419,6 @@ There are 7 cycles before activating the second state machine, and 15 cycles for
 In total this makes up 22 cycles before going idle, should there be no more \textit{di\_ready} signals.
 If the next \textit{di\_ready} signal arrives too early, it will have to be ignored, since the shortest possible intervals for the system are 15 cycles.
 
-\todo{ Concider implementing figures with the stateMachines.}
-
 \subsection{Sub-Problem 4: Error Correction Circuit}
 When transmitting data there is always a risk of the data being received with one or more bits flipped.
 This effect pose a way greater threat when the datatransmission is a wireless transmission from a small satelite in space.
@@ -462,8 +461,6 @@ The different probabilites that are calculated are:
 \end{itemize}
 
 These calculations and how they are done are explained in full details in Appendix C.
-
-\todo{ Refer properly to Appendix C.}
 
 \section{ Testing and verification }
 \subsection{ Testing and verification }
@@ -511,7 +508,7 @@ These are the different situations that might occur for the controller module, t
   \caption{Screenshot from Controller test: A full regular message transmission cycle.}
   \label{fig:ControllerRegular}
 \end{figure}
-Figure \ref{fig:ControllerRegular} shows a regular flowthrough \todo{ Could use better word than "Flowthrough} in the controller after the \textit{di\_ready} signal pulses.
+Figure \ref{fig:ControllerRegular} shows a regular data transmission cycle in the controller after the \textit{di\_ready} signal pulses.
 The output for register storing are set accordingly for every cycle, \textit{do\_ready} pulses after 7 cycles, and the output to the multiplexer are set afterwards for each cycle. 
 he outputs in the figure are tagged to show what data are stored, and what data are to be sent out based on the control signals.
 Notice that when idle, the multiplexer is set to constantly reading v7.
@@ -594,7 +591,7 @@ Total number of flip-flops in the system is: 52.
 \break
 Estimated frequency of the system is: 213.7 MHz
 \break
-The resulting Schematics for both RTL view and Technology view are detailed in Appendix B \todo{ Add proper reference to Appendix b}.
+The resulting Schematics for both RTL view and Technology view are detailed in Appendix B.
 
 \section{Feedback and other Information}
 \todo{ The teachers wanted feedback. They also want to know the time spent on the work. This is where it should be added}.
@@ -602,7 +599,7 @@ The resulting Schematics for both RTL view and Technology view are detailed in A
 \todo{ The cake is a lie!}
 
 \subsection{Time spent by the group}
-Rune Holmgren has recorded a total number of XX hours \todo{ Rune must add this himself. No one but he can do it. Not even Indiana Jones or James Earl Jones} spent on this project.
+Rune Holmgren has recorded a total number of 95 hours spent on this project.
 \break
 Torbjørn Langland was unfortunate and broke his computer by spilling coffee on it.
 His record data which contained the information about time spent on the project was stored on it, therefore the total number of hours spent is now unknown.
@@ -644,6 +641,8 @@ The group would like to extend their sincere thanks to the following individuals
     \HRule \\[1.5cm]
 \end{titlepage}
 \clearpage
+
+% Appendix A
 \begin{titlepage}
     \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
     \center % Center everything on the page
@@ -652,9 +651,64 @@ The group would like to extend their sincere thanks to the following individuals
     { \huge \bfseries Appendix A}\\[0.4cm] % Title of your document
     \HRule \\[1.5cm]
     All code in this appendix is also availabe from : \break \href{https://github.com/Raane/Term-Assigment-TFE4140-mod-anal-dig-sys}{https://github.com/Raane/Term-Assigment-TFE4140-mod-anal-dig-sys}
+%one bit voter
+\begin{figure}[h!]
+    \lstinputlisting[firstline=0, lastline=65]{../Project/liaison/src/onebitvoter.vhd}
+\caption{onebitvoter.vhd part 1}
+\end{figure}
+\begin{figure}[h!]
+    \lstinputlisting[firstline=66, lastline=130]{../Project/liaison/src/onebitvoter.vhd}
+\caption{onebitvoter.vhd part 2}
+\end{figure}
+\begin{figure}[h!]
+    \lstinputlisting[firstline=131, lastline=191]{../Project/liaison/src/onebitvoter.vhd}
+\caption{onebitvoter.vhd part 3}
+\end{figure}
+
+%liaison
+\begin{figure}[h!]
+    \lstinputlisting[firstline=0, lastline=65]{../Project/liaison/src/liaison.vhd}
+\caption{liaison.vhd part 1}
+\end{figure}
+\begin{figure}[h!]
+    \lstinputlisting[firstline=66, lastline=117]{../Project/liaison/src/liaison.vhd}
+\caption{liaison.vhd part 2}
+\end{figure}
+
+%Registers
+\begin{figure}[h!]
+    \lstinputlisting[firstline=0, lastline=65]{../Project/liaison/src/registers.vhd}
+\caption{registers.vhd part 1}
+\end{figure}
+\begin{figure}[h!]
+    \lstinputlisting[firstline=66, lastline=76]{../Project/liaison/src/registers.vhd}
+\caption{registers.vhd part 2}
+\end{figure}
+
+%Controller
+\begin{figure}[h!]
+    \lstinputlisting[firstline=0, lastline=65]{../Project/liaison/src/controller.vhd}
+\caption{controller.vhd part 1}
+\end{figure}
+\begin{figure}[h!]
+    \lstinputlisting[firstline=66, lastline=130]{../Project/liaison/src/controller.vhd}
+\caption{controller.vhd part 2}
+\end{figure}
+\begin{figure}[h!]
+    \lstinputlisting[firstline=131, lastline=140]{../Project/liaison/src/controller.vhd}
+\caption{controller.vhd part 3}
+\end{figure}
+
+%ECC
+\begin{figure}[h!]
+    \lstinputlisting{../Project/liaison/src/ECC.vhd}
+\caption{ECC.vhd}
+\end{figure}
+
 \end{titlepage}
-%\includepdf[pages={1}]{Appendixes/AppendixA.pdf}
 \clearpage
+
+% Appendix B
 \begin{titlepage}
     \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
     \center % Center everything on the page
@@ -665,6 +719,8 @@ The group would like to extend their sincere thanks to the following individuals
 \end{titlepage}
 \includepdf[pages={1,2,3,4,5,6,7,8}]{Appendixes/AppendixB.pdf}
 \clearpage
+
+% Appendix C
 \begin{titlepage}
     \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
     \center % Center everything on the page
