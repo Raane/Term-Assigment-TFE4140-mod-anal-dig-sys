@@ -138,9 +138,9 @@ In addition to faulty microcontrollers, the radiation of space introduce a risk 
 The system will have to add error correction and detection bits to each transmission back to Earth, that can then be used to verify and possibly correct the data.
 This is achieved through use of Hamming code.
 \break
-This report presents the solution for the Liasion system designed by group 1. The problem and the requirements are described in the Term Assignment\cite{assignment-text} for the Course TFE4140 Modelling and Analysis of Digital Systems
+This report presents the solution for the Liasion system designed by group 1. The problem and the requirements are described in the Term Assignment\protect\cite{assignment-text} for the Course TFE4140 Modelling and Analysis of Digital Systems
 Chapter 2 presents the problem and all required functionality in details.
-Chapter 3 presents the technical solutions to the problem, split into different sub-problems similarly to the Term Assignment paper\cite{assignment-text}.
+Chapter 3 presents the technical solutions to the problem, split into different sub-problems similarly to the Term Assignment paper\protect\cite{assignment-text}.
 Chapter 4 presents the testing and verification that is done of the product.
 Chapter 5 presents the results from synthesizing the product.
 Chapters 6 and 7 adds additional information and concludes the report.
@@ -149,7 +149,7 @@ Chapters 6 and 7 adds additional information and concludes the report.
 
 \subsection{The Liasion Fault Tolerant System}
 NTNU is working with a Student Satellite, which is to orbit Earth and measure atmospheric data and deliver this to a ground stattion.
-The goal of this assignment\cite{assignment-text} is to design a fault tolerant system called Liasion, which exploits redundancy.
+The goal of this assignment\protect\cite{assignment-text} is to design a fault tolerant system called Liasion, which exploits redundancy.
 The system will contain four independent microcontrollers, that perform the same calculations.
 Every computation will procude 8-bit words.
 There is always the chance due to cosmic radiation that one or more microcontrollers may produce incorrect data.
@@ -157,11 +157,11 @@ If this is the case, the majority will decide the correct data, in a voting proc
 The voted data is to be accompanied by a 3-bit status signal which contains the number of failed microcontrollers.
 If too many microcontrollers have failed, this status signal will indicate it with a distinct value so that the system receiving on Earth will know this.
 Additionally, data may be corrupted before reaching Earth.
-This problem is to be solved by implementing a module with Error Correcting Circuit (ECC) that uses Hamming Code\cite{hamming-codes}.
+This problem is to be solved by implementing a module with Error Correcting Circuit (ECC) that uses Hamming Code\protect\cite{hamming-codes}.
 The chosen solution must be able to correct single-bit errors and detect double-bit errors\protect\cite{assignment-text}.
 
 \subsection{The Liasion Module functionality in details}
-The description that follows is directly specified in the Term Assignment\cite{assignment-text}.
+The description that follows is directly specified in the Term Assignment\protect\cite{assignment-text}.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{Figures/ProjectDescription/LiaisonBlackBox}
@@ -234,7 +234,7 @@ Synplify Pro C-2009.06 is used for synthesizing, creating resulting LUTs, flip-f
 \indent The Term Assignment was handed out at January 31st, 2014.
 These are the milestones\protect\cite{assignment-text}:
 \begin{itemize}
-    \item \textbf{February 18th, 2014}: Assignment 3 \todo{ INSERT CITATIon TO ASSIGNMENT 3 here}. of the Course, where the individual One-Bit Voters are designed. They serve as basis of the 8-bit voters
+    \item \textbf{February 18th, 2014}: Assignment 3 \protect\cite{assignment-3}. of the Course, where the individual One-Bit Voters are designed. They serve as basis of the 8-bit voters
     \item \textbf{February 28th, 2014}: Delivery of technical notes, that will contain preliminary solutions to sub-problems 1, 2 and 3.
     \item \textbf{March 3rd, 2014}: Delivery of Peer Evaluation, containing evaluation of the technical note and project of another group.
     \item \textbf{March 31st}, 2014: Presentation of the project for groups 1-9 (minus 7).
@@ -244,9 +244,11 @@ These are the milestones\protect\cite{assignment-text}:
 
 
 \section{ Solution to the problem.}
-This chapter will explain how the group has implemented the solution for the Term Assignment\cite{assignment-text}.
-The Term Assignment\cite{assignment-text} was split into 5 sub-problems, therefore this report will detail the solution to each sub-problem accordingly.
+This chapter will explain how the group has implemented the solution for the Term Assignment\protect\cite{assignment-text}.
+The Term Assignment\protect\cite{assignment-text} was split into 5 sub-problems, therefore this report will detail the solution to each sub-problem accordingly.
 This chapter explains the concept and functionality behind the design.
+All system components that are explained, are implemented using VHDL coding.
+All codes, including test benches, are detailed in Appendix A.
 
 \subsection{Sub-Problem 1: State analysis}
 
@@ -280,17 +282,18 @@ A 4-bit register, one bit for each microcontroller, is used to keep record of wh
 The 3-bit status bits that the Liasion System sends out will contain data of how many microcontrollers have failed, but not which ones.
 Therefore this 4-bit register must be independent of the status output.
 Examples are:
+
 \begin{itemize}
     \item \textbf{0000} - All microcontrollers work
     \item \textbf{0100} - Microcontroller \#3 has failed.
     \item \textbf{1010} - Microcontrollers \#2 and \#4 have failed.
 \end{itemize}
 
-\subsection{Sub-Problem 2: Design of 1-Bit voter}
+\subsection{Sub-Problem 2: Design of 1-bit boter}
 Sub-problem 2 concerns the design of the voting system, that will vote one bit at a time.
-According to the course assignments 3 and 4\protect\cite{assignment-3} \protect\cite{assignment-4}, both members of the team were to design a 1-bit voter each, with both in VHDL, simulated and synthesized. 
+According to the course assignments 3 and 4\protect\cite{assignment-3} \protect\cite{assignment-4}, both members of the team were to design a 1-Bit voter each, with both coded in VHDL, simulated and synthesized. 
 
-The one-bit voter has the following inputs and outputs:
+The 1-bit voter has the following inputs and outputs:
 \begin{itemize}
     \item \textbf{a}, \textbf{b}, \textbf{c}, and \textbf{d}: These are the inputs from the four microcontrollers.
     \item \textbf{clk}: The clock signal for the system
@@ -300,18 +303,20 @@ The one-bit voter has the following inputs and outputs:
 \end{itemize}
 
 The 1-bit voter will implement the state machine as described in the previous section, in order to know the system status and set the status output accordingly.
-It will also implement the proposed 4-bit register for error tagging, so that it knows what microcontrollers have failed, and what still works.
+It will also implement the proposed 4-bit register for error tagging, so that it knows which microcontrollers have failed, and which still works.
 It will perform vote at every positive clock edge, by setting the output data accordingly by the majority of the input data.
-It will during the voting compare the inputs with the error tag register in order to disregard the correct faulty microcontrollers.
+It will during the voting compare the inputs with the error tag register in order to disregard the  microcontrollers that are already faulty, if any.
 If one of the remaining microcontrollers has an error (by being the minority in the voting process), it is tagged and the system state and status output changes immediatly.
 The different status outputs are:
+
 \begin{itemize}
     \item \textbf{000} - All microcontrollers work
     \item \textbf{001} - One microcontroller has failed.
     \item \textbf{010} - Two microcontrollers have failed.
     \item \textbf{111} - System shutdown.
 \end{itemize}
-If the \textit{reset} signal is activated, the state machine is reset to initial state, the output status is set to 000, and there are not voting until the \textit{reset} signal is no longer active. 
+
+If the \textit{reset} signal is activated, the state machine is reset to initial state, the output status is set to 000, and there are no voting until the \textit{reset} signal is no longer active. 
 
 \subsection{Sub-Problem 3: 8-Bit voter}
 
@@ -329,7 +334,8 @@ The inputs and the outputs are the same as specified for the Liaison system, and
     \caption{Optional architecture for the 8-bit Voter: Using 1-bit voter and registers}
     \label{fig:ArchitectureOption1}
 \end{figure}
-Figure \ref{fig:ArchitectureOption1} shows a component based implementation that includes the 1-bit voter, a controller module, a register module and a multiplexer. Data are received serially, voted serially by the 1-Bit Voter, and the resulting data are stored in registers. After a specified number of cycles, data are to be sent out serially, together with the \textit{do\_ready} signal.
+Figure \ref{fig:ArchitectureOption1} shows a component based implementation that includes the 1-bit voter, a controller module, a register module and a multiplexer. Data are received serially, voted serially by the 1-bit Voter, and the resulting data are stored in registers. After a specified number of cycles, data are to be sent out serially, together with the \textit{do\_ready} signal.
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{Figures/Solution/ArchitectureOption2}
@@ -337,7 +343,7 @@ Figure \ref{fig:ArchitectureOption1} shows a component based implementation that
     \label{fig:ArchitectureOption2}
 \end{figure}
 Figure \ref{fig:ArchitectureOption2} shows an option where no registers are implemented. 
-The idea is to have as small 8-Bit Voter as possible. 
+The idea is to have as small 8-bit voter as possible. 
 Data that are read and voted serially must be passed on immediatly.
 
 \begin{figure}[h!]
@@ -346,28 +352,30 @@ Data that are read and voted serially must be passed on immediatly.
     \caption{Optional architecture for the 8-bit Voter: Not using 1-bit voter}
     \label{fig:ArchitectureOption3}
 \end{figure}
-Figure \ref{fig:ArchitectureOption3} shows an option where the 1-Bit Voter is not used. In this scenario, 4 sets of 8-Bit words are stored and voted.
-Though the voting can be done serially for each arrived sets of bits, the idea is that it can also perform instant voting on the entire 8 bit words.
-Note that output status data must be handled differently in lack of the designed 1-Bit Voter.
+Figure \ref{fig:ArchitectureOption3} shows an option where the 1-bit Voter is not used. In this scenario, 4 sets of 8-bit words are stored and voted.
+Though the voting can be done serially for each arrived sets of bits, the idea is that the system can also perform instant voting on the entire 8 bit words.
+Note that output status data must be handled differently in lack of the designed 1-bit voter.
 The Controller has this responsibility in this case.
 
 \subsubsection{Choice of Archtecture}
-While the second option uses less space than the first one, and it is possible to pass on data immediatly as soon as it arrives, the Term Assignment specifies that the ECC module is to be imeplemented using Hamming Codes.
+While the second option uses less space than the first one, and it is possible to pass on data immediatly as soon as it arrives, the Term Assignment\protect\cite{assignment-text} specifies that the ECC module is to be imeplemented using Hamming Codes.
 The ECC calculation cannot be done before all data have arrived, voting is done and the status bits are updated.
 But with this implementation, the data is sent immediatly, but not stored.
 The ECC module will have to implement registers, but this contradicts the idea behind this option of not using registers.
 The second option is thus not compatible with expanding the system with an ECC module.
-\break
-The third option uses another solution than a 1-Bit voter, but the group conciders the 1-Bit Voter to be sufficient.
-Implementing another voter is concidered a waste of time since there is already a solution available, that the group conciders to be good enough.
-All data arrives serially, and are sent out serially from the Liasion, and serial voting between receiving and sending is sufficient.
+
+The third option uses another solution than a 1-bit voter, but the group conciders the 1-bit voter to be sufficient.
+Implementing another voter is concidered a waste of time since there is already a solution available in the aftermath of Assigment 3\protect\cite{assignment-3}, that the group conciders to be good enough.
+All data arrive serially, and are sent out serially from the Liasion, and serial voting between receiving and sending is sufficient.
 If all received data were to be voted instantly by voting the entire word, it would create constriction on receiving data and sending out data.
-Only status data or ECC data from the previous vote can be sent out while an 8-bit voting is performed.
+Only status data or ECC data from the previous vote can be sent out while an 8-bit voting is performed, and storing of new data cannot be done until the voting is complete.
 Though maximum throughput is possible, the design is more difficult to implement.
-This solution is likely to have greater complexity than the first option, and the use of four sets of registers make the 8-Bit Voter conciderably larger than the first option.
+This solution is likely to have greater complexity than the first option, and the use of four sets of registers make this 8-bit voter conciderably larger than the first option.
+
 Given these premises, the group has chosen to implement the first option, since the other options are concidered weaker.
 The full architecture, which includes the ECC module, can be seen in figure \ref{fig:ArchitectureFinal}.
 Note that this is named Liasion, since it is used as topmodule for the Liasion system.
+The \textit{reset} and \textit{clk} signals are not shown for simplicity, but they are used by the 1-bit voter, the controller and the registers.
 
 \begin{figure}[h!]
     \centering
@@ -383,47 +391,54 @@ Note that this is named Liasion, since it is used as topmodule for the Liasion s
     \caption{Implemented registers}
     \label{fig:Registers}
 \end{figure}
-Figure \ref{fig:Registers} shows the contents of the register modules.
-There are 8 registers for storing voted data and 3 for storing status data from the 1-Bit Voter.
+
+Figure \ref{fig:Registers} shows the contents of the register module.
+There are 8 registers for storing voted data and 3 for storing status data from the 1-bit voter.
 The group has chosen to implemen 4 bits of ECC data in this project.
-The register module is controlled by a 10-bit control\_signal, that is used when storing data.
-The control\_signal, which is set by the control\_unit, has 1 bit for every 8 voted data register, since voted data arrive serially and must be stored one by one.
-The 9th bit is used for storing data in the status registers, since all 3 status bits arrive simultaniously.
-The 10th bit is used for storing data in the ECC registers, since ECC data are calculated and thus stored thenext  cycle after being done with all voted data and status data.
+The register module is controlled by a 10-bit control signal, that is used when storing data.
+The control signal, which is set by the controller module, has 1 bit for every 8 voted data register Voted data arrive serially and must be stored one by one.
+The 9th bit is used for storing data in the status registers, since all 3 status bits arrive simultaneously.
+The 10th bit is used for storing data in the ECC registers, since ECC data are calculated and thus stored in the next cycle after being done with all voted data and status data.
 If none of these control bits are active, no new data will be stored.
 
 \subsubsection{The Controller Module}
 The Controller Module is responsible for controlling the registers when storing data, and setting the multiplexer so that correct data is sent out per cycle.
 The module is implemented as two state machines.
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.50\textwidth]{Figures/Solution/ControllerStateMachine1}
     \caption{Controller state machine 1}
     \label{fig:ControllerStateMachine1}
 \end{figure}
+
 Figure \ref{fig:ControllerStateMachine1} shows the first state machine.
 It is activated by the \textit{di\_ready} signal, and sets the 10-bit \textit{control\_signal} that is connected to the register module.
-After a specified number of cycles, in this case 7 after \textit{di\_ready}, the \textit{do\_ready} pulses for one cycle.
+After a specified number of cycles, in this case the 7th after \textit{di\_ready} has pulsed, the \textit{do\_ready} pulses for one cycle.
 It can also be seen in the figure which registers are affected by the different states.
 Though it is not seen in the figure, if the \textit{reset} signal is activated, the initial state is set.
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.50\textwidth]{Figures/Solution/ControllerStateMachine2}
     \caption{Controller state machine 2}
     \label{fig:ControllerStateMachine2}
 \end{figure}
+
 Figure \ref{fig:ControllerStateMachine2} shows the second state machine.
-It is activated by the \textit{do\_ready} signal, and sets the 4-bit control\_signal{4-bit voted\_data\_selector} that is connected to the multiplexer, so that data from the registers are sent out in the correct order.
+It is activated by the \textit{do\_ready} signal, and sets the 4-bit \textit{voted\_data\_selector} that is connected to the multiplexer, so that data from the registers are sent out in the correct order.
 This figure shows as well the connection between the output and the registers, and though it is not seen, an active \textit{reset} will return the machine to the initial state.
+
 There are 7 cycles before activating the second state machine, and 15 cycles for the second state machine for setting the output data.
 In total this makes up 22 cycles before going idle, should there be no more \textit{di\_ready} signals.
 If the next \textit{di\_ready} signal arrives too early, it will have to be ignored, since the shortest possible intervals for the system are 15 cycles.
 
 \subsection{Sub-Problem 4: Error Correction Circuit}
-When transmitting data there is always a risk of the data being received with one or more bits flipped.
-This effect pose a way greater threat when the datatransmission is a wireless transmission from a small satelite in space.
-To battle this effect the Liaison system feature an error correcting circuit that add 4 bits to each transmission.
-This mean that every set of 8 bits from the microcontrollers will be accompanied by not only the 3 status bits, but also 4 bits that provide confidence in the other 11.
+When transmitting data there is always a risk of the data being received with one or more bits inverted.
+This is caused by the cosmic radiation.
+This effect poses a greater risk when the data transmission is a wireless transmission from a small satellite in space.
+To counter this effect the Liaison system feature an error correcting circuit that adds 4 bits to each transmission.
+This means that every set of 8 bits from the microcontrollers will be accompanied by not only the 3 status bits, but also 4 bits that provide confidence in the other 11.
 
 \begin{figure}[h!]
 \begin{lstlisting}
@@ -435,14 +450,16 @@ data_out(3) <= data_in(4) xor data_in(5) xor data_in(6) xor data_in(7) xor data_
 \caption{The hamming code example from the staff in TFE4140 \protect\cite{hamming-codes}. \Todo You're sure this is correct cite?}
 \label{fig:HammingCodeLogic}
 \end{figure}
-Based on the logic from the example ECC module\protect\cite{hamming-codes} constructing a module for the liaison system was straight forward.
+
+Based on the logic from the example ECC module\protect\cite{hamming-codes} constructing a module for the liaison system is straight forward.
 The module is a simple combinatorial module that continously read the states of the voted data and status registers.
 Whenever one of these registers are updated, the ECC module will also update it's value.
-It is the then up the the control unit to write the values from the ECC at the right point of time.
+It is the Controller module that makes sure that output data from the ECC module is written to the registers, and the correct moment is the cycle after writing the current status data.
 
 \subsection{Sub-Problem 5: Analysis of error probabilities}
 A microcontroller is expected to fail on an avarage of 6 years.
-Sub-Problem 5 of the Term Assignment specified that 3 mathematical expressions on failure after a time \textit{t}, as well as Mean Time To Failure (MTTF) for the system are to be calculated:
+Sub-Problem 5 of the Term Assignment\protect\cite{assignment-text} specifies that 3 mathematical expressions on failure after a time \textit{t}, as well as Mean Time To Failure (MTTF) for the system, are to be calculated:
+
 \begin{itemize}
     \item The probability for error in maximum one controller (that is zero or one) after \textit{t} time. This will be expressed as P(Max(1)). 
     \item The probability for error in maximum two controllers after \textit{t} time. This will be expressed as P(Max(2)).
@@ -452,7 +469,7 @@ Sub-Problem 5 of the Term Assignment specified that 3 mathematical expressions o
 
 The propability that a machine does not fail after a time \textit{t}, given the expected life time \textit{T}, is expressed as $P = P(t) = e^{-t/T}$.
 Since the expected life time for a microcontroller is T = 6, the probability is expressed as $P = P(t) = e^{-t/6}$. 
-The different probabilites that are calculated are:
+The different expressions and values that are calculated are:
 \begin{itemize}
     \item $P(Max(1)) = e^{-t/2}+3(e^{-t/2}-e^{-2t/3})$
     \item $P(Max(2)) = 3e^{-2t/3}-8e^{-t/2}+6e^{-t/3}$
@@ -463,12 +480,11 @@ The different probabilites that are calculated are:
 These calculations and how they are done are explained in full details in Appendix C.
 
 \section{ Testing and verification }
-\subsection{ Testing and verification }
 To ensure correct funtionallity of each of the modules, and the liaison system as a whole, they are all covered by testbenches.
 These testbenches simulate the behaviour of the modules and expose all potential errors in the system.
 All such errors can then be fixed, and the result is a fully functioning system.
-All the tests were also ran post synthesis through Synplify Pro.
-This section will present what were tested in each component, and the final test results.
+After synthesising the project in Synplify Pro, the all tests were run in "post synthesis simulation".
+This chapter will present what were tested in each component, and the final test results.
 
 \subsection{ Tests and verification of 1-Bit Voter}
 Originally, each member of the group created a test bench of their own for their 1-Bit Voters, as part of assignment 3.
