@@ -69,7 +69,7 @@
     %   DATE SECTION
     %----------------------------------------------------------------------------------------
 
-    \vspace*{1cm}
+    \vspace*{2cm}
     {\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
 
     %----------------------------------------------------------------------------------------
@@ -86,10 +86,11 @@
 \clearpage
 
 \begin{titlepage}
-\vspace*{2cm}
-\begin{abstract}
-    \todo{ Compulsory (means that it is specified in the Term Project in description of report set up, and at this very location). Create a fitting abstract here. Also create a FRONT PAGE. Yes, you didn't read wrong. I wrote in capital letters. If we miss this now, we must indeed be quite stupid...}
-\end{abstract}
+    \vspace*{2cm}
+    \begin{abstract}
+        \todo{ Compulsory (means that it is specified in the Term Project in description of report set up, and at this very location). Create a fitting abstract here. Also create a FRONT PAGE. Yes, you didn't read wrong. I wrote in capital letters. If we miss this now, we must indeed be quite stupid...}
+
+    \end{abstract}
 \end{titlepage}
 
 \clearpage
@@ -101,11 +102,19 @@
 \clearpage
 
 \section{Introduction}
-\todo{ Compulsory. Introduction that explains what to expect of the report. Introduction of the term project should be covered in abstract? }
+When technology is brought into extreme enviroments, it need to be designed to withstand that enviroment.
+The new NTNU student satelite is a good example of such a technological product.
+The heavy radiation in space will affect the onboard computer system, and can at any time break it.
+The likelyhood of such a catastrophic failiure can however be reduced significantly by indrodusing redundancy to the system.
+This redundance is to be managed by the liaison module, as described in this paper.
+The module allow the system to run 4 identical microcontrollers, and compare the outputs to each other.
+Anytime a microcontroller fails, the liaison system will notice the fault by comparing the microcontrollers outputs.
+The failed microcontroller will then be ignored for the rest of the systems lifetime, while the other microcontrollers will be able to continue working.
+By allowing the system to work even at just two non-faulty microcontrollers, the system have an improved expected life time.
+In addition to faulty microcontrollers, the radiation of space introduce a risk of bit errors in transmissions back to earth.
+The system will have to add error correcting and detecting bits to each transmission back to earth, that can then be used to verify and potentially correct the data.
 
-\section{Problem to be solved.}
-This chapter will introduce the reader to the details of the problem that is to be solved through this Term Assignment.
-First the NTNU Student Satellite and the need for a fault tolerant communication module will be described, then a description of the specified behaviour of the module will be detailed, and finally the Framework for the project will be described.
+\section{Problem}
 
 \subsection{The Liasion Fault Tolerant System}
 NTNU is working with a Student Satellite, which is to orbit Earth and measure atmospheric data and deliver this to a ground stattion.
@@ -113,7 +122,7 @@ The goal of this Assignment is to design a fault tolerant system called Liasion,
 The system will contain four independent microcontrollers, that perform the same calculations.
 Every computation will procude 8-bit words.
 There is always the chance due to cosmic radiation that one more microcontrollers may produce incorrect data.
-If this is the case, the majority will decide the correct data, in a process known as \textit{voting}.
+If this is the case, the majority will decide the correct data, in a \textit{voting} process.
 The voted data is to be accompanied by a 3-bit status signal which contains the number of failed microcontrollers.
 If too many microcontrollers have failed, this status signal will indicate it so that recieved data cannot be trusted.
 Additionally, data may be corrupted before reaching Earth.
@@ -429,18 +438,18 @@ The entire test passes with the current 1-Bit Voter.
 The Controller Module is tested for these different situations:
 \begin{itemize}
     \item \textbf{Long intervals between \textit{di\_ready}}. 
-    The controller should set it's outputs so that only the one stream of input data associated with the received \textit{di\_ready} signal should be stored and sent out of the Liasion module.
-    This is seen in the test as changes in the outputs of the module.
-    These changes should be traversed only once per \textit{di\_ready}, and is expected to last for 22 \todo{ Count in test} cycles.
+        The controller should set it's outputs so that only the one stream of input data associated with the received \textit{di\_ready} signal should be stored and sent out of the Liasion module.
+        This is seen in the test as changes in the outputs of the module.
+        These changes should be traversed only once per \textit{di\_ready}, and is expected to last for 22 \todo{ Count in test} cycles.
     \item \textbf{Too short intervals between \textit{di\_ready}}.
-    The controller should ignore \textit{di\_ready} signals that arrive too early, since the system is not finished receiving and/or processing the current data.
+        The controller should ignore \textit{di\_ready} signals that arrive too early, since the system is not finished receiving and/or processing the current data.
     \item \textbf{Maximum throughput}.
-    The controller should enable maximum througput when \textit{di\_ready} signals are received every 15 cycles.
-    This can be seen as there are changes on the output \textit{voted\_data\_selector} at every clock cycle.
+        The controller should enable maximum througput when \textit{di\_ready} signals are received every 15 cycles.
+        This can be seen as there are changes on the output \textit{voted\_data\_selector} at every clock cycle.
     \item \textbf{Reset}.
-    Whenever the \textit{reset} signal pulses, the controller should synchronously halt any activity, and reset both state machines and outputs to initial value.
-    Any waiting \textit{do\_ready} signal should not be sent out.
-    Reset is tested for both before activating second state machine, and after. 
+        Whenever the \textit{reset} signal pulses, the controller should synchronously halt any activity, and reset both state machines and outputs to initial value.
+        Any waiting \textit{do\_ready} signal should not be sent out.
+        Reset is tested for both before activating second state machine, and after. 
 \end{itemize}
 These are the different situations that might occur for the controller module, therefore this test is concidered to give full coverage for the controller module.
 
@@ -494,10 +503,10 @@ These two components are already tested in full coverage, therefore most of the 
 The test bench gives thus only partial cover, only to do a small control to ensure that the components and the toplevel cooperate as expected.
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.5\textwidth]{Figures/Tests/LiaisionTest}
-  \caption{Screenshot from Liaison Test}
-  \label{fig:LiaisonTests}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Figures/Tests/LiaisionTest}
+    \caption{Screenshot from Liaison Test}
+    \label{fig:LiaisonTests}
 \end{figure}
 
 Figure \ref{fig:LiaisonTests} shows a screenshot of the test output.
@@ -563,7 +572,7 @@ The group would like to extend their sincere thanks to the following individuals
 
 \section{ Other problems/needs to be solved:}
 \subsection{ Appendixes}
-\todo{ Appendix A: Project codes }
+\todo{ Appendix A: Project code }
 \break
 
 \bibliography{bibliography}
@@ -587,6 +596,7 @@ The group would like to extend their sincere thanks to the following individuals
     \HRule \\[0.4cm]
     { \huge \bfseries Appendix A}\\[0.4cm] % Title of your document
     \HRule \\[1.5cm]
+    All code in this appendix is also availabe from : \break \href{https://github.com/Raane/Term-Assigment-TFE4140-mod-anal-dig-sys}{https://github.com/Raane/Term-Assigment-TFE4140-mod-anal-dig-sys}
 \end{titlepage}
 %\includepdf[pages={1}]{Appendixes/AppendixA.pdf}
 \clearpage
